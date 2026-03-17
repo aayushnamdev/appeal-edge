@@ -1,0 +1,2315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Appeal Edge | We get you back</title>
+  <meta name="description" content="Expert-led Amazon appeal consulting. Human-crafted, precision-reviewed Plans of Action that get sellers reinstated." />
+  
+  <!-- Favicon: Monogram -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none'%3E%3Crect width='32' height='32' rx='8' fill='%23c3110c'/%3E%3Ctext x='16' y='21.5' font-family='Inter, -apple-system, sans-serif' font-size='16' font-weight='600' fill='%23FFFFFF' text-anchor='middle'%3EAE%3C/text%3E%3C/svg%3E" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  
+  <style>
+    /* 
+     ===========================================
+     APPEALFORGE x SALIENT SAAS AESTHETIC
+     ===========================================
+    */
+    :root {
+      /* Colors — Appeal Edge red/orange palette */
+      --black:          #280905;
+      --charcoal:       #280905;
+      --gray-900:       #4a1510;
+      --gray-600:       #8a3a33;
+      --gray-400:       #c67f78;
+
+      --white:          #FFFFFF;
+      --off-white:      #fffdfc;
+      --bg-light:       #fcf5f4; /* Alternate section bg */
+
+      /* Accents */
+      --blue:           #c3110c;
+      --blue-hover:     #740a03;
+      --blue-light:     #fef2f2;
+      --blue-electric:  #c3110c; /* Squiggle color */
+
+      --orange:         #e6501b; /* Salient-style secondary CTA */
+      --orange-light:   #fff7ed;
+
+      --green:          #e6501b;
+      --amber:          #c3110c;
+
+      --border-light:   #f5e6e5;
+      
+      /* typography */
+      --font: 'Inter', -apple-system, sans-serif;
+      --h1:       clamp(3.5rem, 8vw, 6rem);
+      --h2:       clamp(2.5rem, 6vw, 4rem);
+      --h3:       clamp(1.5rem, 3vw, 2.25rem);
+      --body-lg:  clamp(1.125rem, 2vw, 1.375rem);
+      --body:     1.125rem;
+      --small:    0.875rem;
+
+      /* Spacing */
+      --section-gap:    clamp(100px, 15vw, 180px);
+      --max-width:      1240px;
+      --padding-x:      clamp(24px, 5vw, 64px);
+      
+      /* Shadows */
+      --shadow-sm:      0 2px 4px rgba(0,0,0,0.02);
+      --shadow-md:      0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
+      --shadow-lg:      0 12px 32px -4px rgba(40,9,5, 0.08), 0 4px 12px -2px rgba(40,9,5, 0.04);
+      --shadow-hover:   0 24px 48px -12px rgba(40,9,5, 0.12), 0 8px 24px -4px rgba(40,9,5, 0.08);
+      
+      /* Transitions */
+      --spring:         cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      --ease:           cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    
+    body {
+      font-family: var(--font);
+      font-size: var(--body);
+      color: var(--gray-600);
+      background: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    img, svg { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; transition: all 0.2s var(--ease); }
+    ul { list-style: none; }
+    
+    /* Typography */
+    h1, h2, h3, h4 {
+      color: var(--black);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+    }
+    h1 { font-size: var(--h1); }
+    h2 { font-size: var(--h2); letter-spacing: -0.03em; }
+    h3 { font-size: var(--h3); font-weight: 700; letter-spacing: -0.02em; }
+    
+    p { margin-bottom: 24px; }
+    p:last-child { margin-bottom: 0; }
+
+    /* Layout */
+    .section {
+      padding: var(--section-gap) var(--padding-x);
+      position: relative;
+    }
+    .section.bg-gray { background: var(--off-white); }
+    .section.bg-blue-light { background: var(--bg-light); }
+    
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Floating Background Blobs (Salient Style) */
+    .bg-blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.15;
+    }
+    .blob-1 { top: -10%; right: -5%; width: 600px; height: 600px; background: var(--blue); }
+    .blob-2 { bottom: -20%; left: -10%; width: 800px; height: 800px; background: var(--orange); opacity: 0.08;}
+
+    /* Humanist SVG Text Highlights */
+    .highlight-wrap {
+      position: relative;
+      display: inline-block;
+      white-space: nowrap;
+    }
+    .svg-underline {
+      position: absolute;
+      bottom: -4px; right: -5%;
+      width: 110%; height: auto;
+      z-index: -1;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      transition: stroke-dashoffset 1.5s var(--ease);
+    }
+    .reveal.active .svg-underline { stroke-dashoffset: 0; }
+    
+    .svg-circle {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 130%; height: 160%;
+      z-index: -1;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      transition: stroke-dashoffset 1.5s var(--ease) 0.5s;
+    }
+    .reveal.active .svg-circle { stroke-dashoffset: 0; }
+
+    /* ═══════════════════════════════════
+       BUTTON SYSTEM — Premium Hierarchy
+       ═══════════════════════════════════ */
+
+    /* Base — shared scaffolding only */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-family: var(--font);
+      font-weight: 600;
+      font-size: 15px;
+      letter-spacing: 0.01em;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      text-decoration: none;
+      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+                  box-shadow 0.25s ease,
+                  background-color 0.2s ease,
+                  border-color 0.2s ease,
+                  color 0.2s ease;
+    }
+    .btn:active { transform: translateY(1px) scale(0.99) !important; }
+
+    /* Shimmer sweep — shared util */
+    .btn-shimmer::after {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 55%; height: 100%;
+      background: linear-gradient(105deg, transparent, rgba(255,255,255,0.22), transparent);
+      transform: skewX(-15deg);
+      transition: left 0.65s ease;
+      pointer-events: none;
+    }
+    .btn-shimmer:hover::after { left: 150%; }
+
+    /* ── 1. PRIMARY — Gradient pill (Hero CTA, featured pricing, retry) ── */
+    .btn-primary {
+      background: linear-gradient(135deg, #c3110c 0%, #d93a10 55%, #e6501b 100%);
+      color: #fff;
+      border-radius: 100px;
+      padding: 19px 38px;
+      font-size: 16px;
+      font-weight: 700;
+      box-shadow:
+        0 0 0 1px rgba(195,17,12,0.25),
+        0 2px 4px rgba(195,17,12,0.2),
+        0 8px 24px rgba(195,17,12,0.32),
+        inset 0 1px 0 rgba(255,255,255,0.18);
+    }
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow:
+        0 0 0 1px rgba(195,17,12,0.3),
+        0 4px 8px rgba(195,17,12,0.25),
+        0 16px 40px rgba(195,17,12,0.42),
+        inset 0 1px 0 rgba(255,255,255,0.2);
+    }
+    /* Shimmer on primary */
+    .btn-primary::after {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 50%; height: 100%;
+      background: linear-gradient(105deg, transparent, rgba(255,255,255,0.2), transparent);
+      transform: skewX(-15deg);
+      transition: left 0.7s ease;
+      pointer-events: none;
+    }
+    .btn-primary:hover::after { left: 160%; }
+
+    /* ── 2. OUTLINED — Nav CTA (transparent → fills on hover) ── */
+    .btn-outline {
+      background: transparent;
+      color: #c3110c;
+      border-radius: 100px;
+      padding: 10px 24px;
+      font-size: 14px;
+      font-weight: 600;
+      border: 1.5px solid rgba(195,17,12,0.45);
+    }
+    .btn-outline:hover {
+      background: #c3110c;
+      color: #fff;
+      border-color: #c3110c;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(195,17,12,0.28);
+    }
+
+    /* ── 3. SECONDARY — Clean white pill (non-featured actions) ── */
+    .btn-secondary {
+      background: #ffffff;
+      color: #280905;
+      border-radius: 100px;
+      padding: 17px 34px;
+      border: 1.5px solid rgba(40,9,5,0.1);
+      box-shadow:
+        0 1px 2px rgba(40,9,5,0.06),
+        0 4px 12px rgba(40,9,5,0.05),
+        inset 0 1px 0 rgba(255,255,255,1);
+    }
+    .btn-secondary:hover {
+      border-color: rgba(195,17,12,0.3);
+      box-shadow:
+        0 2px 4px rgba(40,9,5,0.08),
+        0 8px 20px rgba(40,9,5,0.08),
+        0 0 0 3px rgba(195,17,12,0.06);
+      transform: translateY(-2px);
+    }
+
+    /* ── 4. PRICING — Rounded rect, warm tinted (card-contained) ── */
+    .btn-pricing {
+      background: var(--off-white);
+      color: var(--black);
+      border-radius: 14px;
+      padding: 16px 28px;
+      font-size: 15px;
+      border: 1.5px solid var(--border-light);
+      box-shadow: 0 1px 3px rgba(40,9,5,0.06), inset 0 1px 0 rgba(255,255,255,0.9);
+      width: 100%;
+    }
+    .btn-pricing:hover {
+      border-color: rgba(195,17,12,0.35);
+      background: #fff;
+      box-shadow: 0 4px 16px rgba(40,9,5,0.1), 0 0 0 3px rgba(195,17,12,0.07);
+      transform: translateY(-2px);
+    }
+
+    /* ── 5. PRICING PRIMARY — Featured plan pill ── */
+    .btn-pricing-primary {
+      background: linear-gradient(135deg, #c3110c 0%, #e6501b 100%);
+      color: #fff;
+      border-radius: 14px;
+      padding: 17px 28px;
+      font-size: 15px;
+      font-weight: 700;
+      width: 100%;
+      box-shadow:
+        0 0 0 1px rgba(195,17,12,0.2),
+        0 6px 20px rgba(195,17,12,0.35),
+        inset 0 1px 0 rgba(255,255,255,0.18);
+    }
+    .btn-pricing-primary::after {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 50%; height: 100%;
+      background: linear-gradient(105deg, transparent, rgba(255,255,255,0.2), transparent);
+      transform: skewX(-15deg);
+      transition: left 0.7s ease;
+      pointer-events: none;
+    }
+    .btn-pricing-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 0 1px rgba(195,17,12,0.25), 0 10px 30px rgba(195,17,12,0.45), inset 0 1px 0 rgba(255,255,255,0.2);
+    }
+    .btn-pricing-primary:hover::after { left: 160%; }
+
+    /* ── 6. ORANGE-HERO — Footer CTA (warm, large, closing energy) ── */
+    .btn-footer {
+      background: linear-gradient(135deg, #e6501b 0%, #c3110c 100%);
+      color: #fff;
+      border-radius: 100px;
+      padding: 22px 56px;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      box-shadow:
+        0 0 0 1px rgba(230,80,27,0.2),
+        0 8px 32px rgba(230,80,27,0.38),
+        0 0 80px rgba(195,17,12,0.18),
+        inset 0 1px 0 rgba(255,255,255,0.2);
+    }
+    .btn-footer::after {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 50%; height: 100%;
+      background: linear-gradient(105deg, transparent, rgba(255,255,255,0.2), transparent);
+      transform: skewX(-15deg);
+      transition: left 0.8s ease;
+      pointer-events: none;
+    }
+    .btn-footer:hover {
+      transform: translateY(-3px);
+      box-shadow:
+        0 0 0 1px rgba(230,80,27,0.25),
+        0 14px 48px rgba(230,80,27,0.5),
+        0 0 100px rgba(195,17,12,0.25),
+        inset 0 1px 0 rgba(255,255,255,0.22);
+    }
+    .btn-footer:hover::after { left: 160%; }
+
+    /* ── 7. ORANGE (dark widget context — results CTA) ── */
+    .btn-orange {
+      background: linear-gradient(135deg, #c3110c 0%, #e6501b 100%);
+      color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 0 1px rgba(195,17,12,0.3), 0 6px 22px rgba(195,17,12,0.45);
+    }
+    .btn-orange::after {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 50%; height: 100%;
+      background: linear-gradient(105deg, transparent, rgba(255,255,255,0.2), transparent);
+      transform: skewX(-15deg);
+      transition: left 0.65s ease;
+      pointer-events: none;
+    }
+    .btn-orange:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 0 1px rgba(195,17,12,0.35), 0 10px 32px rgba(195,17,12,0.55);
+    }
+    .btn-orange:hover::after { left: 160%; }
+
+    /* ── 8. GHOST (dark widget context) ── */
+    .btn-ghost {
+      background: rgba(255,255,255,0.07);
+      color: rgba(255,255,255,0.82);
+      border: 1.5px solid rgba(255,255,255,0.16);
+      border-radius: 10px;
+    }
+    .btn-ghost:hover {
+      background: rgba(255,255,255,0.13);
+      color: #fff;
+      border-color: rgba(255,255,255,0.28);
+      transform: translateY(-1px);
+    }
+
+    /* Nav */
+    #nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0);
+      transition: all 0.3s var(--ease);
+      padding: 24px 0;
+    }
+    #nav.scrolled {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      padding: 16px 0;
+      box-shadow: var(--shadow-sm);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--padding-x);
+    }
+    .nav-logo svg { height: 28px; width: auto; }
+    .nav-links {
+      display: flex;
+      gap: 48px;
+      font-weight: 500;
+      font-size: 15px;
+      color: var(--charcoal);
+    }
+    .nav-links a:hover { color: var(--blue); }
+    /* nav-cta uses .btn-outline, sizing baked into that class */
+
+    /* Animations */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.4s; }
+
+    /* Hero */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 160px;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: var(--blue-light);
+      color: var(--blue);
+      border-radius: 100px;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 32px;
+    }
+    .hero-badge span {
+      width: 8px; height: 8px;
+      background: var(--blue);
+      border-radius: 50%;
+    }
+    .hero-sub {
+      font-size: var(--body-lg);
+      margin: 32px 0 48px;
+      max-width: 480px;
+      color: var(--gray-600);
+      line-height: 1.6;
+    }
+    .hero-ctas { display: flex; gap: 24px; align-items: center; }
+    
+    /* Hero Image Asset Mockup */
+    .hero-visual {
+      position: relative;
+      border-radius: 40px;
+      background: var(--white);
+      box-shadow: var(--shadow-lg);
+      padding: 32px;
+      border: 1px solid var(--border-light);
+      transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
+      transition: transform 0.8s var(--ease);
+    }
+    .hero-visual:hover {
+      transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+      box-shadow: var(--shadow-hover);
+    }
+    .hv-header { display: flex; gap: 8px; margin-bottom: 32px; }
+    .hv-dot { width: 12px; height: 12px; border-radius: 50%; background: #E5E7EB; }
+    .hv-bar { height: 12px; border-radius: 6px; background: var(--bg-light); margin-bottom: 16px; }
+    .hv-bar.primary { background: var(--blue-light); width: 60%; height: 24px; margin-bottom: 32px; }
+    .hv-bar.alert { background: var(--orange-light); width: 80%; }
+    .hv-bar.success { background: var(--orange-light); width: 40%; }
+    
+    .hv-float {
+      position: absolute;
+      bottom: -30px; left: -40px;
+      background: var(--white);
+      padding: 24px;
+      border-radius: 20px;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      animation: float 6s ease-in-out infinite;
+    }
+    .hv-float-icon {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: var(--green);
+      display: flex; align-items: center; justify-content: center;
+      color: white;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    /* Trust Logos */
+    .trust-logos {
+      display: flex;
+      gap: 48px;
+      opacity: 0.4;
+      filter: grayscale(100%);
+      margin-top: 64px;
+      align-items: center;
+    }
+    .trust-logos span { font-size: 14px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
+
+    /* Process Features */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+    .feature-card {
+      background: var(--white);
+      padding: 48px;
+      border-radius: 32px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-light);
+      transition: all 0.4s var(--spring);
+    }
+    .feature-card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-8px);
+    }
+    .f-icon {
+      width: 72px; height: 72px;
+      border-radius: 24px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 32px;
+      font-size: 28px;
+    }
+    .f-icon.blue { background: var(--blue-light); color: var(--blue); }
+    .f-icon.orange { background: var(--orange-light); color: var(--orange); }
+    .f-icon.green { background: var(--orange-light); color: var(--orange); }
+    .feature-card h3 { margin-bottom: 16px; font-size: 1.5rem; }
+
+    /* Analyzer (scan widget) */
+    .dash-form textarea {
+      width: 100%;
+      height: 180px;
+      background: var(--off-white);
+      border: 2px solid var(--border-light);
+      border-radius: 24px;
+      padding: 24px;
+      font-size: 16px;
+      font-family: var(--font);
+      resize: vertical;
+      margin-bottom: 20px;
+      transition: all 0.3s var(--ease);
+      color: var(--charcoal);
+    }
+    .dash-form textarea:focus {
+      outline: none;
+      border-color: var(--blue);
+      background: var(--white);
+      box-shadow: 0 0 0 4px var(--blue-light);
+    }
+
+    /* File Upload Zone */
+    .upload-zone {
+      border: 2px dashed var(--border-light);
+      border-radius: 20px;
+      padding: 32px 24px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.25s var(--ease);
+      margin-bottom: 20px;
+      background: var(--off-white);
+    }
+    .upload-zone:hover, .upload-zone.drag-over {
+      border-color: var(--blue);
+      background: var(--blue-light);
+    }
+    .upload-zone-icon { font-size: 28px; margin-bottom: 8px; }
+    .upload-zone p { margin: 0; font-size: 14px; color: var(--gray-600); }
+    .upload-zone strong { color: var(--blue); }
+    .upload-zone input[type="file"] { display: none; }
+
+    /* File Pills */
+    .file-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+      min-height: 0;
+    }
+    .file-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--blue-light);
+      color: var(--blue);
+      border-radius: 100px;
+      padding: 6px 14px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .file-pill-remove {
+      cursor: pointer;
+      opacity: 0.6;
+      font-size: 16px;
+      line-height: 1;
+      border: none;
+      background: none;
+      color: inherit;
+      padding: 0;
+    }
+    .file-pill-remove:hover { opacity: 1; }
+
+    /* Loading Stepper */
+    #analyzerLoading { display: none; text-align: left; padding: 16px 0; }
+    .stepper { display: flex; flex-direction: column; gap: 16px; }
+    .step-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      opacity: 0.35;
+      transition: opacity 0.4s ease;
+    }
+    .step-item.active { opacity: 1; }
+    .step-item.done { opacity: 0.6; }
+    .step-dot {
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      border: 2px solid var(--border-light);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px;
+      color: var(--gray-400);
+      flex-shrink: 0;
+      transition: all 0.3s ease;
+      background: var(--white);
+    }
+    .step-item.active .step-dot {
+      border-color: var(--blue);
+      background: var(--blue);
+      color: white;
+      animation: stepPulse 1s ease-in-out infinite;
+    }
+    .step-item.done .step-dot {
+      border-color: var(--green);
+      background: var(--green);
+      color: white;
+    }
+    @keyframes stepPulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(195,17,12,0.4); }
+      50% { box-shadow: 0 0 0 6px rgba(195,17,12,0); }
+    }
+    .step-label { font-weight: 500; color: var(--charcoal); font-size: 15px; }
+
+    /* Results Panel */
+    #dashResults { display: none; text-align: left; }
+
+    .result-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+    .case-badge {
+      background: var(--blue-light);
+      color: var(--blue);
+      border-radius: 12px;
+      padding: 10px 20px;
+      font-weight: 700;
+      font-size: 15px;
+    }
+    .complexity-badge {
+      border-radius: 12px;
+      padding: 8px 16px;
+      font-weight: 600;
+      font-size: 13px;
+    }
+    .complexity-Simple { background: var(--orange-light); color: var(--orange); }
+    .complexity-Medium { background: #fff3e0; color: #b45309; }
+    .complexity-Complex { background: var(--blue-light); color: var(--blue); }
+
+    .synthesis-block {
+      border-left: 4px solid var(--blue);
+      background: var(--blue-light);
+      border-radius: 0 16px 16px 0;
+      padding: 24px 28px;
+      margin-bottom: 24px;
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--charcoal);
+    }
+    .synthesis-block p { margin: 0; }
+
+    .insight-card {
+      background: linear-gradient(135deg, var(--blue-light), #fff5f5);
+      border: 1px solid rgba(195,17,12,0.15);
+      border-radius: 20px;
+      padding: 24px;
+      margin-bottom: 24px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .insight-icon { font-size: 24px; flex-shrink: 0; margin-top: 2px; }
+    .insight-card p { margin: 0; font-size: 14px; color: var(--charcoal); line-height: 1.65; }
+    .insight-card strong { color: var(--blue); display: block; margin-bottom: 4px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; }
+
+    /* Win Rate Rings */
+    .win-rate-section {
+      background: var(--off-white);
+      border-radius: 24px;
+      padding: 32px;
+      margin-bottom: 24px;
+    }
+    .win-rate-title { font-weight: 700; color: var(--black); margin-bottom: 24px; font-size: 16px; }
+    .win-rate-rings {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .ring-wrap {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .ring-svg { width: 120px; height: 120px; transform: rotate(-90deg); }
+    .ring-track { fill: none; stroke: var(--border-light); stroke-width: 8; }
+    .ring-fill {
+      fill: none;
+      stroke-width: 8;
+      stroke-linecap: round;
+      stroke-dasharray: 327;
+      stroke-dashoffset: 327;
+      transition: stroke-dashoffset 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+    .ring-fill.industry { stroke: var(--amber); }
+    .ring-fill.appeal-edge { stroke: var(--blue-electric); }
+    .ring-label-wrap { position: relative; margin-top: -80px; margin-bottom: 40px; }
+    .ring-number {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--charcoal);
+      line-height: 1;
+    }
+    .ring-pct { font-size: 14px; color: var(--gray-600); font-weight: 500; }
+    .ring-title { font-size: 13px; font-weight: 600; color: var(--gray-600); margin-top: 4px; }
+
+    /* Evidence List */
+    .evidence-section {
+      background: var(--off-white);
+      border-radius: 24px;
+      padding: 32px;
+      margin-bottom: 24px;
+    }
+    .evidence-title { font-weight: 700; color: var(--black); margin-bottom: 16px; font-size: 16px; }
+    .evidence-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .evidence-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      color: var(--charcoal);
+    }
+    .evidence-check {
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: var(--orange-light);
+      color: var(--orange);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px;
+      flex-shrink: 0;
+      font-weight: 700;
+    }
+
+    /* Competitor Pricing */
+    .pricing-section {
+      background: var(--off-white);
+      border-radius: 24px;
+      padding: 32px;
+      margin-bottom: 24px;
+    }
+    .pricing-title { font-weight: 700; color: var(--black); margin-bottom: 20px; font-size: 16px; }
+    .price-bar-list { display: flex; flex-direction: column; gap: 12px; }
+    .price-bar-item { display: flex; flex-direction: column; gap: 4px; }
+    .price-bar-top { display: flex; justify-content: space-between; font-size: 13px; }
+    .price-bar-name { font-weight: 600; color: var(--charcoal); }
+    .price-bar-val { color: var(--gray-600); }
+    .price-bar-track {
+      height: 8px;
+      background: var(--border-light);
+      border-radius: 100px;
+      overflow: hidden;
+    }
+    .price-bar-fill {
+      height: 100%;
+      border-radius: 100px;
+      width: 0;
+      transition: width 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+    .price-bar-fill.appeal-edge-bar { background: var(--blue); }
+    .price-bar-fill.competitor-bar { background: var(--gray-400); }
+
+    /* Why Appeal Edge + CTA */
+    .why-section {
+      background: linear-gradient(135deg, var(--blue-light), #fff5f5);
+      border: 1px solid rgba(195,17,12,0.15);
+      border-radius: 24px;
+      padding: 32px;
+      margin-bottom: 24px;
+    }
+    .why-title { font-weight: 700; color: var(--blue); margin-bottom: 12px; font-size: 15px; text-transform: uppercase; letter-spacing: 0.06em; }
+    .why-text { font-size: 15px; color: var(--charcoal); line-height: 1.7; margin: 0; }
+
+    .cta-block {
+      background: var(--black);
+      border-radius: 24px;
+      padding: 40px;
+      text-align: center;
+    }
+    .cta-urgency {
+      background: rgba(245, 158, 11, 0.15);
+      color: var(--amber);
+      border-radius: 8px;
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .cta-block h3 { color: white; font-size: 1.75rem; margin-bottom: 8px; }
+    .cta-block p { color: var(--gray-400); font-size: 15px; margin-bottom: 28px; }
+    .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    /* Error State */
+    #analyzerError {
+      display: none;
+      text-align: center;
+      padding: 32px;
+    }
+    .error-icon { font-size: 40px; margin-bottom: 16px; }
+    #analyzerError h3 { color: var(--charcoal); margin-bottom: 8px; }
+    #analyzerError p { color: var(--gray-600); margin-bottom: 24px; }
+
+    @media (max-width: 768px) {
+      .win-rate-rings { grid-template-columns: 1fr 1fr; gap: 16px; }
+      .ring-svg { width: 100px; height: 100px; }
+      .ring-number { font-size: 22px; }
+      .cta-btns { flex-direction: column; }
+      .result-header { gap: 10px; }
+    }
+
+    /* Testimonials - Salient Row Style */
+    .testimonial-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .testi-card {
+      background: var(--white);
+      padding: 48px;
+      border-radius: 32px;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+    }
+    .testi-card::after {
+      content: '';
+      position: absolute;
+      bottom: -20px; left: 64px;
+      border-width: 20px 20px 0;
+      border-style: solid;
+      border-color: var(--white) transparent transparent transparent;
+    }
+    .testi-card.featured {
+      background: var(--orange);
+      color: var(--white);
+    }
+    .testi-card.featured::after {
+      border-color: var(--orange) transparent transparent transparent;
+    }
+    .testi-card.featured h3 { color: var(--white); }
+    .testi-quote { font-size: 1.25rem; font-weight: 500; line-height: 1.6; margin-bottom: 32px; }
+    
+    .testi-author {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 40px;
+      padding-left: 48px;
+    }
+    .t-avatar { width: 56px; height: 56px; border-radius: 50%; background: var(--gray-400); }
+    .t-name { font-weight: 700; color: var(--charcoal); }
+    .t-role { font-size: 14px; color: var(--gray-600); }
+
+    /* Pricing */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .p-card {
+      background: var(--white);
+      border-radius: 32px;
+      padding: 56px 40px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-light);
+      transition: all 0.4s var(--spring);
+      position: relative;
+    }
+    .p-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-8px);
+    }
+    .p-card.featured {
+      border: 2px solid var(--blue);
+      box-shadow: var(--shadow-lg);
+      transform: scale(1.05);
+    }
+    .p-card.featured:hover { transform: scale(1.05) translateY(-8px); }
+    .p-badge {
+      position: absolute;
+      top: -16px; left: 50%;
+      transform: translateX(-50%);
+      background: var(--blue);
+      color: var(--white);
+      padding: 8px 20px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .p-price { font-size: 4rem; font-weight: 800; color: var(--charcoal); margin: 24px 0; line-height: 1; }
+    .p-price span { font-size: 1.25rem; color: var(--gray-400); font-weight: 500; }
+    .p-list { margin-bottom: 40px; }
+    .p-list li {
+      display: flex; align-items: center; gap: 16px;
+      margin-bottom: 16px; font-size: 15px; color: var(--gray-600);
+    }
+    .p-list li svg { width: 20px; height: 20px; color: var(--blue); flex-shrink: 0;}
+
+    /* Ticker Banner */
+    .ticker-wrap {
+      background: var(--blue);
+      color: var(--white);
+      padding: 32px 0;
+      overflow: hidden;
+      display: flex;
+      white-space: nowrap;
+      transform: rotate(-2deg) scale(1.05);
+      position: relative;
+      z-index: 10;
+      margin-top: 64px;
+      margin-bottom: 0; /* Changed from -40px */
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    .ticker-wrap.orange-bg {
+      background: var(--orange);
+      transform: rotate(1deg) scale(1.05);
+      margin-top: -60px;
+      margin-bottom: 0;
+      z-index: 5;
+    }
+    .ticker {
+      display: flex;
+      animation: ticker 25s linear infinite;
+    }
+    .ticker span {
+      font-size: 2.5rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding: 0 40px;
+      display: inline-block;
+      letter-spacing: 0.05em;
+    }
+    .ticker span::after { content: '•'; margin-left: 80px; }
+    
+    @keyframes ticker {
+      0% { transform: translate3d(0, 0, 0); }
+      100% { transform: translate3d(-50%, 0, 0); }
+    }
+
+    /* Black Pre-Footer & Footer Layout */
+    .footer-wrapper {
+      background: #000000;
+      color: var(--white);
+      padding: 240px var(--padding-x) 64px; /* Increased top padding to push content down */
+      position: relative;
+      margin-top: -120px; /* Pulled up to sit underneath the slanted ticker */
+      z-index: 1;
+    }
+    
+    .prefooter-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 120px;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding-bottom: 100px;
+    }
+    .prefooter-left h2 {
+      color: var(--white);
+      font-size: clamp(3rem, 6vw, 4.5rem);
+      margin-bottom: 48px;
+    }
+    .prefooter-right {
+      display: flex;
+      gap: 80px;
+      padding-top: 32px;
+    }
+    
+    .footer-col h4 {
+      color: var(--gray-400);
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 24px;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 16px; }
+    .footer-col a {
+      color: var(--white);
+      font-size: 20px;
+      font-weight: 500;
+      display: inline-block;
+      position: relative;
+    }
+    .footer-col a::after {
+      content: '';
+      position: absolute;
+      width: 100%; transform: scaleX(0); height: 2px; bottom: 0; left: 0;
+      background-color: var(--white);
+      transform-origin: bottom right; transition: transform 0.25s ease-out;
+    }
+    .footer-col a:hover::after { transform: scaleX(1); transform-origin: bottom left; }
+    
+    .footer-bottom {
+      max-width: var(--max-width);
+      margin: 64px auto 0;
+      display: flex;
+      justify-content: space-between;
+      color: var(--gray-400);
+      font-size: 14px;
+      align-items: center;
+    }
+    .footer-logo svg { height: 28px; width: auto; }
+    .footer-logo text { fill: var(--white); }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .hero-grid { grid-template-columns: 1fr; text-align: center;}
+      .prefooter-grid { grid-template-columns: 1fr; gap: 64px; }
+      .hero-sub { margin: 32px auto 48px; }
+      .hero-ctas { justify-content: center; }
+      .hero-visual { margin-top: 64px; }
+      .testimonial-row { grid-template-columns: 1fr; gap: 80px;}
+    }
+    @media (max-width: 768px) {
+      :root { --section-gap: 80px; }
+      .nav-links, .nav-cta { display: none; }
+      .grid-3, .pricing-grid { grid-template-columns: 1fr; gap: 32px; }
+      .p-card.featured { transform: scale(1); }
+      .p-card.featured:hover { transform: translateY(-8px); }
+      h1 { font-size: 3rem; }
+    }
+
+    /* ════════════════════════════════════════════════
+       SCAN WIDGET — Ember Terminal
+       ════════════════════════════════════════════════ */
+
+    .hero-scan-widget {
+      position: relative;
+      width: 112%;
+      max-width: 530px;
+      margin-left: auto;
+      z-index: 2;
+    }
+
+    /* Ambient ember glow behind card */
+    .scan-orb {
+      position: absolute;
+      inset: -100px;
+      background:
+        radial-gradient(ellipse 65% 45% at 65% 5%, rgba(195,17,12,0.35) 0%, transparent 65%),
+        radial-gradient(ellipse 45% 60% at 15% 85%, rgba(230,80,27,0.22) 0%, transparent 60%);
+      z-index: 0;
+      pointer-events: none;
+      animation: scanGlowPulse 7s ease-in-out infinite alternate;
+    }
+    @keyframes scanGlowPulse {
+      0%   { opacity: 0.75; transform: scale(0.97); }
+      100% { opacity: 1;    transform: scale(1.03); }
+    }
+
+    /* Card shell */
+    .scan-inner {
+      position: relative;
+      z-index: 2;
+      background: linear-gradient(158deg, #130302 0%, #0d0201 55%, #110403 100%);
+      border-radius: 18px;
+      border: 1px solid rgba(195,17,12,0.28);
+      box-shadow:
+        inset 0 1px 0 rgba(255,100,70,0.08),
+        inset 0 -1px 0 rgba(0,0,0,0.6),
+        0 4px 6px rgba(0,0,0,0.3),
+        0 20px 60px rgba(0,0,0,0.65),
+        0 0 80px -15px rgba(195,17,12,0.25);
+      max-height: 620px;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(195,17,12,0.35) transparent;
+    }
+    .scan-inner::-webkit-scrollbar { width: 3px; }
+    .scan-inner::-webkit-scrollbar-track { background: transparent; }
+    .scan-inner::-webkit-scrollbar-thumb { background: rgba(195,17,12,0.4); border-radius: 3px; }
+
+    /* Top ember line */
+    .scan-top-line {
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, rgba(195,17,12,0.9) 35%, rgba(230,80,27,0.7) 65%, transparent 100%);
+      border-radius: 18px 18px 0 0;
+      flex-shrink: 0;
+    }
+
+    /* Inner padding wrapper */
+    .scan-body { padding: 20px 22px 22px; }
+
+    /* Header */
+    .scan-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 18px;
+    }
+    .scan-header-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .scan-live-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: #e6501b;
+      box-shadow: 0 0 6px rgba(230,80,27,0.8);
+      animation: livePulse 2s ease-in-out infinite;
+    }
+    @keyframes livePulse {
+      0%, 100% { opacity: 1; box-shadow: 0 0 6px rgba(230,80,27,0.8); }
+      50%       { opacity: 0.5; box-shadow: 0 0 12px rgba(230,80,27,0.4); }
+    }
+    .scan-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.9);
+    }
+    .scan-meta {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.28);
+    }
+
+    /* Divider */
+    .scan-divider {
+      height: 1px;
+      background: rgba(255,255,255,0.06);
+      margin: 0 0 18px;
+    }
+
+    /* Textarea */
+    .scan-inner .dash-form textarea {
+      width: 100%;
+      height: 130px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 14px 16px;
+      font-size: 13px;
+      font-family: 'DM Mono', monospace;
+      color: rgba(255,255,255,0.88);
+      resize: none;
+      margin-bottom: 12px;
+      transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+      line-height: 1.6;
+    }
+    .scan-inner .dash-form textarea::placeholder {
+      color: rgba(255,255,255,0.2);
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+    }
+    .scan-inner .dash-form textarea:focus {
+      outline: none;
+      background: rgba(255,255,255,0.06);
+      border-color: rgba(195,17,12,0.6);
+      box-shadow: 0 0 0 3px rgba(195,17,12,0.12), inset 0 1px 0 rgba(255,255,255,0.04);
+    }
+
+    /* Upload zone */
+    .scan-inner .upload-zone {
+      border: 1px dashed rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.025);
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-align: left;
+    }
+    .scan-inner .upload-zone-icon {
+      font-size: 20px;
+      flex-shrink: 0;
+      margin-bottom: 0;
+    }
+    .scan-inner .upload-zone-text { flex: 1; }
+    .scan-inner .upload-zone:hover,
+    .scan-inner .upload-zone.drag-over {
+      background: rgba(195,17,12,0.08);
+      border-color: rgba(195,17,12,0.4);
+    }
+    .scan-inner .upload-zone p {
+      color: rgba(255,255,255,0.38);
+      font-size: 12px;
+      font-family: 'DM Mono', monospace;
+      margin: 0;
+    }
+    .scan-inner .upload-zone strong { color: rgba(255,140,110,0.9); font-weight: 500; }
+
+    /* File pills */
+    .scan-inner .file-pill {
+      background: rgba(195,17,12,0.18);
+      color: rgba(255,140,110,0.9);
+      border: 1px solid rgba(195,17,12,0.3);
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+    }
+
+    /* Submit button */
+    .scan-inner #dashBtn {
+      width: 100%;
+      padding: 16px;
+      font-size: 14px;
+      font-family: 'DM Mono', monospace;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, #c3110c 0%, #e6501b 100%);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(195,17,12,0.4), inset 0 1px 0 rgba(255,255,255,0.15);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.25s;
+    }
+    .scan-inner #dashBtn::after {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%; width: 60%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
+      transform: skewX(-20deg);
+      transition: left 0.6s ease;
+    }
+    .scan-inner #dashBtn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(195,17,12,0.5), inset 0 1px 0 rgba(255,255,255,0.18);
+    }
+    .scan-inner #dashBtn:hover::after { left: 140%; }
+    .scan-inner #dashBtn:active { transform: translateY(0); }
+
+    /* ── Loading state ── */
+    .scan-inner #analyzerLoading { padding: 4px 0 8px; }
+
+    .scan-loading-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+    .scan-loading-dots {
+      display: flex;
+      gap: 4px;
+    }
+    .scan-loading-dots span {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: #c3110c;
+      animation: dotBounce 1.2s ease-in-out infinite;
+    }
+    .scan-loading-dots span:nth-child(2) { animation-delay: 0.2s; background: #d42010; }
+    .scan-loading-dots span:nth-child(3) { animation-delay: 0.4s; background: #e6501b; }
+    @keyframes dotBounce {
+      0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+      40%           { transform: scale(1); opacity: 1; }
+    }
+    .scan-loading-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* Stepper redesign */
+    .scan-inner .stepper {
+      position: relative;
+      gap: 0;
+    }
+    .scan-inner .stepper::before {
+      content: '';
+      position: absolute;
+      left: 15px; top: 16px; bottom: 16px;
+      width: 1px;
+      background: rgba(255,255,255,0.06);
+    }
+    .scan-inner .step-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 10px 0;
+      opacity: 0.3;
+      transition: opacity 0.4s ease;
+    }
+    .scan-inner .step-item.active { opacity: 1; }
+    .scan-inner .step-item.done  { opacity: 0.55; }
+    .scan-inner .step-dot {
+      width: 30px; height: 30px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.04);
+      color: rgba(255,255,255,0.3);
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+      transition: all 0.3s;
+    }
+    .scan-inner .step-item.active .step-dot {
+      border-color: #c3110c;
+      background: rgba(195,17,12,0.2);
+      color: #ff7a76;
+      box-shadow: 0 0 12px rgba(195,17,12,0.5);
+      animation: stepPulse 1.2s ease-in-out infinite;
+    }
+    .scan-inner .step-item.done .step-dot {
+      border-color: #e6501b;
+      background: rgba(230,80,27,0.15);
+      color: #ff9a7a;
+    }
+    .scan-inner .step-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      color: rgba(255,255,255,0.72);
+      letter-spacing: 0.02em;
+    }
+    .scan-inner .step-item.active .step-label { color: rgba(255,255,255,0.97); }
+
+    /* ── Results state ── */
+    .scan-inner #dashResults { color: rgba(255,255,255,0.93); }
+
+    /* Classification row */
+    .scan-inner .result-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .scan-inner .case-badge {
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      background: rgba(195,17,12,0.22);
+      color: #ff9a88;
+      border: 1px solid rgba(195,17,12,0.45);
+      border-radius: 6px;
+      padding: 6px 14px;
+    }
+    .scan-inner .complexity-badge {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-weight: 500;
+    }
+    .scan-inner .complexity-Simple  { background: rgba(230,80,27,0.2);  color: #ffb088; }
+    .scan-inner .complexity-Medium  { background: rgba(180,60,20,0.2);  color: #ff9a70; }
+    .scan-inner .complexity-Complex { background: rgba(195,17,12,0.22); color: #ff7a68; }
+
+    /* Synthesis */
+    .scan-inner .synthesis-block {
+      border-left: 3px solid rgba(195,17,12,0.85);
+      background: rgba(195,17,12,0.09);
+      border-radius: 0 10px 10px 0;
+      padding: 14px 16px;
+      margin-bottom: 14px;
+      font-size: 14px;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.95);
+    }
+    .scan-inner .synthesis-block p { margin: 0; }
+
+    /* Key insight */
+    .scan-inner .insight-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-bottom: 14px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .scan-inner .insight-icon { font-size: 18px; flex-shrink: 0; margin-top: 2px; }
+    .scan-inner .insight-card strong {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #ff9a78;
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+    .scan-inner .insight-card p { font-size: 14px; color: rgba(255,255,255,0.9); line-height: 1.6; margin: 0; }
+
+    /* Win rate — compact rings */
+    .scan-inner .win-rate-section {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 14px;
+    }
+    .scan-inner .win-rate-title {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 16px;
+    }
+    .scan-inner .win-rate-rings { gap: 16px; }
+    .scan-inner .ring-svg { width: 80px; height: 80px; }
+    .scan-inner .ring-label-wrap { margin-top: -54px; margin-bottom: 28px; }
+    .scan-inner .ring-number {
+      font-family: 'DM Mono', monospace;
+      font-size: 21px;
+      font-weight: 500;
+      color: #ffffff;
+      line-height: 1;
+    }
+    .scan-inner .ring-pct { font-size: 12px; color: rgba(255,255,255,0.45); }
+    .scan-inner .ring-title {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.04em;
+      color: rgba(255,255,255,0.55);
+      margin-top: 4px;
+    }
+    .scan-inner .ring-track { stroke: rgba(255,255,255,0.1); stroke-width: 7; }
+    .scan-inner .ring-fill { stroke-width: 7; }
+    .scan-inner .ring-fill.industry    { stroke: #c3110c; }
+    .scan-inner .ring-fill.appeal-edge { stroke: #e6501b; }
+
+    /* Evidence */
+    .scan-inner .evidence-section {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 14px;
+    }
+    .scan-inner .evidence-title {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 14px;
+    }
+    .scan-inner .evidence-list { gap: 10px; }
+    .scan-inner .evidence-list li { font-size: 14px; color: rgba(255,255,255,0.9); gap: 12px; }
+    .scan-inner .evidence-check {
+      width: 20px; height: 20px;
+      border-radius: 50%;
+      background: rgba(230,80,27,0.2);
+      color: #ff9a68;
+      font-size: 10px;
+      font-weight: 700;
+      flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    /* Why section */
+    .scan-inner .why-section {
+      background: rgba(195,17,12,0.09);
+      border: 1px solid rgba(195,17,12,0.28);
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 14px;
+    }
+    .scan-inner .why-title {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #ff9a78;
+      margin-bottom: 10px;
+    }
+    .scan-inner .why-text { font-size: 14px; color: rgba(255,255,255,0.88); line-height: 1.65; margin: 0; }
+
+    /* CTA block */
+    .scan-inner .cta-block {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    .scan-inner .cta-urgency {
+      font-family: var(--font);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0;
+      background: rgba(230, 80, 27, 0.22);
+      color: #ffffff;
+      border: 1px solid rgba(230, 80, 27, 0.45);
+      border-radius: 8px;
+      padding: 10px 14px;
+      display: block;
+      margin-bottom: 14px;
+      line-height: 1.5;
+      text-align: left;
+    }
+    .scan-inner .cta-block h3 {
+      color: #ffffff;
+      font-size: 1.25rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+    .scan-inner .cta-block p {
+      color: rgba(255,255,255,0.62);
+      font-size: 14px;
+      margin-bottom: 16px;
+      line-height: 1.55;
+    }
+    .scan-inner .cta-btns { gap: 10px; justify-content: center; }
+    .scan-inner .cta-btns .btn-orange {
+      font-family: 'DM Mono', monospace;
+      font-size: 14px;
+      letter-spacing: 0.04em;
+      padding: 15px 24px;
+    }
+    .scan-inner .cta-btns .btn-ghost {
+      font-size: 13px;
+      padding: 15px 20px;
+    }
+
+    /* Error state */
+    .scan-inner #analyzerError {
+      padding: 24px 16px;
+      text-align: center;
+    }
+    .scan-inner .error-icon { font-size: 32px; margin-bottom: 12px; }
+    .scan-inner #analyzerError h3 {
+      color: rgba(255,255,255,0.88);
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+    .scan-inner #analyzerError p {
+      color: rgba(255,255,255,0.45);
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
+    /* Analyze another */
+    /* Analyze Another — inside dark widget, override light secondary */
+    .scan-inner .btn-secondary {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: rgba(255,255,255,0.06);
+      color: rgba(255,255,255,0.6);
+      border: 1.5px solid rgba(255,255,255,0.12);
+      border-radius: 100px;
+      padding: 11px 22px;
+      box-shadow: none;
+    }
+    .scan-inner .btn-secondary:hover {
+      background: rgba(255,255,255,0.11);
+      color: rgba(255,255,255,0.9);
+      border-color: rgba(255,255,255,0.22);
+      transform: translateY(-1px);
+      box-shadow: none;
+    }
+
+    @media (max-width: 1024px) {
+      .hero-scan-widget { width: 100%; margin: 48px auto 0; }
+      .scan-inner { max-height: none; }
+      #hero { min-height: auto; padding-bottom: 80px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Blobs -->
+  <div class="bg-blob blob-1"></div>
+
+  <!-- Navigation -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 32" fill="none">
+          <text x="0" y="24" font-family="Inter, -apple-system, sans-serif" font-size="22" font-weight="800" fill="#280905" letter-spacing="-0.5">Appeal Edge</text>
+          <circle cx="155" cy="21" r="5" fill="#c3110c"/>
+        </svg>
+      </a>
+      <div class="nav-links">
+        <a href="#how">How it works</a>
+        <a href="#testimonials">Why us?</a>
+        <a href="#pricing">Pricing</a>
+      </div>
+      <div class="nav-cta">
+        <a href="#scan-widget" class="btn btn-outline">Free Scan</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero" class="section">
+    <div class="container hero-grid">
+      <div class="hero-text reveal">
+        <div class="hero-badge">
+          <span></span> Expert-Led Reinstatement Specialists
+        </div>
+        <h1>
+          Your Amazon account is suspended. <br>
+          <span class="highlight-wrap">
+            We get you back.
+            <!-- Humanist underline SVG -->
+            <svg class="svg-underline" viewBox="0 0 300 20" fill="none" stroke="var(--blue-electric)" stroke-width="6" stroke-linecap="round">
+              <path d="M5 15 Q 150 -5 295 15" />
+            </svg>
+          </span>
+        </h1>
+        <p class="hero-sub delay-1">
+          Stop guessing what Amazon wants. Our former Amazon Seller Performance experts analyze your suspension against thousands of successful cases and craft a Plan of Action engineered for reinstatement.
+        </p>
+        <div class="hero-ctas delay-2">
+          <a href="#scan-widget" class="btn btn-primary">Analyze my case <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          <div class="trust-logos">
+            <span>$50M+ Protected</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hero-scan-widget reveal delay-3" id="scan-widget">
+        <div class="scan-orb"></div>
+        <div class="scan-inner">
+          <div class="scan-top-line"></div>
+          <div class="scan-body">
+          <div class="scan-header">
+            <div class="scan-header-left">
+              <div class="scan-live-dot"></div>
+              <span class="scan-label">Free Case Scan</span>
+            </div>
+            <span class="scan-meta">Instant · Free</span>
+          </div>
+          <div class="scan-divider"></div>
+
+          <!-- Input Form -->
+          <div id="analyzerForm">
+            <form class="dash-form" id="dashForm">
+              <textarea id="noticeText" placeholder="Paste your Amazon suspension notice here..."></textarea>
+
+              <div class="upload-zone" id="uploadZone">
+                <div class="upload-zone-icon">📎</div>
+                <div class="upload-zone-text">
+                  <p><strong>Attach files</strong> or drag &amp; drop</p>
+                  <p style="margin-top:2px; font-size:11px;">PDF · PNG · JPG · TXT · EML &nbsp;·&nbsp; Max 10MB · 5 files</p>
+                </div>
+                <input type="file" id="fileInput" accept=".pdf,.png,.jpg,.jpeg,.txt,.eml" multiple />
+              </div>
+
+              <div class="file-pills" id="filePills"></div>
+
+              <button type="submit" class="btn" id="dashBtn">
+                Analyze My Suspension
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </form>
+          </div>
+
+          <!-- Loading Stepper -->
+          <div id="analyzerLoading">
+            <div class="scan-loading-header">
+              <div class="scan-loading-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <span class="scan-loading-label">Analyzing your case</span>
+            </div>
+            <div class="stepper" id="stepperList">
+              <div class="step-item" data-step="0">
+                <div class="step-dot">1</div>
+                <span class="step-label">Reading your suspension notice...</span>
+              </div>
+              <div class="step-item" data-step="1">
+                <div class="step-dot">2</div>
+                <span class="step-label">Classifying violation type...</span>
+              </div>
+              <div class="step-item" data-step="2">
+                <div class="step-dot">3</div>
+                <span class="step-label">Analyzing case specifics...</span>
+              </div>
+              <div class="step-item" data-step="3">
+                <div class="step-dot">4</div>
+                <span class="step-label">Calculating reinstatement probability...</span>
+              </div>
+              <div class="step-item" data-step="4">
+                <div class="step-dot">5</div>
+                <span class="step-label">Generating personalized analysis...</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Results -->
+          <div id="dashResults">
+
+            <!-- Classification Header -->
+            <div class="result-header">
+              <div class="case-badge" id="resCaseBadge">—</div>
+              <div class="complexity-badge" id="resComplexityBadge">—</div>
+            </div>
+
+            <!-- Synthesis -->
+            <div class="synthesis-block">
+              <p id="resSynthesis">—</p>
+            </div>
+
+            <!-- Win Rate Rings -->
+            <div class="win-rate-section">
+              <div class="win-rate-title">Reinstatement Probability</div>
+              <div class="win-rate-rings">
+                <div class="ring-wrap">
+                  <svg class="ring-svg" viewBox="0 0 120 120">
+                    <circle class="ring-track" cx="60" cy="60" r="52"/>
+                    <circle class="ring-fill industry" id="ringIndustry" cx="60" cy="60" r="52"/>
+                  </svg>
+                  <div class="ring-label-wrap">
+                    <div class="ring-number" id="ringIndustryNum">0%</div>
+                  </div>
+                  <div class="ring-title" style="color: var(--amber);">Industry Average</div>
+                </div>
+                <div class="ring-wrap">
+                  <svg class="ring-svg" viewBox="0 0 120 120">
+                    <circle class="ring-track" cx="60" cy="60" r="52"/>
+                    <circle class="ring-fill appeal-edge" id="ringAppeal" cx="60" cy="60" r="52"/>
+                  </svg>
+                  <div class="ring-label-wrap">
+                    <div class="ring-number" id="ringAppealNum">0%</div>
+                  </div>
+                  <div class="ring-title" style="color: var(--blue);">With Appeal Edge</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Why Appeal Edge -->
+            <div class="why-section">
+              <div class="why-title">Why Appeal Edge for this case</div>
+              <p class="why-text" id="resWhyAppealEdge">—</p>
+            </div>
+
+            <!-- CTA Block -->
+            <div class="cta-block">
+              <div class="cta-urgency" id="resUrgency">⏰ Act fast — reinstatement windows close</div>
+              <h3 id="resCtaTitle">Ready to Get Reinstated?</h3>
+              <p id="resCtaDesc">Our team is standing by. Flat-fee, no surprises.</p>
+              <div class="cta-btns">
+                <a href="mailto:hello@appealedge.com?subject=Appeal%20Request" class="btn btn-orange" id="resCtaBtn">Get Started — <span id="resCtaPrice">$497</span></a>
+              </div>
+            </div>
+
+            <!-- Analyze Another -->
+            <div style="text-align:center; margin-top: 16px;">
+              <button id="analyzeAnotherBtn" style="background:none;border:none;cursor:pointer;font-size:12px;color:rgba(255,255,255,0.35);font-family:'DM Mono',monospace;letter-spacing:0.04em;text-decoration:underline;padding:8px;">analyze another case</button>
+            </div>
+
+          </div>
+
+          <!-- Error State -->
+          <div id="analyzerError">
+            <div class="error-icon">⚠️</div>
+            <h3>Analysis Failed</h3>
+            <p id="errorMessage">Something went wrong. Please try again.</p>
+            <button class="btn btn-primary" id="retryBtn">Try Again</button>
+          </div>
+
+          </div><!-- /scan-body -->
+        </div><!-- /scan-inner -->
+      </div><!-- /hero-scan-widget -->
+      
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section id="how" class="section bg-light">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 80px;" class="reveal">
+        <h2>Three steps to <span class="highlight-wrap">freedom.
+          <svg class="svg-circle" viewBox="0 0 200 100" fill="none" stroke="var(--orange)" stroke-width="4" stroke-linecap="round">
+            <path d="M100 10 C 180 10, 190 50, 100 90 C 10 90, 20 10, 100 10" />
+          </svg>
+        </span></h2>
+        <p style="font-size: var(--body-lg); max-width: 600px; margin: 24px auto 0;">We engineered the complexity out of the appeal process.</p>
+      </div>
+      
+      <div class="grid-3">
+        <div class="feature-card reveal delay-1">
+          <div class="f-icon blue">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          </div>
+          <h3>Expert Analysis</h3>
+          <p>Paste your suspension notice. Our specialists identify the root cause and map the exact policy requirements needed for reinstatement.</p>
+        </div>
+        
+        <div class="feature-card reveal delay-2">
+          <div class="f-icon orange">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          </div>
+          <h3>Verified by Humans</h3>
+          <p>A senior appeal specialist (former Amazon Seller Performance team members) reviews and polishes the PoA to ensure the tone and nuance are flawless.</p>
+        </div>
+        
+        <div class="feature-card reveal delay-3">
+          <div class="f-icon green">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          </div>
+          <h3>Reinstatement</h3>
+          <p>Submit your custom-tailored Plan of Action. Watch as your Selling Privileges are restored and funds are unfrozen, usually within 48 hours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Testimonials SAAS style -->
+  <section id="testimonials" class="section">
+    <div class="container">
+      <div class="testimonial-row">
+        
+        <div class="reveal">
+          <div class="testi-card featured">
+            <div class="testi-quote">"Appeal Edge's team caught a detail in my suspension that two other 'experts' completely missed. We submitted their drafted PoA and were back selling a 6-figure run rate in 24 hours. Incredible team."</div>
+          </div>
+          <div class="testi-author">
+            <div class="t-avatar"></div>
+            <div>
+              <div class="t-name">James T.</div>
+              <div class="t-role">7-Figure FBA Seller</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="reveal delay-2">
+          <div style="max-width: 400px; padding-left: 40px;">
+            <h2 style="margin-bottom: 24px;">Don't just take our word for it.</h2>
+            <p style="font-size: var(--body-lg);">We've helped over 2,400 sellers get their businesses back online. Our expert-led approach boasts a 94% success rate.</p>
+            <div style="margin-top: 40px; display: flex; gap: 8px;">
+              <!-- Stars -->
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--orange)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--orange)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--orange)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--orange)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--orange)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <p style="margin-top: 8px; font-weight: 600;">Trustpilot Verified</p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="section bg-light">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 80px;" class="reveal">
+        <h2>Simple, transparent pricing.</h2>
+        <p style="font-size: var(--body-lg); margin-top: 16px;">No retainers. No hourly lawyers. Just flat-fee results.</p>
+      </div>
+      
+      <div class="pricing-grid">
+        
+        <!-- Standard -->
+        <div class="p-card reveal">
+          <h3 style="margin-bottom: 8px;">Standard Action</h3>
+          <p>For common policy violations.</p>
+          <div class="p-price">$497</div>
+          <ul class="p-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Expert-Drafted PoA</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Human Expert Review</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> 4-Day Turnaround</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> 3 Free Revisions</li>
+          </ul>
+          <button class="btn btn-pricing">Get Started</button>
+        </div>
+
+        <!-- Rush -->
+        <div class="p-card featured reveal delay-1">
+          <div class="p-badge">Most Popular</div>
+          <h3 style="margin-bottom: 8px;">Rush Appeal</h3>
+          <p>For high-volume sellers needing speed.</p>
+          <div class="p-price">$797</div>
+          <ul class="p-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Standard features included</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Priority Queue Jumping</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> 24-Hour Delivery Guaranteed</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Unlimited Revisions</li>
+          </ul>
+          <button class="btn btn-pricing-primary">Initiate Rush →</button>
+        </div>
+
+        <!-- Monitoring -->
+        <div class="p-card reveal delay-2">
+          <h3 style="margin-bottom: 8px;">Monitoring</h3>
+          <p>Ongoing protection for large brands.</p>
+          <div class="p-price">$199<span>/mo</span></div>
+          <ul class="p-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Daily Account Health Scans</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Pre-emptive IP Defense</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Dedicated Account Manager</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> 1 Free Appeal per year</li>
+          </ul>
+          <button class="btn btn-pricing">Subscribe</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee Tickers -->
+  <div class="ticker-wrap orange-bg">
+    <div class="ticker">
+      <!-- Repeated twice for seamless loop -->
+      <span>Protect Your Business</span><span>Recover Lost Revenue</span><span>Sell With Confidence</span><span>Beat Auto-Bots</span>
+      <span>Protect Your Business</span><span>Recover Lost Revenue</span><span>Sell With Confidence</span><span>Beat Auto-Bots</span>
+    </div>
+  </div>
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <!-- Repeated twice for seamless loop -->
+      <span>Appeal Edge</span><span>Account Reinstatement</span><span>Appeal Edge</span><span>100% Guaranteed</span>
+      <span>Appeal Edge</span><span>Account Reinstatement</span><span>Appeal Edge</span><span>100% Guaranteed</span>
+    </div>
+  </div>
+
+  <!-- Premium Dark Footer & CTA -->
+  <footer class="footer-wrapper">
+    <div class="prefooter-grid">
+      <div class="prefooter-left">
+        <h2>Your account is waiting.<br> Let's get it back.</h2>
+        <a href="#scan-widget" class="btn btn-footer">
+          Start your free analysis
+        </a>
+      </div>
+      <div class="prefooter-right">
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="#how">How it Works</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li style="font-size: 20px; font-weight: 500;">+1 (800) 555-0199</li>
+            <li><a href="mailto:hello@appealedge.com">hello@appealedge.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <a href="#" class="footer-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 32" fill="none">
+          <text x="0" y="24" font-family="Inter, -apple-system, sans-serif" font-size="22" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5">Appeal Edge</text>
+          <circle cx="145" cy="21" r="5" fill="#c3110c"/>
+        </svg>
+      </a>
+      <div>&copy; 2026 Appeal Edge. Not affiliated with Amazon.</div>
+    </div>
+  </footer>
+
+  <script>
+    // ── Reveal Animations ──────────────────────────────────────
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // ── Sticky Nav ─────────────────────────────────────────────
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    // ── File Upload ────────────────────────────────────────────
+    const uploadZone = document.getElementById('uploadZone');
+    const fileInput  = document.getElementById('fileInput');
+    const filePills  = document.getElementById('filePills');
+    let uploadedFiles = [];
+
+    uploadZone.addEventListener('click', () => fileInput.click());
+    uploadZone.addEventListener('dragover', e => { e.preventDefault(); uploadZone.classList.add('drag-over'); });
+    uploadZone.addEventListener('dragleave', () => uploadZone.classList.remove('drag-over'));
+    uploadZone.addEventListener('drop', e => {
+      e.preventDefault();
+      uploadZone.classList.remove('drag-over');
+      addFiles(Array.from(e.dataTransfer.files));
+    });
+    fileInput.addEventListener('change', () => {
+      addFiles(Array.from(fileInput.files));
+      fileInput.value = '';
+    });
+
+    function addFiles(newFiles) {
+      const allowed = ['.pdf','.png','.jpg','.jpeg','.txt','.eml'];
+      newFiles.forEach(f => {
+        const ext = f.name.slice(f.name.lastIndexOf('.')).toLowerCase();
+        if (!allowed.includes(ext)) return;
+        if (uploadedFiles.length >= 5) return;
+        if (f.size > 10 * 1024 * 1024) return;
+        if (uploadedFiles.find(x => x.name === f.name && x.size === f.size)) return;
+        uploadedFiles.push(f);
+      });
+      renderPills();
+    }
+
+    function renderPills() {
+      filePills.innerHTML = '';
+      uploadedFiles.forEach((f, i) => {
+        const pill = document.createElement('div');
+        pill.className = 'file-pill';
+        pill.innerHTML = `📄 ${f.name} <button class="file-pill-remove" data-i="${i}" title="Remove">×</button>`;
+        filePills.appendChild(pill);
+      });
+      filePills.querySelectorAll('.file-pill-remove').forEach(btn => {
+        btn.addEventListener('click', () => {
+          uploadedFiles.splice(parseInt(btn.dataset.i), 1);
+          renderPills();
+        });
+      });
+    }
+
+    // ── Loading Stepper ────────────────────────────────────────
+    let stepperInterval = null;
+
+    function startStepper() {
+      const steps = document.querySelectorAll('.step-item');
+      let current = 0;
+      steps[0].classList.add('active');
+
+      stepperInterval = setInterval(() => {
+        if (current < steps.length - 1) {
+          steps[current].classList.remove('active');
+          steps[current].classList.add('done');
+          steps[current].querySelector('.step-dot').innerHTML =
+            '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+          current++;
+          steps[current].classList.add('active');
+        }
+      }, 1200);
+    }
+
+    function stopStepper() {
+      if (stepperInterval) { clearInterval(stepperInterval); stepperInterval = null; }
+      document.querySelectorAll('.step-item').forEach(s => {
+        s.classList.remove('active', 'done');
+        const dot = s.querySelector('.step-dot');
+        dot.innerHTML = dot.textContent || (parseInt(s.dataset.step) + 1);
+      });
+      // Re-number dots
+      document.querySelectorAll('.step-dot').forEach((d, i) => { d.textContent = i + 1; });
+    }
+
+    // ── Section Visibility Helper ──────────────────────────────
+    function showSection(id) {
+      ['analyzerForm','analyzerLoading','dashResults','analyzerError'].forEach(s => {
+        const el = document.getElementById(s);
+        if (el) el.style.display = s === id ? 'block' : 'none';
+      });
+    }
+
+    // ── Animate Number Counter ─────────────────────────────────
+    function animateCounter(el, target, suffix) {
+      let start = 0;
+      const duration = 1200;
+      const step = 16;
+      const increment = target / (duration / step);
+      const timer = setInterval(() => {
+        start = Math.min(start + increment, target);
+        el.textContent = Math.round(start) + suffix;
+        if (start >= target) clearInterval(timer);
+      }, step);
+    }
+
+    // ── Render Win Rate Rings ──────────────────────────────────
+    function renderRings(industryRate, appealRate) {
+      const circumference = 2 * Math.PI * 52; // ~327
+
+      function setRing(ringId, numId, rate, color) {
+        const ring = document.getElementById(ringId);
+        const num  = document.getElementById(numId);
+        const offset = circumference * (1 - rate / 100);
+        setTimeout(() => {
+          ring.style.strokeDashoffset = offset;
+          animateCounter(num, rate, '%');
+        }, 300);
+      }
+
+      setRing('ringIndustry', 'ringIndustryNum', industryRate);
+      setRing('ringAppeal',   'ringAppealNum',   appealRate);
+    }
+
+    // ── Render Competitor Price Bars ───────────────────────────
+    function renderPriceBars(appealEdgePrice) {
+      const competitors = [
+        { name: 'CJ Rosenbaum',        val: 3000, label: '~$3,000' },
+        { name: 'eGrowth Partners',     val: 2500, label: '~$2,500' },
+        { name: 'Riverbend Consulting', val: 2000, label: '$1,500–$2,500' },
+        { name: 'Appeal Guru',          val: 1495, label: '$1,495' },
+        { name: 'Thompson & Holt',      val: 800,  label: '$600–$1,000' },
+        { name: 'Appeal Edge',          val: appealEdgePrice, label: `$${appealEdgePrice}`, isUs: true },
+      ];
+
+      const maxVal = Math.max(...competitors.map(c => c.val));
+      const list = document.getElementById('resPriceList');
+      if (!list) return;
+      list.innerHTML = '';
+
+      competitors.forEach(c => {
+        const pct = Math.round((c.val / maxVal) * 100);
+        const item = document.createElement('div');
+        item.className = 'price-bar-item';
+        item.innerHTML = `
+          <div class="price-bar-top">
+            <span class="price-bar-name">${c.name}${c.isUs ? ' ✦' : ''}</span>
+            <span class="price-bar-val">${c.label}</span>
+          </div>
+          <div class="price-bar-track">
+            <div class="price-bar-fill ${c.isUs ? 'appeal-edge-bar' : 'competitor-bar'}" data-pct="${pct}"></div>
+          </div>`;
+        list.appendChild(item);
+      });
+
+      // Animate bars after paint
+      setTimeout(() => {
+        list.querySelectorAll('.price-bar-fill').forEach(bar => {
+          bar.style.width = bar.dataset.pct + '%';
+        });
+      }, 100);
+    }
+
+    // ── Render Full Results ────────────────────────────────────
+    function renderResults(data) {
+      // Classification header
+      document.getElementById('resCaseBadge').textContent = data.caseType || 'Unknown';
+      const compBadge = document.getElementById('resComplexityBadge');
+      compBadge.textContent = (data.complexityTier || 'Medium') + ' Complexity';
+      compBadge.className = 'complexity-badge complexity-' + (data.complexityTier || 'Medium');
+
+      // Synthesis
+      document.getElementById('resSynthesis').textContent = data.synthesis || '';
+
+      // Win Rate Rings
+      renderRings(data.industryWinRate || 55, data.appealEdgeWinRate || 85);
+
+      // Why Appeal Edge
+      document.getElementById('resWhyAppealEdge').textContent = data.whyAppealEdge || '';
+
+      // CTA
+      document.getElementById('resUrgency').textContent = '⏰ ' + (data.urgencyNote || 'Act fast — reinstatement windows close.');
+      document.getElementById('resCtaPrice').textContent = '$' + (data.appealEdgePrice || 497);
+      document.getElementById('resCtaTitle').textContent = `Let's get your account back.`;
+      document.getElementById('resCtaDesc').textContent = `Flat fee. No surprises. Our team is ready.`;
+
+      showSection('dashResults');
+
+      // Scroll widget into view and reset scroll position to top
+      const scanInner = document.querySelector('.scan-inner');
+      if (scanInner) scanInner.scrollTop = 0;
+      document.getElementById('scan-widget').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      // Trigger ring animations after DOM update
+      setTimeout(() => renderRings(data.industryWinRate || 55, data.appealEdgeWinRate || 85), 100);
+    }
+
+    // ── Form Submit ────────────────────────────────────────────
+    document.getElementById('dashForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const noticeText = document.getElementById('noticeText').value.trim();
+      if (!noticeText && uploadedFiles.length === 0) {
+        document.getElementById('noticeText').focus();
+        document.getElementById('noticeText').style.borderColor = 'var(--orange)';
+        setTimeout(() => document.getElementById('noticeText').style.borderColor = '', 2000);
+        return;
+      }
+
+      showSection('analyzerLoading');
+      stopStepper();
+      startStepper();
+
+      const formData = new FormData();
+      formData.append('noticeText', noticeText);
+      uploadedFiles.forEach(f => formData.append('files', f));
+
+      const minDisplayTime = new Promise(r => setTimeout(r, 6000));
+
+      try {
+        const [response] = await Promise.all([
+          fetch('/api/analyze', { method: 'POST', body: formData }),
+          minDisplayTime,
+        ]);
+
+        stopStepper();
+
+        if (!response.ok) {
+          const err = await response.json().catch(() => ({}));
+          throw new Error(err.error || `Server error ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        if (data.caseTypeId === 'unrecognized') {
+          document.getElementById('errorMessage').textContent =
+            'This doesn\'t appear to be an Amazon suspension notice. Please paste the exact email you received from Amazon Seller Performance.';
+          showSection('analyzerError');
+          return;
+        }
+
+        renderResults(data);
+
+      } catch (err) {
+        stopStepper();
+        document.getElementById('errorMessage').textContent = err.message || 'Analysis failed. Please try again.';
+        showSection('analyzerError');
+      }
+    });
+
+    // ── Retry & Analyze Another ────────────────────────────────
+    document.getElementById('retryBtn').addEventListener('click', () => showSection('analyzerForm'));
+    document.getElementById('analyzeAnotherBtn').addEventListener('click', () => {
+      document.getElementById('noticeText').value = '';
+      uploadedFiles = [];
+      renderPills();
+      showSection('analyzerForm');
+      document.getElementById('scan-widget').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  </script>
+</body>
+</html>
