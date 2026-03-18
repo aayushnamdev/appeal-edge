@@ -501,9 +501,24 @@
       background: var(--blue);
       border-radius: 50%;
     }
+    .hero-text {
+      min-width: 0;
+      max-width: 580px;
+    }
+    .hero-title {
+      font-size: clamp(2.8rem, 6.6vw, 5.4rem);
+      line-height: 0.96;
+      letter-spacing: -0.055em;
+      max-width: 8.8ch;
+    }
+    .hero-title .highlight-wrap {
+      display: inline-block;
+      max-width: 7.2ch;
+      white-space: normal;
+    }
     .hero-sub {
       font-size: var(--body-lg);
-      margin: 32px 0 48px;
+      margin: 28px 0 40px;
       max-width: min(480px, 100%);
       color: var(--gray-600);
       line-height: 1.6;
@@ -1191,6 +1206,12 @@
 
       /* Hero */
       #hero { padding-top: 120px; min-height: auto; padding-bottom: 64px; }
+      .hero-title,
+      .hero-title .highlight-wrap { max-width: none; }
+      .hero-title {
+        font-size: clamp(2.4rem, 10vw, 4.2rem);
+        line-height: 0.98;
+      }
       .hero-ctas { flex-direction: column; align-items: stretch; gap: 14px; width: 100%; }
       .hero-ctas .btn-primary,
       .hero-ctas .btn-secondary { width: 100%; justify-content: center; text-align: center; }
@@ -1252,6 +1273,351 @@
       max-width: 530px;
       margin-left: auto;
       z-index: 2;
+    }
+
+    .case-library-section {
+      padding: 18px var(--padding-x) calc(var(--section-gap) * 0.85);
+      position: relative;
+      margin-top: -28px;
+    }
+    .case-library-frame {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+    .case-library {
+      position: relative;
+      z-index: 2;
+    }
+    .case-library-shell {
+      background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(252,245,244,0.98) 100%);
+      border: 1px solid rgba(195,17,12,0.12);
+      border-radius: 30px;
+      box-shadow: 0 28px 60px -36px rgba(40,9,5,0.35);
+      overflow: hidden;
+    }
+    .case-library-shell::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at top right, rgba(195,17,12,0.08), transparent 30%),
+        linear-gradient(180deg, rgba(255,255,255,0.35), transparent 22%);
+      pointer-events: none;
+    }
+    .case-library-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 32px 32px 22px;
+      position: relative;
+      z-index: 1;
+    }
+    .case-library-head-left {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      min-width: 0;
+      max-width: 760px;
+    }
+    .case-library-kicker {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(195,17,12,0.12), rgba(230,80,27,0.18));
+      color: var(--blue);
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+    .case-library-head h3 {
+      font-size: clamp(1.7rem, 3.2vw, 2.5rem);
+      letter-spacing: -0.04em;
+      line-height: 1.02;
+      margin-bottom: 10px;
+    }
+    .case-library-head p {
+      margin: 0;
+      font-size: 16px;
+      color: var(--gray-600);
+      line-height: 1.65;
+    }
+    .case-library-head-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    .case-library-count {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: var(--gray-400);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .case-library-note {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gray-400);
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(195,17,12,0.1);
+      background: rgba(255,255,255,0.7);
+    }
+    .case-library-panel {
+      border-top: 1px solid rgba(195,17,12,0.08);
+      padding: 0 32px 32px;
+      position: relative;
+      z-index: 1;
+    }
+    .case-library-intro {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 0 0 16px;
+    }
+    .case-library-intro p {
+      margin: 6px 0 0;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    .case-library-intro-meta {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gray-400);
+      white-space: nowrap;
+    }
+    .case-tabs {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding-bottom: 8px;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    .case-tabs::-webkit-scrollbar { display: none; }
+    .case-tab {
+      border: 1px solid rgba(195,17,12,0.12);
+      background: rgba(255,255,255,0.9);
+      color: var(--gray-600);
+      padding: 13px 18px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: all 0.2s var(--ease);
+      -webkit-tap-highlight-color: transparent;
+    }
+    .case-tab:hover,
+    .case-tab.active {
+      background: linear-gradient(135deg, rgba(195,17,12,0.12), rgba(230,80,27,0.14));
+      border-color: rgba(195,17,12,0.24);
+      color: var(--black);
+    }
+    .case-tab:focus-visible {
+      outline: 2px solid rgba(195,17,12,0.35);
+      outline-offset: 2px;
+    }
+    .case-carousel-wrap {
+      position: relative;
+      margin-top: 14px;
+    }
+    .case-carousel {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: 100%;
+      gap: 14px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      padding-bottom: 6px;
+      scroll-padding-inline: 0;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    .case-carousel::-webkit-scrollbar { display: none; }
+    .case-slide {
+      scroll-snap-align: start;
+      min-width: 0;
+      background: linear-gradient(180deg, #fff 0%, #fff8f6 100%);
+      border: 1px solid rgba(195,17,12,0.1);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.8);
+      min-height: 560px;
+    }
+    .case-slide-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+    .case-slide-top h4 {
+      font-size: 1.5rem;
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+    }
+    .case-slide-top p {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--gray-600);
+    }
+    .case-step-badge {
+      flex-shrink: 0;
+      border-radius: 999px;
+      padding: 8px 12px;
+      background: rgba(195,17,12,0.08);
+      color: var(--blue);
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .case-brief-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .case-brief-card,
+    .case-list-card,
+    .case-stats-card {
+      border-radius: 14px;
+      background: rgba(255,255,255,0.88);
+      border: 1px solid rgba(195,17,12,0.08);
+      padding: 14px;
+    }
+    .case-card-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gray-400);
+      margin-bottom: 8px;
+      display: block;
+    }
+    .case-brief-card p,
+    .case-list-card p,
+    .case-stats-card p {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--gray-900);
+    }
+    .case-detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .case-list {
+      display: grid;
+      gap: 10px;
+    }
+    .case-list li {
+      position: relative;
+      padding-left: 18px;
+      font-size: 15px;
+      line-height: 1.55;
+      color: var(--gray-900);
+    }
+    .case-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 9px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue), var(--orange));
+    }
+    .case-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .case-stat {
+      border-radius: 14px;
+      padding: 16px 14px;
+      color: var(--white);
+      background: linear-gradient(135deg, #320906 0%, #741109 100%);
+      overflow: hidden;
+      position: relative;
+    }
+    .case-stat.appeal-edge {
+      background: linear-gradient(135deg, #a5100c 0%, #e6501b 100%);
+    }
+    .case-stat-label {
+      display: block;
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0.72;
+      margin-bottom: 10px;
+    }
+    .case-stat-value {
+      display: block;
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .case-stat p {
+      margin: 0;
+      color: rgba(255,255,255,0.8);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .case-library-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: 14px;
+    }
+    .case-library-footer p {
+      margin: 0;
+      font-size: 13px;
+      color: var(--gray-400);
+    }
+    .case-library-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border: none;
+      background: rgba(195,17,12,0.08);
+      color: var(--blue);
+      border-radius: 999px;
+      padding: 14px 20px;
+      font-weight: 700;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.2s var(--ease);
+    }
+    .case-library-action:hover {
+      background: rgba(195,17,12,0.14);
+      transform: translateY(-1px);
     }
 
     /* Ambient ember glow behind card */
@@ -1790,6 +2156,42 @@
       .hero-scan-widget { width: 100%; margin: 48px auto 0; }
       .scan-inner { max-height: none; }
       #hero { min-height: auto; padding-bottom: 80px; }
+      .case-library-section {
+        margin-top: 0;
+        padding-top: 8px;
+      }
+      .case-library-head,
+      .case-library-panel { padding-left: 24px; padding-right: 24px; }
+      .case-library-head { flex-direction: column; }
+      .case-library-head-right { align-items: flex-start; }
+      .case-library-intro { align-items: flex-start; flex-direction: column; }
+    }
+
+    @media (max-width: 640px) {
+      .case-library-section { padding-bottom: 56px; }
+      .case-library-head,
+      .case-library-panel { padding-left: 16px; padding-right: 16px; }
+      .case-library-head-right { gap: 8px; }
+      .case-library-count { display: none; }
+      .case-library-head p,
+      .case-library-intro p,
+      .case-slide-top p,
+      .case-brief-card p,
+      .case-list-card p,
+      .case-stats-card p,
+      .case-list li { font-size: 14px; }
+      .case-tab { font-size: 16px; padding: 12px 16px; }
+      .case-slide,
+      .case-brief-card,
+      .case-list-card,
+      .case-stats-card { border-radius: 18px; }
+      .case-slide { padding: 16px; min-height: auto; }
+      .case-slide-top,
+      .case-library-footer { flex-direction: column; align-items: flex-start; }
+      .case-brief-grid,
+      .case-detail-grid,
+      .case-stats { grid-template-columns: 1fr; }
+      .case-library-action { width: 100%; }
     }
   </style>
 </head>
@@ -1841,15 +2243,9 @@
         <div class="hero-badge">
           <span></span> Amazon Appeal Specialists
         </div>
-        <h1>
-          Your Amazon account is suspended. <br>
-          <span class="highlight-wrap">
-            We get you back.
-            <!-- Humanist underline SVG -->
-            <svg class="svg-underline" viewBox="0 0 300 20" fill="none" stroke="var(--blue-electric)" stroke-width="6" stroke-linecap="round">
-              <path d="M5 15 Q 150 -5 295 15" />
-            </svg>
-          </span>
+        <h1 class="hero-title">
+          Suspended on Amazon?<br>
+          <span class="highlight-wrap">We've seen this case before.</span>
         </h1>
         <p class="hero-sub delay-1">
           Stop guessing what Amazon wants. Our appeal specialists analyze your suspension notice, identify the exact root cause, and craft a case-specific Plan of Action. Not a template.
@@ -2011,8 +2407,53 @@
 
           </div><!-- /scan-body -->
         </div><!-- /scan-inner -->
+
       </div><!-- /hero-scan-widget -->
       
+    </div>
+  </section>
+
+  <section class="case-library-section">
+    <div class="case-library-frame reveal">
+      <div class="case-library case-library-shell" id="caseLibrary">
+        <div class="case-library-head">
+          <div class="case-library-head-left">
+            <div class="case-library-kicker">8X</div>
+            <div>
+              <h3>See how strong Amazon appeals are actually built</h3>
+              <p>Review eight of the most common suspension scenarios, understand what Amazon needs to see, and get clarity before you send the wrong response.</p>
+            </div>
+          </div>
+          <div class="case-library-head-right">
+            <span class="case-library-count" id="caseLibraryCount">01 / 08</span>
+            <div class="case-library-note">Swipe on mobile · compare case paths instantly</div>
+          </div>
+        </div>
+        <div class="case-library-panel">
+          <div class="case-library-intro">
+            <div>
+              <span class="case-card-label">Case Clarity Before You Commit</span>
+              <p>Each card breaks down the real issue behind the suspension, the fixes that actually move the case forward, and why a stronger strategy materially improves your odds.</p>
+            </div>
+            <div class="case-library-intro-meta">Designed to build confidence, then move into the free scan</div>
+          </div>
+
+          <div class="case-tabs" id="caseTabs" aria-label="Common Amazon case types"></div>
+          <div class="case-carousel-wrap">
+            <div class="case-carousel" id="caseCarousel" aria-live="polite"></div>
+          </div>
+
+          <div class="case-library-footer">
+            <p id="caseLibraryHint">01 / 08 · IP infringement</p>
+            <button class="case-library-action" id="caseLibraryScanBtn" type="button">
+              Get your free case scan
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -2238,6 +2679,288 @@
     window.addEventListener('scroll', () => {
       nav.classList.toggle('scrolled', window.scrollY > 20);
     }, { passive: true });
+
+    // ── Swipeable Case Library ────────────────────────────────
+    const caseStudies = [
+      {
+        label: 'IP infringement',
+        hook: 'A single trademark or copyright complaint can freeze a healthy account overnight if Amazon thinks the listing is unsafe to keep live.',
+        concern: 'Amazon needs proof that the exact ASIN, supplier, and content rights are legitimate, and that the complaint will not repeat.',
+        synthesis: 'These cases usually turn on chain-of-custody discipline. If documentation is fragmented, the appeal must rebuild trust with invoices, authorization, and listing cleanup.',
+        causes: [
+          'Supplier invoices do not clearly connect to the accused ASIN or brand.',
+          'Images, packaging, or copy imply brand ownership you cannot prove.',
+          'The seller answered the complaint emotionally instead of documenting controls.'
+        ],
+        solutions: [
+          'Map invoices, authorization letters, and product photos directly to the complaint.',
+          'Remove infringing content and state the exact preventive listing controls now in place.',
+          'Submit a concise Plan of Action built around authenticity, sourcing, and catalog governance.'
+        ],
+        industryChance: 46,
+        ourChance: 83,
+        statNote: 'High upside when the paperwork is organized fast.'
+      },
+      {
+        label: 'Inauthentic claims',
+        hook: 'Amazon treats inauthentic complaints as a trust problem, even when the goods are real, because the documentation often looks weak.',
+        concern: 'They want supplier traceability, invoice sufficiency, and confidence that future inventory can be verified without guesswork.',
+        synthesis: 'Winning here depends less on arguing and more on making the inventory trail obvious. The appeal has to show a reliable sourcing system, not a one-off explanation.',
+        causes: [
+          'Retail receipts or incomplete invoices instead of wholesale sourcing records.',
+          'Mismatch between invoice dates, quantities, and the ASINs under review.',
+          'No procedure for verifying supplier legitimacy before restocking.'
+        ],
+        solutions: [
+          'Provide compliant invoices and supplier contact details Amazon can verify.',
+          'Explain the investigation, stock quarantine, and any SKU-level removals already completed.',
+          'Add ongoing sourcing checks, invoice audits, and restricted restock approvals.'
+        ],
+        industryChance: 41,
+        ourChance: 79,
+        statNote: 'Documentation quality matters more than how strongly you argue.'
+      },
+      {
+        label: 'Used sold as new',
+        hook: 'This violation is rarely about one unit. Amazon reads it as a process failure in prep, inspection, or warehouse handling.',
+        concern: 'They need proof that incoming inventory, prep, labeling, and outbound handling now prevent worn, open-box, or tampered units from shipping.',
+        synthesis: 'The strongest appeals name the exact break in the physical workflow, then show a replacement process with checkpoints, photos, and accountability.',
+        causes: [
+          'Returns or commingled inventory re-entered sellable stock without inspection.',
+          'Packaging damage or sticker residue was missed during prep.',
+          'No final QA check before FBA shipment or merchant-fulfilled dispatch.'
+        ],
+        solutions: [
+          'Isolate affected inventory and remove any questionable units immediately.',
+          'Create a documented inspection checklist for packaging, seals, and condition grading.',
+          'Assign a final quality gate before inventory is relisted or shipped.'
+        ],
+        industryChance: 52,
+        ourChance: 86,
+        statNote: 'Operational fixes are persuasive when they are specific and measurable.'
+      },
+      {
+        label: 'Late shipment rate',
+        hook: 'Delivery performance suspensions usually mean Amazon has lost confidence in the seller’s fulfillment reliability, not just a single slow week.',
+        concern: 'They want to see control over handling time, carrier selection, staffing, and tracking compliance before restoring seller-fulfilled privileges.',
+        synthesis: 'These appeals win when the seller narrows promise windows, simplifies operations, and proves that every order now moves through a predictable shipping playbook.',
+        causes: [
+          'Handling times were too aggressive for actual warehouse capacity.',
+          'Carrier pickups, cutoffs, or tracking uploads were inconsistent.',
+          'Peak order volume outpaced staffing without any throttling plan.'
+        ],
+        solutions: [
+          'Adjust handling times and delivery templates to match real capacity.',
+          'Move to reliable carriers with tracking automation and pickup SLAs.',
+          'Add staffing coverage, order caps, and a daily backlog review.'
+        ],
+        industryChance: 58,
+        ourChance: 88,
+        statNote: 'Performance cases respond well to visible process discipline.'
+      },
+      {
+        label: 'Product condition complaints',
+        hook: 'Condition complaints stack quickly because Amazon assumes the customer experience will keep degrading unless the root issue is fixed.',
+        concern: 'They need evidence that packaging, storage, prep, and listing accuracy all align with the condition promise being made to buyers.',
+        synthesis: 'A useful appeal ties every complaint back to a physical or catalog breakdown, then shows how condition checks, packaging standards, and SKU controls were tightened.',
+        causes: [
+          'Listings overpromised item condition or bundle contents.',
+          'Storage and prep allowed dents, leaks, expiration, or damage.',
+          'Complaint patterns were not reviewed early enough to catch the trend.'
+        ],
+        solutions: [
+          'Audit the affected SKUs and correct listing content where needed.',
+          'Introduce packaging standards and condition inspection photos.',
+          'Track complaint triggers weekly so repeat defects are caught early.'
+        ],
+        industryChance: 49,
+        ourChance: 82,
+        statNote: 'Good evidence converts this from blame to prevention.'
+      },
+      {
+        label: 'Related accounts',
+        hook: 'Related account suspensions feel arbitrary, but Amazon usually wants one thing: a credible explanation of the operational link and why risk will not transfer.',
+        concern: 'They are checking shared ownership, devices, bank details, addresses, or admin access that could connect your account to a restricted seller.',
+        synthesis: 'These cases need precision. The appeal must document the relationship, isolate the overlap, and show the account is independently controlled and policy-safe.',
+        causes: [
+          'Shared devices, IP addresses, users, or service providers created overlap.',
+          'Dormant or old seller accounts were left unresolved.',
+          'Ownership or operational roles were not clearly separated.'
+        ],
+        solutions: [
+          'Disclose the exact connection instead of denying obvious overlap.',
+          'Separate devices, credentials, financial details, and account operators.',
+          'Provide entity, ownership, and control documents that define independence.'
+        ],
+        industryChance: 28,
+        ourChance: 67,
+        statNote: 'Harder case type, but clarity beats defensiveness.'
+      },
+      {
+        label: 'Section 3 / conduct',
+        hook: 'Section 3 suspensions are broad because Amazon believes trust itself was compromised, often through review abuse, manipulative activity, or policy gamesmanship.',
+        concern: 'They want the full root cause, the risky behavior removed, and a control system that prevents any future incentive or manipulation concerns.',
+        synthesis: 'Generic appeals fail here. The response has to show an internal investigation, concrete account clean-up, and a compliance structure with named safeguards.',
+        causes: [
+          'Marketing partners or employees used tactics that violated review or ranking rules.',
+          'Promotional activity blurred into prohibited incentivization.',
+          'The seller lacked oversight on agencies, VA accounts, or off-platform traffic sources.'
+        ],
+        solutions: [
+          'Stop the offending activity and cut access for any risky third parties.',
+          'Document the investigation findings and account remediation steps.',
+          'Install policy approvals, agency monitoring, and tighter role permissions.'
+        ],
+        industryChance: 24,
+        ourChance: 61,
+        statNote: 'These are trust-rebuild cases and need a sharper POA.'
+      },
+      {
+        label: 'Product safety / restricted',
+        hook: 'Safety and restricted product suspensions escalate fast because Amazon is managing buyer harm exposure, not just listing quality.',
+        concern: 'They need certainty around compliance documents, product classification, and whether the item can lawfully and safely remain on the marketplace.',
+        synthesis: 'The appeal has to combine regulatory discipline with marketplace discipline: valid testing, clean documentation, and a clear rule for what will never be listed again.',
+        causes: [
+          'Missing test reports, SDS files, or compliance paperwork for a flagged product.',
+          'The item was listed under the wrong category or product type.',
+          'No pre-listing compliance review existed for new products.'
+        ],
+        solutions: [
+          'Remove non-compliant listings and gather current testing or regulatory documents.',
+          'Clarify product classification and approved sourcing before relisting.',
+          'Create a pre-launch compliance checklist for every new SKU.'
+        ],
+        industryChance: 34,
+        ourChance: 72,
+        statNote: 'Compliance proof moves the needle faster than broad promises.'
+      }
+    ];
+
+    const caseTabs = document.getElementById('caseTabs');
+    const caseCarousel = document.getElementById('caseCarousel');
+    const caseLibraryCount = document.getElementById('caseLibraryCount');
+    const caseLibraryHint = document.getElementById('caseLibraryHint');
+    const caseLibraryScanBtn = document.getElementById('caseLibraryScanBtn');
+
+    function formatCaseCount(index) {
+      return `${String(index + 1).padStart(2, '0')} / ${String(caseStudies.length).padStart(2, '0')}`;
+    }
+
+    function renderCaseLibrary() {
+      caseTabs.innerHTML = '';
+      caseCarousel.innerHTML = '';
+
+      caseStudies.forEach((item, index) => {
+        const tab = document.createElement('button');
+        tab.type = 'button';
+        tab.className = 'case-tab';
+        tab.textContent = item.label;
+        tab.setAttribute('aria-label', `View ${item.label} case details`);
+        tab.addEventListener('click', () => goToCase(index));
+        caseTabs.appendChild(tab);
+
+        const slide = document.createElement('article');
+        slide.className = 'case-slide';
+        slide.dataset.index = index;
+        slide.innerHTML = `
+          <div class="case-slide-top">
+            <div>
+              <span class="case-card-label">Case type ${formatCaseCount(index)}</span>
+              <h4>${item.label}</h4>
+              <p>${item.hook}</p>
+            </div>
+            <div class="case-step-badge">What a winning read looks like</div>
+          </div>
+
+          <div class="case-brief-grid">
+            <div class="case-brief-card">
+              <span class="case-card-label">What Amazon needs to believe</span>
+              <p>${item.concern}</p>
+            </div>
+            <div class="case-brief-card">
+              <span class="case-card-label">Our strategic read</span>
+              <p>${item.synthesis}</p>
+            </div>
+          </div>
+
+          <div class="case-detail-grid">
+            <div class="case-list-card">
+              <span class="case-card-label">Most common breakdowns</span>
+              <ul class="case-list">${item.causes.map(cause => `<li>${cause}</li>`).join('')}</ul>
+            </div>
+            <div class="case-list-card">
+              <span class="case-card-label">Moves that improve reinstatement odds</span>
+              <ul class="case-list">${item.solutions.map(solution => `<li>${solution}</li>`).join('')}</ul>
+            </div>
+          </div>
+
+          <div class="case-stats-card">
+            <span class="case-card-label">Why the right appeal changes the outcome</span>
+            <p>${item.statNote}</p>
+            <div class="case-stats">
+              <div class="case-stat">
+                <span class="case-stat-label">Typical market outcome</span>
+                <span class="case-stat-value">${item.industryChance}%</span>
+                <p>What sellers often face with generic or weak responses.</p>
+              </div>
+              <div class="case-stat appeal-edge">
+                <span class="case-stat-label">With Appeal Edge</span>
+                <span class="case-stat-value">${item.ourChance}%</span>
+                <p>What becomes possible when the case is diagnosed and rebuilt properly.</p>
+              </div>
+            </div>
+          </div>
+        `;
+        caseCarousel.appendChild(slide);
+      });
+
+      updateActiveCase(0);
+    }
+
+    function goToCase(index) {
+      if (!caseCarousel.children[index]) return;
+      const gap = 14;
+      const targetLeft = index * (caseCarousel.clientWidth + gap);
+      caseCarousel.scrollTo({ left: targetLeft, behavior: 'smooth' });
+      updateActiveCase(index);
+    }
+
+    function updateActiveCase(index) {
+      const safeIndex = Math.max(0, Math.min(index, caseStudies.length - 1));
+      const active = caseStudies[safeIndex];
+      caseTabs.querySelectorAll('.case-tab').forEach((tab, tabIndex) => {
+        tab.classList.toggle('active', tabIndex === safeIndex);
+        if (tabIndex === safeIndex) {
+          const targetLeft =
+            tab.offsetLeft - (caseTabs.clientWidth - tab.offsetWidth) / 2;
+          const maxLeft = Math.max(0, caseTabs.scrollWidth - caseTabs.clientWidth);
+          caseTabs.scrollTo({
+            left: Math.max(0, Math.min(targetLeft, maxLeft)),
+            behavior: 'smooth'
+          });
+        }
+      });
+      const countText = formatCaseCount(safeIndex);
+      caseLibraryCount.textContent = countText;
+      caseLibraryHint.textContent = `${countText} · ${active.label}`;
+    }
+
+    caseCarousel.addEventListener('scroll', () => {
+      if (!caseCarousel.children.length) return;
+      const slideWidth = caseCarousel.children[0].getBoundingClientRect().width + 14;
+      const activeIndex = Math.round(caseCarousel.scrollLeft / slideWidth);
+      updateActiveCase(activeIndex);
+    }, { passive: true });
+
+    caseLibraryScanBtn.addEventListener('click', () => {
+      document.getElementById('scan-widget').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setTimeout(() => {
+        const noticeField = document.getElementById('noticeText');
+        if (noticeField) noticeField.focus();
+      }, 450);
+    });
+
+    renderCaseLibrary();
 
     // ── File Upload ────────────────────────────────────────────
     const uploadZone = document.getElementById('uploadZone');
