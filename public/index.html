@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Appeal Edge | Amazon Account Suspended? We Get You Back.</title>
   <meta name="description" content="Amazon account suspended? Appeal Edge analyzes your suspension notice and crafts a case-specific Plan of Action. Not a template. Flat fee, 24-48h turnaround." />
 
@@ -100,8 +100,8 @@
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; font-size: 16px; }
-    
+    html { scroll-behavior: smooth; font-size: 16px; overflow-x: hidden; }
+
     body {
       font-family: var(--font);
       font-size: var(--body);
@@ -162,6 +162,7 @@
       position: relative;
       display: inline-block;
       white-space: nowrap;
+      max-width: 100%;
     }
     .svg-underline {
       position: absolute;
@@ -1134,20 +1135,19 @@
     .nav-hamburger.open { border-color: var(--blue); }
     .nav-hamburger.open span { background: var(--blue); }
 
-    /* ── Compact dropdown menu ── */
+    /* ── Compact dropdown menu — anchored inside #nav (position: fixed) ── */
     .mobile-menu {
       display: none;
       position: absolute;
-      top: calc(100% + 8px);
+      top: calc(100% + 6px);
       right: var(--padding-x);
-      width: 200px;
+      min-width: 190px;
       background: var(--white);
       border: 1px solid var(--border-light);
       border-radius: 16px;
-      box-shadow: 0 12px 32px rgba(40,9,5,0.12);
-      z-index: 999;
+      box-shadow: 0 8px 28px rgba(40,9,5,0.13), 0 2px 8px rgba(40,9,5,0.06);
+      z-index: 1001;
       flex-direction: column;
-      overflow: hidden;
       padding: 8px;
     }
     .mobile-menu.open { display: flex; }
@@ -1155,12 +1155,13 @@
       font-size: 15px;
       font-weight: 600;
       color: var(--charcoal);
-      padding: 12px 14px;
+      padding: 11px 14px;
       border-radius: 10px;
       display: block;
       transition: background 0.15s, color 0.15s;
     }
-    .mobile-menu a:hover { background: var(--bg-light, #f9f6f4); color: var(--blue); }
+    .mobile-menu a:hover { background: var(--bg-light); color: var(--blue); }
+    .mobile-menu-cta { color: var(--blue) !important; font-weight: 700 !important; }
     .mobile-menu-divider {
       height: 1px;
       background: var(--border-light);
@@ -1178,7 +1179,11 @@
     }
 
     @media (max-width: 768px) {
-      :root { --section-gap: 64px; }
+      :root { --section-gap: 64px; --padding-x: 20px; }
+
+      /* Contain everything */
+      .section { padding-left: 20px; padding-right: 20px; }
+      .container { width: 100%; }
 
       /* Nav */
       .nav-links, .nav-cta { display: none; }
@@ -1186,9 +1191,14 @@
 
       /* Hero */
       #hero { padding-top: 120px; min-height: auto; padding-bottom: 64px; }
-      .hero-ctas { flex-direction: column; align-items: center; gap: 16px; width: 100%; }
-      .hero-ctas .btn-primary { width: 100%; justify-content: center; }
+      .hero-ctas { flex-direction: column; align-items: stretch; gap: 14px; width: 100%; }
+      .hero-ctas .btn-primary,
+      .hero-ctas .btn-secondary { width: 100%; justify-content: center; text-align: center; }
       .trust-logos { display: none; }
+      .highlight-wrap { white-space: normal; }
+
+      /* Hide oversized blobs that blow out layout */
+      .bg-blob { display: none; }
 
       /* How it Works */
       .grid-3 { grid-template-columns: 1fr; gap: 24px; }
@@ -1203,8 +1213,9 @@
 
       /* Pricing */
       .pricing-grid { grid-template-columns: 1fr; gap: 36px; }
+      .p-card { width: 100%; }
       .p-card.featured { transform: scale(1); padding-top: 44px; margin-top: 8px; }
-      .p-card.featured:hover { transform: translateY(-8px); }
+      .p-card.featured:hover { transform: translateY(-4px); }
 
       /* Ticker — flatten rotation so it doesn't clip on mobile */
       .ticker-wrap { transform: none; margin-top: 40px; }
@@ -1222,8 +1233,11 @@
     }
 
     @media (max-width: 480px) {
+      :root { --padding-x: 16px; }
       .scan-body { padding: 16px 16px 18px; }
       .hero-badge { font-size: 12px; padding: 6px 12px; }
+      h1 { font-size: clamp(1.9rem, 9vw, 3rem); }
+      h2 { font-size: clamp(1.6rem, 7vw, 2.5rem); }
     }
 
     /* ════════════════════════════════════════════════
@@ -1803,16 +1817,16 @@
         <span></span><span></span><span></span>
       </button>
     </div>
-  </nav>
 
-  <!-- Mobile Dropdown Menu -->
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#how" onclick="closeMobileMenu()">How it works</a>
-    <a href="#testimonials" onclick="closeMobileMenu()">Why us?</a>
-    <a href="#pricing" onclick="closeMobileMenu()">Pricing</a>
-    <div class="mobile-menu-divider"></div>
-    <a href="#" onclick="closeMobileMenu()" style="color:var(--blue);" data-cal-link="apeksha-n/appeal-edge-diagnosis" data-cal-namespace="appeal-edge" data-cal-config='{"layout":"month_view","theme":"light"}'>Book a free call →</a>
-  </div>
+    <!-- Mobile Dropdown Menu — inside nav so absolute positioning is correct -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#how" onclick="closeMobileMenu()">How it works</a>
+      <a href="#testimonials" onclick="closeMobileMenu()">Why us?</a>
+      <a href="#pricing" onclick="closeMobileMenu()">Pricing</a>
+      <div class="mobile-menu-divider"></div>
+      <a href="#" onclick="closeMobileMenu()" class="mobile-menu-cta" data-cal-link="apeksha-n/appeal-edge-diagnosis" data-cal-namespace="appeal-edge" data-cal-config='{"layout":"month_view","theme":"light"}'>Book a free call →</a>
+    </div>
+  </nav>
 
   <!-- Hero -->
   <section id="hero" class="section">
