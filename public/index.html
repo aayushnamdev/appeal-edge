@@ -1197,8 +1197,10 @@
       .trust-logos { display: none; }
       .highlight-wrap { white-space: normal; }
 
-      /* Hide oversized blobs that blow out layout */
+      /* Hide oversized blobs and hero float that blow out layout */
       .bg-blob { display: none; }
+      .hv-float { display: none; }
+      .hero-visual { transform: none !important; }
 
       /* How it Works */
       .grid-3 { grid-template-columns: 1fr; gap: 24px; }
@@ -1799,7 +1801,7 @@
   <!-- Navigation -->
   <nav id="nav">
     <div class="nav-inner">
-      <a href="#" class="nav-logo">
+      <a href="/" class="nav-logo">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 32" fill="none">
           <text x="0" y="24" font-family="Inter, -apple-system, sans-serif" font-size="22" font-weight="800" fill="#280905" letter-spacing="-0.5">Appeal Edge</text>
           <circle cx="155" cy="21" r="5" fill="#c3110c"/>
@@ -1824,7 +1826,7 @@
       <a href="#testimonials" onclick="closeMobileMenu()">Why us?</a>
       <a href="#pricing" onclick="closeMobileMenu()">Pricing</a>
       <div class="mobile-menu-divider"></div>
-      <a href="#" onclick="closeMobileMenu()" class="mobile-menu-cta" data-cal-link="apeksha-n/appeal-edge-diagnosis" data-cal-namespace="appeal-edge" data-cal-config='{"layout":"month_view","theme":"light"}'>Book a free call →</a>
+      <a href="javascript:void(0)" onclick="closeMobileMenu()" class="mobile-menu-cta" data-cal-link="apeksha-n/appeal-edge-diagnosis" data-cal-namespace="appeal-edge" data-cal-config='{"layout":"month_view","theme":"light"}'>Book a free call →</a>
     </div>
   </nav>
 
@@ -1966,6 +1968,12 @@
                   <div class="ring-title" style="color: var(--blue);">With Appeal Edge</div>
                 </div>
               </div>
+            </div>
+
+            <!-- Competitor Pricing Comparison -->
+            <div class="pricing-section">
+              <div class="pricing-title">How we compare on price</div>
+              <div class="price-bar-list" id="resPriceList"></div>
             </div>
 
             <!-- Why Appeal Edge -->
