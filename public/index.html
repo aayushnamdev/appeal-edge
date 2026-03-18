@@ -3,12 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Appeal Edge | We get you back</title>
-  <meta name="description" content="Expert-led Amazon appeal consulting. Human-crafted, precision-reviewed Plans of Action that get sellers reinstated." />
-  
-  <!-- Favicon: Monogram -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none'%3E%3Crect width='32' height='32' rx='8' fill='%23c3110c'/%3E%3Ctext x='16' y='21.5' font-family='Inter, -apple-system, sans-serif' font-size='16' font-weight='600' fill='%23FFFFFF' text-anchor='middle'%3EAE%3C/text%3E%3C/svg%3E" />
-  
+  <title>Appeal Edge | Amazon Account Suspended? We Get You Back.</title>
+  <meta name="description" content="Amazon account suspended? Appeal Edge analyzes your suspension notice and crafts a case-specific Plan of Action. Not a template. Flat fee, 24-48h turnaround." />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://appeal-edge.com" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#c3110c" />
+  <meta name="msapplication-TileColor" content="#c3110c" />
+
+  <!-- Open Graph — controls previews on WhatsApp, iMessage, Telegram, Slack, etc. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Appeal Edge" />
+  <meta property="og:url" content="https://appeal-edge.com" />
+  <meta property="og:title" content="Appeal Edge: Amazon Suspension Appeal Specialists" />
+  <meta property="og:description" content="Suspended on Amazon? We analyze your notice, identify the exact root cause, and deliver a case-specific Plan of Action. Flat fee. 24–48h turnaround." />
+  <meta property="og:image" content="https://appeal-edge.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Appeal Edge: Amazon Suspension Appeal Specialists" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Appeal Edge: Amazon Suspension Appeal Specialists" />
+  <meta name="twitter:description" content="Suspended on Amazon? We analyze your notice and craft a case-specific Plan of Action. Flat fee, no surprises." />
+  <meta name="twitter:image" content="https://appeal-edge.com/og-image.png" />
+
+  <!-- Search / Crawlers -->
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Appeal Edge" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -47,10 +76,10 @@
       
       /* typography */
       --font: 'Inter', -apple-system, sans-serif;
-      --h1:       clamp(3.5rem, 8vw, 6rem);
-      --h2:       clamp(2.5rem, 6vw, 4rem);
-      --h3:       clamp(1.5rem, 3vw, 2.25rem);
-      --body-lg:  clamp(1.125rem, 2vw, 1.375rem);
+      --h1:       clamp(2rem, 8vw, 6rem);
+      --h2:       clamp(1.75rem, 6vw, 4rem);
+      --h3:       clamp(1.25rem, 3vw, 2.25rem);
+      --body-lg:  clamp(1rem, 2vw, 1.375rem);
       --body:     1.125rem;
       --small:    0.875rem;
 
@@ -414,6 +443,7 @@
       max-width: var(--max-width);
       margin: 0 auto;
       padding: 0 var(--padding-x);
+      position: relative;
     }
     .nav-logo svg { height: 28px; width: auto; }
     .nav-links {
@@ -473,11 +503,11 @@
     .hero-sub {
       font-size: var(--body-lg);
       margin: 32px 0 48px;
-      max-width: 480px;
+      max-width: min(480px, 100%);
       color: var(--gray-600);
       line-height: 1.6;
     }
-    .hero-ctas { display: flex; gap: 24px; align-items: center; }
+    .hero-ctas { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
     
     /* Hero Image Asset Mockup */
     .hero-visual {
@@ -544,7 +574,7 @@
     }
     .feature-card {
       background: var(--white);
-      padding: 48px;
+      padding: clamp(24px, 5vw, 48px);
       border-radius: 32px;
       box-shadow: var(--shadow-sm);
       border: 1px solid var(--border-light);
@@ -932,7 +962,7 @@
     .p-card {
       background: var(--white);
       border-radius: 32px;
-      padding: 56px 40px;
+      padding: clamp(28px, 5vw, 56px) clamp(20px, 4vw, 40px);
       box-shadow: var(--shadow-sm);
       border: 1px solid var(--border-light);
       transition: all 0.4s var(--spring);
@@ -961,7 +991,7 @@
       letter-spacing: 0.05em;
       text-transform: uppercase;
     }
-    .p-price { font-size: 4rem; font-weight: 800; color: var(--charcoal); margin: 24px 0; line-height: 1; }
+    .p-price { font-size: clamp(2.5rem, 7vw, 4rem); font-weight: 800; color: var(--charcoal); margin: 24px 0; line-height: 1; }
     .p-price span { font-size: 1.25rem; color: var(--gray-400); font-weight: 500; }
     .p-list { margin-bottom: 40px; }
     .p-list li {
@@ -997,14 +1027,14 @@
       animation: ticker 25s linear infinite;
     }
     .ticker span {
-      font-size: 2.5rem;
+      font-size: clamp(1.25rem, 4vw, 2.5rem);
       font-weight: 800;
       text-transform: uppercase;
-      padding: 0 40px;
+      padding: 0 clamp(20px, 4vw, 40px);
       display: inline-block;
       letter-spacing: 0.05em;
     }
-    .ticker span::after { content: '•'; margin-left: 80px; }
+    .ticker span::after { content: '•'; margin-left: clamp(40px, 6vw, 80px); }
     
     @keyframes ticker {
       0% { transform: translate3d(0, 0, 0); }
@@ -1015,9 +1045,9 @@
     .footer-wrapper {
       background: #000000;
       color: var(--white);
-      padding: 240px var(--padding-x) 64px; /* Increased top padding to push content down */
+      padding: clamp(120px, 18vw, 240px) var(--padding-x) 64px;
       position: relative;
-      margin-top: -120px; /* Pulled up to sit underneath the slanted ticker */
+      margin-top: -120px;
       z-index: 1;
     }
     
@@ -1032,7 +1062,7 @@
     }
     .prefooter-left h2 {
       color: var(--white);
-      font-size: clamp(3rem, 6vw, 4.5rem);
+      font-size: clamp(2rem, 6vw, 4.5rem);
       margin-bottom: 48px;
     }
     .prefooter-right {
@@ -1078,22 +1108,122 @@
     .footer-logo svg { height: 28px; width: auto; }
     .footer-logo text { fill: var(--white); }
 
-    /* Responsive */
+    /* ─── Hamburger Nav ─────────────────────────── */
+    /* ── Three-dot kebab button ── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      width: 40px; height: 40px;
+      background: none;
+      border: 1.5px solid var(--border-light);
+      border-radius: 10px;
+      cursor: pointer;
+      padding: 0;
+      position: relative;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 5px; height: 5px;
+      background: var(--charcoal);
+      border-radius: 50%;
+      transition: background 0.2s var(--ease), transform 0.2s var(--ease);
+    }
+    .nav-hamburger.open { border-color: var(--blue); }
+    .nav-hamburger.open span { background: var(--blue); }
+
+    /* ── Compact dropdown menu ── */
+    .mobile-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 8px);
+      right: var(--padding-x);
+      width: 200px;
+      background: var(--white);
+      border: 1px solid var(--border-light);
+      border-radius: 16px;
+      box-shadow: 0 12px 32px rgba(40,9,5,0.12);
+      z-index: 999;
+      flex-direction: column;
+      overflow: hidden;
+      padding: 8px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--charcoal);
+      padding: 12px 14px;
+      border-radius: 10px;
+      display: block;
+      transition: background 0.15s, color 0.15s;
+    }
+    .mobile-menu a:hover { background: var(--bg-light, #f9f6f4); color: var(--blue); }
+    .mobile-menu-divider {
+      height: 1px;
+      background: var(--border-light);
+      margin: 4px 0;
+    }
+
+    /* ─── Responsive ────────────────────────────── */
     @media (max-width: 1024px) {
-      .hero-grid { grid-template-columns: 1fr; text-align: center;}
+      .hero-grid { grid-template-columns: 1fr; text-align: center; }
       .prefooter-grid { grid-template-columns: 1fr; gap: 64px; }
       .hero-sub { margin: 32px auto 48px; }
       .hero-ctas { justify-content: center; }
       .hero-visual { margin-top: 64px; }
-      .testimonial-row { grid-template-columns: 1fr; gap: 80px;}
+      .testimonial-row { grid-template-columns: 1fr; gap: 48px; }
     }
+
     @media (max-width: 768px) {
-      :root { --section-gap: 80px; }
+      :root { --section-gap: 64px; }
+
+      /* Nav */
       .nav-links, .nav-cta { display: none; }
-      .grid-3, .pricing-grid { grid-template-columns: 1fr; gap: 32px; }
-      .p-card.featured { transform: scale(1); }
+      .nav-hamburger { display: flex; }
+
+      /* Hero */
+      #hero { padding-top: 120px; min-height: auto; padding-bottom: 64px; }
+      .hero-ctas { flex-direction: column; align-items: center; gap: 16px; width: 100%; }
+      .hero-ctas .btn-primary { width: 100%; justify-content: center; }
+      .trust-logos { display: none; }
+
+      /* How it Works */
+      .grid-3 { grid-template-columns: 1fr; gap: 24px; }
+      .feature-card h3 { font-size: 1.25rem; }
+
+      /* Testimonials */
+      .testimonial-row { grid-template-columns: 1fr; gap: 40px; }
+      .testi-card { padding: clamp(24px, 6vw, 40px); }
+      .testi-card::after { left: 32px; }
+      .testi-quote { font-size: 1rem; line-height: 1.65; }
+      .testi-author { padding-left: 0; margin-top: 28px; }
+
+      /* Pricing */
+      .pricing-grid { grid-template-columns: 1fr; gap: 36px; }
+      .p-card.featured { transform: scale(1); padding-top: 44px; margin-top: 8px; }
       .p-card.featured:hover { transform: translateY(-8px); }
-      h1 { font-size: 3rem; }
+
+      /* Ticker — flatten rotation so it doesn't clip on mobile */
+      .ticker-wrap { transform: none; margin-top: 40px; }
+      .ticker-wrap.orange-bg { transform: none; margin-top: 0; }
+
+      /* Footer */
+      .footer-wrapper { margin-top: 0; padding-top: 80px; }
+      .prefooter-grid { grid-template-columns: 1fr; gap: 48px; padding-bottom: 64px; }
+      .prefooter-left h2 { font-size: clamp(1.75rem, 8vw, 2.5rem); margin-bottom: 32px; }
+      .prefooter-right { flex-direction: column; gap: 40px; padding-top: 0; }
+      .footer-col a { font-size: 1.125rem; }
+      .footer-bottom { flex-direction: column; gap: 20px; text-align: center; margin-top: 48px; }
+      .footer-bottom div { max-width: 100%; text-align: center; }
+      .btn-footer { padding: 18px 36px; font-size: 1rem; width: 100%; justify-content: center; }
+    }
+
+    @media (max-width: 480px) {
+      .scan-body { padding: 16px 16px 18px; }
+      .hero-badge { font-size: 12px; padding: 6px 12px; }
     }
 
     /* ════════════════════════════════════════════════
@@ -1102,7 +1232,7 @@
 
     .hero-scan-widget {
       position: relative;
-      width: 112%;
+      width: 100%;
       max-width: 530px;
       margin-left: auto;
       z-index: 2;
@@ -1667,17 +1797,29 @@
         <a href="#pricing">Pricing</a>
       </div>
       <div class="nav-cta">
-        <a href="#scan-widget" class="btn btn-outline">Free Scan</a>
+        <button class="btn btn-outline" data-cal-link="apeksha-n/appeal-edge-diagnosis" data-cal-namespace="appeal-edge" data-cal-config='{"layout":"month_view","theme":"light"}'>Book a free call</button>
       </div>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
+
+  <!-- Mobile Dropdown Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#how" onclick="closeMobileMenu()">How it works</a>
+    <a href="#testimonials" onclick="closeMobileMenu()">Why us?</a>
+    <a href="#pricing" onclick="closeMobileMenu()">Pricing</a>
+    <div class="mobile-menu-divider"></div>
+    <a href="#" onclick="closeMobileMenu()" style="color:var(--blue);" data-cal-link="apeksha-n/appeal-edge-diagnosis" data-cal-namespace="appeal-edge" data-cal-config='{"layout":"month_view","theme":"light"}'>Book a free call →</a>
+  </div>
 
   <!-- Hero -->
   <section id="hero" class="section">
     <div class="container hero-grid">
       <div class="hero-text reveal">
         <div class="hero-badge">
-          <span></span> Expert-Led Reinstatement Specialists
+          <span></span> Amazon Appeal Specialists
         </div>
         <h1>
           Your Amazon account is suspended. <br>
@@ -1690,14 +1832,16 @@
           </span>
         </h1>
         <p class="hero-sub delay-1">
-          Stop guessing what Amazon wants. Our former Amazon Seller Performance experts analyze your suspension against thousands of successful cases and craft a Plan of Action engineered for reinstatement.
+          Stop guessing what Amazon wants. Our appeal specialists analyze your suspension notice, identify the exact root cause, and craft a case-specific Plan of Action. Not a template.
         </p>
         <div class="hero-ctas delay-2">
-          <a href="#scan-widget" class="btn btn-primary">Analyze my case <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-          <div class="trust-logos">
-            <span>$50M+ Protected</span>
-          </div>
+          <button class="btn btn-primary" data-cal-link="apeksha-n/appeal-edge-diagnosis" data-cal-namespace="appeal-edge" data-cal-config='{"layout":"month_view","theme":"light"}'>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            Book a free 15-min call
+          </button>
+          <button class="btn btn-secondary" onclick="document.getElementById('scan-widget').scrollIntoView({behavior:'smooth',block:'start'}); setTimeout(()=>{ const t=document.getElementById('noticeText'); if(t){t.focus();} },600);">Scan my case first</button>
         </div>
+        <p class="delay-2" style="font-size: 13px; color: var(--gray-400); margin-top: 16px; margin-bottom: 0;">Not sure? The free scan tells you your case type and win rate in 30 seconds.</p>
       </div>
       
       <div class="hero-scan-widget reveal delay-3" id="scan-widget">
@@ -1738,7 +1882,7 @@
           </div>
 
           <!-- Loading Stepper -->
-          <div id="analyzerLoading">
+          <div id="analyzerLoading" style="display:none">
             <div class="scan-loading-header">
               <div class="scan-loading-dots">
                 <span></span><span></span><span></span>
@@ -1770,17 +1914,17 @@
           </div>
 
           <!-- Results -->
-          <div id="dashResults">
+          <div id="dashResults" style="display:none">
 
             <!-- Classification Header -->
             <div class="result-header">
-              <div class="case-badge" id="resCaseBadge">—</div>
-              <div class="complexity-badge" id="resComplexityBadge">—</div>
+              <div class="case-badge" id="resCaseBadge"></div>
+              <div class="complexity-badge" id="resComplexityBadge"></div>
             </div>
 
             <!-- Synthesis -->
             <div class="synthesis-block">
-              <p id="resSynthesis">—</p>
+              <p id="resSynthesis"></p>
             </div>
 
             <!-- Win Rate Rings -->
@@ -1813,17 +1957,15 @@
             <!-- Why Appeal Edge -->
             <div class="why-section">
               <div class="why-title">Why Appeal Edge for this case</div>
-              <p class="why-text" id="resWhyAppealEdge">—</p>
+              <p class="why-text" id="resWhyAppealEdge"></p>
             </div>
 
             <!-- CTA Block -->
             <div class="cta-block">
-              <div class="cta-urgency" id="resUrgency">⏰ Act fast — reinstatement windows close</div>
-              <h3 id="resCtaTitle">Ready to Get Reinstated?</h3>
-              <p id="resCtaDesc">Our team is standing by. Flat-fee, no surprises.</p>
-              <div class="cta-btns">
-                <a href="mailto:hello@appealedge.com?subject=Appeal%20Request" class="btn btn-orange" id="resCtaBtn">Get Started — <span id="resCtaPrice">$497</span></a>
-              </div>
+              <div class="cta-urgency" id="resUrgency"></div>
+              <h3 id="resCtaTitle"></h3>
+              <p id="resCtaDesc"></p>
+              <div class="cta-btns" id="resCtaBtns"></div>
             </div>
 
             <!-- Analyze Another -->
@@ -1873,8 +2015,8 @@
           <div class="f-icon orange">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
           </div>
-          <h3>Verified by Humans</h3>
-          <p>A senior appeal specialist (former Amazon Seller Performance team members) reviews and polishes the PoA to ensure the tone and nuance are flawless.</p>
+          <h3>Reviewed by Specialists</h3>
+          <p>An appeal specialist with deep Amazon policy knowledge reviews and refines every PoA: checking tone, specificity, and the exact language Amazon's review team responds to.</p>
         </div>
         
         <div class="feature-card reveal delay-3">
@@ -1882,7 +2024,7 @@
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
           </div>
           <h3>Reinstatement</h3>
-          <p>Submit your custom-tailored Plan of Action. Watch as your Selling Privileges are restored and funds are unfrozen, usually within 48 hours.</p>
+          <p>Submit your custom-tailored Plan of Action. Amazon typically responds within 24-72 hours. If rejected, we revise and resubmit at no extra cost.</p>
         </div>
       </div>
     </div>
@@ -1896,30 +2038,35 @@
         
         <div class="reveal">
           <div class="testi-card featured">
-            <div class="testi-quote">"Appeal Edge's team caught a detail in my suspension that two other 'experts' completely missed. We submitted their drafted PoA and were back selling a 6-figure run rate in 24 hours. Incredible team."</div>
+            <div class="testi-quote">"I'd already tried writing the appeal myself twice and got nowhere. Appeal Edge looked at my suspension notice, spotted exactly what Amazon needed to see, and got it right the first time. Back selling within 48 hours."</div>
           </div>
           <div class="testi-author">
-            <div class="t-avatar"></div>
+            <img src="/assets/testomonial.png" class="t-avatar" alt="James T." style="object-fit: cover;" />
             <div>
               <div class="t-name">James T.</div>
-              <div class="t-role">7-Figure FBA Seller</div>
+              <div class="t-role">Amazon FBA Seller, inauthentic complaint</div>
             </div>
           </div>
         </div>
         
         <div class="reveal delay-2">
           <div style="max-width: 400px; padding-left: 40px;">
-            <h2 style="margin-bottom: 24px;">Don't just take our word for it.</h2>
-            <p style="font-size: var(--body-lg);">We've helped over 2,400 sellers get their businesses back online. Our expert-led approach boasts a 94% success rate.</p>
-            <div style="margin-top: 40px; display: flex; gap: 8px;">
-              <!-- Stars -->
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--orange)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--orange)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--orange)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--orange)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--orange)" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <h2 style="margin-bottom: 24px;">What our early clients are saying.</h2>
+            <p style="font-size: var(--body-lg);">We're a focused team of appeal specialists. Every case gets personal attention — not a copy-paste template. That's the difference clients notice first.</p>
+            <div style="margin-top: 40px; display: flex; flex-direction: column; gap: 16px;">
+              <div style="display: flex; gap: 12px; align-items: flex-start;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; margin-top:2px"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Case-specific POA, not a generic template</span>
+              </div>
+              <div style="display: flex; gap: 12px; align-items: flex-start;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; margin-top:2px"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Up to 3 revision rounds included</span>
+              </div>
+              <div style="display: flex; gap: 12px; align-items: flex-start;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; margin-top:2px"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>50% refund if no progress after 2 full attempts</span>
+              </div>
             </div>
-            <p style="margin-top: 8px; font-weight: 600;">Trustpilot Verified</p>
           </div>
         </div>
         
@@ -1932,7 +2079,7 @@
     <div class="container">
       <div style="text-align: center; margin-bottom: 80px;" class="reveal">
         <h2>Simple, transparent pricing.</h2>
-        <p style="font-size: var(--body-lg); margin-top: 16px;">No retainers. No hourly lawyers. Just flat-fee results.</p>
+        <p style="font-size: var(--body-lg); margin-top: 16px;">No retainers. No surprise invoices. One flat fee covers your full appeal.</p>
       </div>
       
       <div class="pricing-grid">
@@ -1948,36 +2095,36 @@
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> 4-Day Turnaround</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> 3 Free Revisions</li>
           </ul>
-          <button class="btn btn-pricing">Get Started</button>
+          <a href="https://paypal.me/aayushAppealEdge/497" target="_blank" rel="noopener" class="btn btn-pricing">Get Started · Pay via PayPal</a>
         </div>
 
         <!-- Rush -->
         <div class="p-card featured reveal delay-1">
           <div class="p-badge">Most Popular</div>
           <h3 style="margin-bottom: 8px;">Rush Appeal</h3>
-          <p>For high-volume sellers needing speed.</p>
+          <p>For sellers who can't afford to wait.</p>
           <div class="p-price">$797</div>
           <ul class="p-list">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Standard features included</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Priority Queue Jumping</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> 24-Hour Delivery Guaranteed</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Everything in Standard</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Priority handling</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> 24-Hour Turnaround</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Unlimited Revisions</li>
           </ul>
-          <button class="btn btn-pricing-primary">Initiate Rush →</button>
+          <a href="https://paypal.me/aayushAppealEdge/797" target="_blank" rel="noopener" class="btn btn-pricing-primary">Start Rush Appeal · Pay via PayPal →</a>
         </div>
 
         <!-- Monitoring -->
         <div class="p-card reveal delay-2">
           <h3 style="margin-bottom: 8px;">Monitoring</h3>
-          <p>Ongoing protection for large brands.</p>
+          <p>Stay ahead of issues before they escalate.</p>
           <div class="p-price">$199<span>/mo</span></div>
           <ul class="p-list">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Daily Account Health Scans</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Pre-emptive IP Defense</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Dedicated Account Manager</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Weekly Account Health Reviews</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Early Warning on Policy Flags</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Direct Access via Email/WhatsApp</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> 1 Free Appeal per year</li>
           </ul>
-          <button class="btn btn-pricing">Subscribe</button>
+          <a href="https://paypal.me/aayushAppealEdge/199" target="_blank" rel="noopener" class="btn btn-pricing">Get Started · Pay via PayPal</a>
         </div>
 
       </div>
@@ -1995,8 +2142,8 @@
   <div class="ticker-wrap">
     <div class="ticker">
       <!-- Repeated twice for seamless loop -->
-      <span>Appeal Edge</span><span>Account Reinstatement</span><span>Appeal Edge</span><span>100% Guaranteed</span>
-      <span>Appeal Edge</span><span>Account Reinstatement</span><span>Appeal Edge</span><span>100% Guaranteed</span>
+      <span>Appeal Edge</span><span>Account Reinstatement</span><span>Appeal Edge</span><span>Flat-Fee · No Surprises</span>
+      <span>Appeal Edge</span><span>Account Reinstatement</span><span>Appeal Edge</span><span>Flat-Fee · No Surprises</span>
     </div>
   </div>
 
@@ -2005,9 +2152,15 @@
     <div class="prefooter-grid">
       <div class="prefooter-left">
         <h2>Your account is waiting.<br> Let's get it back.</h2>
-        <a href="#scan-widget" class="btn btn-footer">
-          Start your free analysis
-        </a>
+        <div style="display:flex; gap: 16px; flex-wrap: wrap;">
+          <a href="#scan-widget" class="btn btn-footer">
+            Start your free analysis
+          </a>
+          <button class="btn" style="background:rgba(255,255,255,0.08); color:#fff; border:1.5px solid rgba(255,255,255,0.2); border-radius:100px; padding:22px 40px; font-size:16px; font-weight:600;" data-cal-link="apeksha-n/appeal-edge-diagnosis" data-cal-namespace="appeal-edge" data-cal-config='{"layout":"month_view","theme":"light"}'>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:8px;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            Book a free call
+          </button>
+        </div>
       </div>
       <div class="prefooter-right">
         <div class="footer-col">
@@ -2021,8 +2174,7 @@
         <div class="footer-col">
           <h4>Contact Us</h4>
           <ul>
-            <li style="font-size: 20px; font-weight: 500;">+1 (800) 555-0199</li>
-            <li><a href="mailto:hello@appealedge.com">hello@appealedge.com</a></li>
+            <li><a href="mailto:social@appeal-edge.com">social@appeal-edge.com</a></li>
           </ul>
         </div>
       </div>
@@ -2035,7 +2187,7 @@
           <circle cx="145" cy="21" r="5" fill="#c3110c"/>
         </svg>
       </a>
-      <div>&copy; 2026 Appeal Edge. Not affiliated with Amazon.</div>
+      <div style="text-align:right; max-width: 500px;">&copy; 2026 Appeal Edge. Not affiliated with or endorsed by Amazon.com, Inc. We are a consulting service, not a law firm.</div>
     </div>
   </footer>
 
@@ -2216,11 +2368,15 @@
 
     // ── Render Full Results ────────────────────────────────────
     function renderResults(data) {
+      const tier = (data.complexityTier || 'Medium');
+      const isComplex = tier === 'Complex';
+      const price = data.appealEdgePrice || (isComplex ? 797 : 497);
+
       // Classification header
       document.getElementById('resCaseBadge').textContent = data.caseType || 'Unknown';
       const compBadge = document.getElementById('resComplexityBadge');
-      compBadge.textContent = (data.complexityTier || 'Medium') + ' Complexity';
-      compBadge.className = 'complexity-badge complexity-' + (data.complexityTier || 'Medium');
+      compBadge.textContent = tier + ' Complexity';
+      compBadge.className = 'complexity-badge complexity-' + tier;
 
       // Synthesis
       document.getElementById('resSynthesis').textContent = data.synthesis || '';
@@ -2231,15 +2387,51 @@
       // Why Appeal Edge
       document.getElementById('resWhyAppealEdge').textContent = data.whyAppealEdge || '';
 
-      // CTA
-      document.getElementById('resUrgency').textContent = '⏰ ' + (data.urgencyNote || 'Act fast — reinstatement windows close.');
-      document.getElementById('resCtaPrice').textContent = '$' + (data.appealEdgePrice || 497);
-      document.getElementById('resCtaTitle').textContent = `Let's get your account back.`;
-      document.getElementById('resCtaDesc').textContent = `Flat fee. No surprises. Our team is ready.`;
+      // Urgency
+      document.getElementById('resUrgency').textContent = '⏰ ' + (data.urgencyNote || 'Act fast. Reinstatement windows close quickly.');
+
+      // ── Complexity-based CTA routing ──────────────────────────
+      const ctaBtns = document.getElementById('resCtaBtns');
+
+      if (isComplex) {
+        // Complex case: lead with discovery call, payment is secondary
+        document.getElementById('resCtaTitle').textContent = 'This case needs a specialist review.';
+        document.getElementById('resCtaDesc').textContent = 'Book a free 15-min call and we\'ll map out exactly what your appeal needs before you spend a cent.';
+        ctaBtns.innerHTML = `
+          <button class="btn btn-orange" data-cal-link="apeksha-n/appeal-edge-diagnosis"
+            data-cal-namespace="appeal-edge"
+            data-cal-config='{"layout":"month_view","theme":"light"}'>
+            Book a free 15-min call
+          </button>
+          <a href="https://paypal.me/aayushAppealEdge/${price}" target="_blank" rel="noopener"
+             class="btn btn-ghost">Get started · $${price}</a>`;
+      } else {
+        // Simple / Medium: lead with payment, call is a soft fallback
+        document.getElementById('resCtaTitle').textContent = "Your case is actionable. Let's move.";
+        document.getElementById('resCtaDesc').textContent = `Flat fee · $${price} · Up to 3 revision rounds included. We start the same day.`;
+        ctaBtns.innerHTML = `
+          <a href="https://paypal.me/aayushAppealEdge/${price}" target="_blank" rel="noopener"
+             class="btn btn-orange">Get started · $${price}</a>
+          <button class="btn btn-ghost" data-cal-link="apeksha-n/appeal-edge-diagnosis"
+            data-cal-namespace="appeal-edge"
+            data-cal-config='{"layout":"month_view","theme":"light"}'>
+            Have questions? Book a call
+          </button>`;
+      }
+
+      // Re-init Cal.com on dynamically injected buttons
+      if (window.Cal) {
+        Cal.ns['appeal-edge']('ui', {
+          theme: 'light',
+          styles: { branding: { brandColor: '#c3110c' } },
+          hideEventTypeDetails: false,
+          layout: 'month_view'
+        });
+      }
 
       showSection('dashResults');
 
-      // Scroll widget into view and reset scroll position to top
+      // Scroll widget into view
       const scanInner = document.querySelector('.scan-inner');
       if (scanInner) scanInner.scrollTop = 0;
       document.getElementById('scan-widget').scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -2309,6 +2501,65 @@
       renderPills();
       showSection('analyzerForm');
       document.getElementById('scan-widget').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    // ── Cal.com Embed Init ─────────────────────────────────────
+    (function (C, A, L) {
+      let p = function (a, ar) { a.q.push(ar); };
+      let d = C.document;
+      C.Cal = C.Cal || function () {
+        let cal = C.Cal;
+        let ar = arguments;
+        if (!cal.loaded) {
+          cal.ns = {};
+          cal.q = cal.q || [];
+          d.head.appendChild(d.createElement("script")).src = A;
+          cal.loaded = true;
+        }
+        if (ar[0] === L) {
+          const api = function () { p(api, arguments); };
+          const namespace = ar[1];
+          api.q = api.q || [];
+          if (typeof namespace === "string") {
+            cal.ns[namespace] = cal.ns[namespace] || api;
+            p(cal.ns[namespace], ar);
+            p(cal, ["initNamespace", namespace]);
+          } else p(cal, ar);
+          return;
+        }
+        p(cal, ar);
+      };
+    })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", "appeal-edge", { origin: "https://cal.com" });
+    Cal.ns["appeal-edge"]("ui", {
+      theme: "light",
+      styles: { branding: { brandColor: "#c3110c" } },
+      hideEventTypeDetails: false,
+      layout: "month_view"
+    });
+
+    // ── Mobile Hamburger ───────────────────────────────────────
+    const hamburger = document.getElementById('navHamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    hamburger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
+    });
+
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('open');
+      hamburger.classList.remove('open');
+    }
+
+    // Close menu on outside click
+    document.addEventListener('click', (e) => {
+      if (mobileMenu.classList.contains('open') &&
+          !mobileMenu.contains(e.target) &&
+          !hamburger.contains(e.target)) {
+        closeMobileMenu();
+      }
     });
   </script>
 </body>
