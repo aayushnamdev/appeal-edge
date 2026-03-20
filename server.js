@@ -8,8 +8,11 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/assets', express.static(path.join(__dirname, 'assets')));
 
 app.use('/api/analyze', analyzeRoute);
+
+app.use('/trial', express.static(path.join(__dirname, 'frontend-trial')));
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));

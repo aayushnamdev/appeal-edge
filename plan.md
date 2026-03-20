@@ -61,12 +61,12 @@ The technical core of this business is a 4-step AI pipeline that transforms a su
 
 ### Model selection and cost per case
 
-| Model | Input/1M tokens | Output/1M tokens | Best for | Cost per POA |
-|---|---|---|---|---|
-| **Claude Sonnet 4.5** | $3.00 | $15.00 | Complex IP, counterfeit, related account | ~$0.15–0.25 |
-| **Claude Haiku 4.5** | $1.00 | $5.00 | Classification, quality checks | ~$0.02 |
-| **DeepSeek V3.2 (OpenRouter)** | $0.26 | $0.38 | Standard performance, INFORM Act | ~$0.002 |
-| **Kimi K2 (OpenRouter)** | $0.40 | $2.00 | Mid-complexity inauthentic cases | ~$0.007 |
+| Model                          | Input/1M tokens | Output/1M tokens | Best for                                 | Cost per POA |
+| ------------------------------ | --------------- | ---------------- | ---------------------------------------- | ------------ |
+| **Claude Sonnet 4.5**          | $3.00           | $15.00           | Complex IP, counterfeit, related account | ~$0.15–0.25  |
+| **Claude Haiku 4.5**           | $1.00           | $5.00            | Classification, quality checks           | ~$0.02       |
+| **DeepSeek V3.2 (OpenRouter)** | $0.26           | $0.38            | Standard performance, INFORM Act         | ~$0.002      |
+| **Kimi K2 (OpenRouter)**       | $0.40           | $2.00            | Mid-complexity inauthentic cases         | ~$0.007      |
 
 The routing logic is simple: if the case type is performance metrics or INFORM Act compliance, route to **DeepSeek V3.2** (cost: under $0.01). If it's standard inauthentic or review manipulation, use **Haiku for drafting + Sonnet for review** (cost: ~$0.10). If it's IP/trademark, related account, or Section 3 Code of Conduct, use **Claude Sonnet for all steps** (cost: ~$0.25).
 
@@ -90,12 +90,12 @@ The system prompt establishes the AI as a senior Amazon Seller Performance consu
 
 ### First month cost projection (10 cases)
 
-| Item | Cost (USD) | Cost (INR) |
-|---|---|---|
-| AI API — case processing (10 cases) | $2.22 | ₹185 |
-| Prompt development & testing | $8.00 | ₹670 |
-| Buffer | $5.00 | ₹420 |
-| **Total AI costs** | **~$15** | **~₹1,275** |
+| Item                                | Cost (USD) | Cost (INR)  |
+| ----------------------------------- | ---------- | ----------- |
+| AI API — case processing (10 cases) | $2.22      | ₹185        |
+| Prompt development & testing        | $8.00      | ₹670        |
+| Buffer                              | $5.00      | ₹420        |
+| **Total AI costs**                  | **~$15**   | **~₹1,275** |
 
 AI costs are trivially small. Even at 100 cases/month, API costs stay under $25. The real investment is human time and infrastructure.
 
@@ -111,13 +111,13 @@ AI costs are trivially small. Even at 100 cases/month, API costs stay under $25.
 
 ### Where the incumbents are vulnerable
 
-| Competitor | Price | Turnaround | Key weakness |
-|---|---|---|---|
-| Riverbend Consulting | $1,500–2,500+ | 4 business days | Premium pricing, quote-based opacity |
-| Amazon Sellers Lawyer (CJ Rosenbaum) | ~$3,000 | Varies | Attorney pricing, overkill for simple cases |
-| eGrowth Partners | ~$2,500 | Varies | Client reviews cite "copy-paste" appeals, poor communication after payment |
-| The Appeal Guru | $1,495 flat | 24–72 hours | Mid-range but still expensive for small sellers |
-| Thompson & Holt | ~$600–1,000 | Standard | Multiple reviews cite "0/10 appeals," template language, typos |
+| Competitor                           | Price         | Turnaround      | Key weakness                                                               |
+| ------------------------------------ | ------------- | --------------- | -------------------------------------------------------------------------- |
+| Riverbend Consulting                 | $1,500–2,500+ | 4 business days | Premium pricing, quote-based opacity                                       |
+| Amazon Sellers Lawyer (CJ Rosenbaum) | ~$3,000       | Varies          | Attorney pricing, overkill for simple cases                                |
+| eGrowth Partners                     | ~$2,500       | Varies          | Client reviews cite "copy-paste" appeals, poor communication after payment |
+| The Appeal Guru                      | $1,495 flat   | 24–72 hours     | Mid-range but still expensive for small sellers                            |
+| Thompson & Holt                      | ~$600–1,000   | Standard        | Multiple reviews cite "0/10 appeals," template language, typos             |
 
 The client complaints across all competitors cluster around four themes: **high prices with no guarantees**, **template/copy-paste appeal letters**, **communication dropoff after payment**, and **opacity about what's happening with their case**. Your AI-first service addresses all four: lower price ($497 vs $1,500+), AI generates case-specific rather than template appeals, WhatsApp Business enables real-time communication, and a clear process timeline sets expectations upfront.
 
@@ -193,20 +193,20 @@ Review which channels produced leads (likely Facebook groups and Reddit DMs). Do
 
 ### Complete budget breakdown
 
-| Item | Cost |
-|---|---|
-| Domain name (Namecheap) | $12/year |
-| Carrd Pro Standard | $19/year |
-| Calendly | $0 (free tier) |
-| PayPal Business setup | $0 |
-| Tally intake form | $0 (already built and live) |
-| YouTube/Loom recording | $0 |
-| LinkedIn | $0 |
-| WhatsApp Business | $0 |
-| AI API testing + first month | ~$15 |
-| Optional Facebook micro-promotion | $20–50 |
-| **Total minimum launch cost** | **~$46 (~₹3,850)** |
-| **Total with optional spend** | **~$100 (~₹8,350)** |
+| Item                              | Cost                        |
+| --------------------------------- | --------------------------- |
+| Domain name (Namecheap)           | $12/year                    |
+| Carrd Pro Standard                | $19/year                    |
+| Calendly                          | $0 (free tier)              |
+| PayPal Business setup             | $0                          |
+| Tally intake form                 | $0 (already built and live) |
+| YouTube/Loom recording            | $0                          |
+| LinkedIn                          | $0                          |
+| WhatsApp Business                 | $0                          |
+| AI API testing + first month      | ~$15                        |
+| Optional Facebook micro-promotion | $20–50                      |
+| **Total minimum launch cost**     | **~$46 (~₹3,850)**          |
+| **Total with optional spend**     | **~$100 (~₹8,350)**         |
 
 This leaves **₹6,650–11,150** of the ₹5K–15K budget as reserve for Month 2 operations or emergency spend.
 
@@ -273,18 +273,18 @@ Start as a **sole proprietorship** with a separate current account. Graduate to 
 ### Master system prompt (use for all cases)
 
 ```
-SYSTEM: You are a senior Amazon Seller Performance consultant with 10+ years 
-of experience in account reinstatement. You have successfully resolved 3,000+ 
+SYSTEM: You are a senior Amazon Seller Performance consultant with 10+ years
+of experience in account reinstatement. You have successfully resolved 3,000+
 suspension cases across all violation categories.
 
 RULES:
-1. Never use generic, template-sounding language. Amazon's review team detects 
+1. Never use generic, template-sounding language. Amazon's review team detects
    and rejects formulaic appeals — they see thousands weekly.
-2. Write like an operations manager documenting a process fix — not like a 
+2. Write like an operations manager documenting a process fix — not like a
    lawyer arguing a case or a person begging for mercy.
-3. Every corrective action must be SPECIFIC: name dates, quantities, tools, 
-   people, and evidence. "We improved our quality process" = REJECTION. 
-   "On March 1, 2026, we implemented a 3-point receiving inspection using 
+3. Every corrective action must be SPECIFIC: name dates, quantities, tools,
+   people, and evidence. "We improved our quality process" = REJECTION.
+   "On March 1, 2026, we implemented a 3-point receiving inspection using
    photographic documentation before shipment — see Exhibit B" = APPROVAL.
 4. Follow the mandatory 3-part structure:
    - ROOT CAUSE: What operational failure caused this? (Not "a misunderstanding")
@@ -356,12 +356,12 @@ Team of 2–3 case managers, 1–2 VAs. Expand services: listing optimization ($
 
 ### Revenue math at each milestone
 
-| Milestone | Cases/month | Avg price | Monthly revenue | Costs | Net profit |
-|---|---|---|---|---|---|
-| Month 1 | 3 | $400 | $1,200 | ~$200 | ~$1,000 |
-| Month 6 | 15 | $600 | $9,000 | ~$2,000 | ~$7,000 |
-| Month 12 | 30 + 20 monitoring clients | $650 avg + $200/mo | $23,500 | ~$5,000 | ~$18,500 |
-| Year 2 | 50 + 50 monitoring | $750 avg + $200/mo | $47,500 | ~$12,000 | ~$35,500 |
+| Milestone | Cases/month                | Avg price          | Monthly revenue | Costs    | Net profit |
+| --------- | -------------------------- | ------------------ | --------------- | -------- | ---------- |
+| Month 1   | 3                          | $400               | $1,200          | ~$200    | ~$1,000    |
+| Month 6   | 15                         | $600               | $9,000          | ~$2,000  | ~$7,000    |
+| Month 12  | 30 + 20 monitoring clients | $650 avg + $200/mo | $23,500         | ~$5,000  | ~$18,500   |
+| Year 2    | 50 + 50 monitoring         | $750 avg + $200/mo | $47,500         | ~$12,000 | ~$35,500   |
 
 ---
 
