@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
   <!-- Background -->
-  <rect width="32" height="32" rx="7" fill="#c3110c"/>
+  <rect width="32" height="32" rx="7" fill="#6366f1"/>
 
   <!-- Solid filled "A" mark — chunky triangle with crossbar slot punched out -->
   <!-- Outer triangle -->
   <path d="M16 5 L27.5 27.5 H4.5 Z" fill="white"/>
 
-  <!-- Crossbar slot — red rect punches through the white triangle -->
-  <rect x="9.5" y="18.5" width="13" height="3" fill="#c3110c"/>
+  <!-- Crossbar slot — indigo rect punches through the white triangle -->
+  <rect x="9.5" y="18.5" width="13" height="3" fill="#6366f1"/>
 </svg>
