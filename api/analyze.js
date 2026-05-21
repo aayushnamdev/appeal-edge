@@ -3,13 +3,35 @@ const os = require('os');
 const path = require('path');
 const fs = require('fs');
 const OpenAI = require('openai');
+const { Resend } = require('resend');
 const { SYSTEM_PROMPT } = require('./prompts');
 const { extractText } = require('./fileExtract');
 
-// Tell Vercel: don't touch the body — multer handles it
-module.exports.config = {
-  api: { bodyParser: false },
-};
+async function saveLead(email, ip, noticePreview) {
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) return;
+  try {
+    const resend = new Resend(apiKey);
+    await resend.emails.send({
+      from: 'Appeal Edge <onboarding@resend.dev>',
+      to: ['aayush22@duck.com', 'apekshanamdev12@gmail.com'],
+      subject: `New scan lead: ${email}`,
+      html: `
+        <h2>New Free Scan Lead</h2>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Time:</strong> ${new Date().toISOString()}</p>
+        <p><strong>IP:</strong> ${ip}</p>
+        <hr/>
+        <p><strong>Notice Preview:</strong></p>
+        <blockquote style="color:#555">${(noticePreview || 'N/A').slice(0, 500)}</blockquote>
+      `,
+    });
+  } catch (err) {
+    console.error('[RESEND] Failed to send lead email:', err.message);
+  }
+}
+
+// bodyParser disabled — multer handles multipart body parsing
 
 // Rate limiting (in-memory per instance)
 const rateLimitMap = new Map();
@@ -44,12 +66,28 @@ function getOpenAI() {
   return openai;
 }
 
-async function callAI(combinedText) {
+async function callAI(combinedText, imageFiles = []) {
+  const userContent = [];
+
+  if (combinedText) {
+    userContent.push({ type: 'text', text: `Analyze this Amazon suspension notice:\n\n${combinedText.slice(0, 8000)}` });
+  }
+
+  for (const file of imageFiles) {
+    const base64 = fs.readFileSync(file.path).toString('base64');
+    const mimeType = file.mimetype || 'image/png';
+    userContent.push({ type: 'image_url', image_url: { url: `data:${mimeType};base64,${base64}` } });
+  }
+
+  if (!combinedText && imageFiles.length > 0) {
+    userContent.push({ type: 'text', text: 'Analyze this Amazon suspension notice shown in the image(s).' });
+  }
+
   const response = await getOpenAI().chat.completions.create({
     model: 'grok-4-1-fast-reasoning',
     messages: [
       { role: 'system', content: SYSTEM_PROMPT },
-      { role: 'user', content: `Analyze this Amazon suspension notice:\n\n${combinedText.slice(0, 8000)}` },
+      { role: 'user', content: userContent },
     ],
     response_format: { type: 'json_object' },
     temperature: 0.3,
@@ -77,14 +115,24 @@ module.exports = async function handler(req, res) {
 
   const uploadedFiles = req.files || [];
   const noticeText = (req.body?.noticeText || '').trim();
+  const email = (req.body?.email || '').trim();
+
+  if (email) {
+    console.log('[LEAD]', JSON.stringify({ email, ip, timestamp: new Date().toISOString() }));
+    saveLead(email, ip, noticeText);
+  }
 
   const cleanup = () => uploadedFiles.forEach(f => { try { fs.unlinkSync(f.path); } catch {} });
 
   try {
+    const imageExts = ['.png', '.jpg', '.jpeg', '.webp', '.gif'];
+    const imageFiles = uploadedFiles.filter(f => imageExts.includes(path.extname(f.originalname).toLowerCase()));
+    const otherFiles = uploadedFiles.filter(f => !imageExts.includes(path.extname(f.originalname).toLowerCase()));
+
     const parts = [];
     if (noticeText) parts.push(noticeText);
 
-    for (const file of uploadedFiles) {
+    for (const file of otherFiles) {
       try {
         const extracted = await extractText(file.path, file.originalname, file.mimetype);
         if (extracted?.trim()) parts.push(extracted.trim());
@@ -94,7 +142,7 @@ module.exports = async function handler(req, res) {
     }
 
     const combinedText = parts.join('\n\n---\n\n');
-    if (combinedText.length < 30) {
+    if (combinedText.length < 30 && imageFiles.length === 0) {
       cleanup();
       return res.status(400).json({ error: 'Please paste your suspension notice or upload a file to analyze.' });
     }
@@ -102,7 +150,7 @@ module.exports = async function handler(req, res) {
     let result;
     for (let attempt = 0; attempt < 2; attempt++) {
       try {
-        const raw = await callAI(combinedText);
+        const raw = await callAI(combinedText, imageFiles);
         result = JSON.parse(raw);
         break;
       } catch {

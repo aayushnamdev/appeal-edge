@@ -410,7 +410,7 @@ tailwind.config = {
             Get my free case analysis
           </button>
           <button class="px-8 py-4 bg-surface-container-highest text-on-surface text-base font-bold rounded-[10px] hover:bg-surface-bright transition-all w-full sm:w-auto"
-            data-cal-link="apeksha-n/appeal-edge-diagnosis"
+            data-cal-link="aayushnamdev/appeal-edge-diagnosis"
             data-cal-namespace="appeal-edge"
             data-cal-config='{"layout":"month_view","theme":"dark"}'>
             Talk to a specialist first
@@ -564,7 +564,20 @@ tailwind.config = {
 
         <div id="filePills" class="mt-3 flex flex-wrap"></div>
 
-        <button id="submitBtn" type="button" class="mt-6 w-full py-3.5 rounded-[10px] font-bold text-sm transition-all" style="background:#c0c1ff; color:#1000a9;">
+        <div class="mt-5">
+          <input
+            type="email"
+            id="userEmail"
+            placeholder="Your email — we'll send a personalized follow-up"
+            class="w-full rounded-xl px-4 py-3.5 text-sm text-white placeholder-outline font-medium"
+            style="background:#0b0e15; border:none; outline:none; transition: box-shadow 0.2s;"
+            onfocus="this.style.boxShadow='0 0 0 1px rgba(192,193,255,0.4)'"
+            onblur="this.style.boxShadow='none'"
+          />
+          <p class="text-xs text-outline mt-1.5 pl-1">No spam. Just a follow-up if your case is actionable.</p>
+        </div>
+
+        <button id="submitBtn" type="button" class="mt-5 w-full py-3.5 rounded-[10px] font-bold text-sm transition-all" style="background:#c0c1ff; color:#1000a9;">
           Analyze my suspension →
         </button>
       </div>
@@ -1079,7 +1092,7 @@ tailwind.config = {
       </button>
       <button class="px-8 py-4 md:px-10 md:py-5 text-on-surface text-base md:text-lg font-bold rounded-[10px] transition-all hover:bg-surface-bright"
         style="background:rgba(255,255,255,0.06);"
-        data-cal-link="apeksha-n/appeal-edge-diagnosis"
+        data-cal-link="aayushnamdev/appeal-edge-diagnosis"
         data-cal-namespace="appeal-edge"
         data-cal-config='{"layout":"month_view","theme":"dark"}'>
         Talk to a specialist
@@ -1287,6 +1300,25 @@ uploadZone.addEventListener('dragleave', () => uploadZone.classList.remove('drag
 uploadZone.addEventListener('drop', e => { e.preventDefault(); uploadZone.classList.remove('drag-over'); addFiles(Array.from(e.dataTransfer.files)); });
 fileInput.addEventListener('change', () => { addFiles(Array.from(fileInput.files)); fileInput.value = ''; });
 
+// ── Paste screenshot support ───────────────────────────
+document.addEventListener('paste', e => {
+  const items = Array.from(e.clipboardData?.items || []);
+  const imageItems = items.filter(item => item.type.startsWith('image/'));
+  if (!imageItems.length) return;
+  e.preventDefault();
+  imageItems.forEach((item, idx) => {
+    const blob = item.getAsFile();
+    if (!blob) return;
+    const ext = item.type === 'image/png' ? '.png' : '.jpg';
+    const name = `screenshot-${Date.now()}${idx > 0 ? `-${idx}` : ''}${ext}`;
+    const file = new File([blob], name, { type: item.type });
+    addFiles([file]);
+  });
+  // briefly highlight upload zone to confirm paste was received
+  uploadZone.classList.add('drag-over');
+  setTimeout(() => uploadZone.classList.remove('drag-over'), 600);
+});
+
 function addFiles(newFiles) {
   const allowed = ['.pdf', '.png', '.jpg', '.jpeg', '.txt', '.eml'];
   newFiles.forEach(f => {
@@ -1390,7 +1422,7 @@ function renderResults(data) {
     document.getElementById('resCtaDesc').textContent  = "Book a free 15-min call and we'll map out exactly what your appeal needs before you spend anything.";
     ctaBtns.innerHTML = `
       <button class="scan-btn-primary"
-        data-cal-link="apeksha-n/appeal-edge-diagnosis"
+        data-cal-link="aayushnamdev/appeal-edge-diagnosis"
         data-cal-namespace="appeal-edge"
         data-cal-config='{"layout":"month_view","theme":"dark"}'>
         Book a free 15-min call
@@ -1406,7 +1438,7 @@ function renderResults(data) {
         Get started · $${price}
       </a>
       <button class="scan-btn-secondary"
-        data-cal-link="apeksha-n/appeal-edge-diagnosis"
+        data-cal-link="aayushnamdev/appeal-edge-diagnosis"
         data-cal-namespace="appeal-edge"
         data-cal-config='{"layout":"month_view","theme":"dark"}'>
         Have questions? Book a call
@@ -1429,11 +1461,22 @@ function renderResults(data) {
 // ── Form Submit ───────────────────────────────────────
 document.getElementById('submitBtn').addEventListener('click', async () => {
   const noticeText = document.getElementById('noticeText').value.trim();
+  const email = document.getElementById('userEmail').value.trim();
+
   if (!noticeText && uploadedFiles.length === 0) {
     const ta = document.getElementById('noticeText');
     ta.style.boxShadow = '0 0 0 2px rgba(255,180,171,0.6)';
     ta.focus();
     setTimeout(() => { ta.style.boxShadow = ''; }, 2500);
+    return;
+  }
+
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    const emailInput = document.getElementById('userEmail');
+    emailInput.style.boxShadow = '0 0 0 2px rgba(255,180,171,0.6)';
+    emailInput.placeholder = 'Please enter a valid email to continue';
+    emailInput.focus();
+    setTimeout(() => { emailInput.style.boxShadow = ''; emailInput.placeholder = 'Your email — we\'ll send a personalized follow-up'; }, 2500);
     return;
   }
 
@@ -1443,6 +1486,7 @@ document.getElementById('submitBtn').addEventListener('click', async () => {
 
   const formData = new FormData();
   formData.append('noticeText', noticeText);
+  formData.append('email', email);
   uploadedFiles.forEach(f => formData.append('files', f));
 
   const minTime = new Promise(r => setTimeout(r, 6000));
@@ -1481,6 +1525,7 @@ document.getElementById('submitBtn').addEventListener('click', async () => {
 document.getElementById('retryBtn').addEventListener('click', () => showSection('scanForm'));
 document.getElementById('analyzeAnotherBtn').addEventListener('click', () => {
   document.getElementById('noticeText').value = '';
+  document.getElementById('userEmail').value = '';
   uploadedFiles = []; renderPills();
   showSection('scanForm');
   document.getElementById('scan-widget').scrollIntoView({ behavior: 'smooth', block: 'start' });
