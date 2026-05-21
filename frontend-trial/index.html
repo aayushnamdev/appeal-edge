@@ -1109,6 +1109,77 @@ tailwind.config = {
 </section>
 
 <!-- ═══════════════════════════════════════════
+  BLOG PREVIEW
+═══════════════════════════════════════════ -->
+<section class="py-16 md:py-24" style="background:#10131a; border-top:1px solid rgba(70,69,84,0.2)">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="flex items-end justify-between mb-10" data-reveal>
+      <div>
+        <div class="text-[10px] font-black tracking-widest text-secondary uppercase mb-3">From the blog</div>
+        <h2 class="text-3xl md:text-4xl font-black text-white leading-tight tracking-tight">Real cases. Real POAs.</h2>
+      </div>
+      <a href="/blog/" class="hidden md:inline-flex items-center gap-1.5 text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors">
+        View all posts
+        <span class="material-symbols-outlined text-base">arrow_forward</span>
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" data-reveal data-reveal-delay="1">
+
+      <!-- Post card -->
+      <a href="/blog/inauthentic-shoe-brand-reinstated-17-days/" class="block rounded-2xl p-6 transition-all" style="background:rgba(29,31,39,0.5); border:1px solid rgba(70,69,84,0.3); text-decoration:none;" onmouseover="this.style.borderColor='rgba(192,193,255,0.3)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='rgba(70,69,84,0.3)'; this.style.transform='translateY(0)'">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-[10px] font-black tracking-widest text-secondary uppercase" style="background:rgba(68,226,205,0.1); border:1px solid rgba(68,226,205,0.2); padding:3px 10px; border-radius:100px;">Case Study</span>
+          <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Inauthentic</span>
+        </div>
+        <h3 class="text-lg font-bold text-white leading-snug mb-3">
+          How We Reinstated a Shoe Brand After an Inauthentic Suspension
+        </h3>
+        <p class="text-sm leading-relaxed mb-5" style="color:#908fa0;">
+          Nine ASINs frozen. $3,200 lost every day. Two appeals rejected. Here is the supply chain gap that caused it and the POA structure that worked in 17 days.
+        </p>
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <div class="w-7 h-7 rounded-full flex items-center justify-center font-black text-xs select-none flex-shrink-0" style="background:rgba(192,193,255,0.15); color:#c0c1ff;">A</div>
+            <span class="text-xs text-slate-500">Aayush Namdev &middot; 8 min</span>
+          </div>
+          <span class="text-xs" style="color:#464554;">May 21, 2026</span>
+        </div>
+      </a>
+
+      <!-- Coming soon placeholders -->
+      <div class="rounded-2xl p-6" style="background:rgba(29,31,39,0.25); border:1px solid rgba(70,69,84,0.15); opacity:0.45;">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-[10px] font-black tracking-widest uppercase" style="color:#c0c1ff; background:rgba(192,193,255,0.07); border:1px solid rgba(192,193,255,0.1); padding:3px 10px; border-radius:100px;">Coming soon</span>
+          <span class="text-[10px] font-bold text-slate-600 uppercase tracking-widest">IP Complaint</span>
+        </div>
+        <h3 class="text-lg font-bold leading-snug mb-3" style="color:#464554;">Reinstated After a Brand Owner Trademark Complaint</h3>
+        <p class="text-sm leading-relaxed" style="color:#32353d;">When the brand owner files the complaint themselves, the appeal path looks different.</p>
+      </div>
+
+      <div class="rounded-2xl p-6" style="background:rgba(29,31,39,0.25); border:1px solid rgba(70,69,84,0.15); opacity:0.45;">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-[10px] font-black tracking-widest uppercase" style="color:#c0c1ff; background:rgba(192,193,255,0.07); border:1px solid rgba(192,193,255,0.1); padding:3px 10px; border-radius:100px;">Coming soon</span>
+          <span class="text-[10px] font-bold text-slate-600 uppercase tracking-widest">Performance</span>
+        </div>
+        <h3 class="text-lg font-bold leading-snug mb-3" style="color:#464554;">High ODR Suspension: What Amazon Wants to See</h3>
+        <p class="text-sm leading-relaxed" style="color:#32353d;">Order Defect Rate suspensions require a different POA structure than policy violations.</p>
+      </div>
+
+    </div>
+
+    <div class="mt-8 md:hidden text-center">
+      <a href="/blog/" class="inline-flex items-center gap-1.5 text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors">
+        View all posts
+        <span class="material-symbols-outlined text-base">arrow_forward</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
   FOOTER
 ═══════════════════════════════════════════ -->
 <footer class="py-10 px-5 md:px-8" style="background:#10131a; border-top:1px solid rgba(70,69,84,0.2)">
