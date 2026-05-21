@@ -349,7 +349,7 @@ tailwind.config = {
   <a href="#case-types" class="mobile-menu-link" onclick="closeMobileMenu()">Case types</a>
   <a href="#faq" class="mobile-menu-link" onclick="closeMobileMenu()">FAQ</a>
   <div style="margin-top:24px;">
-    <button onclick="closeMobileMenu(); scrollTo('#scan-widget')" class="scan-btn-primary">Get my free case analysis</button>
+    <button onclick="closeMobileMenu(); goTo('#scan-widget')" class="scan-btn-primary">Get my free case analysis</button>
   </div>
 </div>
 
@@ -368,7 +368,7 @@ tailwind.config = {
     </div>
 
     <div class="hidden md:flex items-center gap-4">
-      <button onclick="scrollTo('#scan-widget')" class="bg-primary text-on-primary px-5 py-2.5 rounded-[10px] text-sm font-bold hover:shadow-[0_0_20px_rgba(68,226,205,0.3)] transition-all active:scale-95">
+      <button onclick="goTo('#scan-widget')" class="bg-primary text-on-primary px-5 py-2.5 rounded-[10px] text-sm font-bold hover:shadow-[0_0_20px_rgba(68,226,205,0.3)] transition-all active:scale-95">
         Free case analysis
       </button>
     </div>
@@ -406,7 +406,7 @@ tailwind.config = {
         </p>
 
         <div class="flex flex-col sm:flex-row gap-3 justify-center">
-          <button onclick="scrollTo('#scan-widget')" class="px-8 py-4 bg-primary text-on-primary text-base font-bold rounded-[10px] hover:shadow-[0_0_25px_rgba(192,193,255,0.4)] transition-all active:scale-95 w-full sm:w-auto">
+          <button onclick="goTo('#scan-widget')" class="px-8 py-4 bg-primary text-on-primary text-base font-bold rounded-[10px] hover:shadow-[0_0_25px_rgba(192,193,255,0.4)] transition-all active:scale-95 w-full sm:w-auto">
             Get my free case analysis
           </button>
           <button class="px-8 py-4 bg-surface-container-highest text-on-surface text-base font-bold rounded-[10px] hover:bg-surface-bright transition-all w-full sm:w-auto"
@@ -1085,7 +1085,7 @@ tailwind.config = {
       Get your free case analysis now. If your case is actionable, we can start your appeal today.
     </p>
     <div class="flex flex-col sm:flex-row gap-3 justify-center mb-6">
-      <button onclick="scrollTo('#scan-widget')"
+      <button onclick="goTo('#scan-widget')"
          class="px-8 py-4 md:px-10 md:py-5 text-on-primary text-base md:text-lg font-black rounded-[10px] transition-all hover:scale-105"
          style="background:#c0c1ff; box-shadow:0 0 30px rgba(192,193,255,0.4);">
         Get my free case analysis
@@ -1144,7 +1144,7 @@ tailwind.config = {
 <script>
 
 // ── Smooth Scroll Helper ──────────────────────────────
-function scrollTo(selector) {
+function goTo(selector) {
   const el = document.querySelector(selector);
   if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
