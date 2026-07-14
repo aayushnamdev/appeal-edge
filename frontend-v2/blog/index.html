@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | Appeal Edge</title>
+<meta name="description" content="Guides for Amazon sellers navigating a suspension: what triggers it, what Amazon actually checks, and how to build an appeal that gets a real read.">
+<link rel="canonical" href="https://www.appeal-edge.com/blog/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Appeal Edge">
+<meta property="og:title" content="Blog | Appeal Edge">
+<meta property="og:description" content="Guides for Amazon sellers navigating a suspension: what triggers it, what Amazon actually checks, and how to build an appeal that gets a real read.">
+<meta property="og:url" content="https://www.appeal-edge.com/blog/">
+<meta property="og:image" content="https://www.appeal-edge.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blog | Appeal Edge">
+<meta name="twitter:description" content="Guides for Amazon sellers navigating a suspension: what triggers it, what Amazon actually checks, and how to build an appeal that gets a real read.">
+<meta name="twitter:image" content="https://www.appeal-edge.com/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.appeal-edge.com/#organization",
+      "name": "Appeal Edge",
+      "url": "https://www.appeal-edge.com/",
+      "logo": "https://www.appeal-edge.com/apple-touch-icon.png"
+    },
+    {
+      "@type": "Blog",
+      "@id": "https://www.appeal-edge.com/blog/#blog",
+      "name": "Appeal Edge Blog",
+      "url": "https://www.appeal-edge.com/blog/",
+      "publisher": { "@id": "https://www.appeal-edge.com/#organization" },
+      "blogPost": [
+        {
+          "@type": "BlogPosting",
+          "headline": "Suspended for a \"Related Account\" You Never Created? Here's the Appeal That Actually Works",
+          "url": "https://www.appeal-edge.com/blog/amazon-related-account-suspension-appeal/",
+          "datePublished": "2026-07-14"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  :root {
+    --navy: #0A2540;
+    --navy-2: #0E2E52;
+    --blue: #2B50FF;
+    --blue-dark: #1E3AE0;
+    --amber: #F5A623;
+    --amber-dark: #E48F00;
+    --ink: #1A2433;
+    --grey: #5B6675;
+    --mist: #F4F7FB;
+    --line: #D9DEE6;
+    --white: #FFFFFF;
+    --grad-dark: linear-gradient(135deg, #0A2540 0%, #0E2E52 100%);
+    --e1: 0 1px 2px rgba(10,37,64,.06);
+    --e2: 0 4px 16px rgba(10,37,64,.08);
+    --e3: 0 12px 32px rgba(10,37,64,.12);
+    --focus: 0 0 0 3px rgba(43,80,255,.35);
+    --r-card: 18px;
+    --r-btn: 12px;
+    --maxw: 1160px;
+    --section-y: clamp(72px, 9vw, 120px);
+    --font-display: 'Archivo', sans-serif;
+    --font-body: 'Instrument Sans', system-ui, sans-serif;
+    color-scheme: light;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--ink);
+    background: var(--white);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection { background: rgba(43,80,255,.16); }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+  .display {
+    font-family: var(--font-display);
+    font-variation-settings: 'wdth' 120;
+    font-weight: 850;
+    text-transform: uppercase;
+    letter-spacing: -.01em;
+    line-height: 1.02;
+  }
+  h1.display { font-size: clamp(34px, 5vw, 58px); color: var(--navy); max-width: 18ch; }
+  .section { padding: var(--section-y) 0; }
+  .lede { color: var(--grey); max-width: 52ch; margin-top: 18px; font-size: 18px; }
+  a { color: var(--blue); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  :focus-visible { outline: none; box-shadow: var(--focus); border-radius: 6px; }
+
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    font-family: var(--font-body); font-weight: 600; font-size: 16px; white-space: nowrap;
+    padding: 15px 28px; border-radius: var(--r-btn); border: none; cursor: pointer;
+    text-decoration: none; transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+  }
+  .btn:hover { text-decoration: none; }
+  .btn:active { transform: translateY(1px) scale(.98); }
+  .btn-blue { background: var(--blue); color: var(--white); box-shadow: var(--e2); }
+  .btn-blue:hover { background: var(--blue-dark); box-shadow: var(--e3); transform: translateY(-1px); }
+  .btn-white { background: var(--white); color: var(--navy); box-shadow: var(--e2); }
+  .btn-white:hover { background: var(--mist); box-shadow: var(--e3); transform: translateY(-1px); }
+
+  /* ---------- Nav (shared) ---------- */
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 50; height: 68px;
+    display: flex; align-items: center; background: rgba(255,255,255,.92);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 0 1px 0 var(--line);
+  }
+  .nav-inner {
+    max-width: var(--maxw); margin: 0 auto; padding: 0 24px; width: 100%;
+    display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  }
+  .wordmark {
+    font-family: var(--font-display); font-variation-settings: 'wdth' 118; font-weight: 800;
+    text-transform: uppercase; font-size: 19px; color: var(--navy); letter-spacing: .01em;
+    display: inline-flex; align-items: baseline; gap: 2px; white-space: nowrap;
+  }
+  .wordmark:hover { text-decoration: none; }
+  .wordmark .dot { color: var(--amber); }
+  .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+  .nav-links a { font-size: 15px; font-weight: 500; color: var(--ink); }
+  .nav-links a:hover { color: var(--blue); text-decoration: none; }
+  .nav .btn { padding: 11px 20px; font-size: 15px; }
+  @media (max-width: 860px) {
+    .nav-links { display: none; }
+    .nav-inner { padding: 0 12px; gap: 8px; }
+    .wordmark { font-size: 13px; letter-spacing: 0; }
+    .nav .btn { padding: 7px 10px; font-size: 11.5px; white-space: nowrap; }
+  }
+
+  /* ---------- Blog header ---------- */
+  .blog-header { padding: 152px 0 40px; }
+  .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--grey); }
+
+  /* ---------- Post grid ---------- */
+  .blog-grid {
+    margin-top: 48px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+  }
+  .post-card {
+    display: block;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F4F7FB 100%);
+    border: 1px solid var(--line);
+    border-radius: var(--r-card);
+    box-shadow: var(--e1);
+    padding: 28px;
+    transition: box-shadow .15s ease, transform .15s ease, border-color .15s ease;
+  }
+  .post-card:hover { box-shadow: var(--e3); transform: translateY(-2px); border-color: var(--blue); text-decoration: none; }
+  .post-tag {
+    display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--blue); background: rgba(43,80,255,.08); border-radius: 999px; padding: 5px 12px;
+  }
+  .post-card h2 { margin-top: 16px; font-size: 21px; font-weight: 700; color: var(--navy); line-height: 1.3; }
+  .post-card p { margin-top: 10px; color: var(--grey); font-size: 15px; }
+  .post-meta { margin-top: 18px; font-size: 13px; color: var(--grey); }
+
+  /* ---------- Footer (shared) ---------- */
+  .footer { background: var(--navy); color: rgba(255,255,255,.7); }
+  .prefooter {
+    padding: clamp(56px, 7vw, 88px) 0; border-bottom: 1px solid rgba(255,255,255,.12);
+    display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap;
+  }
+  .prefooter h2 {
+    font-family: var(--font-display); font-variation-settings: 'wdth' 118; font-weight: 850;
+    text-transform: uppercase; font-size: clamp(26px, 3.4vw, 40px); line-height: 1.05;
+    color: var(--white); max-width: 22ch;
+  }
+  .footer-cols { padding: 56px 0; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; }
+  .footer .wordmark { color: var(--white); }
+  .footer-desc { margin-top: 12px; font-size: 15px; color: rgba(255,255,255,.55); }
+  .footer-col h4 {
+    font-size: 13px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
+    color: rgba(255,255,255,.45); margin-bottom: 16px;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 10px; }
+  .footer-col a { color: rgba(255,255,255,.8); font-size: 15px; }
+  .footer-col a:hover { color: var(--white); }
+  .footer-legal {
+    padding: 28px 0 40px; border-top: 1px solid rgba(255,255,255,.12); font-size: 13px;
+    color: rgba(255,255,255,.62); display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+  }
+  .footer-legal p { max-width: 62ch; }
+  @media (max-width: 860px) {
+    .footer-cols { grid-template-columns: 1fr; gap: 36px; }
+    .prefooter { flex-direction: column; align-items: flex-start; }
+  }
+
+  /* ---------- WhatsApp FAB (shared) ---------- */
+  .wa-fab {
+    position: fixed; right: 22px; bottom: 22px; z-index: 40; width: 56px; height: 56px;
+    border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center;
+    box-shadow: var(--e3); transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .wa-fab:hover { transform: translateY(-2px); box-shadow: 0 16px 40px rgba(10,37,64,.2); }
+  .wa-fab:active { transform: translateY(0) scale(.96); }
+  .wa-fab svg { width: 30px; height: 30px; fill: #fff; }
+
+  @media (max-width: 400px) { .wrap { padding: 0 18px; } }
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="wordmark" href="/" aria-label="Appeal Edge home">Appeal Edge<span class="dot">.</span></a>
+    <nav aria-label="Main">
+      <ul class="nav-links">
+        <li><a href="/#expert">The Expert</a></li>
+        <li><a href="/#how">How it works</a></li>
+        <li><a href="/#handle">What we handle</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-blue" data-cta href="https://tally.so/r/Y5voaW" target="_blank" rel="noopener">Get your case reviewed</a>
+  </div>
+</header>
+
+<main>
+  <section class="blog-header">
+    <div class="wrap">
+      <p class="eyebrow">Guides</p>
+      <h1 class="display">The Appeal Edge blog.</h1>
+      <p class="lede">What actually triggers a suspension, what Amazon's reviewers check, and how to build an appeal that gets a real read. No invented numbers, no guaranteed outcomes.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="blog-grid">
+        <a class="post-card" href="/blog/amazon-related-account-suspension-appeal/">
+          <span class="post-tag">Related Account</span>
+          <h2>Suspended for a "Related Account" You Never Created? Here's the Appeal That Actually Works</h2>
+          <p>Why Amazon links accounts that were never meant to be connected, the one mistake that makes it permanent, and what your appeal actually needs to prove.</p>
+          <p class="post-meta">Appeal Edge &middot; 7 min read &middot; July 14, 2026</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="prefooter">
+      <h2>Your account is waiting. Let's get it back.</h2>
+      <a class="btn btn-white" data-cta href="https://tally.so/r/Y5voaW" target="_blank" rel="noopener">Get your case reviewed</a>
+    </div>
+    <div class="footer-cols">
+      <div>
+        <a class="wordmark" href="/">Appeal Edge<span class="dot">.</span></a>
+        <p class="footer-desc">The Reinstatement Force.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="/#expert">The Expert</a></li>
+          <li><a href="/#how">How it works</a></li>
+          <li><a href="/#handle">What we handle</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:contact@appeal-edge.com">contact@appeal-edge.com</a></li>
+          <li><a href="https://wa.me/919220560623?text=Hi%20Appeal%20Edge%2C%20my%20Amazon%20account%20is%20suspended%20and%20I%20need%20help%20with%20my%20case." target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="https://www.instagram.com/appeal.edge/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/company/112773661/" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <p>Appeal Edge is an independent consultancy. Not affiliated with, endorsed by, or sponsored by Amazon.</p>
+      <p>&copy; 2026 Appeal Edge</p>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-fab" href="https://wa.me/919220560623?text=Hi%20Appeal%20Edge%2C%20my%20Amazon%20account%20is%20suspended%20and%20I%20need%20help%20with%20my%20case." target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+</body>
+</html>
