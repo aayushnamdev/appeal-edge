@@ -1,4 +1,51 @@
+User-agent: GPTBot
+Allow: /
+Disallow: /old/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /old/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /old/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /old/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /old/
+
+User-agent: Bytespider
+Allow: /
+Disallow: /old/
+
+User-agent: CCBot
+Allow: /
+Disallow: /old/
+
+User-agent: Amazonbot
+Allow: /
+Disallow: /old/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /old/
+
+User-agent: Cohere-ai
+Allow: /
+Disallow: /old/
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /old/
+
 User-agent: *
 Allow: /
+Disallow: /old/
+
+Content-Signal: ai-train=yes, search=yes, ai-retrieval=yes, ai-personalization=no
 
 Sitemap: https://appeal-edge.com/sitemap.xml
