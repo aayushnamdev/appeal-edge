@@ -584,7 +584,7 @@
     font-variation-settings: 'wdth' 120;
     font-weight: 880;
     text-transform: uppercase;
-    font-size: clamp(34px, 4.6vw, 56px);
+    font-size: clamp(26px, 3.4vw, 42px);
     line-height: 1.02;
     color: var(--white);
     margin: 0 auto;
@@ -839,7 +839,8 @@
   }
 
   @media (max-width: 480px) {
-    h2.display, .cta-zone h2, .prefooter h2 { max-width: none; overflow-wrap: break-word; }
+    h2.display, .prefooter h2 { max-width: none; overflow-wrap: break-word; }
+    .cta-zone h2 { max-width: none; overflow-wrap: normal; word-break: keep-all; }
   }
 </style>
 </head>
@@ -852,7 +853,7 @@
     <a class="brand" href="#top" aria-label="Appeal Edge home"><img class="brand-logo" src="assets/logo/appeal-edge-logo.png" alt="Appeal Edge"></a>
     <nav aria-label="Main">
       <ul class="nav-links">
-        <li><a href="#expert">The Expert</a></li>
+        <li><a href="#expert">Advisor</a></li>
         <li><a href="#how">How it works</a></li>
         <li><a href="#handle">What we handle</a></li>
         <li><a href="/blog/">Blog</a></li>
@@ -878,38 +879,11 @@
     </div>
   </section>
 
-  <!-- 2. THE EXPERT -->
-  <section class="section" id="expert">
+  <!-- 2. MEET THE FOUNDERS TEAM -->
+  <section class="section mist" id="founders">
     <div class="wrap">
-      <h2 class="display reveal">Led by one expert. Every case.</h2>
-      <p class="lede reveal">Every submission is reviewed and matched to the Appeal Edge expert who has resolved that exact situation before. Meet the one who leads them.</p>
-      <div class="expert-grid">
-        <figure class="expert-photo reveal">
-          <img src="assets/jeff-photo.jpeg" alt="Jeff Goldin, lead expert at Appeal Edge" loading="lazy">
-        </figure>
-        <div>
-          <h3 class="expert-name reveal">Jeff Goldin</h3>
-          <p class="expert-title reveal" style="--d:.05s">Lead Expert at Appeal Edge. Amazon compliance, brand protection and suspension prevention.</p>
-          <p class="expert-claim reveal" style="--d:.1s">In 2014 he founded the world's first Amazon appeal and reinstatement company, and wrote the playbook the industry still copies.</p>
-          <p class="expert-bio reveal" style="--d:.15s">For more than 25 years Jeff has worked inside Amazon's rules: account health, policy compliance, seller performance and suspension prevention across the US, UK, Canada, Germany, France, Italy and Japan. At Appeal Edge he takes on the most complex cases personally.</p>
-          <ul class="cred-list">
-            <li class="reveal"><span class="year">2014</span>Pioneered the Amazon appeal and reinstatement industry</li>
-            <li class="reveal" style="--d:.05s"><span class="year">25+</span>Years of experience selling and resolving cases on Amazon</li>
-            <li class="reveal" style="--d:.1s"><span class="year">7</span>Marketplaces worked: US, UK, Canada, Germany, France, Italy and Japan</li>
-            <li class="reveal" style="--d:.15s"><span class="year">2008</span>Sole US seller invited to the Amazon Japan Conference</li>
-            <li class="reveal" style="--d:.2s"><span class="year">Direct</span>Escalated complex cases directly with Amazon management</li>
-          </ul>
-          <p class="expert-meta reveal">Aliso Viejo, California</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 2b. MEET THE COFOUNDERS -->
-  <section class="section mist" id="cofounders">
-    <div class="wrap">
-      <h2 class="display reveal">Meet the cofounders</h2>
-      <p class="lede reveal">The people building Appeal Edge.</p>
+      <h2 class="display reveal">Meet the Founders Team</h2>
+      <p class="lede reveal">The founders who build and run Appeal Edge.</p>
 
       <div class="cf-stage">
         <div class="cf-side cf-left reveal">
@@ -926,7 +900,7 @@
         <figure class="cf-video reveal" style="--d:.08s">
           <div class="cf-frame">
             <iframe src="https://www.youtube.com/embed/FknNCZqfn0k"
-                    title="Meet the Appeal Edge cofounders"
+                    title="Meet the Appeal Edge founders team"
                     loading="lazy" allowfullscreen
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
           </div>
@@ -953,6 +927,33 @@
           <span class="cf-role">CTO</span>
         </figcaption>
       </figure>
+    </div>
+  </section>
+
+  <!-- 2b. OUR ADVISOR -->
+  <section class="section" id="expert">
+    <div class="wrap">
+      <h2 class="display reveal">Our advisor.</h2>
+      <p class="lede reveal">Appeal Edge is advised by the expert who pioneered this industry. He guides the team on the toughest cases.</p>
+      <div class="expert-grid">
+        <figure class="expert-photo reveal">
+          <img src="assets/jeff-photo.jpeg" alt="Jeff Goldin, advisor to Appeal Edge" loading="lazy">
+        </figure>
+        <div>
+          <h3 class="expert-name reveal">Jeff Goldin</h3>
+          <p class="expert-title reveal" style="--d:.05s">Advisor to Appeal Edge. Amazon compliance, brand protection and suspension prevention.</p>
+          <p class="expert-claim reveal" style="--d:.1s">In 2014 he founded the world's first Amazon appeal and reinstatement company, and wrote the playbook the industry still copies.</p>
+          <p class="expert-bio reveal" style="--d:.15s">For more than 25 years Jeff has worked inside Amazon's rules: account health, policy compliance, seller performance and suspension prevention across the US, UK, Canada, Germany, France, Italy and Japan. As advisor to Appeal Edge he guides the team on the most complex cases.</p>
+          <ul class="cred-list">
+            <li class="reveal"><span class="year">2014</span>Pioneered the Amazon appeal and reinstatement industry</li>
+            <li class="reveal" style="--d:.05s"><span class="year">25+</span>Years of experience selling and resolving cases on Amazon</li>
+            <li class="reveal" style="--d:.1s"><span class="year">7</span>Marketplaces worked: US, UK, Canada, Germany, France, Italy and Japan</li>
+            <li class="reveal" style="--d:.15s"><span class="year">2008</span>Sole US seller invited to the Amazon Japan Conference</li>
+            <li class="reveal" style="--d:.2s"><span class="year">Direct</span>Escalated complex cases directly with Amazon management</li>
+          </ul>
+          <p class="expert-meta reveal">Aliso Viejo, California</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -1124,7 +1125,7 @@
       <div class="footer-col">
         <h4>Navigate</h4>
         <ul>
-          <li><a href="#expert">The Expert</a></li>
+          <li><a href="#expert">Advisor</a></li>
           <li><a href="#how">How it works</a></li>
           <li><a href="#handle">What we handle</a></li>
           <li><a href="/blog/">Blog</a></li>
