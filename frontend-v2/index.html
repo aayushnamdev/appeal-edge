@@ -351,6 +351,92 @@
     color: var(--grey);
   }
 
+  /* ---------- Cofounders ---------- */
+  .cf-stage {
+    display: grid;
+    grid-template-columns: 1fr minmax(320px, 620px) 1fr;
+    align-items: center;
+    gap: clamp(16px, 3vw, 40px);
+    margin-top: 48px;
+  }
+  .cf-side {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .cf-left { text-align: right; align-items: flex-end; }
+  .cf-right { text-align: left; align-items: flex-start; }
+  .cf-name {
+    font-family: var(--font-display);
+    font-variation-settings: 'wdth' 116;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--navy);
+    font-size: clamp(18px, 2vw, 24px);
+    line-height: 1.1;
+  }
+  .cf-role {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--blue);
+  }
+  .cf-arrow {
+    margin-top: 14px;
+    color: var(--blue);
+    line-height: 0;
+  }
+  .cf-arrow svg { display: block; width: clamp(40px, 6vw, 76px); height: auto; }
+  .cf-video {
+    background: linear-gradient(180deg, #FFFFFF 0%, var(--mist) 100%);
+    border: 1px solid var(--line);
+    border-radius: var(--r-card);
+    box-shadow: var(--e2);
+    padding: 10px;
+    margin: 0;
+  }
+  .cf-frame {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .cf-frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  .cf-cto {
+    margin: clamp(40px, 6vw, 64px) auto 0;
+    max-width: 260px;
+    text-align: center;
+  }
+  .cf-photo {
+    background: linear-gradient(180deg, #FFFFFF 0%, var(--mist) 100%);
+    border: 1px solid var(--line);
+    border-radius: var(--r-card);
+    box-shadow: var(--e2);
+    padding: 10px;
+  }
+  .cf-photo img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center 30%;
+    border-radius: 10px;
+  }
+  .cf-cto figcaption {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
   /* ---------- Proof strip ---------- */
   .proof {
     background: var(--grad-dark);
@@ -720,6 +806,11 @@
   /* ---------- Mobile ---------- */
   @media (max-width: 860px) {
     .hero { padding-top: 128px; }
+    .cf-stage { grid-template-columns: 1fr; gap: 16px; }
+    .cf-left { text-align: left; align-items: flex-start; }
+    .cf-right { text-align: right; align-items: flex-end; }
+    .cf-video { width: 100%; }
+    .cf-arrow { margin-top: 6px; transform: rotate(90deg); }
     .expert-grid { grid-template-columns: 1fr; }
     .expert-photo { position: static; max-width: 320px; }
     .proof-grid { grid-template-columns: 1fr 1fr; gap: 40px 16px; }
@@ -798,6 +889,57 @@
           <p class="expert-meta reveal">Aliso Viejo, California</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- 2b. MEET THE COFOUNDERS -->
+  <section class="section mist" id="cofounders">
+    <div class="wrap">
+      <h2 class="display reveal">Meet the cofounders</h2>
+      <p class="lede reveal">The people building Appeal Edge.</p>
+
+      <div class="cf-stage">
+        <div class="cf-side cf-left reveal">
+          <span class="cf-name">Khushi Narwal</span>
+          <span class="cf-role">CMO</span>
+          <span class="cf-arrow cf-arrow-r" aria-hidden="true">
+            <svg viewBox="0 0 76 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 12H70" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M60 3L70 12L60 21" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </div>
+
+        <figure class="cf-video reveal" style="--d:.08s">
+          <div class="cf-frame">
+            <iframe src="https://www.youtube.com/embed/FknNCZqfn0k"
+                    title="Meet the Appeal Edge cofounders"
+                    loading="lazy" allowfullscreen
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+          </div>
+        </figure>
+
+        <div class="cf-side cf-right reveal" style="--d:.05s">
+          <span class="cf-arrow cf-arrow-l" aria-hidden="true">
+            <svg viewBox="0 0 76 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M74 12H6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M16 3L6 12L16 21" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="cf-name">Apeksha Namdev</span>
+          <span class="cf-role">COO</span>
+        </div>
+      </div>
+
+      <figure class="cf-cto reveal" style="--d:.12s">
+        <div class="cf-photo">
+          <img src="assets/aayush-photo.jpg" alt="Aayush Namdev, CTO of Appeal Edge" loading="lazy">
+        </div>
+        <figcaption>
+          <span class="cf-name">Aayush Namdev</span>
+          <span class="cf-role">CTO</span>
+        </figcaption>
+      </figure>
     </div>
   </section>
 
