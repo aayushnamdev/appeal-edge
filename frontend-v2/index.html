@@ -787,7 +787,19 @@
   }
   .social-rail svg { width: 16px; height: 16px; fill: currentColor; }
   @media (max-width: 900px) {
-    .social-rail { display: none; }
+    .wa-fab { display: none; }
+    .social-rail {
+      top: auto;
+      bottom: 16px;
+      left: 50%;
+      right: auto;
+      transform: translateX(-50%);
+      flex-direction: row;
+      gap: 7px;
+      padding: 6px 8px;
+    }
+    .social-rail a { width: 28px; height: 28px; }
+    .social-rail svg { width: 13px; height: 13px; }
   }
 
   /* ---------- Reveal animation ---------- */
@@ -810,7 +822,8 @@
     .cf-left { text-align: left; align-items: flex-start; }
     .cf-right { text-align: right; align-items: flex-end; }
     .cf-video { width: 100%; }
-    .cf-arrow { margin-top: 6px; transform: rotate(90deg); }
+    .cf-arrow { margin: 6px 0; transform: rotate(90deg); }
+    .cf-arrow svg { width: 28px; }
     .expert-grid { grid-template-columns: 1fr; }
     .expert-photo { position: static; max-width: 320px; }
     .proof-grid { grid-template-columns: 1fr 1fr; gap: 40px 16px; }
