@@ -12,29 +12,30 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amazon Intellectual Property Complaint: How to Appeal a Trademark or Copyright Claim | Appeal Edge</title>
-<meta name="description" content="An Amazon intellectual property complaint isn't reviewed by Amazon itself, it's enforced on the rights owner's word. Here's what actually resolves a trademark, copyright, or patent complaint.">
-<link rel="canonical" href="https://www.appeal-edge.com/blog/amazon-ip-complaint-suspension-appeal/">
+<title>What Is an Amazon Repricer? How Automated Pricing Software Actually Works | Appeal Edge</title>
+<meta name="description" content="A repricer is software that changes your Amazon price automatically, often every few minutes. Here is exactly what it checks, the decision loop it runs, and how to set one up correctly.">
+<link rel="canonical" href="https://www.appeal-edge.com/blog/what-is-an-amazon-repricer/">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Appeal Edge">
-<meta property="og:title" content="Amazon Intellectual Property Complaint: How to Appeal a Trademark or Copyright Claim">
-<meta property="og:description" content="An Amazon intellectual property complaint isn't reviewed by Amazon itself, it's enforced on the rights owner's word. Here's what actually resolves a trademark, copyright, or patent complaint.">
-<meta property="og:url" content="https://www.appeal-edge.com/blog/amazon-ip-complaint-suspension-appeal/">
+<meta property="og:title" content="What Is an Amazon Repricer? How Automated Pricing Software Actually Works">
+<meta property="og:description" content="A repricer is software that changes your Amazon price automatically, often every few minutes. Here is exactly what it checks, the decision loop it runs, and how to set one up correctly.">
+<meta property="og:url" content="https://www.appeal-edge.com/blog/what-is-an-amazon-repricer/">
 <meta property="og:image" content="https://www.appeal-edge.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="article:published_time" content="2026-07-20T00:00:00+00:00">
-<meta property="article:modified_time" content="2026-07-20T00:00:00+00:00">
-<meta property="article:section" content="IP Complaints">
-<meta property="article:tag" content="Amazon intellectual property complaint">
-<meta property="article:tag" content="Amazon trademark complaint">
-<meta property="article:tag" content="Amazon copyright infringement claim">
+<meta property="article:published_time" content="2026-07-26T00:00:00+00:00">
+<meta property="article:modified_time" content="2026-07-26T00:00:00+00:00">
+<meta property="article:section" content="Seller Tools">
+<meta property="article:tag" content="What is an Amazon repricer">
+<meta property="article:tag" content="Amazon repricer meaning">
+<meta property="article:tag" content="How does Amazon repricer work">
+<meta property="article:tag" content="Amazon repricing software setup">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Amazon Intellectual Property Complaint: How to Appeal a Trademark or Copyright Claim">
-<meta name="twitter:description" content="What actually resolves a trademark, copyright, or patent complaint against your Amazon listing.">
+<meta name="twitter:title" content="What Is an Amazon Repricer? How Automated Pricing Software Actually Works">
+<meta name="twitter:description" content="What an Amazon repricer actually is, the exact decision loop it runs, and how to set one up correctly.">
 <meta name="twitter:image" content="https://www.appeal-edge.com/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,68 +44,100 @@
 {
   "@context": "https://schema.org",
   "@graph": [
+    { "@type": "Organization", "@id": "https://www.appeal-edge.com/#organization", "name": "Appeal Edge", "url": "https://www.appeal-edge.com/", "logo": "https://www.appeal-edge.com/apple-touch-icon.png" },
+    { "@type": "Person", "@id": "https://www.appeal-edge.com/#aayush-namdev", "name": "Aayush Namdev", "jobTitle": "CTO", "worksFor": { "@id": "https://www.appeal-edge.com/#organization" } },
     {
-      "@type": "Organization",
-      "@id": "https://www.appeal-edge.com/#organization",
-      "name": "Appeal Edge",
-      "url": "https://www.appeal-edge.com/",
-      "logo": "https://www.appeal-edge.com/apple-touch-icon.png"
+  "@type": "Article",
+  "@id": "https://www.appeal-edge.com/blog/what-is-an-amazon-repricer/#article",
+  "headline": "What Is an Amazon Repricer? How Automated Pricing Software Actually Works",
+  "description": "A repricer is software that changes your Amazon price automatically, often every few minutes. Here is exactly what it checks, the decision loop it runs, and how to set one up correctly.",
+  "author": {
+    "@id": "https://www.appeal-edge.com/#aayush-namdev"
+  },
+  "publisher": {
+    "@id": "https://www.appeal-edge.com/#organization"
+  },
+  "datePublished": "2026-07-26",
+  "dateModified": "2026-07-26",
+  "mainEntityOfPage": "https://www.appeal-edge.com/blog/what-is-an-amazon-repricer/",
+  "image": "https://www.appeal-edge.com/og-image.png",
+  "articleSection": "Seller Tools",
+  "keywords": [
+    "What is an Amazon repricer",
+    "Amazon repricer meaning",
+    "How does Amazon repricer work",
+    "Amazon repricing software setup"
+  ]
+},
+    {
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.appeal-edge.com/"
     },
     {
-      "@type": "Person",
-      "@id": "https://www.appeal-edge.com/#khushi-narwal",
-      "name": "Khushi Narwal",
-      "jobTitle": "COO",
-      "worksFor": { "@id": "https://www.appeal-edge.com/#organization" }
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://www.appeal-edge.com/blog/"
     },
     {
-      "@type": "Article",
-      "@id": "https://www.appeal-edge.com/blog/amazon-ip-complaint-suspension-appeal/#article",
-      "headline": "Amazon Intellectual Property Complaint: How to Appeal a Trademark or Copyright Claim",
-      "description": "An Amazon intellectual property complaint isn't reviewed by Amazon itself, it's enforced on the rights owner's word. Here's what actually resolves a trademark, copyright, or patent complaint.",
-      "author": { "@id": "https://www.appeal-edge.com/#khushi-narwal" },
-      "publisher": { "@id": "https://www.appeal-edge.com/#organization" },
-      "datePublished": "2026-07-20",
-      "dateModified": "2026-07-20",
-      "mainEntityOfPage": "https://www.appeal-edge.com/blog/amazon-ip-complaint-suspension-appeal/",
-      "image": "https://www.appeal-edge.com/og-image.png",
-      "articleSection": "IP Complaints",
-      "keywords": ["Amazon intellectual property complaint appeal", "Amazon trademark complaint", "Amazon copyright infringement claim", "Amazon IP complaint"]
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.appeal-edge.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.appeal-edge.com/blog/" },
-        { "@type": "ListItem", "position": 3, "name": "IP Complaint Appeal", "item": "https://www.appeal-edge.com/blog/amazon-ip-complaint-suspension-appeal/" }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://www.appeal-edge.com/blog/amazon-ip-complaint-suspension-appeal/#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is the fastest way to resolve an Amazon intellectual property complaint?",
-          "acceptedAnswer": { "@type": "Answer", "text": "A direct retraction from the rights owner who filed the complaint, submitted through Amazon's process, is generally the fastest path since Amazon doesn't independently investigate the underlying dispute." }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I appeal an IP complaint by proving my product is genuine?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Not on its own. IP complaints are usually about unauthorized use of a trademark, copyrighted material, or a patent, not product authenticity, so proof of genuineness alone typically doesn't resolve the complaint." }
-        },
-        {
-          "@type": "Question",
-          "name": "Does Amazon investigate whether the complaint is true?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Generally no. Amazon acts on the rights owner's complaint directly and expects the two parties to resolve the underlying dispute, with Amazon enforcing whatever resolution results." }
-        },
-        {
-          "@type": "Question",
-          "name": "What if I believe the complaint was filed in error?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Contact the rights owner listed on Amazon's notice directly, professionally, and request a retraction if you believe the claim is invalid or mistaken." }
-        }
-      ]
+      "@type": "ListItem",
+      "position": 3,
+      "name": "What Is an Amazon Repricer",
+      "item": "https://www.appeal-edge.com/blog/what-is-an-amazon-repricer/"
     }
+  ]
+},
+    {
+  "@type": "FAQPage",
+  "@id": "https://www.appeal-edge.com/blog/what-is-an-amazon-repricer/#faq",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is an Amazon repricer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Software connected to your seller account that automatically adjusts your listed price based on rules or an algorithm, without you manually changing it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often does a repricer change my price?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most tools poll competing prices every few minutes. Some offer near real time repricing for high velocity ASINs where the Buy Box changes hands frequently."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to code anything to set one up?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Repricers connect through an authorized integration in Seller Central, and setup is done through the tool's own interface with floor, ceiling, and rule settings per SKU."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a floor and a ceiling in a repricer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The floor is the lowest price the software is allowed to set, the ceiling is the highest. Every automated price change happens somewhere inside that range."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a repricer get my account suspended?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Indirectly, yes. A missing or misconfigured floor can let the software chase a price down toward cost, and sharp price swings across a catalog are a pattern Amazon's Fair Pricing Policy is built to catch."
+      }
+    }
+  ]
+}
   ]
 }
 </script>
@@ -164,6 +197,9 @@
   .prose ul, .prose ol { margin-top: 16px; padding-left: 22px; color: var(--ink); }
   .prose li { margin-top: 8px; }
   .prose strong { color: var(--navy); }
+  .prose table { width: 100%; margin-top: 20px; border-collapse: collapse; font-size: 15px; }
+  .prose th, .prose td { text-align: left; padding: 12px 14px; border: 1px solid var(--line); vertical-align: top; }
+  .prose th { background: var(--mist); color: var(--navy); font-size: 13px; text-transform: uppercase; letter-spacing: .04em; }
   .callout { margin-top: 28px; padding: 24px 26px; border-radius: var(--r-card); background: linear-gradient(180deg, #FFFFFF 0%, #F4F7FB 100%); border: 1px solid var(--line); box-shadow: var(--e1); }
   .callout.warn { border-color: rgba(245,166,35,.4); background: linear-gradient(180deg, #FFFDF7 0%, #FFF6E6 100%); }
   .callout h4 { font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--amber-dark); margin-bottom: 10px; }
@@ -246,58 +282,82 @@
 
 <main>
   <nav class="breadcrumb wrap" aria-label="Breadcrumb">
-    <a href="/">Home</a><span>/</span><a href="/blog/">Blog</a><span>/</span>IP Complaint Appeal
+    <a href="/">Home</a><span>/</span><a href="/blog/">Blog</a><span>/</span>What Is an Amazon Repricer
   </nav>
 
   <article class="wrap">
     <header class="article-header">
-      <span class="post-tag">IP Complaints</span>
-      <h1 class="article-title">Amazon intellectual property complaint: how to appeal a trademark or copyright claim.</h1>
-      <p class="article-dek">An intellectual property complaint isn't a suspension Amazon reviewers decide on their own judgment. It's Amazon acting on a rights owner's word. Here's what actually resolves a trademark, copyright, or patent complaint, and why denying it rarely works.</p>
-      <p class="byline"><strong>Khushi Narwal, COO</strong> &middot; Published July 20, 2026 &middot; 6 min read</p>
+      <span class="post-tag">Seller Tools</span>
+      <h1 class="article-title">What is an amazon repricer? how automated pricing software actually works.</h1>
+      <p class="article-dek">A repricer is the software layer that changes your price without you touching it, often every few minutes. Here is the exact decision loop it runs each time, how to set one up, and what actually changes on your account once it's live.</p>
+      <p class="byline"><strong>Aayush Namdev, CTO</strong> &middot; Published July 26, 2026 &middot; 10 min read</p>
     </header>
 
     <div class="prose">
-      <p class="lede-p">A rights owner files a complaint, usually through Amazon's Report Infringement form or Brand Registry, alleging trademark, copyright, or patent infringement. Amazon's role at that point is enforcement, not investigation. Understanding that distinction changes how you should approach the appeal entirely.</p>
+      <p class="lede-p">Most active Amazon listings are repriced by software, not a person checking a spreadsheet twice a day. A repricer is the tool doing that work, and understanding exactly what it checks, in what order, and how often, is the difference between using it as a genuine advantage and quietly creating an account risk.</p>
 
-      <h2>The three types of IP complaints Amazon actually processes</h2>
-      <p><strong>Trademark infringement</strong> involves using a brand's protected name, logo, or packaging without authorization, often in a listing title, image, or description. <strong>Copyright infringement</strong> covers unauthorized use of someone else's images, product photography, written content, or design work. <strong>Patent infringement</strong> is the hardest to resolve directly, since it usually involves a genuine technical or design dispute that Amazon is not positioned to evaluate itself.</p>
+      <h2>The plain definition</h2>
+      <p>An Amazon repricer is software that connects to your seller account through an authorized integration and automatically adjusts the price of your listings based on rules you set or an algorithm the tool runs. It removes the need to manually check competing prices throughout the day, since the software checks continuously and applies a new price the moment its conditions are met.</p>
 
-      <h2>Why denying the complaint rarely works</h2>
-      <p>Amazon doesn't independently investigate whether an IP complaint is valid. When a rights owner files one through the proper channel, Amazon acts on it and expects the two parties to resolve the underlying dispute directly. A plan that simply denies wrongdoing, without a retraction or proof of authorization, gives Amazon nothing to act on and typically doesn't move the case forward.</p>
-
-      <h2>What actually gets a listing reinstated</h2>
+      <h2>The decision loop, step by step</h2>
+      <p>Every reprice event follows roughly the same sequence, whether the tool is simple or advanced.</p>
       <ol>
-        <li><strong>A retraction letter from the rights owner</strong>, submitted directly to Amazon through their process, confirming the complaint has been withdrawn.</li>
-        <li><strong>Proof of authorization</strong> to use the trademark or copyrighted material, such as a licensing agreement or authorized reseller documentation.</li>
-        <li><strong>For patent complaints</strong>, resolution is typically slower and may require a legal outcome or a direct agreement with the patent holder, since Amazon generally won't reinstate on a seller's word alone.</li>
+        <li><strong>Poll the market.</strong> The repricer checks competing offers on the same listing at a set interval, often every few minutes.</li>
+        <li><strong>Filter the competition.</strong> It narrows those offers to ones that actually matter: same condition, comparable fulfillment method, and excludes listings that are out of stock or otherwise not a real competing option.</li>
+        <li><strong>Check your bounds.</strong> It reads the floor and ceiling you've set for that specific SKU, since every price change has to land somewhere inside that range.</li>
+        <li><strong>Apply the rule or algorithm.</strong> A rule based tool follows a fixed instruction. An algorithmic tool weighs your sales velocity, margin, and stock level alongside the competing price.</li>
+        <li><strong>Set the new price and log it.</strong> The change is applied to the live listing and recorded in a price history log, which becomes important later if a pricing dispute ever needs to be reviewed.</li>
       </ol>
-      <div class="callout warn">
-        <h4>Patent complaints are different</h4>
-        <p>Trademark and copyright complaints can sometimes be resolved directly with the rights owner. Patent complaints are harder: Amazon generally won't reinstate a listing without either a retraction or a legal ruling, since patent disputes involve a genuine technical question Amazon isn't equipped to judge.</p>
-      </div>
 
-      <h2>If you don't know who filed the complaint</h2>
-      <p>Amazon's notice typically includes the rights owner's contact information. If you believe the claim is invalid or mistaken, reach out directly and professionally to request a retraction. Going straight to Amazon with a denial, without first attempting to resolve it with the actual rights owner, tends to slow the case down rather than speed it up.</p>
+      <h2>Rule based versus algorithmic, briefly</h2>
+      <p>Rule based tools follow a fixed instruction, such as beating the lowest price by a set amount. Algorithmic tools weigh more inputs, including your own margin and inventory position, before deciding a price. The choice between them affects setup time, audit simplicity, and how well the tool protects margin rather than just chasing the Buy Box. That comparison deserves its own detailed breakdown, linked below.</p>
+
+      <h2>Setting one up for the first time</h2>
+      <ol>
+        <li><strong>Authorize the connection.</strong> Repricers connect through Seller Central's API authorization, granting the tool permission to read pricing data and update listings.</li>
+        <li><strong>Choose which SKUs to include.</strong> Start with a small, low risk slice of the catalog rather than turning it on for everything at once.</li>
+        <li><strong>Set a floor and ceiling per SKU.</strong> Not once for the entire catalog. A single blanket minimum treats a low value accessory the same as a high value unit, and that mismatch is where most misconfigurations start.</li>
+        <li><strong>Choose a poll frequency.</strong> Most sellers don't need the fastest available setting, especially while testing.</li>
+        <li><strong>Run a pilot batch and review results after 48 hours.</strong> Check whether the price is landing above your floor most of the time, or sitting at the floor constantly, which usually signals a setting that isn't working correctly.</li>
+      </ol>
+
+      <h2>What actually changes on your account once it's live</h2>
+      <p>Your Buy Box win rate typically shifts, sometimes significantly, within the first few days. A detailed price history becomes available in your account's pricing reports, which is useful evidence if a pricing question ever comes up. And because pricing behavior is one of the signals Amazon's systems monitor for fairness, an active repricer means your account's price movement is now something worth watching, not something to set once and ignore.</p>
+
+      <h2>Signs your repricer is misconfigured</h2>
+      <ul>
+        <li>A SKU sitting at its floor price for more than 48 hours without moving</li>
+        <li>Sudden, sharp price swings across multiple listings in the same day</li>
+        <li>Margin eroding even while the Buy Box win rate looks healthy</li>
+      </ul>
+
+      <div class="callout warn">
+        <h4>Set the floor per SKU, not once for the whole catalog</h4>
+        <p>A blanket minimum across hundreds of SKUs is the single most common repricer misconfiguration. Review any SKU that has spent more than 48 hours sitting at its floor before assuming the setting is working correctly.</p>
+      </div>
 
       <div class="faq-section">
         <h2>Frequently asked questions</h2>
         <div class="faq-list">
           <details class="faq-item">
-            <summary>What is the fastest way to resolve an Amazon intellectual property complaint?<span class="faq-mark" aria-hidden="true"></span></summary>
-            <p class="faq-body">A direct retraction from the rights owner who filed the complaint, submitted through Amazon's process, is generally the fastest path since Amazon doesn't independently investigate the underlying dispute.</p>
+            <summary>What is an Amazon repricer?<span class="faq-mark" aria-hidden="true"></span></summary>
+            <p class="faq-body">Software connected to your seller account that automatically adjusts your listed price based on rules or an algorithm, without you manually changing it.</p>
           </details>
           <details class="faq-item">
-            <summary>Can I appeal an IP complaint by proving my product is genuine?<span class="faq-mark" aria-hidden="true"></span></summary>
-            <p class="faq-body">Not on its own. IP complaints are usually about unauthorized use of a trademark, copyrighted material, or a patent, not product authenticity, so proof of genuineness alone typically doesn't resolve the complaint.</p>
+            <summary>How often does a repricer change my price?<span class="faq-mark" aria-hidden="true"></span></summary>
+            <p class="faq-body">Most tools poll competing prices every few minutes. Some offer near real time repricing for high velocity ASINs where the Buy Box changes hands frequently.</p>
           </details>
           <details class="faq-item">
-            <summary>Does Amazon investigate whether the complaint is true?<span class="faq-mark" aria-hidden="true"></span></summary>
-            <p class="faq-body">Generally no. Amazon acts on the rights owner's complaint directly and expects the two parties to resolve the underlying dispute, with Amazon enforcing whatever resolution results.</p>
+            <summary>Do I need to code anything to set one up?<span class="faq-mark" aria-hidden="true"></span></summary>
+            <p class="faq-body">No. Repricers connect through an authorized integration in Seller Central, and setup is done through the tool's own interface with floor, ceiling, and rule settings per SKU.</p>
           </details>
           <details class="faq-item">
-            <summary>What if I believe the complaint was filed in error?<span class="faq-mark" aria-hidden="true"></span></summary>
-            <p class="faq-body">Contact the rights owner listed on Amazon's notice directly, professionally, and request a retraction if you believe the claim is invalid or mistaken.</p>
+            <summary>What is the difference between a floor and a ceiling in a repricer?<span class="faq-mark" aria-hidden="true"></span></summary>
+            <p class="faq-body">The floor is the lowest price the software is allowed to set, the ceiling is the highest. Every automated price change happens somewhere inside that range.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can a repricer get my account suspended?<span class="faq-mark" aria-hidden="true"></span></summary>
+            <p class="faq-body">Indirectly, yes. A missing or misconfigured floor can let the software chase a price down toward cost, and sharp price swings across a catalog are a pattern Amazon's Fair Pricing Policy is built to catch.</p>
           </details>
         </div>
       </div>
@@ -305,17 +365,16 @@
       <div class="related">
         <h4>Related reading</h4>
         <ul>
-          <li><a href="/blog/amazon-trademark-violation-appeal-seller-central-steps/">Amazon trademark violation appeal: the exact steps in seller central</a></li>
-          <li><a href="/blog/amazon-inauthentic-complaint-no-invoice-appeal/">Amazon inauthentic complaint, no invoice from your supplier? Here's what actually works</a></li>
-          <li><a href="/blog/amazon-used-sold-as-new-suspension-appeal/">Amazon used sold as new complaints: why this suspension happens and how to appeal it</a></li>
-          <li><a href="/blog/amazon-section-3-suspension-appeal/">Amazon Section 3 suspension: what the notice actually means and how to respond</a></li>
+          <li><a href="/blog/amazon-repricing-software-guide/">Amazon repricing software: how automated pricing actually works</a></li>
+          <li><a href="/blog/algorithmic-vs-rule-based-amazon-repricing/">Algorithmic vs rule based Amazon repricing: which one should you run</a></li>
+          <li><a href="/blog/amazon-repricing-strategies-fair-pricing-policy/">Amazon repricing strategies and where the fair pricing policy draws the line</a></li>
         </ul>
       </div>
     </div>
 
     <div class="cta-card">
-      <h3>Hit with an IP complaint you don't understand?</h3>
-      <p>Send us the complaint notice. We'll help you identify what's actually being claimed and the real path to resolution, before you spend a review cycle on the wrong approach.</p>
+      <h3>Repricer already caused a pricing problem?</h3>
+      <p>Send us your suspension or warning notice along with your repricer settings and price history. We'll help you find the actual root cause.</p>
       <a class="btn btn-amber" data-cta-main href="https://tally.so/r/Y5voaW" target="_blank" rel="noopener">Get your case reviewed</a>
       <p class="cta-assure">Confidential. No charge to review. No obligation.</p>
     </div>
