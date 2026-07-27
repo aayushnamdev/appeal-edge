@@ -1,0 +1,11 @@
+{
+  "name": "Appeal Edge",
+  "short_name": "Appeal Edge",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#2B50FF",
+  "background_color": "#2B50FF",
+  "display": "browser"
+}

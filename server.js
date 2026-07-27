@@ -30,9 +30,16 @@ app.use((req, res, next) => {
 });
 
 // Long, immutable cache for fonts/images; short cache for HTML so deploys show up promptly.
+// Icons/manifest get a short revalidating cache instead of `immutable` — they're
+// replaced in place at fixed filenames (favicon.ico, icon.svg, ...), and `immutable`
+// previously told browsers/crawlers to never re-check them, which is why a favicon
+// swapped in March was still being served to Google months later.
 const staticCacheOptions = {
   setHeaders: (res, filePath) => {
-    if (/\.(woff2?|ttf|otf|png|jpe?g|svg|webp|ico)$/i.test(filePath)) {
+    const base = path.basename(filePath);
+    if (/^(favicon\.ico|icon(-\d+)?\.svg|icon-\d+\.png|apple-touch-icon(-\d+)?\.png|site\.webmanifest|og-image\.png)$/i.test(base)) {
+      res.setHeader('Cache-Control', 'public, max-age=86400, must-revalidate');
+    } else if (/\.(woff2?|ttf|otf|png|jpe?g|svg|webp|ico)$/i.test(filePath)) {
       res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
     } else if (/\.html$/i.test(filePath)) {
       res.setHeader('Cache-Control', 'public, max-age=0, must-revalidate');
@@ -57,6 +64,8 @@ app.use((req, res) => {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Page not found | Appeal Edge</title>
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" type="image/svg+xml" href="/icon.svg">
 <style>
   body { margin:0; min-height:100dvh; display:flex; align-items:center; justify-content:center;
     font-family:'Instrument Sans',system-ui,sans-serif; background:#FFFFFF; color:#1A2433; text-align:center; padding:24px; }
