@@ -12,8 +12,8 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Suspended for a "Related Account" You Never Created? The Appeal That Works | Appeal Edge</title>
-<meta name="description" content="Amazon suspended your account for being 'related' to another one you never opened. Here's why that happens, the one mistake that makes it permanent, and what your appeal actually needs to prove.">
+<title>Amazon Related Account Suspension Appeal | Appeal Edge</title>
+<meta name="description" content="Amazon suspended your account for being 'related' to another one you never opened. Here's why that happens, and what your appeal needs to prove.">
 <link rel="canonical" href="https://www.appeal-edge.com/blog/amazon-related-account-suspension-appeal/">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
@@ -21,7 +21,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Appeal Edge">
 <meta property="og:title" content="Suspended for a &quot;Related Account&quot; You Never Created? The Appeal That Works">
-<meta property="og:description" content="Amazon suspended your account for being 'related' to another one you never opened. Here's why that happens, the one mistake that makes it permanent, and what your appeal actually needs to prove.">
+<meta property="og:description" content="Amazon suspended your account for being 'related' to another one you never opened. Here's why that happens, and what your appeal needs to prove.">
 <meta property="og:url" content="https://www.appeal-edge.com/blog/amazon-related-account-suspension-appeal/">
 <meta property="og:image" content="https://www.appeal-edge.com/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -36,9 +36,8 @@
 <meta name="twitter:title" content="Suspended for a &quot;Related Account&quot; You Never Created? The Appeal That Works">
 <meta name="twitter:description" content="Why Amazon links accounts that were never meant to be connected, and what your appeal actually needs to prove.">
 <meta name="twitter:image" content="https://www.appeal-edge.com/og-image.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" href="/assets/fonts/archivo-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/instrument-sans-variable.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -54,7 +53,7 @@
       "@type": "Article",
       "@id": "https://www.appeal-edge.com/blog/amazon-related-account-suspension-appeal/#article",
       "headline": "Suspended for a \"Related Account\" You Never Created? Here's the Appeal That Actually Works",
-      "description": "Amazon suspended your account for being 'related' to another one you never opened. Here's why that happens, the one mistake that makes it permanent, and what your appeal actually needs to prove.",
+      "description": "Amazon suspended your account for being 'related' to another one you never opened. Here's why that happens, and what your appeal needs to prove.",
       "author": { "@id": "https://www.appeal-edge.com/#organization" },
       "publisher": { "@id": "https://www.appeal-edge.com/#organization" },
       "datePublished": "2026-07-14",
@@ -102,6 +101,22 @@
 }
 </script>
 <style>
+  @font-face {
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 100 900;
+    font-stretch: 62% 125%;
+    font-display: swap;
+    src: url('/assets/fonts/archivo-variable.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Instrument Sans';
+    font-style: normal;
+    font-weight: 400 600;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url('/assets/fonts/instrument-sans-variable.woff2') format('woff2');
+  }
   :root {
     --navy: #0A2540;
     --navy-2: #0E2E52;
@@ -172,8 +187,32 @@
   .nav-links a { font-size: 15px; font-weight: 500; color: var(--ink); }
   .nav-links a:hover { color: var(--blue); text-decoration: none; }
   .nav .btn { padding: 11px 20px; font-size: 15px; }
+  .nav-toggle { display: none; position: relative; width: 40px; height: 40px; flex: none; border: none; background: transparent; cursor: pointer; align-items: center; justify-content: center; }
+  .nav-toggle span, .nav-toggle span::before, .nav-toggle span::after { content: ""; position: absolute; width: 22px; height: 2px; background: var(--navy); border-radius: 2px; transition: transform .2s ease, opacity .2s ease, background .2s ease; }
+  .nav-toggle span::before { top: -7px; }
+  .nav-toggle span::after { top: 7px; }
+  .nav-toggle[aria-expanded="true"] span { background: transparent; }
+  .nav-toggle[aria-expanded="true"] span::before { top: 0; transform: rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] span::after { top: 0; transform: rotate(-45deg); }
   @media (max-width: 860px) {
-    .nav-links { display: none; }
+    .nav-toggle { display: flex; }
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      background: var(--white);
+      box-shadow: var(--e3);
+      padding: 8px 0;
+      border-top: 1px solid var(--line);
+    }
+    .nav-links.open { display: flex; }
+    .nav-links li { width: 100%; }
+    .nav-links a { display: block; padding: 14px 24px; }
     .nav-inner { padding: 0 12px; gap: 8px; }
     .brand-logo { height: 38px; }
     .nav .btn { padding: 7px 10px; font-size: 11.5px; white-space: nowrap; }
@@ -225,6 +264,11 @@
   }
   .callout p { margin-top: 0; color: var(--ink); }
 
+  .related { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--line); }
+  .related h4 { font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--grey); margin-bottom: 14px; }
+  .related ul { list-style: none; padding: 0; margin: 0; }
+  .related li { margin-top: 10px; }
+  .related a { font-weight: 600; }
   .cta-card {
     margin-top: 48px; padding: 40px; border-radius: var(--r-card); background: var(--grad-dark);
     text-align: center;
@@ -316,7 +360,7 @@
   <div class="nav-inner">
     <a class="brand" href="/" aria-label="Appeal Edge home"><img class="brand-logo" src="/assets/logo/appeal-edge-logo.png" alt="Appeal Edge"></a>
     <nav aria-label="Main">
-      <ul class="nav-links">
+      <ul class="nav-links" id="nav-links-list">
         <li><a href="/#expert">The Expert</a></li>
         <li><a href="/#how">How it works</a></li>
         <li><a href="/#handle">What we handle</a></li>
@@ -324,8 +368,28 @@
       </ul>
     </nav>
     <a class="btn btn-blue" data-cta href="https://tally.so/r/Y5voaW" target="_blank" rel="noopener">Get your case reviewed</a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links-list">
+      <span></span>
+    </button>
   </div>
 </header>
+<script>
+(function () {
+  var toggle = document.querySelector(".nav-toggle");
+  var links = document.getElementById("nav-links-list");
+  if (!toggle || !links) return;
+  toggle.addEventListener("click", function () {
+    var open = links.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  links.querySelectorAll("a").forEach(function (a) {
+    a.addEventListener("click", function () {
+      links.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+    });
+  });
+})();
+</script>
 
 <main>
   <nav class="breadcrumb wrap" aria-label="Breadcrumb">
@@ -398,6 +462,16 @@
       </div>
     </div>
 
+
+    <div class="related">
+      <h4>Related reading</h4>
+      <ul>
+          <li><a href="/blog/amazon-section-3-suspension-appeal/">Amazon Section 3 suspension: what the notice actually means and how to respond</a></li>
+          <li><a href="/blog/amazon-restricted-products-suspension-appeal/">Amazon restricted products suspension: selling in a gated category without approval</a></li>
+          <li><a href="/blog/amazon-velocity-review-suspension-appeal/">Amazon velocity review suspension: why a sudden review spike gets flagged</a></li>
+      </ul>
+    </div>
+
     <div class="cta-card">
       <h3>Get a second opinion before you resubmit.</h3>
       <p>Send us your suspension notice. We'll tell you what actually triggered it and whether your appeal is addressing the real cause, before you spend another review cycle finding out the hard way.</p>
@@ -443,7 +517,7 @@
       </div>
     </div>
     <div class="footer-legal">
-      <p>Appeal Edge is an independent consultancy. Not affiliated with, endorsed by, or sponsored by Amazon.</p>
+      <p>Appeal Edge is an independent consultancy. Not affiliated with, endorsed by, or sponsored by Amazon. <a href="/privacy-policy/" style="color:inherit;text-decoration:underline;">Privacy Policy</a> &middot; <a href="/terms/" style="color:inherit;text-decoration:underline;">Terms of Service</a></p>
       <p>&copy; 2026 Appeal Edge</p>
     </div>
   </div>

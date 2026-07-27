@@ -12,16 +12,16 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amazon Repricing Strategies and Where the Fair Pricing Policy Draws the Line | Appeal Edge</title>
-<meta name="description" content="Aggressive repricing strategies win the Buy Box until they trip Amazon's Fair Pricing Policy. Here are the common strategy patterns and exactly where the line sits.">
+<title>Amazon Repricing Strategies and Fair Pricing | Appeal Edge</title>
+<meta name="description" content="Aggressive repricing strategies win the Buy Box until they trip Amazon's Fair Pricing Policy. Here is where the line actually sits.">
 <link rel="canonical" href="https://www.appeal-edge.com/blog/amazon-repricing-strategies-fair-pricing-policy/">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Appeal Edge">
-<meta property="og:title" content="Amazon Repricing Strategies and Where the Fair Pricing Policy Draws the Line">
-<meta property="og:description" content="Aggressive repricing strategies win the Buy Box until they trip Amazon's Fair Pricing Policy. Here are the common strategy patterns and exactly where the line sits.">
+<meta property="og:title" content="Amazon Repricing Strategies and Fair Pricing">
+<meta property="og:description" content="Aggressive repricing strategies win the Buy Box until they trip Amazon's Fair Pricing Policy. Here is where the line actually sits.">
 <meta property="og:url" content="https://www.appeal-edge.com/blog/amazon-repricing-strategies-fair-pricing-policy/">
 <meta property="og:image" content="https://www.appeal-edge.com/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -34,12 +34,11 @@
 <meta property="article:tag" content="Amazon repricing service">
 <meta property="article:tag" content="Amazon high price alert">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Amazon Repricing Strategies and Where the Fair Pricing Policy Draws the Line">
+<meta name="twitter:title" content="Amazon Repricing Strategies and Fair Pricing">
 <meta name="twitter:description" content="Common Amazon repricing strategy patterns, and exactly where an aggressive one crosses into a Fair Pricing Policy violation.">
 <meta name="twitter:image" content="https://www.appeal-edge.com/og-image.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" href="/assets/fonts/archivo-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/instrument-sans-variable.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -49,8 +48,8 @@
     {
   "@type": "Article",
   "@id": "https://www.appeal-edge.com/blog/amazon-repricing-strategies-fair-pricing-policy/#article",
-  "headline": "Amazon Repricing Strategies and Where the Fair Pricing Policy Draws the Line",
-  "description": "Aggressive repricing strategies win the Buy Box until they trip Amazon's Fair Pricing Policy. Here are the common strategy patterns and exactly where the line sits.",
+  "headline": "Amazon Repricing Strategies and Fair Pricing",
+  "description": "Aggressive repricing strategies win the Buy Box until they trip Amazon's Fair Pricing Policy. Here is where the line actually sits.",
   "author": {
     "@id": "https://www.appeal-edge.com/#khushi-narwal"
   },
@@ -142,6 +141,22 @@
 }
 </script>
 <style>
+  @font-face {
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 100 900;
+    font-stretch: 62% 125%;
+    font-display: swap;
+    src: url('/assets/fonts/archivo-variable.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Instrument Sans';
+    font-style: normal;
+    font-weight: 400 600;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url('/assets/fonts/instrument-sans-variable.woff2') format('woff2');
+  }
   :root {
     --navy: #0A2540; --navy-2: #0E2E52; --blue: #2B50FF; --blue-dark: #1E3AE0;
     --amber: #F5A623; --amber-dark: #E48F00; --ink: #1A2433; --grey: #5B6675;
@@ -179,7 +194,14 @@
   .nav-links a { font-size: 15px; font-weight: 500; color: var(--ink); }
   .nav-links a:hover { color: var(--blue); text-decoration: none; }
   .nav .btn { padding: 11px 20px; font-size: 15px; }
-  @media (max-width: 860px) { .nav-links { display: none; } .nav-inner { padding: 0 12px; gap: 8px; } .brand-logo { height: 38px; } .nav .btn { padding: 7px 10px; font-size: 11.5px; white-space: nowrap; } }
+    .nav-toggle { display: none; position: relative; width: 40px; height: 40px; flex: none; border: none; background: transparent; cursor: pointer; align-items: center; justify-content: center; }
+  .nav-toggle span, .nav-toggle span::before, .nav-toggle span::after { content: ""; position: absolute; width: 22px; height: 2px; background: var(--navy); border-radius: 2px; transition: transform .2s ease, opacity .2s ease, background .2s ease; }
+  .nav-toggle span::before { top: -7px; }
+  .nav-toggle span::after { top: 7px; }
+  .nav-toggle[aria-expanded="true"] span { background: transparent; }
+  .nav-toggle[aria-expanded="true"] span::before { top: 0; transform: rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] span::after { top: 0; transform: rotate(-45deg); }
+  @media (max-width: 860px) { .nav-toggle { display: flex; } .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; background: var(--white); box-shadow: var(--e3); padding: 8px 0; border-top: 1px solid var(--line); } .nav-links.open { display: flex; } .nav-links li { width: 100%; } .nav-links a { display: block; padding: 14px 24px; } .nav-inner { padding: 0 12px; gap: 8px; } .brand-logo { height: 38px; } .nav .btn { padding: 7px 10px; font-size: 11.5px; white-space: nowrap; } }
   .breadcrumb { padding: 148px 0 0; font-size: 13px; color: var(--grey); }
   .breadcrumb a { color: var(--grey); font-weight: 500; }
   .breadcrumb a:hover { color: var(--blue); }
@@ -268,7 +290,7 @@
   <div class="nav-inner">
     <a class="brand" href="/" aria-label="Appeal Edge home"><img class="brand-logo" src="/assets/logo/appeal-edge-logo.png" alt="Appeal Edge"></a>
     <nav aria-label="Main">
-      <ul class="nav-links">
+      <ul class="nav-links" id="nav-links-list">
         <li><a href="/#expert">The Expert</a></li>
         <li><a href="/#how">How it works</a></li>
         <li><a href="/#handle">What we handle</a></li>
@@ -277,8 +299,28 @@
       </ul>
     </nav>
     <a class="btn btn-blue" data-cta href="https://tally.so/r/Y5voaW" target="_blank" rel="noopener">Get your case reviewed</a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links-list">
+      <span></span>
+    </button>
   </div>
 </header>
+<script>
+(function () {
+  var toggle = document.querySelector(".nav-toggle");
+  var links = document.getElementById("nav-links-list");
+  if (!toggle || !links) return;
+  toggle.addEventListener("click", function () {
+    var open = links.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  links.querySelectorAll("a").forEach(function (a) {
+    a.addEventListener("click", function () {
+      links.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+    });
+  });
+})();
+</script>
 
 <main>
   <nav class="breadcrumb wrap" aria-label="Breadcrumb">
@@ -306,7 +348,7 @@
       <p>The most aggressive of the three, this strategy is configured to match or beat competing prices as tightly as possible, prioritizing win rate above margin in the short term. It's the strategy most likely to produce the price swings that draw policy attention if it isn't bounded carefully.</p>
 
       <h2>What the Fair Pricing Policy actually monitors</h2>
-      <p>Amazon's Fair Pricing Policy watches for prices that are significantly higher than your own recent price history, or higher than a comparable price found elsewhere for the same or a similar product. It's built primarily to catch price gouging, but a repricer that swings a price sharply upward across a catalog, even unintentionally, can trigger the same monitoring, since the system is looking at the pattern of the price change, not the intent behind it.</p>
+      <p><a href="https://m.media-amazon.com/images/G/02/rainier/help/legal/Amazon_Marketplace_Fair_Pricing_Policy_EN_161220.pdf" target="_blank" rel="noopener">Amazon's Fair Pricing Policy</a> watches for prices that are significantly higher than your own recent price history, or higher than a comparable price found elsewhere for the same or a similar product. It's built primarily to catch price gouging, but a repricer that swings a price sharply upward across a catalog, even unintentionally, can trigger the same monitoring, since the system is looking at the pattern of the price change, not the intent behind it.</p>
 
       <h2>The specific configuration errors that cross the line</h2>
       <ul>
@@ -352,7 +394,7 @@
       <div class="related">
         <h4>Related reading</h4>
         <ul>
-          <li><a href="/blog/amazon-repricing-software-guide/">Amazon repricing software: how automated pricing actually works</a></li>
+          <li><a href="/blog/amazon-repricing-software-guide/">Can a repricer cause an Amazon suspension? What the Fair Pricing Policy flags</a></li>
           <li><a href="/blog/what-is-an-amazon-repricer/">What is an Amazon repricer? How automated pricing software actually works</a></li>
           <li><a href="/blog/algorithmic-vs-rule-based-amazon-repricing/">Algorithmic vs rule based Amazon repricing: which one should you run</a></li>
           <li><a href="/blog/amazon-high-odr-suspension-appeal/">Amazon high order defect rate suspension: how to appeal it</a></li>
@@ -405,7 +447,7 @@
       </div>
     </div>
     <div class="footer-legal">
-      <p>Appeal Edge is an independent consultancy. Not affiliated with, endorsed by, or sponsored by Amazon.</p>
+      <p>Appeal Edge is an independent consultancy. Not affiliated with, endorsed by, or sponsored by Amazon. <a href="/privacy-policy/" style="color:inherit;text-decoration:underline;">Privacy Policy</a> &middot; <a href="/terms/" style="color:inherit;text-decoration:underline;">Terms of Service</a></p>
       <p>&copy; 2026 Appeal Edge</p>
     </div>
   </div>

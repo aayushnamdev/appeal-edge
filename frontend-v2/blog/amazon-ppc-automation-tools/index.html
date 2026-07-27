@@ -12,16 +12,16 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amazon PPC Automation Tools: What They Do and When You Still Need a Human | Appeal Edge</title>
-<meta name="description" content="Bid automation tools adjust your Amazon ad spend hundreds of times a day. Here's what they're actually optimizing for, and the one setting that can quietly turn a campaign into a policy problem.">
+<title>Amazon PPC Automation Tools Guide | Appeal Edge</title>
+<meta name="description" content="Bid automation tools adjust your Amazon ad spend hundreds of times a day. Here's what they're actually optimizing for.">
 <link rel="canonical" href="https://www.appeal-edge.com/blog/amazon-ppc-automation-tools/">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Appeal Edge">
-<meta property="og:title" content="Amazon PPC Automation Tools: What They Do and When You Still Need a Human">
-<meta property="og:description" content="Bid automation tools adjust your Amazon ad spend hundreds of times a day. Here's what they're actually optimizing for, and the one setting that can quietly turn a campaign into a policy problem.">
+<meta property="og:title" content="Amazon PPC Automation Tools Guide">
+<meta property="og:description" content="Bid automation tools adjust your Amazon ad spend hundreds of times a day. Here's what they're actually optimizing for.">
 <meta property="og:url" content="https://www.appeal-edge.com/blog/amazon-ppc-automation-tools/">
 <meta property="og:image" content="https://www.appeal-edge.com/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -33,12 +33,11 @@
 <meta property="article:tag" content="Amazon advertising software">
 <meta property="article:tag" content="Amazon ACOS optimization">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Amazon PPC Automation Tools: What They Do and When You Still Need a Human">
+<meta name="twitter:title" content="Amazon PPC Automation Tools Guide">
 <meta name="twitter:description" content="What Amazon PPC bid automation actually optimizes for, and where autopilot targeting can turn into a policy problem.">
 <meta name="twitter:image" content="https://www.appeal-edge.com/og-image.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" href="/assets/fonts/archivo-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/instrument-sans-variable.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -60,8 +59,8 @@
     {
       "@type": "Article",
       "@id": "https://www.appeal-edge.com/blog/amazon-ppc-automation-tools/#article",
-      "headline": "Amazon PPC Automation Tools: What They Do and When You Still Need a Human",
-      "description": "Bid automation tools adjust your Amazon ad spend hundreds of times a day. Here's what they're actually optimizing for, and the one setting that can quietly turn a campaign into a policy problem.",
+      "headline": "Amazon PPC Automation Tools Guide",
+      "description": "Bid automation tools adjust your Amazon ad spend hundreds of times a day. Here's what they're actually optimizing for.",
       "author": { "@id": "https://www.appeal-edge.com/#aayush-namdev" },
       "publisher": { "@id": "https://www.appeal-edge.com/#organization" },
       "datePublished": "2026-07-17",
@@ -109,6 +108,22 @@
 }
 </script>
 <style>
+  @font-face {
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 100 900;
+    font-stretch: 62% 125%;
+    font-display: swap;
+    src: url('/assets/fonts/archivo-variable.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Instrument Sans';
+    font-style: normal;
+    font-weight: 400 600;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url('/assets/fonts/instrument-sans-variable.woff2') format('woff2');
+  }
   :root {
     --navy: #0A2540; --navy-2: #0E2E52; --blue: #2B50FF; --blue-dark: #1E3AE0;
     --amber: #F5A623; --amber-dark: #E48F00; --ink: #1A2433; --grey: #5B6675;
@@ -146,7 +161,14 @@
   .nav-links a { font-size: 15px; font-weight: 500; color: var(--ink); }
   .nav-links a:hover { color: var(--blue); text-decoration: none; }
   .nav .btn { padding: 11px 20px; font-size: 15px; }
-  @media (max-width: 860px) { .nav-links { display: none; } .nav-inner { padding: 0 12px; gap: 8px; } .brand-logo { height: 38px; } .nav .btn { padding: 7px 10px; font-size: 11.5px; white-space: nowrap; } }
+    .nav-toggle { display: none; position: relative; width: 40px; height: 40px; flex: none; border: none; background: transparent; cursor: pointer; align-items: center; justify-content: center; }
+  .nav-toggle span, .nav-toggle span::before, .nav-toggle span::after { content: ""; position: absolute; width: 22px; height: 2px; background: var(--navy); border-radius: 2px; transition: transform .2s ease, opacity .2s ease, background .2s ease; }
+  .nav-toggle span::before { top: -7px; }
+  .nav-toggle span::after { top: 7px; }
+  .nav-toggle[aria-expanded="true"] span { background: transparent; }
+  .nav-toggle[aria-expanded="true"] span::before { top: 0; transform: rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] span::after { top: 0; transform: rotate(-45deg); }
+  @media (max-width: 860px) { .nav-toggle { display: flex; } .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; background: var(--white); box-shadow: var(--e3); padding: 8px 0; border-top: 1px solid var(--line); } .nav-links.open { display: flex; } .nav-links li { width: 100%; } .nav-links a { display: block; padding: 14px 24px; } .nav-inner { padding: 0 12px; gap: 8px; } .brand-logo { height: 38px; } .nav .btn { padding: 7px 10px; font-size: 11.5px; white-space: nowrap; } }
   .breadcrumb { padding: 148px 0 0; font-size: 13px; color: var(--grey); }
   .breadcrumb a { color: var(--grey); font-weight: 500; }
   .breadcrumb a:hover { color: var(--blue); }
@@ -232,7 +254,7 @@
   <div class="nav-inner">
     <a class="brand" href="/" aria-label="Appeal Edge home"><img class="brand-logo" src="/assets/logo/appeal-edge-logo.png" alt="Appeal Edge"></a>
     <nav aria-label="Main">
-      <ul class="nav-links">
+      <ul class="nav-links" id="nav-links-list">
         <li><a href="/#expert">The Expert</a></li>
         <li><a href="/#how">How it works</a></li>
         <li><a href="/#handle">What we handle</a></li>
@@ -241,8 +263,28 @@
       </ul>
     </nav>
     <a class="btn btn-blue" data-cta href="https://tally.so/r/Y5voaW" target="_blank" rel="noopener">Get your case reviewed</a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links-list">
+      <span></span>
+    </button>
   </div>
 </header>
+<script>
+(function () {
+  var toggle = document.querySelector(".nav-toggle");
+  var links = document.getElementById("nav-links-list");
+  if (!toggle || !links) return;
+  toggle.addEventListener("click", function () {
+    var open = links.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  links.querySelectorAll("a").forEach(function (a) {
+    a.addEventListener("click", function () {
+      links.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+    });
+  });
+})();
+</script>
 
 <main>
   <nav class="breadcrumb wrap" aria-label="Breadcrumb">
@@ -308,7 +350,7 @@
       <div class="related">
         <h4>Related reading</h4>
         <ul>
-          <li><a href="/blog/amazon-repricing-software-guide/">Amazon repricing software: how automated pricing actually works</a></li>
+          <li><a href="/blog/amazon-repricing-software-guide/">Can a repricer cause an Amazon suspension? What the Fair Pricing Policy flags</a></li>
           <li><a href="/blog/amazon-inventory-management-software/">Amazon inventory management software: avoiding stockouts and overstock</a></li>
           <li><a href="/blog/amazon-product-research-tools/">Amazon product research tools: how sellers actually find winning products</a></li>
           <li><a href="/blog/amazon-seller-accounting-software/">Amazon seller accounting software: getting your numbers right across marketplaces</a></li>
@@ -361,7 +403,7 @@
       </div>
     </div>
     <div class="footer-legal">
-      <p>Appeal Edge is an independent consultancy. Not affiliated with, endorsed by, or sponsored by Amazon.</p>
+      <p>Appeal Edge is an independent consultancy. Not affiliated with, endorsed by, or sponsored by Amazon. <a href="/privacy-policy/" style="color:inherit;text-decoration:underline;">Privacy Policy</a> &middot; <a href="/terms/" style="color:inherit;text-decoration:underline;">Terms of Service</a></p>
       <p>&copy; 2026 Appeal Edge</p>
     </div>
   </div>

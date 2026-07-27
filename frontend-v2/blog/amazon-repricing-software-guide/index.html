@@ -12,16 +12,16 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amazon Repricing Software: How Automated Pricing Actually Works | Appeal Edge</title>
-<meta name="description" content="Automated repricers change your price every few minutes to compete for the Buy Box. Here's how the two repricing models actually work, and where a misconfigured one quietly puts your account at risk.">
+<title>Can a Repricer Cause an Amazon Suspension? | Appeal Edge</title>
+<meta name="description" content="A repricer can trigger a suspension through Fair Pricing Policy violations. What crosses the line, and how to check your settings first.">
 <link rel="canonical" href="https://www.appeal-edge.com/blog/amazon-repricing-software-guide/">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Appeal Edge">
-<meta property="og:title" content="Amazon Repricing Software: How Automated Pricing Actually Works">
-<meta property="og:description" content="Automated repricers change your price every few minutes to compete for the Buy Box. Here's how the two repricing models actually work, and where a misconfigured one quietly puts your account at risk.">
+<meta property="og:title" content="Can a Repricer Cause an Amazon Suspension?">
+<meta property="og:description" content="A repricer can trigger a suspension through Fair Pricing Policy violations. What crosses the line, and how to check your settings first.">
 <meta property="og:url" content="https://www.appeal-edge.com/blog/amazon-repricing-software-guide/">
 <meta property="og:image" content="https://www.appeal-edge.com/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -29,16 +29,15 @@
 <meta property="article:published_time" content="2026-07-15T00:00:00+00:00">
 <meta property="article:modified_time" content="2026-07-15T00:00:00+00:00">
 <meta property="article:section" content="Seller Tools">
+<meta property="article:tag" content="Amazon repricer suspension">
+<meta property="article:tag" content="Amazon Fair Pricing Policy">
 <meta property="article:tag" content="Amazon repricing software">
-<meta property="article:tag" content="Amazon Buy Box">
-<meta property="article:tag" content="Amazon pricing automation">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Amazon Repricing Software: How Automated Pricing Actually Works">
-<meta name="twitter:description" content="How automated repricing actually decides a price, and where it can quietly cause account risk.">
+<meta name="twitter:title" content="Can a Repricer Cause an Amazon Suspension?">
+<meta name="twitter:description" content="What actually crosses the line into a Fair Pricing Policy violation, and how to check your repricer settings first.">
 <meta name="twitter:image" content="https://www.appeal-edge.com/og-image.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" href="/assets/fonts/archivo-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/instrument-sans-variable.woff2" as="font" type="font/woff2" crossorigin>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -60,8 +59,8 @@
     {
       "@type": "Article",
       "@id": "https://www.appeal-edge.com/blog/amazon-repricing-software-guide/#article",
-      "headline": "Amazon Repricing Software: How Automated Pricing Actually Works",
-      "description": "Automated repricers change your price every few minutes to compete for the Buy Box. Here's how the two repricing models actually work, and where a misconfigured one quietly puts your account at risk.",
+      "headline": "Can a Repricer Cause an Amazon Suspension?",
+      "description": "A repricer can trigger a suspension through Fair Pricing Policy violations. What crosses the line, and how to check your settings first.",
       "author": { "@id": "https://www.appeal-edge.com/#aayush-namdev" },
       "publisher": { "@id": "https://www.appeal-edge.com/#organization" },
       "datePublished": "2026-07-15",
@@ -69,14 +68,14 @@
       "mainEntityOfPage": "https://www.appeal-edge.com/blog/amazon-repricing-software-guide/",
       "image": "https://www.appeal-edge.com/og-image.png",
       "articleSection": "Seller Tools",
-      "keywords": ["Amazon repricing software", "Amazon Buy Box algorithm", "Amazon pricing automation", "Amazon seller tools"]
+      "keywords": ["Amazon repricer suspension", "Amazon Fair Pricing Policy", "Amazon repricing software", "Amazon Buy Box algorithm"]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.appeal-edge.com/" },
         { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.appeal-edge.com/blog/" },
-        { "@type": "ListItem", "position": 3, "name": "Repricing Software Guide", "item": "https://www.appeal-edge.com/blog/amazon-repricing-software-guide/" }
+        { "@type": "ListItem", "position": 3, "name": "Can a Repricer Cause a Suspension", "item": "https://www.appeal-edge.com/blog/amazon-repricing-software-guide/" }
       ]
     },
     {
@@ -109,6 +108,22 @@
 }
 </script>
 <style>
+  @font-face {
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 100 900;
+    font-stretch: 62% 125%;
+    font-display: swap;
+    src: url('/assets/fonts/archivo-variable.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Instrument Sans';
+    font-style: normal;
+    font-weight: 400 600;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url('/assets/fonts/instrument-sans-variable.woff2') format('woff2');
+  }
   :root {
     --navy: #0A2540; --navy-2: #0E2E52; --blue: #2B50FF; --blue-dark: #1E3AE0;
     --amber: #F5A623; --amber-dark: #E48F00; --ink: #1A2433; --grey: #5B6675;
@@ -146,7 +161,14 @@
   .nav-links a { font-size: 15px; font-weight: 500; color: var(--ink); }
   .nav-links a:hover { color: var(--blue); text-decoration: none; }
   .nav .btn { padding: 11px 20px; font-size: 15px; }
-  @media (max-width: 860px) { .nav-links { display: none; } .nav-inner { padding: 0 12px; gap: 8px; } .brand-logo { height: 38px; } .nav .btn { padding: 7px 10px; font-size: 11.5px; white-space: nowrap; } }
+    .nav-toggle { display: none; position: relative; width: 40px; height: 40px; flex: none; border: none; background: transparent; cursor: pointer; align-items: center; justify-content: center; }
+  .nav-toggle span, .nav-toggle span::before, .nav-toggle span::after { content: ""; position: absolute; width: 22px; height: 2px; background: var(--navy); border-radius: 2px; transition: transform .2s ease, opacity .2s ease, background .2s ease; }
+  .nav-toggle span::before { top: -7px; }
+  .nav-toggle span::after { top: 7px; }
+  .nav-toggle[aria-expanded="true"] span { background: transparent; }
+  .nav-toggle[aria-expanded="true"] span::before { top: 0; transform: rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] span::after { top: 0; transform: rotate(-45deg); }
+  @media (max-width: 860px) { .nav-toggle { display: flex; } .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; background: var(--white); box-shadow: var(--e3); padding: 8px 0; border-top: 1px solid var(--line); } .nav-links.open { display: flex; } .nav-links li { width: 100%; } .nav-links a { display: block; padding: 14px 24px; } .nav-inner { padding: 0 12px; gap: 8px; } .brand-logo { height: 38px; } .nav .btn { padding: 7px 10px; font-size: 11.5px; white-space: nowrap; } }
   .breadcrumb { padding: 148px 0 0; font-size: 13px; color: var(--grey); }
   .breadcrumb a { color: var(--grey); font-weight: 500; }
   .breadcrumb a:hover { color: var(--blue); }
@@ -232,7 +254,7 @@
   <div class="nav-inner">
     <a class="brand" href="/" aria-label="Appeal Edge home"><img class="brand-logo" src="/assets/logo/appeal-edge-logo.png" alt="Appeal Edge"></a>
     <nav aria-label="Main">
-      <ul class="nav-links">
+      <ul class="nav-links" id="nav-links-list">
         <li><a href="/#expert">The Expert</a></li>
         <li><a href="/#how">How it works</a></li>
         <li><a href="/#handle">What we handle</a></li>
@@ -241,19 +263,39 @@
       </ul>
     </nav>
     <a class="btn btn-blue" data-cta href="https://tally.so/r/Y5voaW" target="_blank" rel="noopener">Get your case reviewed</a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links-list">
+      <span></span>
+    </button>
   </div>
 </header>
+<script>
+(function () {
+  var toggle = document.querySelector(".nav-toggle");
+  var links = document.getElementById("nav-links-list");
+  if (!toggle || !links) return;
+  toggle.addEventListener("click", function () {
+    var open = links.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  links.querySelectorAll("a").forEach(function (a) {
+    a.addEventListener("click", function () {
+      links.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+    });
+  });
+})();
+</script>
 
 <main>
   <nav class="breadcrumb wrap" aria-label="Breadcrumb">
-    <a href="/">Home</a><span>/</span><a href="/blog/">Blog</a><span>/</span>Repricing Software Guide
+    <a href="/">Home</a><span>/</span><a href="/blog/">Blog</a><span>/</span>Can a Repricer Cause a Suspension
   </nav>
 
   <article class="wrap">
     <header class="article-header">
       <span class="post-tag">Seller Tools</span>
-      <h1 class="article-title">Amazon repricing software: how automated pricing actually works.</h1>
-      <p class="article-dek">Most active listings on Amazon are repriced by software, not a person watching a spreadsheet. Here's what that software is actually doing every time it changes your price, and where a loose setting turns a pricing tool into an account problem.</p>
+      <h1 class="article-title">Can a repricer cause an amazon suspension? what the fair pricing policy actually flags.</h1>
+      <p class="article-dek">Automated repricing is not risk free. Here's what Amazon's Fair Pricing Policy is actually built to catch, the specific settings that cross the line, and how to check yours before a misconfigured price swing turns into a suspension notice.</p>
       <p class="byline"><strong>Aayush Namdev, CTO</strong> &middot; Published July 15, 2026 &middot; 7 min read</p>
     </header>
 
@@ -274,7 +316,7 @@
       </ol>
 
       <h2>Where a repricer quietly becomes an account risk</h2>
-      <p>The floor price is the setting that causes the most damage when it's wrong. A blank or misconfigured minimum can let the software chase a competitor down toward the cost of goods, or in rare misconfigurations, toward a fraction of a cent. Selling below cost for an extended run doesn't just hurt margin. Sudden, sharp price swings across a catalog are one of the patterns Amazon's Fair Pricing Policy is built to catch, and a fair pricing violation shows up on the account exactly like any other policy strike.</p>
+      <p>The floor price is the setting that causes the most damage when it's wrong. A blank or misconfigured minimum can let the software chase a competitor down toward the cost of goods, or in rare misconfigurations, toward a fraction of a cent. Selling below cost for an extended run doesn't just hurt margin. Sudden, sharp price swings across a catalog are one of the patterns <a href="https://m.media-amazon.com/images/G/02/rainier/help/legal/Amazon_Marketplace_Fair_Pricing_Policy_EN_161220.pdf" target="_blank" rel="noopener">Amazon's Fair Pricing Policy</a> is built to catch, and a fair pricing violation shows up on the account exactly like any other policy strike.</p>
       <p>The second common failure is a stale competitor set: repricing against an offer that's actually out of stock, a different condition, or a different fulfillment channel. The result is a price that technically follows the rule but doesn't reflect the real market, which erodes margin without winning anything back in return.</p>
       <div class="callout warn">
         <h4>Set the floor per SKU, not once for the whole catalog</h4>
@@ -366,7 +408,7 @@
       </div>
     </div>
     <div class="footer-legal">
-      <p>Appeal Edge is an independent consultancy. Not affiliated with, endorsed by, or sponsored by Amazon.</p>
+      <p>Appeal Edge is an independent consultancy. Not affiliated with, endorsed by, or sponsored by Amazon. <a href="/privacy-policy/" style="color:inherit;text-decoration:underline;">Privacy Policy</a> &middot; <a href="/terms/" style="color:inherit;text-decoration:underline;">Terms of Service</a></p>
       <p>&copy; 2026 Appeal Edge</p>
     </div>
   </div>
