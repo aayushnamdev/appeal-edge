@@ -48,4 +48,4 @@ Disallow: /old/
 
 Content-Signal: ai-train=yes, search=yes, ai-retrieval=yes, ai-personalization=no
 
-Sitemap: https://appeal-edge.com/sitemap.xml
+Sitemap: https://www.appeal-edge.com/sitemap.xml
