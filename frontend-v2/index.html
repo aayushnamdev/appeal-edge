@@ -514,34 +514,6 @@
     height: 100%;
     border: 0;
   }
-  .cf-facade {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-    padding: 0;
-    cursor: pointer;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .cf-facade::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(10,37,64,.15);
-  }
-  .cf-play {
-    position: relative;
-    z-index: 1;
-    width: 68px;
-    filter: drop-shadow(0 4px 12px rgba(0,0,0,.35));
-    transition: transform .15s ease;
-  }
-  .cf-facade:hover .cf-play { transform: scale(1.08); }
   .cf-cto {
     margin: clamp(40px, 6vw, 64px) auto 0;
     max-width: 260px;
@@ -1051,28 +1023,13 @@
         </div>
 
         <figure class="cf-video reveal" style="--d:.08s">
-          <div class="cf-frame" id="cf-frame">
-            <button class="cf-facade" type="button" aria-label="Play: meet the Appeal Edge founders team" style="background-image:url('https://i.ytimg.com/vi/FknNCZqfn0k/hqdefault.jpg')">
-              <svg class="cf-play" viewBox="0 0 68 48" aria-hidden="true"><path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" fill="#f00"/><path d="M45 24 27 14v20" fill="#fff"/></svg>
-            </button>
+          <div class="cf-frame">
+            <iframe src="https://www.youtube.com/embed/FknNCZqfn0k"
+                    title="Meet the Appeal Edge founders team"
+                    loading="lazy" allowfullscreen
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
           </div>
         </figure>
-        <script>
-        (function () {
-          var frame = document.getElementById("cf-frame");
-          var facade = frame && frame.querySelector(".cf-facade");
-          if (!frame || !facade) return;
-          facade.addEventListener("click", function () {
-            var iframe = document.createElement("iframe");
-            iframe.src = "https://www.youtube.com/embed/FknNCZqfn0k?autoplay=1";
-            iframe.title = "Meet the Appeal Edge founders team";
-            iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
-            iframe.allowFullscreen = true;
-            frame.innerHTML = "";
-            frame.appendChild(iframe);
-          }, { once: true });
-        })();
-        </script>
 
         <div class="cf-side cf-right reveal" style="--d:.05s">
           <span class="cf-arrow cf-arrow-l" aria-hidden="true">
@@ -1088,7 +1045,7 @@
 
       <figure class="cf-cto reveal" style="--d:.12s">
         <div class="cf-photo">
-          <img src="assets/aayush-photo.webp" alt="Aayush Namdev, CTO of Appeal Edge" loading="lazy" width="598" height="598">
+          <img src="assets/aayush-photo.webp" alt="Aayush Namdev, CTO of Appeal Edge" loading="lazy">
         </div>
         <figcaption>
           <span class="cf-name">Aayush Namdev</span>
