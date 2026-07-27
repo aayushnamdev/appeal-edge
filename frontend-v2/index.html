@@ -13,7 +13,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Appeal Edge | Amazon Account Reinstatement Experts</title>
-<meta name="description" content="Appeal Edge recovers suspended Amazon seller accounts, inventory and funds. Every case is reviewed by expert specialists, led by the pioneer of the Amazon appeal industry.">
+<meta name="description" content="Appeal Edge recovers suspended Amazon seller accounts, inventory and funds. Every case is reviewed by expert specialists, led by the industry's pioneer.">
 <link rel="canonical" href="https://www.appeal-edge.com/">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
@@ -30,10 +30,53 @@
 <meta name="twitter:title" content="Appeal Edge | Amazon Account Reinstatement Experts">
 <meta name="twitter:description" content="Amazon locked you out. We have the keys. Expert recovery of suspended seller accounts, inventory and funds.">
 <meta name="twitter:image" content="https://www.appeal-edge.com/og-image.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" href="/assets/fonts/archivo-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/instrument-sans-variable.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.appeal-edge.com/#organization",
+      "name": "Appeal Edge",
+      "url": "https://www.appeal-edge.com/",
+      "logo": "https://www.appeal-edge.com/apple-touch-icon.png",
+      "description": "Independent Amazon seller suspension appeal consultancy. Every case is reviewed and assigned to the specialist who fits it, led by the expert who pioneered the industry in 2014.",
+      "email": "contact@appeal-edge.com",
+      "sameAs": [
+        "https://www.instagram.com/appeal.edge/",
+        "https://www.linkedin.com/company/112773661/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.appeal-edge.com/#website",
+      "url": "https://www.appeal-edge.com/",
+      "name": "Appeal Edge",
+      "publisher": { "@id": "https://www.appeal-edge.com/#organization" },
+      "inLanguage": "en-US"
+    }
+  ]
+}
+</script>
 <style>
+  @font-face {
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 100 900;
+    font-stretch: 62% 125%;
+    font-display: swap;
+    src: url('/assets/fonts/archivo-variable.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Instrument Sans';
+    font-style: normal;
+    font-weight: 400 600;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url('/assets/fonts/instrument-sans-variable.woff2') format('woff2');
+  }
   :root {
     --navy: #0A2540;
     --navy-2: #0E2E52;
@@ -221,8 +264,53 @@
   }
   .nav-links a:hover { color: var(--blue); text-decoration: none; }
   .nav .btn { padding: 11px 20px; font-size: 15px; }
+  .nav-toggle {
+    display: none;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    flex: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-toggle span,
+  .nav-toggle span::before,
+  .nav-toggle span::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 2px;
+    background: var(--navy);
+    border-radius: 2px;
+    transition: transform .2s ease, opacity .2s ease, background .2s ease;
+  }
+  .nav-toggle span::before { top: -7px; }
+  .nav-toggle span::after { top: 7px; }
+  .nav-toggle[aria-expanded="true"] span { background: transparent; }
+  .nav-toggle[aria-expanded="true"] span::before { top: 0; transform: rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] span::after { top: 0; transform: rotate(-45deg); }
   @media (max-width: 860px) {
-    .nav-links { display: none; }
+    .nav-toggle { display: flex; }
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      background: var(--white);
+      box-shadow: var(--e3);
+      padding: 8px 0;
+      border-top: 1px solid var(--line);
+    }
+    .nav-links.open { display: flex; }
+    .nav-links li { width: 100%; }
+    .nav-links a { display: block; padding: 14px 24px; }
     .nav-inner { padding: 0 12px; gap: 8px; }
     .brand-logo { height: 38px; }
     .nav .btn { padding: 7px 10px; font-size: 11.5px; white-space: nowrap; }
@@ -426,6 +514,34 @@
     height: 100%;
     border: 0;
   }
+  .cf-facade {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cf-facade::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(10,37,64,.15);
+  }
+  .cf-play {
+    position: relative;
+    z-index: 1;
+    width: 68px;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,.35));
+    transition: transform .15s ease;
+  }
+  .cf-facade:hover .cf-play { transform: scale(1.08); }
   .cf-cto {
     margin: clamp(40px, 6vw, 64px) auto 0;
     max-width: 260px;
@@ -867,9 +983,9 @@
 
 <header class="nav" id="nav">
   <div class="nav-inner">
-    <a class="brand" href="#top" aria-label="Appeal Edge home"><img class="brand-logo" src="assets/logo/appeal-edge-logo.png" alt="Appeal Edge"></a>
+    <a class="brand" href="#top" aria-label="Appeal Edge home"><img class="brand-logo" src="assets/logo/appeal-edge-logo.png" alt="Appeal Edge" width="400" height="135"></a>
     <nav aria-label="Main">
-      <ul class="nav-links">
+      <ul class="nav-links" id="nav-links-list">
         <li><a href="#expert">Advisor</a></li>
         <li><a href="#how">How it works</a></li>
         <li><a href="#handle">What we handle</a></li>
@@ -877,9 +993,29 @@
         <li><a href="#faq">FAQ</a></li>
       </ul>
     </nav>
-    <a class="btn btn-blue" data-cta href="#understand">Get your case reviewed</a>
+    <a class="btn btn-blue" data-cta href="https://tally.so/r/Y5voaW" target="_blank" rel="noopener">Get your case reviewed</a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links-list">
+      <span></span>
+    </button>
   </div>
 </header>
+<script>
+(function () {
+  var toggle = document.querySelector(".nav-toggle");
+  var links = document.getElementById("nav-links-list");
+  if (!toggle || !links) return;
+  toggle.addEventListener("click", function () {
+    var open = links.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  links.querySelectorAll("a").forEach(function (a) {
+    a.addEventListener("click", function () {
+      links.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+    });
+  });
+})();
+</script>
 
 <main id="top">
 
@@ -890,7 +1026,7 @@
       <h1 class="reveal" style="--d:.06s">Amazon locked you out.<br>We have the keys.</h1>
       <p class="hero-sub reveal" style="--d:.12s"><strong>Your account, your inventory, your funds. We get them back.</strong><br>Every case is reviewed by our team and guided by more than 25 years of Amazon reinstatement expertise across seven global marketplaces.<br>That expertise comes from the advisor who pioneered this industry in 2014.</p>
       <div class="hero-ctas reveal" style="--d:.18s">
-        <a class="btn btn-blue" data-cta href="#understand">Get your case reviewed</a>
+        <a class="btn btn-blue" data-cta href="https://tally.so/r/Y5voaW" target="_blank" rel="noopener">Get your case reviewed</a>
         <a class="link-plain" href="#expert">Meet our advisor</a>
       </div>
     </div>
@@ -915,13 +1051,28 @@
         </div>
 
         <figure class="cf-video reveal" style="--d:.08s">
-          <div class="cf-frame">
-            <iframe src="https://www.youtube.com/embed/FknNCZqfn0k"
-                    title="Meet the Appeal Edge founders team"
-                    loading="lazy" allowfullscreen
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+          <div class="cf-frame" id="cf-frame">
+            <button class="cf-facade" type="button" aria-label="Play: meet the Appeal Edge founders team" style="background-image:url('https://i.ytimg.com/vi/FknNCZqfn0k/hqdefault.jpg')">
+              <svg class="cf-play" viewBox="0 0 68 48" aria-hidden="true"><path d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" fill="#f00"/><path d="M45 24 27 14v20" fill="#fff"/></svg>
+            </button>
           </div>
         </figure>
+        <script>
+        (function () {
+          var frame = document.getElementById("cf-frame");
+          var facade = frame && frame.querySelector(".cf-facade");
+          if (!frame || !facade) return;
+          facade.addEventListener("click", function () {
+            var iframe = document.createElement("iframe");
+            iframe.src = "https://www.youtube.com/embed/FknNCZqfn0k?autoplay=1";
+            iframe.title = "Meet the Appeal Edge founders team";
+            iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+            iframe.allowFullscreen = true;
+            frame.innerHTML = "";
+            frame.appendChild(iframe);
+          }, { once: true });
+        })();
+        </script>
 
         <div class="cf-side cf-right reveal" style="--d:.05s">
           <span class="cf-arrow cf-arrow-l" aria-hidden="true">
@@ -937,7 +1088,7 @@
 
       <figure class="cf-cto reveal" style="--d:.12s">
         <div class="cf-photo">
-          <img src="assets/aayush-photo.jpg" alt="Aayush Namdev, CTO of Appeal Edge" loading="lazy">
+          <img src="assets/aayush-photo.webp" alt="Aayush Namdev, CTO of Appeal Edge" loading="lazy" width="598" height="598">
         </div>
         <figcaption>
           <span class="cf-name">Aayush Namdev</span>
@@ -954,7 +1105,7 @@
       <p class="lede reveal">Appeal Edge is advised by the expert who pioneered this industry. He guides the team on the toughest cases.</p>
       <div class="expert-grid">
         <figure class="expert-photo reveal">
-          <img src="assets/jeff-photo.jpeg" alt="Jeff Goldin, advisor to Appeal Edge" loading="lazy">
+          <img src="assets/jeff-photo.webp" alt="Jeff Goldin, advisor to Appeal Edge" loading="lazy" width="946" height="2048">
         </figure>
         <div>
           <h3 class="expert-name reveal">Jeff Goldin</h3>
@@ -1076,7 +1227,7 @@
     <div class="wrap">
       <h2 class="reveal">Understand your case.</h2>
       <p class="cta-sub reveal" style="--d:.06s">Tell us what happened. Our experts read every submission and tell you the real path forward.</p>
-      <a class="btn btn-amber reveal" style="--d:.12s" data-cta-main href="mailto:contact@appeal-edge.com">Get your case reviewed</a>
+      <a class="btn btn-amber reveal" style="--d:.12s" data-cta-main href="https://tally.so/r/Y5voaW" target="_blank" rel="noopener">Get your case reviewed</a>
       <p class="cta-assure reveal" style="--d:.18s">Confidential. No charge to review. No obligation.</p>
     </div>
   </section>
@@ -1132,11 +1283,11 @@
   <div class="wrap">
     <div class="prefooter">
       <h2 class="reveal">Your account is waiting. Let's get it back.</h2>
-      <a class="btn btn-white reveal" data-cta href="#understand">Get your case reviewed</a>
+      <a class="btn btn-white reveal" data-cta href="https://tally.so/r/Y5voaW" target="_blank" rel="noopener">Get your case reviewed</a>
     </div>
     <div class="footer-cols">
       <div>
-        <a class="brand" href="#top"><img class="brand-logo" src="assets/logo/appeal-edge-logo-white.png" alt="Appeal Edge"></a>
+        <a class="brand" href="#top"><img class="brand-logo" src="assets/logo/appeal-edge-logo-white.png" alt="Appeal Edge" loading="lazy" width="400" height="135"></a>
         <p class="footer-desc">The Reinstatement Force.</p>
       </div>
       <div class="footer-col">
@@ -1160,7 +1311,7 @@
       </div>
     </div>
     <div class="footer-legal">
-      <p>Appeal Edge is an independent consultancy. Not affiliated with, endorsed by, or sponsored by Amazon.</p>
+      <p>Appeal Edge is an independent consultancy. Not affiliated with, endorsed by, or sponsored by Amazon. <a href="/privacy-policy/" style="color:inherit;text-decoration:underline;">Privacy Policy</a> &middot; <a href="/terms/" style="color:inherit;text-decoration:underline;">Terms of Service</a></p>
       <p>&copy; 2026 Appeal Edge</p>
     </div>
   </div>
@@ -1186,17 +1337,6 @@
 </a>
 
 <script>
-  // Live case-intake form. Empty string = CTAs scroll to the Understand-your-case section instead.
-  const FORM_URL = "https://tally.so/r/Y5voaW";
-
-  if (FORM_URL) {
-    document.querySelectorAll("[data-cta], [data-cta-main]").forEach(a => {
-      a.href = FORM_URL;
-      a.target = "_blank";
-      a.rel = "noopener";
-    });
-  }
-
   // Nav: transparent until the page scrolls past the top sentinel
   const nav = document.getElementById("nav");
   const sentinel = document.getElementById("nav-sentinel");
