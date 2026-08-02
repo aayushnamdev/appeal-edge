@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 130" width="100%" height="100%">
+  <!-- Icon -->
+  <g transform="translate(0, 0)">
+    <path d="M 0,130 L 52,0 L 86,0 L 86,30 L 74,30 L 62,60 L 86,60 L 86,90 L 50,90 L 34,130 Z" fill="#818CF8" />
+    <rect x="86" y="0" width="34" height="130" fill="#FFFFFF" />
+  </g>
+  <!-- Wordmark -->
+  <text x="150" y="96" font-family="Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="80" letter-spacing="-0.03em">
+    <tspan font-weight="800" fill="#FFFFFF">Appeal </tspan>
+    <tspan font-weight="500" fill="#818CF8">Edge</tspan>
+  </text>
+</svg>

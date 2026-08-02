@@ -1,0 +1,6 @@
+<svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+  <!-- Unlocked Shackle -->
+  <path d="M 55,75 L 55,50 C 55,20 105,20 105,50 L 105,60" fill="none" stroke="#4F46E5" stroke-width="20" stroke-linecap="round" />
+  <!-- Solid Body with embedded 'A' cutout -->
+  <path d="M 35,75 C 35,69 40,64 46,64 L 114,64 C 120,64 125,69 125,75 L 125,145 C 125,151 120,156 114,156 L 46,156 C 40,156 35,151 35,145 Z M 80,75 L 105,140 L 90,140 L 85,124 L 75,124 L 70,140 L 55,140 Z M 80,95 L 83,115 L 77,115 Z" fill="#111827" fill-rule="evenodd" />
+</svg>

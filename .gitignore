@@ -4,3 +4,35 @@ node_modules/
 .DS_Store
 .claude/
 .vercel
+
+# Python (radar/ and the archived scraper)
+__pycache__/
+*.pyc
+.pytest_cache/
+venv/
+
+# radar (Amazon seller monitoring — see radar/README.md) — separate internal
+# tool, not part of the public site; also carries multi-GB venv/chrome-profile
+# working directories that must never land in git
+radar/
+
+# archived, pre-radar scraper — kept on disk for reference, never committed
+# (already untracked before the 2026-07-28 move; contains a 344MB sqlite db,
+# a 249MB source CSV, and an 784MB venv that must never land in git)
+archive/scraper-v1/
+
+# internal-only docs and reports, not part of the public site
+docs/SellerCare-Brand-Bible.docx
+docs/brand-color-mood.md
+docs/supporting-files/
+GEO-BRAND-MENTIONS.md
+GEO-TECHNICAL-AUDIT.md
+chart.md
+appeal-edge.com-Performance-on-Search-*/
+
+# Claude tooling config, not part of the site
+.agents/
+skills-lock.json
+
+# unfinished experiment, not linked from the live site
+frontend-v2/scroll-hero-test/

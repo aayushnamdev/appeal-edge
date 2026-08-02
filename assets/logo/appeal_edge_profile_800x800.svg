@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <defs>
+    <radialGradient id="bgGlow" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#6366F1" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#6366F1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bgGlow2" cx="70%" cy="75%" r="50%">
+      <stop offset="0%" stop-color="#2DD4BF" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#2DD4BF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="lockG" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#2DD4BF"/>
+    </linearGradient>
+    <linearGradient id="arG" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#2DD4BF"/>
+    </linearGradient>
+    <linearGradient id="shimTop" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366F1" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#818CF8" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#2DD4BF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="wordGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#2DD4BF"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background — dark, brand base -->
+  <rect width="800" height="800" fill="#0A0D14"/>
+  <rect width="800" height="800" fill="url(#bgGlow)"/>
+  <rect width="800" height="800" fill="url(#bgGlow2)"/>
+
+  <!-- Top shimmer accent line -->
+  <line x1="160" y1="2" x2="640" y2="2" stroke="url(#shimTop)" stroke-width="2"/>
+
+  <!-- === LOGO MARK — centred upper half === -->
+  <!-- Shield/hex body — bold, centred at x=400 -->
+  <path d="M 300,290 L 340,262 L 460,262 L 500,290 L 500,368 L 400,426 L 300,368 Z"
+        fill="none" stroke="url(#lockG)" stroke-width="10" stroke-linejoin="round"/>
+
+  <!-- Keyhole: circle -->
+  <circle cx="400" cy="322" r="26" fill="none" stroke="url(#lockG)" stroke-width="7.5"/>
+  <!-- Keyhole: stem -->
+  <line x1="400" y1="348" x2="400" y2="384" stroke="url(#lockG)" stroke-width="7.5" stroke-linecap="round"/>
+
+  <!-- Left shackle arm — curves up and to the left -->
+  <path d="M 340,262 L 340,208 Q 340,176 364,176 Q 388,176 388,208"
+        fill="none" stroke="url(#lockG)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Right arm — arrow pointing up (reinstatement) -->
+  <line x1="460" y1="262" x2="460" y2="172"
+        stroke="url(#arG)" stroke-width="10" stroke-linecap="round"/>
+  <!-- Arrowhead -->
+  <path d="M 436,204 L 460,160 L 484,204"
+        fill="none" stroke="url(#arG)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- === WORDMARK — centred lower half === -->
+  <!-- "Appeal" -->
+  <text x="400" y="512"
+        text-anchor="middle"
+        font-family="Inter,-apple-system,sans-serif"
+        font-size="80"
+        font-weight="600"
+        letter-spacing="-0.025em"
+        fill="#E8EAED">Appeal</text>
+
+  <!-- "Edge" in gradient -->
+  <text x="400" y="596"
+        text-anchor="middle"
+        font-family="Inter,-apple-system,sans-serif"
+        font-size="80"
+        font-weight="600"
+        letter-spacing="-0.025em"
+        fill="url(#wordGrad)">Edge</text>
+
+  <!-- Thin shimmer rule between mark and wordmark -->
+  <line x1="240" y1="454" x2="560" y2="454" stroke="rgba(99,102,241,0.22)" stroke-width="1.5"/>
+
+  <!-- Domain — small monospace at bottom -->
+  <text x="400" y="660"
+        text-anchor="middle"
+        font-family="'JetBrains Mono',monospace"
+        font-size="22"
+        fill="#5EEAD4"
+        letter-spacing="0.06em">appeal-edge.com</text>
+</svg>

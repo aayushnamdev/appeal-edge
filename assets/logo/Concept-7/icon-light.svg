@@ -1,0 +1,16 @@
+<svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+  <defs>
+    <linearGradient id="arrowGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#14B8A6"/>
+    </linearGradient>
+    <linearGradient id="hookGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#312E81"/>
+      <stop offset="100%" stop-color="#4F46E5"/>
+    </linearGradient>
+  </defs>
+  <path d="M 50,80 L 50,45 C 50,25 75,25 75,45 L 75,55" fill="none" stroke="url(#hookGrad)" stroke-width="14" stroke-linecap="round" />
+  <path d="M 110,80 L 110,35" fill="none" stroke="url(#arrowGrad)" stroke-width="14" stroke-linecap="round" />
+  <path d="M 94,48 L 110,25 L 126,48" fill="none" stroke="url(#arrowGrad)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M 25,80 L 135,80 L 135,120 L 80,155 L 25,120 Z M 80,88 L 115,140 L 100,140 L 91,127 L 69,127 L 60,140 L 45,140 Z M 80,110 L 87,120 L 73,120 Z" fill="#111827" fill-rule="evenodd" />
+</svg>

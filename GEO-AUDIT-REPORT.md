@@ -1,99 +1,144 @@
-# GEO + SEO Audit — appeal-edge.com
+# GEO Audit Report: Appeal Edge
 
-**Date:** 2026-07-14 (audited immediately after today's frontend-v2 relaunch)
-**Scope:** Full site — homepage (live), `/old` (archived frontend-trial), `/blog/*` (orphaned)
+**Audit Date:** 2026-08-02
+**URL:** https://www.appeal-edge.com
+**Business Type:** Agency/Services (Amazon seller suspension appeal consulting) with a large content/blog arm
+**Pages Analyzed:** Homepage, /blog/ index, 8 sampled blog posts (across suspension-appeal, AI-for-sellers, and software-guide clusters), privacy-policy, terms — plus full sitemap.xml (41 URLs), robots.txt, llms.txt
+**Supersedes:** the 2026-07-14 audit of the same name (relaunch-day baseline, scored 61/100 technical only)
 
 ---
 
-## Composite GEO Score: 40 / 100 — Needs Work
+## Executive Summary
 
-| Category | Weight | Score | Weighted |
+**Overall GEO Score: 60/100 (Fair)**
+
+The July 14 relaunch's critical migration bug (sitemap/llms.txt pointing at soft-404s) is now fully fixed and technical infrastructure is excellent (93/100) — crawlability, security headers, self-hosted fonts, and schema markup are all in good shape following recent commits. The site's weak point isn't the content itself, which is specific and non-generic, it's that almost none of it has any independent trace off the domain: Brand Authority sits at 5/100, unchanged from the May baseline despite 35 new blog posts, because zero of that content has produced a Wikipedia entry, a Reddit mention, a YouTube presence, or press coverage. AI systems weight third-party corroboration heavily for entity trust — right now an AI asked "who can help appeal an Amazon suspension" has no external signal that Appeal Edge exists.
+
+### Score Breakdown
+
+| Category | Score | Weight | Weighted Score |
 |---|---|---|---|
-| AI Citability & Visibility | 25% | 71/100 | 17.75 |
-| Brand Authority Signals | 20% | 5/100 | 1.00 |
-| Content Quality & E-E-A-T | 20% | 41/100 | 8.20 |
-| Technical Foundations | 15% | 61/100 | 9.15 |
-| Structured Data | 10% | 5/100 | 0.50 |
-| Platform Optimization | 10% | 37/100 | 3.70 |
-| **Composite** | | | **40.3** |
-
-**Read on the number:** the new page itself is well-built (clean semantic HTML, fast, mobile-fine, wide-open crawler access, a genuinely strong credentials block). The score is dragged down almost entirely by three things that are cheap to fix: **zero structured data, a broken-by-migration routing layer, and a brand that's externally invisible under its current name.** This is a fixable-this-week problem, not a rebuild problem.
+| AI Citability | 82/100 | 25% | 20.5 |
+| Brand Authority | 5/100 | 20% | 1.0 |
+| Content E-E-A-T | 61/100 | 20% | 12.2 |
+| Technical GEO | 93/100 | 15% | 14.0 |
+| Schema & Structured Data | 65/100 | 10% | 6.5 |
+| Platform Optimization | 57/100 | 10% | 5.7 |
+| **Overall GEO Score** | | | **60/100** |
 
 ---
 
-## The one bug that's costing the most, and I put it there
+## Critical Issues (Fix Immediately)
 
-All five subagents independently found the same root cause: **today's server.js change (frontend-v2 → root, frontend-trial → `/old`) has no fallback 404.** `app.get('*', ...)` sends `frontend-v2/index.html` for literally any unmatched path, at HTTP 200. This silently breaks three separate things at once:
+1. **Brand has zero third-party corroboration.** No Wikipedia/Wikidata entry, no Reddit mentions in r/AmazonSeller or r/FulfillmentByAmazon, no YouTube presence, no press/G2/Trustpilot listings. Confirmed via fresh search today, not just re-stating the May audit — the gap hasn't moved despite the content buildout.
+2. **Jeff Goldin authority mismatch.** The homepage positions Jeff Goldin (25+ yrs, founded the industry in 2014) as the credibility anchor, but his bio explicitly labels him "Advisor to Appeal Edge," not founder/author, and none of the 8 sampled blog posts are bylined to him. The actual "Founders Team" (Khushi Narwal – COO, Apeksha Namdev – CEO, Aayush Namdev – CTO) have no individual bios, credentials, or external profiles anywhere on the site. No `/about` page exists at all.
+3. **No Service/ProfessionalService schema.** For a business whose entire offering is the appeal-consulting service itself, there is no machine-readable description of it (no `provider`, `areaServed`, `offers`).
 
-- **`sitemap.xml`** still lists `/blog/` and the shoe-brand case study — both now return byte-identical homepage HTML (same content-length, same ETag) instead of real content.
-- **`/llms.txt`** — confirmed via curl, the live URL returns the homepage's `text/html`, not the actual `public/llms.txt` file (which was never committed to git, so it was never deployed regardless).
-- **Any nonexistent URL** on the whole domain (tested `/this-page-does-not-exist-xyz123`) — also 200s with the homepage. Any stale backlink, old bookmark, or crawler-guessed path hits this.
+## High Priority Issues
 
-I can fix the routing/404 half of this immediately (it's a `server.js` change, same category of work as the mobile fixes earlier). **The sitemap and llms.txt content need your input first** — see decisions below.
+1. **`sameAs` coverage is thin.** Organization schema links only Instagram + LinkedIn (2 platforms) — no Wikipedia, Wikidata, YouTube, Crunchbase, X. Person schemas for authors (including Jeff Goldin, who isn't even hyperlinked) have zero `sameAs` at all.
+2. **Near-zero citation of Amazon's own policy pages.** Only 2 of 8 sampled posts link to an authoritative external source (Amazon's Fair Pricing PDF, sell.amazon.com dropshipping page). The other 6 — including posts making specific policy interpretations (IP complaints, related accounts, used-sold-as-new) — cite nothing external. This is both a trust signal and a direct citability lever AI answer engines reward.
+3. **Person schema for authors is a shell.** `name`, `jobTitle`, `worksFor` only — no `url`, `sameAs`, `image`, `description`, `knowsAbout`. AI models can't independently verify author expertise.
+4. **llms.txt is incomplete relative to site depth.** Well-formed but only links `/blog/` generically rather than enumerating the 41 published URLs.
+5. **Zero HTML tables anywhere in the 10-page sample**, despite content that is inherently tabular (pricing tiers, repricing-model comparisons). This is the single biggest content-quality-vs-packaging gap for Google AI Overviews and Gemini, and requires no new research — the facts are already written in prose.
 
----
+## Medium Priority Issues
 
-## Two things I found that need your decision, not my assumption
+1. `/old/` archive is robots-blocked and unlinked but still returns 200 with no `X-Robots-Tag: noindex` — residual index-leakage risk via stray backlinks.
+2. 4 of 8 sampled posts (and 3 of 7 with Article schema) default to the generic "Appeal Edge" byline instead of a named author, and 3 posts use `author` = Organization rather than Person — weaker for E-E-A-T.
+3. No legal disclaimer ("not legal advice," "results vary") on the pricing/policy-interpretation posts.
+4. No `speakable` property or `SearchAction`/`potentialAction` on homepage `WebSite` schema.
+5. Redirect chain has 2 hops (`http://` → 308 → `https://` → 307 → `https://www.`) — should collapse to one.
 
-**1. Founder identity conflict.** The orphaned case-study post's schema (`frontend-trial/blog/inauthentic-shoe-brand-reinstated-17-days/index.html`) names **you, Aayush Namdev, as Founder** (`"jobTitle": "Founder"`). The live site's entire trust narrative is Jeff Goldin founding the company in 2014. If that page ever gets re-linked or re-crawled, an AI system would see two different people claimed as the same company's founder. I'm not touching this — I don't know the actual org structure (are you the business owner and Jeff the lead expert/co-founder? Is "Founder" on that old page simply wrong?). Tell me the real answer and I'll make the schema consistent everywhere.
+## Low Priority Issues
 
-**2. Jeff Goldin's external identity.** Independent web research (by the ai-visibility subagent, not verified further by me) surfaced that Jeff Goldin has a real, established LinkedIn under **"CEO, Sellercare, LLC"** — a different brand name — and that Sellercare's own marketing makes the identical "first company to pioneer Amazon appeals in 2014" claim. If accurate, this means Jeff's actual public reputation and any existing backlinks/mentions live under "Sellercare," completely disconnected from "Appeal Edge." I have not added any `sameAs` link to that LinkedIn profile or asserted this connection anywhere — that's a real-world business-relationship fact only you and Jeff can confirm (Is Sellercare still active? Is Appeal Edge a rebrand of it, a sister brand, or unrelated?). Once you confirm, this is genuinely the highest-leverage brand-authority fix available (inheriting years of real reputation vs. building from zero) — but I won't guess at it.
-
----
-
-## Category Breakdown
-
-### AI Citability & Visibility — 71/100
-- **Strongest asset on the whole site:** the credentials list (2014 / 25+ / 7 marketplaces / 2008 conference / "Direct" escalation) — scored 78/100, clean, specific, quotable.
-- Crawler access is wide open (100/100) — `robots.txt` is a blanket `Allow: /`, every major AI crawler (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, Amazonbot, etc.) is implicitly allowed.
-- Weakest citability blocks: the "who we help" problem rows and FAQ answers for cost/timeline — both deliberately hedge with no concrete number, which is honest but gives AI models nothing specific to cite. (This was a deliberate decision on the relaunch — "no invented numbers" — so it's a tradeoff, not a mistake, but worth knowing it costs citability.)
-- `llms.txt` scores 0/100 in practice — see routing bug above.
-
-### Brand Authority Signals — 5/100
-- Zero presence confirmed via direct checks: no Wikipedia/Wikidata entry for "Appeal Edge" or "Jeff Goldin," no Reddit threads, no YouTube, no Trustpilot/G2 reviews.
-- LinkedIn company page exists (linked in footer) but appears new/unpopulated.
-- This category has the single biggest fix available if the Sellercare-identity question above resolves in your favor — real years of external reputation may already exist, just under a different name.
-
-### Content Quality & E-E-A-T — 41/100
-- Jeff's bio has genuinely specific, checkable claims (2008 Japan Conference invite, 7 named marketplaces) — a real strength, reads as authored by a human, not AI-generic.
-- Whole live site is one page, ~718 words. No case studies, no About page, no privacy policy/ToS (confirmed absent via full-text search), no visible publish/update date.
-- The orphaned shoe-brand case study (specific dates, unit counts, dollar figures, an honest "what we'd do differently" section) is a strong E-E-A-T asset sitting unused — pending the founder-identity fix above.
-
-### Technical Foundations — 61/100
-- Real strengths: SSR/no JS-dependency (15/15), security headers all confirmed actually reaching the response (X-Frame-Options, CSP missing though), mobile/viewport setup solid, CLS-safe image handling.
-- Dragged down by: the sitemap/soft-404 issue, no canonical tag, a stale `Last-Modified: 2018` header, and a redirect chain with a 307 where a 301/308 belongs.
-
-### Structured Data — 5/100
-- Zero JSON-LD anywhere on the live site, confirmed directly on the rendered HTML.
-- A ready-to-paste `Organization` + `Person` (Jeff Goldin) + `FAQPage` + `speakable` block was generated using only verified, real values (Instagram, LinkedIn, the 5 actual FAQ answers) — no fabricated founding dates or addresses. Sitting in the schema subagent's output, ready for your review before I insert it, specifically because of the founder/identity question above.
-
-### Platform Optimization — 37/100
-- Best-positioned: ChatGPT Web Search (53/100) — open crawler access + naturally quotable FAQ copy even with no schema.
-- Worst-positioned: Google Gemini (21/100) — near-total absence from Google's ecosystem (no YouTube, no GBP, no schema `sameAs`).
-- FAQ content lives inside `<details>/<summary>` with no heading structure — easy fix, turns 5 answer-ready blocks into real extractable H3s.
+1. `aayush-photo.webp` missing explicit `width`/`height` attributes (minor CLS risk).
+2. HSTS header present but lacks `includeSubDomains`.
+3. Heading hierarchy skips H3 in favor of H4 subsections on some posts.
+4. No Bing Webmaster Tools / IndexNow verification signal found.
 
 ---
 
-## Prioritized Action Plan
+## Category Deep Dives
 
-### Fix now (I can do these — code/content changes, no external facts needed)
-1. **Add a real 404 handler to server.js**, or a `/blog` route serving actual content — resolves the sitemap, llms.txt-routing, and orphan-page problems in one change.
-2. **Add `<link rel="canonical">`** to the homepage.
-3. **Convert the FAQ `<summary>` text into visible `<h3>` headings** (keep `<details>` for the accordion UX) — makes 5 answer blocks AI-Overview-extractable.
-4. **Add a `Content-Signal` directive to robots.txt** if you have a preference on AI training vs. retrieval use.
+### AI Citability (82/100)
+FAQ blocks are the strongest citability lever on the site — the same Q&A text appears both as a visible accordion and in JSON-LD `FAQPage` markup, giving crawlers a clean, duplicate-verified answer. Sampled passages score well: the appeal-cost FAQ ("$1,500 per appeal... independent consultants $2,000–$2,500... lawyers $1,500–$5,000") scored ~84/100 for citability — numeric, self-contained, directly answers a likely query. Weakness: content is competent industry-standard advice without proprietary data (no win-rate stats, case counts, original research) that would push scores past 85.
 
-### Needs your decision first (I'll act the moment you answer)
-5. **Resolve the founder-identity conflict** (you vs. Jeff, on the orphaned blog post) — then I'll make the Organization/Person schema and any republished case-study content consistent.
-6. **Confirm or deny the Jeff Goldin ↔ Sellercare, LLC connection** — determines whether we bridge to an existing reputation or build brand authority from zero.
-7. **Rewrite `public/llms.txt`** to match the live site (current pricing model is "no pricing shown," current email is `contact@`, not `social@`) — needs your current pricing-disclosure stance, since the live FAQ deliberately keeps pricing off-page.
-8. **Insert the generated Organization + Person + FAQPage JSON-LD** — ready to paste, held pending #5/#6 above so the `founder` field and Person `sameAs` aren't wrong on day one.
-9. **Decide whether to republish the shoe-brand case study** — it's a strong, specific, real asset, but its schema needs the founder fix first.
+Crawler access is a genuine strength: every major AI crawler (GPTBot, OAI-SearchBot, ChatGPT-User, ClaudeBot, PerplexityBot, Amazonbot, Google-Extended, Bytespider, CCBot, Cohere-ai, Applebot-Extended) gets explicit `Allow: /`, only `/old/` is blocked, and the site ships a `Content-Signal: ai-train=yes, search=yes, ai-retrieval=yes, ai-personalization=no` directive — a forward-leaning, still-rare signal.
 
-### Medium-term (marketing/content work, not this session's scope)
-10. Pursue a Wikipedia mention, build Reddit/community presence, record one YouTube video with Jeff — the highest-leverage off-page moves per the platform analysis, but they're ongoing marketing work, not a one-time fix.
-11. Build 2-3 subtopic guide pages (Section 3, IP complaints) for topical authority.
-12. Add a privacy policy and terms of service page.
+### Brand Authority (5/100)
+Unchanged from the May baseline. Wikipedia API search returned no article and no Wikidata Q-number. No Reddit threads mention "Appeal Edge" by name in any Amazon-seller subreddit. No YouTube channel. LinkedIn company page exists but doesn't surface in external search (effectively invisible). No G2/Trustpilot/Capterra/press mentions. "Jeff Goldin" as founder/advisor could not be externally corroborated by any LinkedIn or press source found. 35 new blog posts changed on-site citability substantially but produced zero measurable off-site signal — this is the single largest lever on the composite score given its 20% weight and current near-zero value.
+
+### Content E-E-A-T (61/100)
+Experience/expertise signals are genuinely strong — zero generic AI-filler phrases detected across the sample, and content shows real case-pattern granularity (e.g., specific detail on which device-overlap patterns trigger related-account reviews). Freshness is excellent: every post carries real, recent `article:published_time`/`modified_time` (June–July 2026). The critical gap is trust signals: the site's credibility narrative doesn't hold together (Jeff Goldin positioned as anchor but not author or linked founder), there's no `/about` page, and 6 of 8 posts cite zero external authoritative sources despite interpreting Amazon policy. Word counts (592–1,031) are tight and non-padded but thin for genuinely comprehensive appeal-process topics.
+
+### Technical GEO (93/100)
+The July 14 critical issue — sitemap/llms.txt pointing at soft-404s — is verified fixed: distinct byte sizes confirmed at `/`, `/blog/`, and a sample post; a fake URL correctly returns 404 instead of the old 200-everywhere bug. All 41 sitemap URLs diff cleanly against live blog-index links with zero mismatches. CSP header now shipped alongside existing HSTS/X-Frame-Options/Referrer-Policy. Fonts are self-hosted and preloaded, static assets cache with `immutable`, Brotli compression confirmed. Remaining gaps are minor: `/old/` needs `X-Robots-Tag: noindex` for defense in depth, and the redirect chain should collapse from 2 hops to 1.
+
+### Schema & Structured Data (65/100)
+Coverage is strong for the site's size — Organization, WebSite, and FAQPage on the homepage; Organization, Article, BreadcrumbList, and (mostly) Person on blog posts; all valid JSON-LD, server-rendered, no syntax errors. Article blocks are unusually complete (`headline`, `dateModified`, `mainEntityOfPage`, `author`/`publisher` via `@id` reference). The gaps are structural rather than cosmetic: no Service/ProfessionalService schema for the core offering, thin `sameAs` (2 links total), and Person schemas for authors that carry only name/title with no verification properties.
+
+### Platform Optimization (57/100)
+| Platform | Score |
+|---|---|
+| Google AI Overviews | 68/100 |
+| ChatGPT Web Search | 62/100 |
+| Perplexity | 58/100 |
+| Google Gemini | 50/100 |
+| Bing Copilot | 48/100 |
+
+Crawler access is perfect across the board (highest-scoring shared factor). AI Overviews scores best due to tight FAQ answer lengths but is held back by zero `<table>` elements despite inherently tabular content. Gemini and Bing Copilot score lowest, reflecting the same off-domain ecosystem gap seen in Brand Authority — no YouTube, Google Business Profile, Bing Webmaster verification, or Knowledge Panel indicators.
 
 ---
 
-*Full per-category subagent detail (citability scoring, brand-mention platform table, technical evidence with curl output, complete JSON-LD block) is preserved in this session — ask if you want any of it expanded into its own file (e.g. `GEO-SCHEMA-REPORT.md`, `GEO-TECHNICAL-AUDIT.md`).*
+## Quick Wins (Implement This Week)
+
+1. **Convert existing pricing/comparison prose into real `<table>` markup** across the blog — the facts are already written (cost tiers, repricing models), this is pure formatting with no new research, and it's the highest-leverage fix for AI Overviews/Gemini snippet extraction.
+2. **Add `Service`/`ProfessionalService` schema** describing the core appeal-consulting offering (name, description, provider, areaServed, offers).
+3. **Expand llms.txt to enumerate all 41 URLs** (or ship an `/llms-full.txt`) instead of linking `/blog/` generically.
+4. **Add `X-Robots-Tag: noindex` on all `/old/*` responses** — closes the one residual index-leakage path from the July migration.
+5. **Add inline links to Amazon's actual policy pages** in the 6 sampled posts that currently cite none, starting with the IP-complaint and related-account posts.
+
+## 30-Day Action Plan
+
+### Week 1: Close the schema and technical gaps
+- [ ] Add Service/ProfessionalService schema
+- [ ] Expand Organization `sameAs` (add any real, live profiles — don't fabricate)
+- [ ] `X-Robots-Tag: noindex` on `/old/*`
+- [ ] Collapse the redirect chain to one hop
+
+### Week 2: Fix the credibility narrative
+- [ ] Build a real `/about` page naming the actual founders team (Khushi Narwal, Apeksha Namdev, Aayush Namdev) with individual bios
+- [ ] Resolve the Jeff Goldin positioning — either have him author/co-author cornerstone posts and link a real, verifiable profile, or adjust homepage copy so it doesn't imply he's the operational voice
+- [ ] Standardize blog bylines to named Person authors (currently 4 of 8 sampled default to generic "Appeal Edge")
+
+### Week 3: Citability packaging pass
+- [ ] Convert comparison prose to `<table>` markup across published posts
+- [ ] Add inline citations to Amazon's policy pages on the 6 posts currently missing them
+- [ ] Add a legal disclaimer to pricing/policy-interpretation posts
+
+### Week 4: Off-domain brand signal (the biggest lever, longest lead time)
+- [ ] Set up a Bing Webmaster Tools account + IndexNow key
+- [ ] Begin authentic, non-promotional participation in r/AmazonSeller / r/FulfillmentByAmazon where genuinely relevant
+- [ ] Pursue one earned press or review-site listing (G2/Trustpilot) to create a citable third-party source
+
+---
+
+## Appendix: Pages Analyzed
+
+| URL | Notes |
+|---|---|
+| `/` | Organization, WebSite, FAQPage schema; strong technical baseline |
+| `/blog/` | Organization, Blog schema listing 36 posts |
+| `/blog/amazon-related-account-suspension-appeal/` | Strong case-pattern specificity; author = Organization |
+| `/blog/amazon-appeal-service-cost/` | Highest-citability FAQ passage found; no external citation; no disclaimer |
+| `/blog/amazon-ip-complaint-suspension-appeal/` | No external policy citation |
+| `/blog/ai-generated-amazon-listings-without-suspension-risk/` | No FAQPage (confirmed non-issue — no genuine Q&A content to mark up) |
+| `/blog/amazon-repricing-software-guide/` | Only post citing Amazon's Fair Pricing PDF |
+| `/blog/amazon-rufus-generative-search-ai-optimization/` | No FAQPage (same non-issue as above) |
+| `/blog/used-sold-as-new-plan-of-action-template/` | Sampled for content depth |
+| `/blog/amazon-seller-of-record-explained/` | Only other post with an external citation (sell.amazon.com) |
+| `/privacy-policy/` | Organization, WebSite, WebPage, BreadcrumbList |
+| `/terms/` | Organization, WebSite, WebPage, BreadcrumbList |
+
+**Not sampled but present in sitemap:** 27 additional blog posts (AI-for-sellers cluster, remaining suspension-appeal-type guides, repricing/inventory tooling guides) — all confirmed live and correctly listed via sitemap-to-blog-index diff during the technical audit, but not individually schema/content-reviewed in this pass.

@@ -3,33 +3,10 @@ const os = require('os');
 const path = require('path');
 const fs = require('fs');
 const OpenAI = require('openai');
-const { Resend } = require('resend');
-const { SYSTEM_PROMPT } = require('./prompts');
+const { SYSTEM_PROMPT, CASE_TYPES } = require('./prompts');
 const { extractText } = require('./fileExtract');
-
-async function saveLead(email, ip, noticePreview) {
-  const apiKey = process.env.RESEND_API_KEY;
-  if (!apiKey) return;
-  try {
-    const resend = new Resend(apiKey);
-    await resend.emails.send({
-      from: 'Appeal Edge <onboarding@resend.dev>',
-      to: ['aayush22@duck.com', 'apekshanamdev12@gmail.com'],
-      subject: `New scan lead: ${email}`,
-      html: `
-        <h2>New Free Scan Lead</h2>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Time:</strong> ${new Date().toISOString()}</p>
-        <p><strong>IP:</strong> ${ip}</p>
-        <hr/>
-        <p><strong>Notice Preview:</strong></p>
-        <blockquote style="color:#555">${(noticePreview || 'N/A').slice(0, 500)}</blockquote>
-      `,
-    });
-  } catch (err) {
-    console.error('[RESEND] Failed to send lead email:', err.message);
-  }
-}
+const { sendLeadEmail } = require('./leadMailer');
+const { logScan } = require('./scanLog');
 
 // bodyParser disabled — multer handles multipart body parsing
 
@@ -116,11 +93,7 @@ module.exports = async function handler(req, res) {
   const uploadedFiles = req.files || [];
   const noticeText = (req.body?.noticeText || '').trim();
   const email = (req.body?.email || '').trim();
-
-  if (email) {
-    console.log('[LEAD]', JSON.stringify({ email, ip, timestamp: new Date().toISOString() }));
-    saveLead(email, ip, noticeText);
-  }
+  const sourcePage = (req.body?.sourcePage || '').trim().slice(0, 200);
 
   const cleanup = () => uploadedFiles.forEach(f => { try { fs.unlinkSync(f.path); } catch {} });
 
@@ -160,6 +133,28 @@ module.exports = async function handler(req, res) {
 
     cleanup();
     if (!result?.caseTypeId) return res.status(500).json({ error: 'Unexpected AI response. Please try again.' });
+    // The model sometimes echoes the raw id (e.g. "inauthentic") instead of the
+    // human readable label into caseType. Overriding it from the fixed CASE_TYPES
+    // map makes the label on the page deterministic regardless of model drift.
+    const known = CASE_TYPES[result.caseTypeId];
+    if (known) result.caseType = known.label;
+
+    // Every completed scan gets logged, email or not, so nothing scanned is
+    // just thrown away. The Resend ping only fires when there's an email,
+    // since that's the only case where following up is actually possible.
+    logScan({
+      email,
+      caseType: result.caseType,
+      caseTypeId: result.caseTypeId,
+      synthesis: result.synthesis,
+      sourcePage,
+      hasFiles: uploadedFiles.length > 0,
+      ip,
+    });
+    if (email) {
+      sendLeadEmail(email, ip, `${result.caseType}\n\n${result.synthesis || noticeText}`);
+    }
+
     return res.json(result);
 
   } catch (err) {

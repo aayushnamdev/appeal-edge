@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1584" height="396" viewBox="0 0 1584 396">
+  <defs>
+    <radialGradient id="bg1" cx="12%" cy="0%" r="60%">
+      <stop offset="0%" stop-color="#6366F1" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#6366F1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bg2" cx="92%" cy="110%" r="55%">
+      <stop offset="0%" stop-color="#2DD4BF" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#2DD4BF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bg3" cx="50%" cy="50%" r="35%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="shimmer" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366F1" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#818CF8" stop-opacity="0.55"/>
+      <stop offset="70%" stop-color="#2DD4BF" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#2DD4BF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="mG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#2DD4BF"/>
+    </linearGradient>
+    <linearGradient id="lockG" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#2DD4BF"/>
+    </linearGradient>
+    <linearGradient id="arG" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#2DD4BF"/>
+    </linearGradient>
+    <linearGradient id="divider" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6366F1" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#6366F1" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#2DD4BF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1584" height="396" fill="#0A0D14"/>
+  <rect width="1584" height="396" fill="url(#bg1)"/>
+  <rect width="1584" height="396" fill="url(#bg2)"/>
+  <rect width="1584" height="396" fill="url(#bg3)"/>
+
+  <!-- Top shimmer line -->
+  <line x1="0" y1="2" x2="1584" y2="2" stroke="url(#shimmer)" stroke-width="2.5"/>
+  <!-- Bottom shimmer line -->
+  <line x1="0" y1="394" x2="1584" y2="394" stroke="url(#shimmer)" stroke-width="1.5"/>
+
+  <!-- Subtle dotted vertical mid-texture -->
+  <line x1="792" y1="40" x2="792" y2="356" stroke="rgba(99,102,241,0.04)" stroke-width="1.5" stroke-dasharray="3 12"/>
+
+  <!-- === LOGO MARK (left zone) === -->
+  <!-- Shield body — larger for this size -->
+  <path d="M 100,212 L 130,190 L 200,190 L 230,212 L 230,278 L 165,316 L 100,278 Z"
+        fill="none" stroke="url(#lockG)" stroke-width="7" stroke-linejoin="round"/>
+  <!-- Keyhole circle -->
+  <circle cx="165" cy="240" r="18" fill="none" stroke="url(#lockG)" stroke-width="5"/>
+  <!-- Keyhole stem -->
+  <line x1="165" y1="258" x2="165" y2="282" stroke="url(#lockG)" stroke-width="5" stroke-linecap="round"/>
+  <!-- Left shackle arm -->
+  <path d="M 130,190 L 130,148 Q 130,122 148,122 Q 166,122 166,148"
+        fill="none" stroke="url(#lockG)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Right arm — arrow pointing up (reinstatement) -->
+  <line x1="200" y1="190" x2="200" y2="118"
+        stroke="url(#arG)" stroke-width="7" stroke-linecap="round"/>
+  <path d="M 182,140 L 200,108 L 218,140"
+        fill="none" stroke="url(#arG)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Wordmark -->
+  <text x="258" y="248" font-family="Inter,-apple-system,sans-serif" font-size="58" font-weight="600" letter-spacing="-0.025em" fill="#E8EAED">Appeal</text>
+  <text x="258" y="312" font-family="Inter,-apple-system,sans-serif" font-size="58" font-weight="600" letter-spacing="-0.025em" fill="url(#mG)">Edge</text>
+
+  <!-- Vertical rule divider between logo zone and centre -->
+  <line x1="556" y1="90" x2="556" y2="306" stroke="url(#divider)" stroke-width="1.5"/>
+
+  <!-- === CENTRE: Tagline + pills === -->
+  <text x="950" y="168" text-anchor="middle" font-family="Inter,-apple-system,sans-serif" font-size="36" font-weight="600" letter-spacing="-0.02em" fill="#E8EAED">Suspended on Amazon?</text>
+  <text x="950" y="216" text-anchor="middle" font-family="Inter,-apple-system,sans-serif" font-size="28" font-weight="400" fill="#A5B4FC">We've seen this case before.</text>
+
+  <!-- Divider under tagline -->
+  <line x1="622" y1="234" x2="1278" y2="234" stroke="rgba(99,102,241,0.18)" stroke-width="1.5"/>
+
+  <!-- Three credential pills -->
+  <rect x="622" y="250" width="210" height="38" rx="19" fill="rgba(99,102,241,0.12)" stroke="rgba(99,102,241,0.30)" stroke-width="1.5"/>
+  <text x="727" y="274" text-anchor="middle" font-family="Inter,-apple-system,sans-serif" font-size="16" font-weight="500" fill="#818CF8" letter-spacing="0.02em">Appeal specialists</text>
+
+  <rect x="846" y="250" width="170" height="38" rx="19" fill="rgba(45,212,191,0.10)" stroke="rgba(45,212,191,0.28)" stroke-width="1.5"/>
+  <text x="931" y="274" text-anchor="middle" font-family="Inter,-apple-system,sans-serif" font-size="16" font-weight="500" fill="#2DD4BF" letter-spacing="0.02em">48-hr results</text>
+
+  <rect x="1030" y="250" width="110" height="38" rx="19" fill="rgba(56,189,248,0.08)" stroke="rgba(56,189,248,0.22)" stroke-width="1.5"/>
+  <text x="1085" y="274" text-anchor="middle" font-family="Inter,-apple-system,sans-serif" font-size="16" font-weight="500" fill="#38BDF8" letter-spacing="0.02em">Flat fee</text>
+
+  <!-- === RIGHT: Contact zone === -->
+  <line x1="1200" y1="90" x2="1200" y2="306" stroke="url(#divider)" stroke-width="1.5"/>
+
+  <!-- CTA headline -->
+  <text x="1392" y="160" text-anchor="middle" font-family="Inter,-apple-system,sans-serif" font-size="16" font-weight="700" letter-spacing="0.06em" fill="#E8EAED">GET REINSTATED IN 48 HRS</text>
+
+  <!-- Separator -->
+  <line x1="1218" y1="174" x2="1566" y2="174" stroke="rgba(99,102,241,0.15)" stroke-width="1"/>
+
+  <!-- Email -->
+  <text x="1224" y="210" font-family="'JetBrains Mono',monospace" font-size="18" fill="#5EEAD4" letter-spacing="0.02em">social@appeal-edge.com</text>
+
+  <!-- Website -->
+  <text x="1224" y="248" font-family="'JetBrains Mono',monospace" font-size="18" fill="#5EEAD4" letter-spacing="0.02em">www.appeal-edge.com</text>
+
+  <!-- Micro label -->
+  <text x="1224" y="284" font-family="Inter,-apple-system,sans-serif" font-size="14" font-weight="400" fill="#4B5268">Amazon appeal specialists</text>
+</svg>

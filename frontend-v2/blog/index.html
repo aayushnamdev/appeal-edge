@@ -10,6 +10,7 @@
 
   gtag('config', 'G-BP6Y4M1CP0');
 </script>
+<script defer src="/js/ae-analytics.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blog | Appeal Edge</title>
@@ -440,6 +441,16 @@
   .post-card p { margin-top: 10px; color: var(--grey); font-size: 15px; }
   .post-meta { margin-top: 18px; font-size: 13px; color: var(--grey); }
 
+  /* ---------- Blog mid-page CTA ---------- */
+  .blog-cta { margin-top: 56px; padding: clamp(40px, 5vw, 56px); border-radius: var(--r-card); background: var(--grad-dark); text-align: center; }
+  .blog-cta h3 {
+    font-family: var(--font-display); font-variation-settings: 'wdth' 118; font-weight: 850; text-transform: uppercase;
+    font-size: clamp(24px, 3vw, 34px); color: var(--white); line-height: 1.1; max-width: 20ch; margin: 0 auto;
+  }
+  .blog-cta p { margin-top: 14px; color: rgba(255,255,255,.75); font-size: 16px; max-width: 52ch; margin-left: auto; margin-right: auto; }
+  .blog-cta .btn { margin-top: 26px; }
+  .blog-cta .cta-assure { margin-top: 16px; font-size: 13px; color: rgba(255,255,255,.6); }
+
   /* ---------- Footer (shared) ---------- */
   .footer { background: var(--navy); color: rgba(255,255,255,.7); }
   .prefooter {
@@ -770,6 +781,13 @@
           <p>What counts toward each component of ODR, the 60 day rolling window, and valid tracking rate as the adjacent metric.</p>
           <p class="post-meta">Aayush Namdev, CTO &middot; 7 min read &middot; July 26, 2026</p>
         </a>
+      </div>
+
+      <div class="blog-cta">
+        <h3>Not sure which of these fits your notice?</h3>
+        <p>Paste it into our free scanner. It reads your notice the way our specialists do and tells you the violation type and what your appeal will need.</p>
+        <a class="btn btn-amber" data-cta-main href="/#understand">Scan your notice free</a>
+        <p class="cta-assure">Confidential. Nothing is shared with Amazon. No charge to review.</p>
       </div>
     </div>
   </section>

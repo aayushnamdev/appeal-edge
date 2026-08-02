@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const analyzeRoute = require('./api/analyze');
+const leadRoute = require('./api/lead');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -10,12 +11,12 @@ app.disable('x-powered-by');
 
 const CSP = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com",
+  "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://tally.so",
   "style-src 'self' 'unsafe-inline'",
   "font-src 'self' data:",
   "img-src 'self' data: https:",
-  "frame-src https://www.youtube.com",
-  "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://region1.google-analytics.com",
+  "frame-src https://www.youtube.com https://tally.so",
+  "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com",
   "base-uri 'self'",
   "object-src 'none'",
 ].join('; ');
@@ -43,6 +44,8 @@ const staticCacheOptions = {
       res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
     } else if (/\.html$/i.test(filePath)) {
       res.setHeader('Cache-Control', 'public, max-age=0, must-revalidate');
+    } else if (/\.js$/i.test(filePath)) {
+      res.setHeader('Cache-Control', 'public, max-age=3600, must-revalidate');
     }
   },
 };
@@ -52,10 +55,17 @@ app.use(express.static(path.join(__dirname, 'public'), staticCacheOptions));
 app.use('/assets', express.static(path.join(__dirname, 'assets'), staticCacheOptions));
 
 app.use('/api/analyze', analyzeRoute);
+app.use('/api/lead', leadRoute);
 
 app.use(express.static(path.join(__dirname, 'frontend-v2'), staticCacheOptions));
 
-app.use('/old', express.static(path.join(__dirname, 'frontend-trial')));
+// /old/ is the superseded frontend-trial build. robots.txt already disallows it
+// for crawlers; X-Robots-Tag backs that up for any crawler that ignores robots.txt
+// or for stale backlinks that get followed directly.
+app.use('/old', (req, res, next) => {
+  res.setHeader('X-Robots-Tag', 'noindex, nofollow');
+  next();
+}, express.static(path.join(__dirname, 'frontend-trial')));
 
 app.use((req, res) => {
   res.status(404).send(`<!DOCTYPE html>
