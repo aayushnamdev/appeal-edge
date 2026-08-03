@@ -9,6 +9,17 @@ const PORT = process.env.PORT || 3000;
 
 app.disable('x-powered-by');
 
+// GSC was splitting ranking signals between appeal-edge.com and www.appeal-edge.com
+// because nothing redirected the apex, so Google ignored the www canonical tags.
+// 301 the bare apex to www, preserving path and query string. Leave localhost,
+// 127.0.0.1 and any other host (Vercel previews, etc.) untouched.
+app.use((req, res, next) => {
+  if (req.hostname === 'appeal-edge.com') {
+    return res.redirect(301, `https://www.appeal-edge.com${req.originalUrl}`);
+  }
+  next();
+});
+
 const CSP = [
   "default-src 'self'",
   "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://tally.so",
