@@ -1,0 +1,173 @@
+/* ---------- Free case scan ----------
+   Shared scanner styles, extracted from frontend-v2/index.html so the
+   same scan-zone markup can be embedded on the homepage and inside blog
+   posts. Relies on the CSS custom properties (--mist, --white, --line,
+   --blue, --grey, --navy, --ink, --e2, --r-card, --r-btn, --focus,
+   --font-body, --font-display, --section-y) already defined in each
+   page's own :root block. */
+.scan-zone { background: var(--mist); padding: var(--section-y) 0; }
+.scan-intro { text-align: center; }
+.scan-intro .eyebrow, .scan-intro h2.display { margin-left: auto; margin-right: auto; }
+.scan-intro .lede { margin-left: auto; margin-right: auto; }
+
+.scan-grid {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: clamp(28px, 4vw, 56px);
+  align-items: start;
+  margin-top: 48px;
+  text-align: left;
+}
+.scan-input-col, .scan-results-col {
+  background: var(--white);
+  border-radius: var(--r-card);
+  box-shadow: var(--e2);
+  padding: clamp(24px, 3vw, 32px);
+}
+.scan-field-label { display: block; font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+.scan-textarea {
+  width: 100%;
+  min-height: 140px;
+  resize: vertical;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--ink);
+  background: var(--mist);
+  border: 1px solid var(--line);
+  border-radius: var(--r-btn);
+  padding: 16px 18px;
+  transition: border-color .15s ease;
+}
+.scan-textarea:focus-visible { outline: none; border-color: var(--blue); box-shadow: var(--focus); }
+.scan-drop-zone.drag-over .scan-upload-btn { border-color: var(--blue); background: rgba(43,80,255,.06); }
+.scan-upload-row {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.scan-upload-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--blue);
+  border: 1px dashed var(--line);
+  border-radius: var(--r-btn);
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: border-color .15s ease, background .15s ease;
+}
+.scan-upload-btn:hover { border-color: var(--blue); background: rgba(43,80,255,.05); }
+.scan-upload-btn svg { width: 16px; height: 16px; fill: currentColor; flex: none; }
+.scan-file-name { font-size: 13px; color: var(--grey); }
+.scan-email-row { margin-top: 20px; }
+.scan-email-input {
+  width: 100%; font-family: var(--font-body); font-size: 15px; color: var(--ink);
+  background: var(--mist); border: 1px solid var(--line); border-radius: var(--r-btn); padding: 13px 16px;
+  transition: border-color .15s ease;
+}
+.scan-email-input:focus-visible { outline: none; border-color: var(--blue); box-shadow: var(--focus); }
+.scan-email-hint { margin-top: 6px; font-size: 13px; color: var(--grey); }
+.scan-submit-row { margin-top: 22px; }
+.scan-submit-row .btn { width: 100%; }
+.scan-note { display: block; margin-top: 12px; font-size: 13px; color: var(--grey); text-align: center; }
+
+/* Empty, loading, error and results all occupy the same slot in the right column */
+.scan-empty { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; padding: 28px 8px; color: var(--grey); }
+.scan-empty svg { width: 40px; height: 40px; color: var(--line); }
+.scan-empty p { max-width: 34ch; font-size: 15px; }
+.scan-loading { display: flex; align-items: center; gap: 14px; padding: 20px 8px; }
+.scan-spinner {
+  width: 22px; height: 22px; border-radius: 50%; flex: none;
+  border: 3px solid var(--line); border-top-color: var(--blue);
+  animation: scan-spin .8s linear infinite;
+}
+@keyframes scan-spin { to { transform: rotate(360deg); } }
+.scan-loading p { color: var(--grey); font-size: 15px; }
+.scan-error {
+  padding: 14px 18px;
+  border-radius: var(--r-btn);
+  background: rgba(198,40,40,.06);
+  border: 1px solid rgba(198,40,40,.3);
+  color: #B3261E;
+  font-size: 14px;
+}
+.scan-results { text-align: left; }
+.scan-result-tag {
+  display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--blue); background: rgba(43,80,255,.08);
+  border-radius: 999px; padding: 5px 12px;
+}
+.scan-result-type {
+  font-family: var(--font-display); font-variation-settings: 'wdth' 116; font-weight: 800;
+  text-transform: uppercase; font-size: clamp(20px, 2.6vw, 26px); color: var(--navy);
+  margin-top: 14px; line-height: 1.15;
+}
+.scan-result-synthesis { margin-top: 14px; color: var(--ink); font-size: 16px; }
+.scan-result-block { margin-top: 24px; }
+.scan-result-block h4 {
+  font-size: 13px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--grey); margin-bottom: 10px;
+}
+.scan-result-block p { color: var(--ink); font-size: 15px; }
+.scan-evidence-list { list-style: none; }
+.scan-evidence-list li {
+  position: relative; padding-left: 22px; margin-top: 8px; color: var(--ink); font-size: 15px;
+}
+.scan-evidence-list li::before {
+  content: ""; position: absolute; left: 0; top: 8px; width: 8px; height: 8px;
+  border-radius: 50%; background: var(--blue);
+}
+.scan-insight {
+  margin-top: 24px; padding: 18px 20px; border-radius: var(--r-btn);
+  background: linear-gradient(180deg, #FFFDF7 0%, #FFF6E6 100%); border: 1px solid rgba(245,166,35,.4);
+  color: var(--ink); font-size: 15px;
+}
+.scan-insight p + p { margin-top: 8px; }
+.scan-continue { margin-top: 32px; padding-top: 28px; border-top: 1px solid var(--line); }
+.scan-continue h4 {
+  font-family: var(--font-display); font-variation-settings: 'wdth' 116; font-weight: 800;
+  text-transform: uppercase; font-size: 18px; color: var(--navy);
+}
+.scan-continue p { margin-top: 8px; color: var(--grey); font-size: 15px; }
+.scan-tally-wrap { margin-top: 16px; }
+.scan-tally-wrap iframe { width: 100%; border: none; }
+.scan-again { margin-top: 20px; }
+.scan-again button {
+  background: none; border: none; color: var(--blue); font-weight: 600; font-size: 14px;
+  cursor: pointer; padding: 0;
+}
+.scan-again button:hover { text-decoration: underline; }
+.scan-talk-instead { margin-top: 32px; text-align: center; }
+.scan-talk-instead a { font-size: 14px; font-weight: 600; }
+
+/* Blog post variant: narrower heading sizes to match article typography */
+.scan-heading {
+  font-family: var(--font-display); font-variation-settings: 'wdth' 118; font-weight: 850;
+  text-transform: uppercase; letter-spacing: -.005em; font-size: clamp(24px, 3.2vw, 32px);
+  color: var(--navy); line-height: 1.1; margin-top: 12px;
+}
+.scan-sub { margin-top: 14px; color: var(--grey); font-size: 16px; max-width: 56ch; margin-left: auto; margin-right: auto; }
+.scan-eyebrow { font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--blue); }
+
+/* In-article variant: a bordered card instead of a full bleed section,
+   since blog posts embed the scanner inside the 780px article column
+   rather than a full width homepage section. */
+.scan-zone.scan-inline {
+  background: var(--mist);
+  padding: 40px 32px;
+  border-radius: var(--r-card);
+  border: 1px solid var(--line);
+  margin-top: 48px;
+}
+@media (max-width: 480px) {
+  .scan-zone.scan-inline { padding: 28px 20px; }
+}
+
+@media (max-width: 860px) {
+  .scan-grid { grid-template-columns: 1fr; }
+}
