@@ -8,7 +8,7 @@
   </url>
   <url>
     <loc>https://www.appeal-edge.com/blog/</loc>
-    <lastmod>2026-08-05</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -103,12 +103,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.appeal-edge.com/blog/amazon-repricing-software-guide/</loc>
-    <lastmod>2026-08-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.appeal-edge.com/blog/amazon-ip-complaint-suspension-appeal/</loc>
     <lastmod>2026-08-03</lastmod>
     <changefreq>monthly</changefreq>
@@ -181,18 +175,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.appeal-edge.com/blog/algorithmic-vs-rule-based-amazon-repricing/</loc>
-    <lastmod>2026-08-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.appeal-edge.com/blog/amazon-repricing-strategies-fair-pricing-policy/</loc>
-    <lastmod>2026-08-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://www.appeal-edge.com/blog/amazon-fba-commingling-inauthentic-complaints/</loc>
     <lastmod>2026-08-05</lastmod>
     <changefreq>monthly</changefreq>
@@ -207,6 +189,66 @@
   <url>
     <loc>https://www.appeal-edge.com/blog/amazon-order-defect-rate-too-high-fix/</loc>
     <lastmod>2026-07-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.appeal-edge.com/blog/amazon-dropshipping-packing-slips-invoices-requirements/</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.appeal-edge.com/blog/is-dropshipping-allowed-on-amazon/</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.appeal-edge.com/blog/amazon-seller-of-record-vs-supplier/</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.appeal-edge.com/blog/how-to-remove-amazon-ip-complaint/</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.appeal-edge.com/blog/amazon-copyright-infringement-appeal/</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.appeal-edge.com/blog/stickerless-commingled-inventory-explained/</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.appeal-edge.com/blog/amazon-commingled-inventory-counterfeit-complaint/</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.appeal-edge.com/blog/amazon-valid-tracking-rate-suspension/</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.appeal-edge.com/blog/amazon-forged-manipulated-documents-appeal/</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.appeal-edge.com/blog/amazon-fair-pricing-policy-violation-appeal/</loc>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
