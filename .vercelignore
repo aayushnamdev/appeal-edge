@@ -1,0 +1,42 @@
+node_modules
+.env
+*.log
+.DS_Store
+.claude
+.vercel
+
+# Python (radar/ and the archived scraper)
+__pycache__
+*.pyc
+.pytest_cache
+venv
+
+# radar — separate internal tool, not part of the public site,
+# carries a huge multi-GB working tree (chrome profiles, venvs, DB dumps)
+radar
+
+# archived, pre-radar scraper
+archive
+
+# internal-only docs, not served
+docs
+Site Data
+GEO-BRAND-MENTIONS.md
+GEO-TECHNICAL-AUDIT.md
+GEO-AUDIT-REPORT.md
+GEO-AUDIT-theappealguru.md
+chart.md
+plan.md
+appeal-edge.com-Performance-on-Search-*
+
+# Claude tooling config
+.agents
+skills-lock.json
+
+# unfinished experiment
+frontend-v2/scroll-hero-test
+
+# other local-only assets not referenced by server.js
+stitch
+frontend-trial
+Appeal-Edge.html
