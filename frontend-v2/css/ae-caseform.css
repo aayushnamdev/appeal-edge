@@ -1,0 +1,42 @@
+/* ---------- Case review form (primary CTA) ----------
+   Promotes the "Get your case reviewed" Tally form to the first, largest
+   CTA in every blog post. Builds on the existing .cta-card look (dark
+   gradient card, see each post's inline <style>) via the .case-form
+   modifier, and adds the expand-on-click embed panel that
+   public/js/ae-caseform.js swaps in without leaving the page.
+   Relies on the CSS custom properties already defined in each page's own
+   :root block (--navy, --white, --grad-dark, --r-card, --r-btn, --e2,
+   --font-display, --font-body, --line, --grey, --amber). */
+
+.cta-card.case-form { text-align: center; }
+.case-form .cta-eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 10px;
+}
+
+/* The embed panel: Tally's form text renders dark, so it needs a light
+   surface of its own rather than sitting transparent on the dark card. */
+.case-form-embed {
+  margin-top: 28px;
+  background: var(--white);
+  border-radius: var(--r-btn);
+  padding: 8px clamp(12px, 2vw, 20px) 4px;
+  text-align: left;
+}
+.case-form-embed iframe { width: 100%; border: none; display: block; }
+
+/* Shown once the embed swaps the CTA out; kept in ae-scanner.css too
+   since the scanner's own Tally embed (.scan-tally-wrap) can render this
+   same note on pages that never load this file, e.g. the homepage. */
+.tally-submitted-note {
+  padding: 22px 4px;
+  text-align: center;
+  color: var(--ink);
+  font-size: 15px;
+}
+.tally-submitted-note strong { display: block; margin-bottom: 6px; color: var(--navy); font-size: 17px; }

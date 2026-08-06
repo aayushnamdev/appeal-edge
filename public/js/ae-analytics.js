@@ -27,7 +27,7 @@
     if (a.closest(".hero")) return "hero";
     if (a.closest(".scan-zone")) return "mid_page";
     if (a.closest(".blog-cta")) return "mid_page";
-    if (a.closest(".cta-card")) return "article_end";
+    if (a.closest(".cta-card") || a.closest(".case-form")) return "article_end";
     if (a.closest(".prefooter")) return "prefooter";
     if (a.classList.contains("wa-fab")) return "float_wa";
     if (a.closest(".social-rail")) return "social_rail";
@@ -85,5 +85,53 @@
         page_type: pageType,
       });
     }
+  });
+
+  // Embedded Tally forms (the scanner's result panel, and the blog
+  // case-form panel) submit inside an iframe. Tally's own "redirect on
+  // completion" then navigates that iframe to /thank-you/, not the
+  // parent tab, so the generate_lead conversion there never fires for an
+  // embedded submission. Tally also posts a Tally.FormSubmitted message
+  // to the parent window on every embed, iframe or not, so catch it here
+  // instead. Guarded with the same sessionStorage key /thank-you/ uses,
+  // so a submission is never double counted if its iframe does happen to
+  // load the redirect.
+  window.addEventListener("message", (e) => {
+    if (e.origin !== "https://tally.so") return;
+    let payload = e.data;
+    if (typeof payload === "string") {
+      try { payload = JSON.parse(payload); } catch { return; }
+    }
+    if (!payload || payload.event !== "Tally.FormSubmitted") return;
+
+    const key = "ae_lead_" + clientId + path;
+    if (sessionStorage.getItem(key)) return;
+    sessionStorage.setItem(key, "1");
+
+    let pos = "unknown";
+    document.querySelectorAll("iframe").forEach((frame) => {
+      if (frame.contentWindow !== e.source) return;
+      const src = frame.getAttribute("src") || frame.getAttribute("data-tally-src") || "";
+      try { pos = new URL(src, location.href).searchParams.get("pos") || "unknown"; } catch {}
+    });
+
+    if (typeof gtag === "function") {
+      gtag("event", "generate_lead", {
+        source_page: path,
+        cta_position: pos,
+        cta_destination: "tally",
+        page_type: pageType,
+        currency: "USD",
+        value: 1,
+      });
+    }
+
+    // Swap the iframe for a short native note. It already submitted;
+    // showing Tally's own thank-you page inside a small embed reads odd.
+    document.querySelectorAll(".scan-tally-wrap, .case-form-embed").forEach((wrap) => {
+      if (!wrap.querySelector("iframe")) return;
+      wrap.innerHTML = '<div class="tally-submitted-note"><strong>Got it.</strong>' +
+        "We will reach out with next steps. Confidential, no charge to review.</div>";
+    });
   });
 })();
