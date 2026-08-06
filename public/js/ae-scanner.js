@@ -49,7 +49,15 @@
     const images = Array.from(items)
       .filter(i => i.kind === "file" && i.type.startsWith("image/"))
       .map(i => i.getAsFile())
-      .filter(Boolean);
+      .filter(Boolean)
+      // Pasted clipboard blobs often carry no filename/extension. The
+      // server filters uploads by extension (api/analyze.js), so an
+      // extension-less paste was silently rejected. Name it explicitly.
+      .map(blob => new File(
+        [blob],
+        "screenshot-" + Date.now() + "." + (blob.type.split("/")[1] || "png"),
+        { type: blob.type }
+      ));
     if (images.length) {
       assignFiles(images);
     }

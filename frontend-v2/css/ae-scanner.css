@@ -40,7 +40,7 @@
   transition: border-color .15s ease;
 }
 .scan-textarea:focus-visible { outline: none; border-color: var(--blue); box-shadow: var(--focus); }
-.scan-drop-zone.drag-over .scan-upload-btn { border-color: var(--blue); background: rgba(43,80,255,.06); }
+#scan-drop-zone.drag-over .scan-upload-btn { border-color: var(--blue); background: rgba(43,80,255,.06); }
 .scan-upload-row {
   margin-top: 14px;
   display: flex;
@@ -76,11 +76,16 @@
 .scan-submit-row .btn { width: 100%; }
 .scan-note { display: block; margin-top: 12px; font-size: 13px; color: var(--grey); text-align: center; }
 
-/* Empty, loading, error and results all occupy the same slot in the right column */
-.scan-empty { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; padding: 28px 8px; color: var(--grey); }
+/* Empty, loading, error and results all occupy the same slot in the right
+   column. :not([hidden]) matters here: a plain .scan-empty/.scan-loading
+   class selector ties with the browser's own [hidden] rule on
+   specificity, and the author stylesheet wins that tie by load order, so
+   the hidden attribute JS sets on these two was silently doing nothing
+   (the loading spinner rendered before any scan ever ran). */
+.scan-empty:not([hidden]) { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; padding: 28px 8px; color: var(--grey); }
 .scan-empty svg { width: 40px; height: 40px; color: var(--line); }
 .scan-empty p { max-width: 34ch; font-size: 15px; }
-.scan-loading { display: flex; align-items: center; gap: 14px; padding: 20px 8px; }
+.scan-loading:not([hidden]) { display: flex; align-items: center; gap: 14px; padding: 20px 8px; }
 .scan-spinner {
   width: 22px; height: 22px; border-radius: 50%; flex: none;
   border: 3px solid var(--line); border-top-color: var(--blue);
@@ -136,6 +141,19 @@
 .scan-continue p { margin-top: 8px; color: var(--grey); font-size: 15px; }
 .scan-tally-wrap { margin-top: 16px; }
 .scan-tally-wrap iframe { width: 100%; border: none; }
+
+/* Shown by ae-analytics.js once an embedded Tally submission is caught.
+   Duplicated in ae-caseform.css, which the homepage never loads, so this
+   copy covers .scan-tally-wrap wherever the scanner (and only the
+   scanner) exists. */
+.tally-submitted-note {
+  padding: 22px 4px;
+  text-align: center;
+  color: var(--ink);
+  font-size: 15px;
+}
+.tally-submitted-note strong { display: block; margin-bottom: 6px; color: var(--navy); font-size: 17px; }
+
 .scan-again { margin-top: 20px; }
 .scan-again button {
   background: none; border: none; color: var(--blue); font-weight: 600; font-size: 14px;
@@ -156,7 +174,13 @@
 
 /* In-article variant: a bordered card instead of a full bleed section,
    since blog posts embed the scanner inside the 780px article column
-   rather than a full width homepage section. */
+   rather than a full width homepage section. Single column at every
+   width: the 5fr/7fr split only reads inside the homepage's ~1160px
+   section, and inside a 780px article column it produces a tall skinny
+   form beside a near-empty results panel, since the two cards don't
+   share height (.scan-grid uses align-items: start). The homepage's own
+   .scan-grid is untouched; @media (max-width: 860px) below still covers
+   it on narrow viewports. */
 .scan-zone.scan-inline {
   background: var(--mist);
   padding: 40px 32px;
@@ -164,6 +188,26 @@
   border: 1px solid var(--line);
   margin-top: 48px;
 }
+.scan-zone.scan-inline .scan-grid { grid-template-columns: 1fr; gap: 0; margin-top: 24px; }
+.scan-zone.scan-inline .scan-input-col,
+.scan-zone.scan-inline .scan-results-col {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+/* The "will appear here" placeholder is what left the dead space next to
+   the tall form; in-article, the result renders directly under the
+   button instead, so it needs no waiting state of its own. */
+.scan-zone.scan-inline .scan-empty { display: none; }
+.scan-zone.scan-inline .scan-loading,
+.scan-zone.scan-inline .scan-error,
+.scan-zone.scan-inline .scan-results {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+.scan-zone.scan-inline .scan-heading { font-size: clamp(20px, 2.6vw, 24px); margin-top: 8px; }
+.scan-zone.scan-inline .scan-sub { font-size: 15px; margin-top: 10px; }
 @media (max-width: 480px) {
   .scan-zone.scan-inline { padding: 28px 20px; }
 }
