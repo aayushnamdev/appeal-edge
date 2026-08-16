@@ -13,6 +13,8 @@
   else if (/^\/blog\/[^/]+\/$/.test(path)) pageType = "blog_post";
   else if (path === "/privacy-policy/" || path === "/terms/") pageType = "legal";
   else if (path === "/thank-you/") pageType = "thank_you";
+  else if (/^\/experts\/[^/]+\/$/.test(path)) pageType = "expert";
+  else if (/^\/amazon-[^/]*service[^/]*\/$/.test(path)) pageType = "service";
 
   // GA4 client id, read straight from the _ga cookie so it's available
   // synchronously at click time (no gtag('get', ...) round trip).
