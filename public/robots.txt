@@ -14,7 +14,19 @@ User-agent: ClaudeBot
 Allow: /
 Disallow: /old/
 
+User-agent: Claude-User
+Allow: /
+Disallow: /old/
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /old/
+
 User-agent: PerplexityBot
+Allow: /
+Disallow: /old/
+
+User-agent: Perplexity-User
 Allow: /
 Disallow: /old/
 
@@ -42,10 +54,17 @@ User-agent: Applebot-Extended
 Allow: /
 Disallow: /old/
 
-User-agent: *
+User-agent: Meta-ExternalAgent
 Allow: /
 Disallow: /old/
 
+User-agent: Bingbot
+Allow: /
+Disallow: /old/
+
+User-agent: *
+Allow: /
+Disallow: /old/
 Content-Signal: ai-train=yes, search=yes, ai-retrieval=yes, ai-personalization=no
 
 Sitemap: https://www.appeal-edge.com/sitemap.xml
