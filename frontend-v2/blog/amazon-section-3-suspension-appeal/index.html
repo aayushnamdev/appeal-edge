@@ -48,39 +48,129 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
       "@id": "https://www.appeal-edge.com/#organization",
       "name": "Appeal Edge",
       "url": "https://www.appeal-edge.com/",
-      "logo": { "@type": "ImageObject", "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png", "width": 400, "height": 135 }
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png",
+        "width": 400,
+        "height": 135
+      },
+      "description": "Independent Amazon seller suspension appeal consultancy. Every case is reviewed and assigned to the specialist who fits it, led by the expert who pioneered the industry in 2014.",
+      "email": "contact@appeal-edge.com",
+      "sameAs": [
+        "https://www.instagram.com/appeal.edge/",
+        "https://www.linkedin.com/company/112773661/"
+      ],
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "Canada"
+        },
+        {
+          "@type": "Country",
+          "name": "Germany"
+        },
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "Country",
+          "name": "Italy"
+        },
+        {
+          "@type": "Country",
+          "name": "Japan"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        }
+      ],
+      "knowsAbout": [
+        "Inauthentic and counterfeit complaints",
+        "Order Defect Rate, Late Shipment Rate, and Valid Tracking Rate",
+        "Intellectual property, trademark, and copyright complaints",
+        "Related account suspensions",
+        "Listing policy violations and restricted category issues",
+        "Review manipulation suspicions",
+        "Dropshipping policy violations",
+        "Used sold as new and condition complaints"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "contact@appeal-edge.com",
+        "url": "https://tally.so/r/Y5voaW"
+      }
     },
     {
       "@type": "Person",
       "@id": "https://www.appeal-edge.com/#khushi-narwal",
       "name": "Khushi Narwal",
       "jobTitle": "COO",
-      "worksFor": { "@id": "https://www.appeal-edge.com/#organization" }
+      "worksFor": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      }
     },
     {
       "@type": "Article",
       "@id": "https://www.appeal-edge.com/blog/amazon-section-3-suspension-appeal/#article",
       "headline": "Amazon Section 3 Suspension: How to Respond",
       "description": "Amazon Section 3 suspension notices cite the Business Solutions Agreement but rarely explain what's flagged. Here's what Section 3 covers and how to identify the real issue.",
-      "author": { "@id": "https://www.appeal-edge.com/#khushi-narwal" },
-      "publisher": { "@id": "https://www.appeal-edge.com/#organization" },
+      "author": {
+        "@id": "https://www.appeal-edge.com/#khushi-narwal"
+      },
+      "publisher": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      },
       "datePublished": "2026-07-22",
       "dateModified": "2026-08-03",
       "mainEntityOfPage": "https://www.appeal-edge.com/blog/amazon-section-3-suspension-appeal/",
       "image": "https://www.appeal-edge.com/og-image.png",
       "articleSection": "Policy Violations",
-      "keywords": ["Amazon Section 3 suspension", "Amazon Business Solutions Agreement violation", "Amazon seller code of conduct", "Amazon account suspension"]
+      "keywords": [
+        "Amazon Section 3 suspension",
+        "Amazon Business Solutions Agreement violation",
+        "Amazon seller code of conduct",
+        "Amazon account suspension"
+      ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.appeal-edge.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.appeal-edge.com/blog/" },
-        { "@type": "ListItem", "position": 3, "name": "Section 3 Suspension Appeal", "item": "https://www.appeal-edge.com/blog/amazon-section-3-suspension-appeal/" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.appeal-edge.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.appeal-edge.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Section 3 Suspension Appeal",
+          "item": "https://www.appeal-edge.com/blog/amazon-section-3-suspension-appeal/"
+        }
       ]
     },
     {
@@ -90,22 +180,34 @@
         {
           "@type": "Question",
           "name": "What is a Section 3 suspension?",
-          "acceptedAnswer": { "@type": "Answer", "text": "It refers to Section 3 of Amazon's Business Solutions Agreement, a broad section of seller conduct rules, so a notice citing it can point to any of several different account level concerns rather than one specific one." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It refers to Section 3 of Amazon's Business Solutions Agreement, a broad section of seller conduct rules, so a notice citing it can point to any of several different account level concerns rather than one specific one."
+          }
         },
         {
           "@type": "Question",
           "name": "Why doesn't the notice say exactly what I did wrong?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Amazon's Section 3 notices are sometimes intentionally general, which means sellers often need to review their own account activity and Account Health dashboard to identify the specific concern." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Amazon's Section 3 notices are sometimes intentionally general, which means sellers often need to review their own account activity and Account Health dashboard to identify the specific concern."
+          }
         },
         {
           "@type": "Question",
           "name": "How do I figure out what actually triggered it?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Check the Account Health dashboard for specific policy flags, review recent account activity for anything unusual, and look at the exact wording and timing of Amazon's notice for context clues." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Check the Account Health dashboard for specific policy flags, review recent account activity for anything unusual, and look at the exact wording and timing of Amazon's notice for context clues."
+          }
         },
         {
           "@type": "Question",
           "name": "Can a general response work if the notice itself is general?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. A vague response to a vague notice tends to read as unresolved. The appeal still needs to name a specific likely cause and address it directly." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. A vague response to a vague notice tends to read as unresolved. The appeal still needs to name a specific likely cause and address it directly."
+          }
         }
       ]
     }

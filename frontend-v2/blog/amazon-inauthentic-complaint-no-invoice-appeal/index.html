@@ -48,32 +48,120 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
       "@id": "https://www.appeal-edge.com/#organization",
       "name": "Appeal Edge",
       "url": "https://www.appeal-edge.com/",
-      "logo": { "@type": "ImageObject", "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png", "width": 400, "height": 135 }
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png",
+        "width": 400,
+        "height": 135
+      },
+      "description": "Independent Amazon seller suspension appeal consultancy. Every case is reviewed and assigned to the specialist who fits it, led by the expert who pioneered the industry in 2014.",
+      "email": "contact@appeal-edge.com",
+      "sameAs": [
+        "https://www.instagram.com/appeal.edge/",
+        "https://www.linkedin.com/company/112773661/"
+      ],
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "Canada"
+        },
+        {
+          "@type": "Country",
+          "name": "Germany"
+        },
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "Country",
+          "name": "Italy"
+        },
+        {
+          "@type": "Country",
+          "name": "Japan"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        }
+      ],
+      "knowsAbout": [
+        "Inauthentic and counterfeit complaints",
+        "Order Defect Rate, Late Shipment Rate, and Valid Tracking Rate",
+        "Intellectual property, trademark, and copyright complaints",
+        "Related account suspensions",
+        "Listing policy violations and restricted category issues",
+        "Review manipulation suspicions",
+        "Dropshipping policy violations",
+        "Used sold as new and condition complaints"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "contact@appeal-edge.com",
+        "url": "https://tally.so/r/Y5voaW"
+      }
     },
     {
       "@type": "Article",
       "@id": "https://www.appeal-edge.com/blog/amazon-inauthentic-complaint-no-invoice-appeal/#article",
       "headline": "Amazon Inauthentic Complaint, No Invoice From Your Supplier? Here's What Actually Works",
       "description": "Amazon says your product is inauthentic and wants an invoice you don't have. Here's why invoice quality is the real reason most inauthentic appeals fail.",
-      "author": { "@id": "https://www.appeal-edge.com/#organization" },
-      "publisher": { "@id": "https://www.appeal-edge.com/#organization" },
+      "author": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      },
+      "publisher": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      },
       "datePublished": "2026-07-14",
       "dateModified": "2026-07-14",
       "mainEntityOfPage": "https://www.appeal-edge.com/blog/amazon-inauthentic-complaint-no-invoice-appeal/",
       "image": "https://www.appeal-edge.com/og-image.png",
       "articleSection": "Inauthentic",
-      "keywords": ["Amazon inauthentic complaint", "Amazon invoice requirements", "Amazon appeal evidence", "Amazon account reinstatement"]
+      "keywords": [
+        "Amazon inauthentic complaint",
+        "Amazon invoice requirements",
+        "Amazon appeal evidence",
+        "Amazon account reinstatement"
+      ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.appeal-edge.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.appeal-edge.com/blog/" },
-        { "@type": "ListItem", "position": 3, "name": "Inauthentic Complaint, No Invoice", "item": "https://www.appeal-edge.com/blog/amazon-inauthentic-complaint-no-invoice-appeal/" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.appeal-edge.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.appeal-edge.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Inauthentic Complaint, No Invoice",
+          "item": "https://www.appeal-edge.com/blog/amazon-inauthentic-complaint-no-invoice-appeal/"
+        }
       ]
     },
     {
@@ -83,22 +171,34 @@
         {
           "@type": "Question",
           "name": "Why do inauthentic complaint appeals usually fail?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Most rejections come down to invoice documentation, not the product itself. A vague, incomplete, or mismatched invoice reads as unresolved even when the product is genuine." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most rejections come down to invoice documentation, not the product itself. A vague, incomplete, or mismatched invoice reads as unresolved even when the product is genuine."
+          }
         },
         {
           "@type": "Question",
           "name": "What does Amazon actually want to see in the invoice?",
-          "acceptedAnswer": { "@type": "Answer", "text": "An invoice from your actual supplier, dated within the required window, showing quantities that reasonably match your sales volume, and matching the exact product in question." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An invoice from your actual supplier, dated within the required window, showing quantities that reasonably match your sales volume, and matching the exact product in question."
+          }
         },
         {
           "@type": "Question",
           "name": "What if the supplier will not provide a compliant invoice?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Options include requesting a corrected invoice in writing, sourcing a letter of authorization directly from the brand, or in some cases switching to an authorized supplier who can provide proper documentation going forward." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Options include requesting a corrected invoice in writing, sourcing a letter of authorization directly from the brand, or in some cases switching to an authorized supplier who can provide proper documentation going forward."
+          }
         },
         {
           "@type": "Question",
           "name": "Does a genuine product protect you if the invoice is weak?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Not on its own. Amazon's review process weighs documentation heavily, so a genuine product with poor paperwork can still result in a rejected appeal." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not on its own. Amazon's review process weighs documentation heavily, so a genuine product with poor paperwork can still result in a rejected appeal."
+          }
         }
       ]
     }

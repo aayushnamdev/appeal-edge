@@ -50,37 +50,159 @@
 {
   "@context": "https://schema.org",
   "@graph": [
-    { "@type": "Organization", "@id": "https://www.appeal-edge.com/#organization", "name": "Appeal Edge", "url": "https://www.appeal-edge.com/", "logo": { "@type": "ImageObject", "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png", "width": 400, "height": 135 } },
+    {
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
+      "@id": "https://www.appeal-edge.com/#organization",
+      "name": "Appeal Edge",
+      "url": "https://www.appeal-edge.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png",
+        "width": 400,
+        "height": 135
+      },
+      "description": "Independent Amazon seller suspension appeal consultancy. Every case is reviewed and assigned to the specialist who fits it, led by the expert who pioneered the industry in 2014.",
+      "email": "contact@appeal-edge.com",
+      "sameAs": [
+        "https://www.instagram.com/appeal.edge/",
+        "https://www.linkedin.com/company/112773661/"
+      ],
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "Canada"
+        },
+        {
+          "@type": "Country",
+          "name": "Germany"
+        },
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "Country",
+          "name": "Italy"
+        },
+        {
+          "@type": "Country",
+          "name": "Japan"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        }
+      ],
+      "knowsAbout": [
+        "Inauthentic and counterfeit complaints",
+        "Order Defect Rate, Late Shipment Rate, and Valid Tracking Rate",
+        "Intellectual property, trademark, and copyright complaints",
+        "Related account suspensions",
+        "Listing policy violations and restricted category issues",
+        "Review manipulation suspicions",
+        "Dropshipping policy violations",
+        "Used sold as new and condition complaints"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "contact@appeal-edge.com",
+        "url": "https://tally.so/r/Y5voaW"
+      }
+    },
     {
       "@type": "Article",
       "@id": "https://www.appeal-edge.com/blog/stickerless-commingled-inventory-explained/#article",
       "headline": "Stickerless Commingled Inventory Explained",
       "description": "Stickerless commingled inventory pools your units with other sellers on the same ASIN. Here is exactly how it works and whether Amazon still allows it.",
-      "author": { "@id": "https://www.appeal-edge.com/#organization" },
-      "publisher": { "@id": "https://www.appeal-edge.com/#organization" },
+      "author": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      },
+      "publisher": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      },
       "datePublished": "2026-08-06",
       "dateModified": "2026-08-06",
       "mainEntityOfPage": "https://www.appeal-edge.com/blog/stickerless-commingled-inventory-explained/",
       "image": "https://www.appeal-edge.com/og-image.png",
       "articleSection": "Inauthentic",
-      "keywords": ["Stickerless commingled inventory", "Amazon commingled inventory", "FBA individual unit labeling", "Amazon inauthentic complaint"]
+      "keywords": [
+        "Stickerless commingled inventory",
+        "Amazon commingled inventory",
+        "FBA individual unit labeling",
+        "Amazon inauthentic complaint"
+      ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.appeal-edge.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.appeal-edge.com/blog/" },
-        { "@type": "ListItem", "position": 3, "name": "Stickerless Commingled Inventory", "item": "https://www.appeal-edge.com/blog/stickerless-commingled-inventory-explained/" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.appeal-edge.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.appeal-edge.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Stickerless Commingled Inventory",
+          "item": "https://www.appeal-edge.com/blog/stickerless-commingled-inventory-explained/"
+        }
       ]
     },
     {
       "@type": "FAQPage",
       "@id": "https://www.appeal-edge.com/blog/stickerless-commingled-inventory-explained/#faq",
       "mainEntity": [
-        { "@type": "Question", "name": "What does stickerless commingled inventory mean?", "acceptedAnswer": { "@type": "Answer", "text": "It means Amazon pools your FBA units together with other sellers who list the identical product under the same ASIN, and fulfills orders from whichever unit sits closest in the warehouse, not specifically yours." } },
-        { "@type": "Question", "name": "Is commingled inventory still allowed on Amazon?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. It remains the default storage method for many product categories unless a seller actively selects individual unit labeling during shipment creation." } },
-        { "@type": "Question", "name": "Can commingled inventory get me suspended?", "acceptedAnswer": { "@type": "Answer", "text": "Indirectly. If another seller's unit in the shared pool is defective or counterfeit, a resulting complaint can extend to every seller active on that ASIN, including sellers who sourced correctly." } },
-        { "@type": "Question", "name": "How do I stop my inventory from being commingled?", "acceptedAnswer": { "@type": "Answer", "text": "Select individual unit labeling, sometimes called the Amazon barcode requirement, when creating your inbound shipment, which assigns each unit its own traceable barcode instead of pooling it anonymously." } }
+        {
+          "@type": "Question",
+          "name": "What does stickerless commingled inventory mean?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It means Amazon pools your FBA units together with other sellers who list the identical product under the same ASIN, and fulfills orders from whichever unit sits closest in the warehouse, not specifically yours."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is commingled inventory still allowed on Amazon?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. It remains the default storage method for many product categories unless a seller actively selects individual unit labeling during shipment creation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can commingled inventory get me suspended?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Indirectly. If another seller's unit in the shared pool is defective or counterfeit, a resulting complaint can extend to every seller active on that ASIN, including sellers who sourced correctly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I stop my inventory from being commingled?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Select individual unit labeling, sometimes called the Amazon barcode requirement, when creating your inbound shipment, which assigns each unit its own traceable barcode instead of pooling it anonymously."
+          }
+        }
       ]
     }
   ]

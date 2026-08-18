@@ -50,37 +50,159 @@
 {
   "@context": "https://schema.org",
   "@graph": [
-    { "@type": "Organization", "@id": "https://www.appeal-edge.com/#organization", "name": "Appeal Edge", "url": "https://www.appeal-edge.com/", "logo": { "@type": "ImageObject", "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png", "width": 400, "height": 135 } },
+    {
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
+      "@id": "https://www.appeal-edge.com/#organization",
+      "name": "Appeal Edge",
+      "url": "https://www.appeal-edge.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png",
+        "width": 400,
+        "height": 135
+      },
+      "description": "Independent Amazon seller suspension appeal consultancy. Every case is reviewed and assigned to the specialist who fits it, led by the expert who pioneered the industry in 2014.",
+      "email": "contact@appeal-edge.com",
+      "sameAs": [
+        "https://www.instagram.com/appeal.edge/",
+        "https://www.linkedin.com/company/112773661/"
+      ],
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "Canada"
+        },
+        {
+          "@type": "Country",
+          "name": "Germany"
+        },
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "Country",
+          "name": "Italy"
+        },
+        {
+          "@type": "Country",
+          "name": "Japan"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        }
+      ],
+      "knowsAbout": [
+        "Inauthentic and counterfeit complaints",
+        "Order Defect Rate, Late Shipment Rate, and Valid Tracking Rate",
+        "Intellectual property, trademark, and copyright complaints",
+        "Related account suspensions",
+        "Listing policy violations and restricted category issues",
+        "Review manipulation suspicions",
+        "Dropshipping policy violations",
+        "Used sold as new and condition complaints"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "contact@appeal-edge.com",
+        "url": "https://tally.so/r/Y5voaW"
+      }
+    },
     {
       "@type": "Article",
       "@id": "https://www.appeal-edge.com/blog/amazon-suspended-fba-inventory-stranded-storage-fees/#article",
       "headline": "Amazon Suspended and FBA Inventory Stranded: Fees Still Accruing",
       "description": "Your Amazon account is suspended and your FBA stock is stuck in a warehouse while storage fees keep accruing. Here is what actually happens to that inventory and what to do.",
-      "author": { "@id": "https://www.appeal-edge.com/#organization" },
-      "publisher": { "@id": "https://www.appeal-edge.com/#organization" },
+      "author": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      },
+      "publisher": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      },
       "datePublished": "2026-08-14",
       "dateModified": "2026-08-14",
       "mainEntityOfPage": "https://www.appeal-edge.com/blog/amazon-suspended-fba-inventory-stranded-storage-fees/",
       "image": "https://www.appeal-edge.com/og-image.png",
       "articleSection": "Small Sellers",
-      "keywords": ["Amazon FBA inventory suspended", "Stranded FBA stock suspension", "Amazon storage fees suspended account", "FBA inventory removal suspended"]
+      "keywords": [
+        "Amazon FBA inventory suspended",
+        "Stranded FBA stock suspension",
+        "Amazon storage fees suspended account",
+        "FBA inventory removal suspended"
+      ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.appeal-edge.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.appeal-edge.com/blog/" },
-        { "@type": "ListItem", "position": 3, "name": "FBA Inventory Stranded", "item": "https://www.appeal-edge.com/blog/amazon-suspended-fba-inventory-stranded-storage-fees/" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.appeal-edge.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.appeal-edge.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "FBA Inventory Stranded",
+          "item": "https://www.appeal-edge.com/blog/amazon-suspended-fba-inventory-stranded-storage-fees/"
+        }
       ]
     },
     {
       "@type": "FAQPage",
       "@id": "https://www.appeal-edge.com/blog/amazon-suspended-fba-inventory-stranded-storage-fees/#faq",
       "mainEntity": [
-        { "@type": "Question", "name": "Do FBA storage fees stop when my Amazon account is suspended?", "acceptedAnswer": { "@type": "Answer", "text": "No. Storage fees, including long term storage fees, continue accruing on inventory already in FBA warehouses regardless of account status, until the stock is removed, sold, or disposed of." } },
-        { "@type": "Question", "name": "Can I get my inventory out of FBA while my account is suspended?", "acceptedAnswer": { "@type": "Answer", "text": "In most cases, yes. Removal orders can generally still be requested during a suspension, though processing may be slower than usual, and it is worth doing this in parallel with the appeal rather than waiting." } },
-        { "@type": "Question", "name": "What happens to my stranded inventory if my appeal fails?", "acceptedAnswer": { "@type": "Answer", "text": "It remains in FBA accruing fees unless you submit a removal order to have it returned or disposed of. Removal remains available even after a final decision on the account, so recovering the physical stock is still possible." } },
-        { "@type": "Question", "name": "Are held funds and stranded inventory the same issue?", "acceptedAnswer": { "@type": "Answer", "text": "No, they are related but separate. Held funds concern money from past sales and follow Amazon's disbursement hold process, while stranded inventory is physical stock in a warehouse that needs its own removal request." } }
+        {
+          "@type": "Question",
+          "name": "Do FBA storage fees stop when my Amazon account is suspended?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Storage fees, including long term storage fees, continue accruing on inventory already in FBA warehouses regardless of account status, until the stock is removed, sold, or disposed of."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I get my inventory out of FBA while my account is suspended?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In most cases, yes. Removal orders can generally still be requested during a suspension, though processing may be slower than usual, and it is worth doing this in parallel with the appeal rather than waiting."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens to my stranded inventory if my appeal fails?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It remains in FBA accruing fees unless you submit a removal order to have it returned or disposed of. Removal remains available even after a final decision on the account, so recovering the physical stock is still possible."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are held funds and stranded inventory the same issue?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, they are related but separate. Held funds concern money from past sales and follow Amazon's disbursement hold process, while stranded inventory is physical stock in a warehouse that needs its own removal request."
+          }
+        }
       ]
     }
   ]

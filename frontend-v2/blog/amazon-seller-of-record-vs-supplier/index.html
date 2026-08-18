@@ -50,37 +50,159 @@
 {
   "@context": "https://schema.org",
   "@graph": [
-    { "@type": "Organization", "@id": "https://www.appeal-edge.com/#organization", "name": "Appeal Edge", "url": "https://www.appeal-edge.com/", "logo": { "@type": "ImageObject", "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png", "width": 400, "height": 135 } },
+    {
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
+      "@id": "https://www.appeal-edge.com/#organization",
+      "name": "Appeal Edge",
+      "url": "https://www.appeal-edge.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png",
+        "width": 400,
+        "height": 135
+      },
+      "description": "Independent Amazon seller suspension appeal consultancy. Every case is reviewed and assigned to the specialist who fits it, led by the expert who pioneered the industry in 2014.",
+      "email": "contact@appeal-edge.com",
+      "sameAs": [
+        "https://www.instagram.com/appeal.edge/",
+        "https://www.linkedin.com/company/112773661/"
+      ],
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "Canada"
+        },
+        {
+          "@type": "Country",
+          "name": "Germany"
+        },
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "Country",
+          "name": "Italy"
+        },
+        {
+          "@type": "Country",
+          "name": "Japan"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        }
+      ],
+      "knowsAbout": [
+        "Inauthentic and counterfeit complaints",
+        "Order Defect Rate, Late Shipment Rate, and Valid Tracking Rate",
+        "Intellectual property, trademark, and copyright complaints",
+        "Related account suspensions",
+        "Listing policy violations and restricted category issues",
+        "Review manipulation suspicions",
+        "Dropshipping policy violations",
+        "Used sold as new and condition complaints"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "contact@appeal-edge.com",
+        "url": "https://tally.so/r/Y5voaW"
+      }
+    },
     {
       "@type": "Article",
       "@id": "https://www.appeal-edge.com/blog/amazon-seller-of-record-vs-supplier/#article",
       "headline": "Seller of Record vs Supplier on Amazon: The Actual Difference",
       "description": "Being the seller of record and being the supplier are two different roles. Confusing them is why sellers still get flagged even after sourcing correctly.",
-      "author": { "@id": "https://www.appeal-edge.com/#organization" },
-      "publisher": { "@id": "https://www.appeal-edge.com/#organization" },
+      "author": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      },
+      "publisher": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      },
       "datePublished": "2026-08-06",
       "dateModified": "2026-08-06",
       "mainEntityOfPage": "https://www.appeal-edge.com/blog/amazon-seller-of-record-vs-supplier/",
       "image": "https://www.appeal-edge.com/og-image.png",
       "articleSection": "Dropship Policy",
-      "keywords": ["Amazon seller of record vs supplier", "Amazon seller of record", "Amazon dropshipping supplier agreement", "Amazon EU importer of record"]
+      "keywords": [
+        "Amazon seller of record vs supplier",
+        "Amazon seller of record",
+        "Amazon dropshipping supplier agreement",
+        "Amazon EU importer of record"
+      ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.appeal-edge.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.appeal-edge.com/blog/" },
-        { "@type": "ListItem", "position": 3, "name": "Seller of Record vs Supplier", "item": "https://www.appeal-edge.com/blog/amazon-seller-of-record-vs-supplier/" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.appeal-edge.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.appeal-edge.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Seller of Record vs Supplier",
+          "item": "https://www.appeal-edge.com/blog/amazon-seller-of-record-vs-supplier/"
+        }
       ]
     },
     {
       "@type": "FAQPage",
       "@id": "https://www.appeal-edge.com/blog/amazon-seller-of-record-vs-supplier/#faq",
       "mainEntity": [
-        { "@type": "Question", "name": "Is my supplier the seller of record?", "acceptedAnswer": { "@type": "Answer", "text": "No. The supplier is whoever manufactures or ships the product. Seller of record is a distinct role, the identity the customer legally transacted with." } },
-        { "@type": "Question", "name": "Can I use a supplier that also sells on Amazon?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Their status as another Amazon seller does not automatically create a conflict, as long as the paperwork inside the shipment shows your business as the seller." } },
-        { "@type": "Question", "name": "Does the seller of record have to physically hold inventory?", "acceptedAnswer": { "@type": "Answer", "text": "No. A seller of record can use FBA or a third party warehouse for physical fulfillment. What matters is which identity the customer facing documentation shows." } },
-        { "@type": "Question", "name": "What is the EU importer of record, and is it the same thing?", "acceptedAnswer": { "@type": "Answer", "text": "No. It is a separate EU product safety requirement about who is responsible for compliance in the EU market. Sellers on EU marketplaces need to satisfy both the Amazon seller of record requirement and, where applicable, EU importer of record rules." } }
+        {
+          "@type": "Question",
+          "name": "Is my supplier the seller of record?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The supplier is whoever manufactures or ships the product. Seller of record is a distinct role, the identity the customer legally transacted with."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use a supplier that also sells on Amazon?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Their status as another Amazon seller does not automatically create a conflict, as long as the paperwork inside the shipment shows your business as the seller."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the seller of record have to physically hold inventory?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. A seller of record can use FBA or a third party warehouse for physical fulfillment. What matters is which identity the customer facing documentation shows."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the EU importer of record, and is it the same thing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. It is a separate EU product safety requirement about who is responsible for compliance in the EU market. Sellers on EU marketplaces need to satisfy both the Amazon seller of record requirement and, where applicable, EU importer of record rules."
+          }
+        }
       ]
     }
   ]

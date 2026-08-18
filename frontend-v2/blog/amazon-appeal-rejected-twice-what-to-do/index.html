@@ -50,32 +50,120 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
       "@id": "https://www.appeal-edge.com/#organization",
       "name": "Appeal Edge",
       "url": "https://www.appeal-edge.com/",
-      "logo": { "@type": "ImageObject", "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png", "width": 400, "height": 135 }
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png",
+        "width": 400,
+        "height": 135
+      },
+      "description": "Independent Amazon seller suspension appeal consultancy. Every case is reviewed and assigned to the specialist who fits it, led by the expert who pioneered the industry in 2014.",
+      "email": "contact@appeal-edge.com",
+      "sameAs": [
+        "https://www.instagram.com/appeal.edge/",
+        "https://www.linkedin.com/company/112773661/"
+      ],
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "Canada"
+        },
+        {
+          "@type": "Country",
+          "name": "Germany"
+        },
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "Country",
+          "name": "Italy"
+        },
+        {
+          "@type": "Country",
+          "name": "Japan"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        }
+      ],
+      "knowsAbout": [
+        "Inauthentic and counterfeit complaints",
+        "Order Defect Rate, Late Shipment Rate, and Valid Tracking Rate",
+        "Intellectual property, trademark, and copyright complaints",
+        "Related account suspensions",
+        "Listing policy violations and restricted category issues",
+        "Review manipulation suspicions",
+        "Dropshipping policy violations",
+        "Used sold as new and condition complaints"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "contact@appeal-edge.com",
+        "url": "https://tally.so/r/Y5voaW"
+      }
     },
     {
       "@type": "Article",
       "@id": "https://www.appeal-edge.com/blog/amazon-appeal-rejected-twice-what-to-do/#article",
       "headline": "Amazon Appeal Rejected? What to Actually Change Before You Resubmit",
       "description": "Amazon appeal rejected once or twice? It means something specific is still missing. Here's exactly what to change before you resubmit.",
-      "author": { "@id": "https://www.appeal-edge.com/#organization" },
-      "publisher": { "@id": "https://www.appeal-edge.com/#organization" },
+      "author": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      },
+      "publisher": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      },
       "datePublished": "2026-07-14",
       "dateModified": "2026-08-05",
       "mainEntityOfPage": "https://www.appeal-edge.com/blog/amazon-appeal-rejected-twice-what-to-do/",
       "image": "https://www.appeal-edge.com/og-image.png",
       "articleSection": "Appeal Strategy",
-      "keywords": ["Amazon appeal rejected", "Amazon Plan of Action revision", "Amazon suspension escalation", "Amazon account reinstatement"]
+      "keywords": [
+        "Amazon appeal rejected",
+        "Amazon Plan of Action revision",
+        "Amazon suspension escalation",
+        "Amazon account reinstatement"
+      ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.appeal-edge.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.appeal-edge.com/blog/" },
-        { "@type": "ListItem", "position": 3, "name": "Appeal Rejected Twice", "item": "https://www.appeal-edge.com/blog/amazon-appeal-rejected-twice-what-to-do/" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.appeal-edge.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.appeal-edge.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Appeal Rejected Twice",
+          "item": "https://www.appeal-edge.com/blog/amazon-appeal-rejected-twice-what-to-do/"
+        }
       ]
     },
     {
@@ -85,22 +173,34 @@
         {
           "@type": "Question",
           "name": "What does a second rejection actually tell you?",
-          "acceptedAnswer": { "@type": "Answer", "text": "It tells you the first plan's root cause or corrective action wasn't specific or convincing enough, not that the situation is hopeless. Amazon's rejection notice, read carefully, usually points at what's missing." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It tells you the first plan's root cause or corrective action wasn't specific or convincing enough, not that the situation is hopeless. Amazon's rejection notice, read carefully, usually points at what's missing."
+          }
         },
         {
           "@type": "Question",
           "name": "Should I resubmit the same plan with small wording changes?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. Resubmitting a similar plan without a new root cause or new evidence tends to read as unchanged, and can slow down the case further." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Resubmitting a similar plan without a new root cause or new evidence tends to read as unchanged, and can slow down the case further."
+          }
         },
         {
           "@type": "Question",
           "name": "What should change before a third submission?",
-          "acceptedAnswer": { "@type": "Answer", "text": "At minimum, a more specific root cause, concrete supporting evidence, and a measurable prevention step, not just more explanation of the original plan." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "At minimum, a more specific root cause, concrete supporting evidence, and a measurable prevention step, not just more explanation of the original plan."
+          }
         },
         {
           "@type": "Question",
           "name": "Is it worth getting an outside review after two rejections?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Often yes. A fresh, specific read on what's actually missing before a third submission can be higher leverage than guessing again on your own." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Often yes. A fresh, specific read on what's actually missing before a third submission can be higher leverage than guessing again on your own."
+          }
         }
       ]
     }

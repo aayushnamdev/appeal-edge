@@ -49,39 +49,129 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
       "@id": "https://www.appeal-edge.com/#organization",
       "name": "Appeal Edge",
       "url": "https://www.appeal-edge.com/",
-      "logo": { "@type": "ImageObject", "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png", "width": 400, "height": 135 }
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png",
+        "width": 400,
+        "height": 135
+      },
+      "description": "Independent Amazon seller suspension appeal consultancy. Every case is reviewed and assigned to the specialist who fits it, led by the expert who pioneered the industry in 2014.",
+      "email": "contact@appeal-edge.com",
+      "sameAs": [
+        "https://www.instagram.com/appeal.edge/",
+        "https://www.linkedin.com/company/112773661/"
+      ],
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "Canada"
+        },
+        {
+          "@type": "Country",
+          "name": "Germany"
+        },
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "Country",
+          "name": "Italy"
+        },
+        {
+          "@type": "Country",
+          "name": "Japan"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        }
+      ],
+      "knowsAbout": [
+        "Inauthentic and counterfeit complaints",
+        "Order Defect Rate, Late Shipment Rate, and Valid Tracking Rate",
+        "Intellectual property, trademark, and copyright complaints",
+        "Related account suspensions",
+        "Listing policy violations and restricted category issues",
+        "Review manipulation suspicions",
+        "Dropshipping policy violations",
+        "Used sold as new and condition complaints"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "contact@appeal-edge.com",
+        "url": "https://tally.so/r/Y5voaW"
+      }
     },
     {
       "@type": "Person",
       "@id": "https://www.appeal-edge.com/#aayush-namdev",
       "name": "Aayush Namdev",
       "jobTitle": "CTO",
-      "worksFor": { "@id": "https://www.appeal-edge.com/#organization" }
+      "worksFor": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      }
     },
     {
       "@type": "Article",
       "@id": "https://www.appeal-edge.com/blog/amazon-seller-accounting-software/#article",
       "headline": "Amazon Seller Accounting Software Guide",
       "description": "An Amazon settlement report bundles fees, storage, refunds, and promotions into one deposit. Here's what accounting sync tools actually do with that data.",
-      "author": { "@id": "https://www.appeal-edge.com/#aayush-namdev" },
-      "publisher": { "@id": "https://www.appeal-edge.com/#organization" },
+      "author": {
+        "@id": "https://www.appeal-edge.com/#aayush-namdev"
+      },
+      "publisher": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      },
       "datePublished": "2026-07-19",
       "dateModified": "2026-07-19",
       "mainEntityOfPage": "https://www.appeal-edge.com/blog/amazon-seller-accounting-software/",
       "image": "https://www.appeal-edge.com/og-image.png",
       "articleSection": "Seller Finance",
-      "keywords": ["Amazon seller accounting software", "Amazon bookkeeping tool", "Amazon settlement report reconciliation", "Amazon seller taxes"]
+      "keywords": [
+        "Amazon seller accounting software",
+        "Amazon bookkeeping tool",
+        "Amazon settlement report reconciliation",
+        "Amazon seller taxes"
+      ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.appeal-edge.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.appeal-edge.com/blog/" },
-        { "@type": "ListItem", "position": 3, "name": "Seller Accounting Software", "item": "https://www.appeal-edge.com/blog/amazon-seller-accounting-software/" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.appeal-edge.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.appeal-edge.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Seller Accounting Software",
+          "item": "https://www.appeal-edge.com/blog/amazon-seller-accounting-software/"
+        }
       ]
     },
     {
@@ -91,22 +181,34 @@
         {
           "@type": "Question",
           "name": "Why doesn't a settlement report match a normal ledger?",
-          "acceptedAnswer": { "@type": "Answer", "text": "A single settlement deposit bundles product revenue, fees, storage charges, refunds, promotions, and reimbursements together, rather than listing each order separately." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A single settlement deposit bundles product revenue, fees, storage charges, refunds, promotions, and reimbursements together, rather than listing each order separately."
+          }
         },
         {
           "@type": "Question",
           "name": "What do accounting sync tools like A2X and Link My Books actually do?",
-          "acceptedAnswer": { "@type": "Answer", "text": "They break each settlement report into categorized line items and post one summarized journal entry per settlement period into your accounting software, matched to the actual deposit." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "They break each settlement report into categorized line items and post one summarized journal entry per settlement period into your accounting software, matched to the actual deposit."
+          }
         },
         {
           "@type": "Question",
           "name": "Can a reconciliation gap cause a tax problem?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Selling across marketplaces without a per marketplace revenue breakdown can mean missing the point where a state sales tax threshold or a country's VAT registration requirement has been crossed." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Selling across marketplaces without a per marketplace revenue breakdown can mean missing the point where a state sales tax threshold or a country's VAT registration requirement has been crossed."
+          }
         },
         {
           "@type": "Question",
           "name": "What happens if a settlement balance goes negative?",
-          "acceptedAnswer": { "@type": "Answer", "text": "An unresolved negative balance, often from a heavy return or reimbursement period, is one of the reasons Amazon can place a hold on disbursements or new listing activity until it's settled." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An unresolved negative balance, often from a heavy return or reimbursement period, is one of the reasons Amazon can place a hold on disbursements or new listing activity until it's settled."
+          }
         }
       ]
     }

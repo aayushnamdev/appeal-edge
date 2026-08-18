@@ -49,39 +49,129 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
       "@id": "https://www.appeal-edge.com/#organization",
       "name": "Appeal Edge",
       "url": "https://www.appeal-edge.com/",
-      "logo": { "@type": "ImageObject", "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png", "width": 400, "height": 135 }
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png",
+        "width": 400,
+        "height": 135
+      },
+      "description": "Independent Amazon seller suspension appeal consultancy. Every case is reviewed and assigned to the specialist who fits it, led by the expert who pioneered the industry in 2014.",
+      "email": "contact@appeal-edge.com",
+      "sameAs": [
+        "https://www.instagram.com/appeal.edge/",
+        "https://www.linkedin.com/company/112773661/"
+      ],
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "Canada"
+        },
+        {
+          "@type": "Country",
+          "name": "Germany"
+        },
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "Country",
+          "name": "Italy"
+        },
+        {
+          "@type": "Country",
+          "name": "Japan"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        }
+      ],
+      "knowsAbout": [
+        "Inauthentic and counterfeit complaints",
+        "Order Defect Rate, Late Shipment Rate, and Valid Tracking Rate",
+        "Intellectual property, trademark, and copyright complaints",
+        "Related account suspensions",
+        "Listing policy violations and restricted category issues",
+        "Review manipulation suspicions",
+        "Dropshipping policy violations",
+        "Used sold as new and condition complaints"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "contact@appeal-edge.com",
+        "url": "https://tally.so/r/Y5voaW"
+      }
     },
     {
       "@type": "Person",
       "@id": "https://www.appeal-edge.com/#apeksha-namdev",
       "name": "Apeksha Namdev",
       "jobTitle": "CEO",
-      "worksFor": { "@id": "https://www.appeal-edge.com/#organization" }
+      "worksFor": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      }
     },
     {
       "@type": "Article",
       "@id": "https://www.appeal-edge.com/blog/ai-sentiment-analysis-amazon-account-health/#article",
       "headline": "AI Sentiment Analysis for Amazon Account Health",
       "description": "Order Defect Rate is a lagging number. Review text, return reasons, and buyer messages usually show a problem weeks before it shows up in your metrics.",
-      "author": { "@id": "https://www.appeal-edge.com/#apeksha-namdev" },
-      "publisher": { "@id": "https://www.appeal-edge.com/#organization" },
+      "author": {
+        "@id": "https://www.appeal-edge.com/#apeksha-namdev"
+      },
+      "publisher": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      },
       "datePublished": "2026-06-19",
       "dateModified": "2026-06-19",
       "mainEntityOfPage": "https://www.appeal-edge.com/blog/ai-sentiment-analysis-amazon-account-health/",
       "image": "https://www.appeal-edge.com/og-image.png",
       "articleSection": "AI & Automation",
-      "keywords": ["AI sentiment analysis", "Amazon account health", "Amazon Voice of the Customer", "Amazon Order Defect Rate"]
+      "keywords": [
+        "AI sentiment analysis",
+        "Amazon account health",
+        "Amazon Voice of the Customer",
+        "Amazon Order Defect Rate"
+      ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.appeal-edge.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.appeal-edge.com/blog/" },
-        { "@type": "ListItem", "position": 3, "name": "AI Sentiment Analysis", "item": "https://www.appeal-edge.com/blog/ai-sentiment-analysis-amazon-account-health/" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.appeal-edge.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.appeal-edge.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AI Sentiment Analysis",
+          "item": "https://www.appeal-edge.com/blog/ai-sentiment-analysis-amazon-account-health/"
+        }
       ]
     }
   ]

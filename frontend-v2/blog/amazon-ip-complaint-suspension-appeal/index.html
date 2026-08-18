@@ -48,39 +48,129 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
       "@id": "https://www.appeal-edge.com/#organization",
       "name": "Appeal Edge",
       "url": "https://www.appeal-edge.com/",
-      "logo": { "@type": "ImageObject", "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png", "width": 400, "height": 135 }
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png",
+        "width": 400,
+        "height": 135
+      },
+      "description": "Independent Amazon seller suspension appeal consultancy. Every case is reviewed and assigned to the specialist who fits it, led by the expert who pioneered the industry in 2014.",
+      "email": "contact@appeal-edge.com",
+      "sameAs": [
+        "https://www.instagram.com/appeal.edge/",
+        "https://www.linkedin.com/company/112773661/"
+      ],
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "Canada"
+        },
+        {
+          "@type": "Country",
+          "name": "Germany"
+        },
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "Country",
+          "name": "Italy"
+        },
+        {
+          "@type": "Country",
+          "name": "Japan"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        }
+      ],
+      "knowsAbout": [
+        "Inauthentic and counterfeit complaints",
+        "Order Defect Rate, Late Shipment Rate, and Valid Tracking Rate",
+        "Intellectual property, trademark, and copyright complaints",
+        "Related account suspensions",
+        "Listing policy violations and restricted category issues",
+        "Review manipulation suspicions",
+        "Dropshipping policy violations",
+        "Used sold as new and condition complaints"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "contact@appeal-edge.com",
+        "url": "https://tally.so/r/Y5voaW"
+      }
     },
     {
       "@type": "Person",
       "@id": "https://www.appeal-edge.com/#khushi-narwal",
       "name": "Khushi Narwal",
       "jobTitle": "COO",
-      "worksFor": { "@id": "https://www.appeal-edge.com/#organization" }
+      "worksFor": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      }
     },
     {
       "@type": "Article",
       "@id": "https://www.appeal-edge.com/blog/amazon-ip-complaint-suspension-appeal/#article",
       "headline": "Amazon Intellectual Property Complaint: Appeal",
       "description": "An Amazon intellectual property complaint isn't reviewed by Amazon itself, it's enforced on the rights owner's word. Here's what actually resolves it.",
-      "author": { "@id": "https://www.appeal-edge.com/#khushi-narwal" },
-      "publisher": { "@id": "https://www.appeal-edge.com/#organization" },
+      "author": {
+        "@id": "https://www.appeal-edge.com/#khushi-narwal"
+      },
+      "publisher": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      },
       "datePublished": "2026-07-20",
       "dateModified": "2026-08-03",
       "mainEntityOfPage": "https://www.appeal-edge.com/blog/amazon-ip-complaint-suspension-appeal/",
       "image": "https://www.appeal-edge.com/og-image.png",
       "articleSection": "IP Complaints",
-      "keywords": ["Amazon intellectual property complaint appeal", "Amazon trademark complaint", "Amazon copyright infringement claim", "Amazon IP complaint"]
+      "keywords": [
+        "Amazon intellectual property complaint appeal",
+        "Amazon trademark complaint",
+        "Amazon copyright infringement claim",
+        "Amazon IP complaint"
+      ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.appeal-edge.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.appeal-edge.com/blog/" },
-        { "@type": "ListItem", "position": 3, "name": "IP Complaint Appeal", "item": "https://www.appeal-edge.com/blog/amazon-ip-complaint-suspension-appeal/" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.appeal-edge.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.appeal-edge.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "IP Complaint Appeal",
+          "item": "https://www.appeal-edge.com/blog/amazon-ip-complaint-suspension-appeal/"
+        }
       ]
     },
     {
@@ -90,22 +180,34 @@
         {
           "@type": "Question",
           "name": "What is the fastest way to resolve an Amazon intellectual property complaint?",
-          "acceptedAnswer": { "@type": "Answer", "text": "A direct retraction from the rights owner who filed the complaint, submitted through Amazon's process, is generally the fastest path since Amazon doesn't independently investigate the underlying dispute." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A direct retraction from the rights owner who filed the complaint, submitted through Amazon's process, is generally the fastest path since Amazon doesn't independently investigate the underlying dispute."
+          }
         },
         {
           "@type": "Question",
           "name": "Can I appeal an IP complaint by proving my product is genuine?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Not on its own. IP complaints are usually about unauthorized use of a trademark, copyrighted material, or a patent, not product authenticity, so proof of genuineness alone typically doesn't resolve the complaint." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not on its own. IP complaints are usually about unauthorized use of a trademark, copyrighted material, or a patent, not product authenticity, so proof of genuineness alone typically doesn't resolve the complaint."
+          }
         },
         {
           "@type": "Question",
           "name": "Does Amazon investigate whether the complaint is true?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Generally no. Amazon acts on the rights owner's complaint directly and expects the two parties to resolve the underlying dispute, with Amazon enforcing whatever resolution results." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Generally no. Amazon acts on the rights owner's complaint directly and expects the two parties to resolve the underlying dispute, with Amazon enforcing whatever resolution results."
+          }
         },
         {
           "@type": "Question",
           "name": "What if I believe the complaint was filed in error?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Contact the rights owner listed on Amazon's notice directly, professionally, and request a retraction if you believe the claim is invalid or mistaken." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Contact the rights owner listed on Amazon's notice directly, professionally, and request a retraction if you believe the claim is invalid or mistaken."
+          }
         }
       ]
     }

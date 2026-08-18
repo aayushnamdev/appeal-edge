@@ -50,37 +50,159 @@
 {
   "@context": "https://schema.org",
   "@graph": [
-    { "@type": "Organization", "@id": "https://www.appeal-edge.com/#organization", "name": "Appeal Edge", "url": "https://www.appeal-edge.com/", "logo": { "@type": "ImageObject", "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png", "width": 400, "height": 135 } },
+    {
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
+      "@id": "https://www.appeal-edge.com/#organization",
+      "name": "Appeal Edge",
+      "url": "https://www.appeal-edge.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png",
+        "width": 400,
+        "height": 135
+      },
+      "description": "Independent Amazon seller suspension appeal consultancy. Every case is reviewed and assigned to the specialist who fits it, led by the expert who pioneered the industry in 2014.",
+      "email": "contact@appeal-edge.com",
+      "sameAs": [
+        "https://www.instagram.com/appeal.edge/",
+        "https://www.linkedin.com/company/112773661/"
+      ],
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "Canada"
+        },
+        {
+          "@type": "Country",
+          "name": "Germany"
+        },
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "Country",
+          "name": "Italy"
+        },
+        {
+          "@type": "Country",
+          "name": "Japan"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        }
+      ],
+      "knowsAbout": [
+        "Inauthentic and counterfeit complaints",
+        "Order Defect Rate, Late Shipment Rate, and Valid Tracking Rate",
+        "Intellectual property, trademark, and copyright complaints",
+        "Related account suspensions",
+        "Listing policy violations and restricted category issues",
+        "Review manipulation suspicions",
+        "Dropshipping policy violations",
+        "Used sold as new and condition complaints"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "contact@appeal-edge.com",
+        "url": "https://tally.so/r/Y5voaW"
+      }
+    },
     {
       "@type": "Article",
       "@id": "https://www.appeal-edge.com/blog/amazon-appeal-final-decision-account-not-reinstated/#article",
       "headline": "Amazon Final Decision Email: What It Actually Means",
       "description": "A final decision email feels like the end, but it usually is not. Here is what the notice actually means and the paths still open after it.",
-      "author": { "@id": "https://www.appeal-edge.com/#organization" },
-      "publisher": { "@id": "https://www.appeal-edge.com/#organization" },
+      "author": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      },
+      "publisher": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      },
       "datePublished": "2026-08-05",
       "dateModified": "2026-08-05",
       "mainEntityOfPage": "https://www.appeal-edge.com/blog/amazon-appeal-final-decision-account-not-reinstated/",
       "image": "https://www.appeal-edge.com/og-image.png",
       "articleSection": "Appeal Strategy",
-      "keywords": ["Amazon final decision email", "Amazon account not reinstated", "Amazon appeal exhausted", "Amazon executive escalation"]
+      "keywords": [
+        "Amazon final decision email",
+        "Amazon account not reinstated",
+        "Amazon appeal exhausted",
+        "Amazon executive escalation"
+      ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.appeal-edge.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.appeal-edge.com/blog/" },
-        { "@type": "ListItem", "position": 3, "name": "Final Decision Email", "item": "https://www.appeal-edge.com/blog/amazon-appeal-final-decision-account-not-reinstated/" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.appeal-edge.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.appeal-edge.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Final Decision Email",
+          "item": "https://www.appeal-edge.com/blog/amazon-appeal-final-decision-account-not-reinstated/"
+        }
       ]
     },
     {
       "@type": "FAQPage",
       "@id": "https://www.appeal-edge.com/blog/amazon-appeal-final-decision-account-not-reinstated/#faq",
       "mainEntity": [
-        { "@type": "Question", "name": "Does a final decision email mean my account is permanently lost?", "acceptedAnswer": { "@type": "Answer", "text": "Not necessarily. It generally means Amazon will not review additional submissions on the same evidence, not that reinstatement is permanently impossible, particularly for a suspended rather than terminated account." } },
-        { "@type": "Question", "name": "Can I still submit a new appeal after a final decision?", "acceptedAnswer": { "@type": "Answer", "text": "Only with genuinely new evidence. A resubmission of the same or reworded content generally does not reopen a case that has already received a final decision." } },
-        { "@type": "Question", "name": "What is the difference between suspension and termination here?", "acceptedAnswer": { "@type": "Answer", "text": "A suspension is generally treated as more reversible, and new evidence can still prompt review. A termination is a more serious, generally harder to reverse action." } },
-        { "@type": "Question", "name": "What escalation paths exist beyond the standard appeal?", "acceptedAnswer": { "@type": "Answer", "text": "Executive level escalation channels, and in some cases a formal complaint through an external body such as the Better Business Bureau, have prompted a fresh review of cases that appeared closed." } }
+        {
+          "@type": "Question",
+          "name": "Does a final decision email mean my account is permanently lost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not necessarily. It generally means Amazon will not review additional submissions on the same evidence, not that reinstatement is permanently impossible, particularly for a suspended rather than terminated account."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I still submit a new appeal after a final decision?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Only with genuinely new evidence. A resubmission of the same or reworded content generally does not reopen a case that has already received a final decision."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between suspension and termination here?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A suspension is generally treated as more reversible, and new evidence can still prompt review. A termination is a more serious, generally harder to reverse action."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What escalation paths exist beyond the standard appeal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Executive level escalation channels, and in some cases a formal complaint through an external body such as the Better Business Bureau, have prompted a fresh review of cases that appeared closed."
+          }
+        }
       ]
     }
   ]

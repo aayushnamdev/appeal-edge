@@ -50,37 +50,159 @@
 {
   "@context": "https://schema.org",
   "@graph": [
-    { "@type": "Organization", "@id": "https://www.appeal-edge.com/#organization", "name": "Appeal Edge", "url": "https://www.appeal-edge.com/", "logo": { "@type": "ImageObject", "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png", "width": 400, "height": 135 } },
+    {
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
+      "@id": "https://www.appeal-edge.com/#organization",
+      "name": "Appeal Edge",
+      "url": "https://www.appeal-edge.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png",
+        "width": 400,
+        "height": 135
+      },
+      "description": "Independent Amazon seller suspension appeal consultancy. Every case is reviewed and assigned to the specialist who fits it, led by the expert who pioneered the industry in 2014.",
+      "email": "contact@appeal-edge.com",
+      "sameAs": [
+        "https://www.instagram.com/appeal.edge/",
+        "https://www.linkedin.com/company/112773661/"
+      ],
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "Canada"
+        },
+        {
+          "@type": "Country",
+          "name": "Germany"
+        },
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "Country",
+          "name": "Italy"
+        },
+        {
+          "@type": "Country",
+          "name": "Japan"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        }
+      ],
+      "knowsAbout": [
+        "Inauthentic and counterfeit complaints",
+        "Order Defect Rate, Late Shipment Rate, and Valid Tracking Rate",
+        "Intellectual property, trademark, and copyright complaints",
+        "Related account suspensions",
+        "Listing policy violations and restricted category issues",
+        "Review manipulation suspicions",
+        "Dropshipping policy violations",
+        "Used sold as new and condition complaints"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "contact@appeal-edge.com",
+        "url": "https://tally.so/r/Y5voaW"
+      }
+    },
     {
       "@type": "Article",
       "@id": "https://www.appeal-edge.com/blog/amazon-dropshipping-packing-slips-invoices-requirements/#article",
       "headline": "Amazon Dropshipping Packing Slips and Invoices: What Has to Match",
       "description": "Amazon checks three specific surfaces for dropshipping compliance: packing slips, invoices, and outer packaging. Here is exactly what has to appear on each.",
-      "author": { "@id": "https://www.appeal-edge.com/#organization" },
-      "publisher": { "@id": "https://www.appeal-edge.com/#organization" },
+      "author": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      },
+      "publisher": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      },
       "datePublished": "2026-08-06",
       "dateModified": "2026-08-06",
       "mainEntityOfPage": "https://www.appeal-edge.com/blog/amazon-dropshipping-packing-slips-invoices-requirements/",
       "image": "https://www.appeal-edge.com/og-image.png",
       "articleSection": "Dropship Policy",
-      "keywords": ["Amazon dropshipping packing slips", "Amazon dropshipping invoices", "Amazon seller of record documentation", "Amazon dropshipping compliance"]
+      "keywords": [
+        "Amazon dropshipping packing slips",
+        "Amazon dropshipping invoices",
+        "Amazon seller of record documentation",
+        "Amazon dropshipping compliance"
+      ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.appeal-edge.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.appeal-edge.com/blog/" },
-        { "@type": "ListItem", "position": 3, "name": "Packing Slips and Invoices Requirements", "item": "https://www.appeal-edge.com/blog/amazon-dropshipping-packing-slips-invoices-requirements/" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.appeal-edge.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.appeal-edge.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Packing Slips and Invoices Requirements",
+          "item": "https://www.appeal-edge.com/blog/amazon-dropshipping-packing-slips-invoices-requirements/"
+        }
       ]
     },
     {
       "@type": "FAQPage",
       "@id": "https://www.appeal-edge.com/blog/amazon-dropshipping-packing-slips-invoices-requirements/#faq",
       "mainEntity": [
-        { "@type": "Question", "name": "Does the invoice need to show my exact business address?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Your invoice needs your registered business name and an address matching your seller central account, since a mismatch is one of the first things a reviewer checks." } },
-        { "@type": "Question", "name": "Can the packing slip be blank instead of showing my name?", "acceptedAnswer": { "@type": "Answer", "text": "A blank packing slip is safer than one showing your supplier, but a slip that clearly shows your business name is the strongest evidence of compliance." } },
-        { "@type": "Question", "name": "What if my supplier refuses to leave their name off packing slips?", "acceptedAnswer": { "@type": "Answer", "text": "That supplier relationship is a suspension risk on its own. Put a written agreement in place covering documentation, or move to a supplier willing to ship with blank or private label paperwork." } },
-        { "@type": "Question", "name": "Is a generic return address enough to comply?", "acceptedAnswer": { "@type": "Answer", "text": "No. The return address on the package has to be traceable to your business specifically, not a generic third party fulfillment address that does not identify you as the seller." } }
+        {
+          "@type": "Question",
+          "name": "Does the invoice need to show my exact business address?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Your invoice needs your registered business name and an address matching your seller central account, since a mismatch is one of the first things a reviewer checks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can the packing slip be blank instead of showing my name?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A blank packing slip is safer than one showing your supplier, but a slip that clearly shows your business name is the strongest evidence of compliance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if my supplier refuses to leave their name off packing slips?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "That supplier relationship is a suspension risk on its own. Put a written agreement in place covering documentation, or move to a supplier willing to ship with blank or private label paperwork."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a generic return address enough to comply?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The return address on the package has to be traceable to your business specifically, not a generic third party fulfillment address that does not identify you as the seller."
+          }
+        }
       ]
     }
   ]

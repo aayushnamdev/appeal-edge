@@ -48,39 +48,129 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
       "@id": "https://www.appeal-edge.com/#organization",
       "name": "Appeal Edge",
       "url": "https://www.appeal-edge.com/",
-      "logo": { "@type": "ImageObject", "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png", "width": 400, "height": 135 }
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png",
+        "width": 400,
+        "height": 135
+      },
+      "description": "Independent Amazon seller suspension appeal consultancy. Every case is reviewed and assigned to the specialist who fits it, led by the expert who pioneered the industry in 2014.",
+      "email": "contact@appeal-edge.com",
+      "sameAs": [
+        "https://www.instagram.com/appeal.edge/",
+        "https://www.linkedin.com/company/112773661/"
+      ],
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "Canada"
+        },
+        {
+          "@type": "Country",
+          "name": "Germany"
+        },
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "Country",
+          "name": "Italy"
+        },
+        {
+          "@type": "Country",
+          "name": "Japan"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        }
+      ],
+      "knowsAbout": [
+        "Inauthentic and counterfeit complaints",
+        "Order Defect Rate, Late Shipment Rate, and Valid Tracking Rate",
+        "Intellectual property, trademark, and copyright complaints",
+        "Related account suspensions",
+        "Listing policy violations and restricted category issues",
+        "Review manipulation suspicions",
+        "Dropshipping policy violations",
+        "Used sold as new and condition complaints"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "contact@appeal-edge.com",
+        "url": "https://tally.so/r/Y5voaW"
+      }
     },
     {
       "@type": "Person",
       "@id": "https://www.appeal-edge.com/#khushi-narwal",
       "name": "Khushi Narwal",
       "jobTitle": "COO",
-      "worksFor": { "@id": "https://www.appeal-edge.com/#organization" }
+      "worksFor": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      }
     },
     {
       "@type": "Article",
       "@id": "https://www.appeal-edge.com/blog/amazon-restricted-products-suspension-appeal/#article",
       "headline": "Amazon Restricted Products Suspension Appeal",
       "description": "A product research tool can surface a promising product without ever flagging that the category is gated. Here's what makes a product restricted.",
-      "author": { "@id": "https://www.appeal-edge.com/#khushi-narwal" },
-      "publisher": { "@id": "https://www.appeal-edge.com/#organization" },
+      "author": {
+        "@id": "https://www.appeal-edge.com/#khushi-narwal"
+      },
+      "publisher": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      },
       "datePublished": "2026-07-24",
       "dateModified": "2026-07-24",
       "mainEntityOfPage": "https://www.appeal-edge.com/blog/amazon-restricted-products-suspension-appeal/",
       "image": "https://www.appeal-edge.com/og-image.png",
       "articleSection": "Restricted Products",
-      "keywords": ["Amazon restricted products suspension", "Amazon gated category approval", "Amazon category ungating", "Amazon listing suspended"]
+      "keywords": [
+        "Amazon restricted products suspension",
+        "Amazon gated category approval",
+        "Amazon category ungating",
+        "Amazon listing suspended"
+      ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.appeal-edge.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.appeal-edge.com/blog/" },
-        { "@type": "ListItem", "position": 3, "name": "Restricted Products Appeal", "item": "https://www.appeal-edge.com/blog/amazon-restricted-products-suspension-appeal/" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.appeal-edge.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.appeal-edge.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Restricted Products Appeal",
+          "item": "https://www.appeal-edge.com/blog/amazon-restricted-products-suspension-appeal/"
+        }
       ]
     },
     {
@@ -90,22 +180,34 @@
         {
           "@type": "Question",
           "name": "What makes a product restricted on Amazon?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Certain categories, like specific electronics, supplements, cosmetics, children's products, and hazardous materials, require Amazon's approval before you're allowed to list, regardless of the product's quality." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Certain categories, like specific electronics, supplements, cosmetics, children's products, and hazardous materials, require Amazon's approval before you're allowed to list, regardless of the product's quality."
+          }
         },
         {
           "@type": "Question",
           "name": "Why do sellers get caught by this unexpectedly?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Product research tools generally don't flag category gating, so a seller can identify a promising product, source it, and list it without realizing approval was required first." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Product research tools generally don't flag category gating, so a seller can identify a promising product, source it, and list it without realizing approval was required first."
+          }
         },
         {
           "@type": "Question",
           "name": "What does the ungating process typically require?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Usually invoices from an approved supplier, sometimes in a minimum quantity, and in some categories a specific brand approval." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usually invoices from an approved supplier, sometimes in a minimum quantity, and in some categories a specific brand approval."
+          }
         },
         {
           "@type": "Question",
           "name": "What should the appeal include if I already listed without approval?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Removing the listing that triggered the suspension, completing the actual category approval process, and showing that step was completed before requesting reinstatement." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Removing the listing that triggered the suspension, completing the actual category approval process, and showing that step was completed before requesting reinstatement."
+          }
         }
       ]
     }

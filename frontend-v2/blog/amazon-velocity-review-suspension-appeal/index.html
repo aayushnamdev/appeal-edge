@@ -48,39 +48,129 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
       "@id": "https://www.appeal-edge.com/#organization",
       "name": "Appeal Edge",
       "url": "https://www.appeal-edge.com/",
-      "logo": { "@type": "ImageObject", "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png", "width": 400, "height": 135 }
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png",
+        "width": 400,
+        "height": 135
+      },
+      "description": "Independent Amazon seller suspension appeal consultancy. Every case is reviewed and assigned to the specialist who fits it, led by the expert who pioneered the industry in 2014.",
+      "email": "contact@appeal-edge.com",
+      "sameAs": [
+        "https://www.instagram.com/appeal.edge/",
+        "https://www.linkedin.com/company/112773661/"
+      ],
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "Canada"
+        },
+        {
+          "@type": "Country",
+          "name": "Germany"
+        },
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "Country",
+          "name": "Italy"
+        },
+        {
+          "@type": "Country",
+          "name": "Japan"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        }
+      ],
+      "knowsAbout": [
+        "Inauthentic and counterfeit complaints",
+        "Order Defect Rate, Late Shipment Rate, and Valid Tracking Rate",
+        "Intellectual property, trademark, and copyright complaints",
+        "Related account suspensions",
+        "Listing policy violations and restricted category issues",
+        "Review manipulation suspicions",
+        "Dropshipping policy violations",
+        "Used sold as new and condition complaints"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "contact@appeal-edge.com",
+        "url": "https://tally.so/r/Y5voaW"
+      }
     },
     {
       "@type": "Person",
       "@id": "https://www.appeal-edge.com/#khushi-narwal",
       "name": "Khushi Narwal",
       "jobTitle": "COO",
-      "worksFor": { "@id": "https://www.appeal-edge.com/#organization" }
+      "worksFor": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      }
     },
     {
       "@type": "Article",
       "@id": "https://www.appeal-edge.com/blog/amazon-velocity-review-suspension-appeal/#article",
       "headline": "Amazon Velocity Review Suspension Appeal",
       "description": "Amazon's velocity review flag can trigger from a sudden, legitimate burst of reviews. Here's exactly what the flag measures, and what clears it.",
-      "author": { "@id": "https://www.appeal-edge.com/#khushi-narwal" },
-      "publisher": { "@id": "https://www.appeal-edge.com/#organization" },
+      "author": {
+        "@id": "https://www.appeal-edge.com/#khushi-narwal"
+      },
+      "publisher": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      },
       "datePublished": "2026-07-23",
       "dateModified": "2026-08-03",
       "mainEntityOfPage": "https://www.appeal-edge.com/blog/amazon-velocity-review-suspension-appeal/",
       "image": "https://www.appeal-edge.com/og-image.png",
       "articleSection": "Velocity Review",
-      "keywords": ["Amazon velocity review suspension", "Amazon review velocity flag", "sudden review spike Amazon", "Amazon review manipulation"]
+      "keywords": [
+        "Amazon velocity review suspension",
+        "Amazon review velocity flag",
+        "sudden review spike Amazon",
+        "Amazon review manipulation"
+      ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.appeal-edge.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.appeal-edge.com/blog/" },
-        { "@type": "ListItem", "position": 3, "name": "Velocity Review Appeal", "item": "https://www.appeal-edge.com/blog/amazon-velocity-review-suspension-appeal/" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.appeal-edge.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.appeal-edge.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Velocity Review Appeal",
+          "item": "https://www.appeal-edge.com/blog/amazon-velocity-review-suspension-appeal/"
+        }
       ]
     },
     {
@@ -90,22 +180,34 @@
         {
           "@type": "Question",
           "name": "What triggers a velocity review flag?",
-          "acceptedAnswer": { "@type": "Answer", "text": "A sudden, sharp increase in the rate reviews accumulate on a listing, especially one that looks disproportionate to the listing's actual sales volume." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A sudden, sharp increase in the rate reviews accumulate on a listing, especially one that looks disproportionate to the listing's actual sales volume."
+          }
         },
         {
           "@type": "Question",
           "name": "Can a legitimate marketing push cause a false flag?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. A viral moment, press mention, or a promotion can generate a genuine review spike that looks similar to manipulation from the outside." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. A viral moment, press mention, or a promotion can generate a genuine review spike that looks similar to manipulation from the outside."
+          }
         },
         {
           "@type": "Question",
           "name": "What evidence clears a legitimate spike?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Sales data and marketing records that show the review spike lines up with a real, verifiable increase in orders, such as an ad campaign or press feature." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sales data and marketing records that show the review spike lines up with a real, verifiable increase in orders, such as an ad campaign or press feature."
+          }
         },
         {
           "@type": "Question",
           "name": "How can I lower the risk of being flagged in the future?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Spread review requests out over time rather than concentrating them in a narrow window, and never use third party review incentive services." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Spread review requests out over time rather than concentrating them in a narrow window, and never use third party review incentive services."
+          }
         }
       ]
     }

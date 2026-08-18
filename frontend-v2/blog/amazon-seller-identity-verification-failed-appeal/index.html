@@ -50,38 +50,168 @@
 {
   "@context": "https://schema.org",
   "@graph": [
-    { "@type": "Organization", "@id": "https://www.appeal-edge.com/#organization", "name": "Appeal Edge", "url": "https://www.appeal-edge.com/", "logo": { "@type": "ImageObject", "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png", "width": 400, "height": 135 } },
-    { "@type": "Person", "@id": "https://www.appeal-edge.com/#aayush-namdev", "name": "Aayush Namdev", "jobTitle": "CTO", "worksFor": { "@id": "https://www.appeal-edge.com/#organization" } },
+    {
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
+      "@id": "https://www.appeal-edge.com/#organization",
+      "name": "Appeal Edge",
+      "url": "https://www.appeal-edge.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png",
+        "width": 400,
+        "height": 135
+      },
+      "description": "Independent Amazon seller suspension appeal consultancy. Every case is reviewed and assigned to the specialist who fits it, led by the expert who pioneered the industry in 2014.",
+      "email": "contact@appeal-edge.com",
+      "sameAs": [
+        "https://www.instagram.com/appeal.edge/",
+        "https://www.linkedin.com/company/112773661/"
+      ],
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "Canada"
+        },
+        {
+          "@type": "Country",
+          "name": "Germany"
+        },
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "Country",
+          "name": "Italy"
+        },
+        {
+          "@type": "Country",
+          "name": "Japan"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        }
+      ],
+      "knowsAbout": [
+        "Inauthentic and counterfeit complaints",
+        "Order Defect Rate, Late Shipment Rate, and Valid Tracking Rate",
+        "Intellectual property, trademark, and copyright complaints",
+        "Related account suspensions",
+        "Listing policy violations and restricted category issues",
+        "Review manipulation suspicions",
+        "Dropshipping policy violations",
+        "Used sold as new and condition complaints"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "contact@appeal-edge.com",
+        "url": "https://tally.so/r/Y5voaW"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.appeal-edge.com/#aayush-namdev",
+      "name": "Aayush Namdev",
+      "jobTitle": "CTO",
+      "worksFor": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      }
+    },
     {
       "@type": "Article",
       "@id": "https://www.appeal-edge.com/blog/amazon-seller-identity-verification-failed-appeal/#article",
       "headline": "Amazon Seller Verification Failed: How to Appeal",
       "description": "Video or document verification failures are usually a mismatch problem, not a fraud accusation. Here is what Amazon checks and how to fix a failed verification.",
-      "author": { "@id": "https://www.appeal-edge.com/#aayush-namdev" },
-      "publisher": { "@id": "https://www.appeal-edge.com/#organization" },
+      "author": {
+        "@id": "https://www.appeal-edge.com/#aayush-namdev"
+      },
+      "publisher": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      },
       "datePublished": "2026-08-05",
       "dateModified": "2026-08-05",
       "mainEntityOfPage": "https://www.appeal-edge.com/blog/amazon-seller-identity-verification-failed-appeal/",
       "image": "https://www.appeal-edge.com/og-image.png",
       "articleSection": "Account Verification",
-      "keywords": ["Amazon seller verification failed", "Amazon video verification", "Amazon identity verification appeal", "Amazon Section 3 verification"]
+      "keywords": [
+        "Amazon seller verification failed",
+        "Amazon video verification",
+        "Amazon identity verification appeal",
+        "Amazon Section 3 verification"
+      ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.appeal-edge.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.appeal-edge.com/blog/" },
-        { "@type": "ListItem", "position": 3, "name": "Seller Verification Failed", "item": "https://www.appeal-edge.com/blog/amazon-seller-identity-verification-failed-appeal/" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.appeal-edge.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.appeal-edge.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Seller Verification Failed",
+          "item": "https://www.appeal-edge.com/blog/amazon-seller-identity-verification-failed-appeal/"
+        }
       ]
     },
     {
       "@type": "FAQPage",
       "@id": "https://www.appeal-edge.com/blog/amazon-seller-identity-verification-failed-appeal/#faq",
       "mainEntity": [
-        { "@type": "Question", "name": "Why did my Amazon seller verification fail?", "acceptedAnswer": { "@type": "Answer", "text": "Almost always a mismatch: a name, address, or business detail that does not match exactly across your ID, your bank or utility statement, and your Seller Central profile, or a document that is expired or too low quality to read." } },
-        { "@type": "Question", "name": "What documents does Amazon typically require?", "acceptedAnswer": { "@type": "Answer", "text": "A government issued photo ID and a bank statement or utility bill showing your name and address, generally required to be current, often within the last 90 days." } },
-        { "@type": "Question", "name": "What should I prepare for the video verification call?", "acceptedAnswer": { "@type": "Answer", "text": "Your original ID and business documents, a quiet and well lit space, and the ability to state your business details exactly as they appear in Seller Central." } },
-        { "@type": "Question", "name": "How long does a verification appeal take?", "acceptedAnswer": { "@type": "Answer", "text": "Initial reviews commonly take a few business days. Each additional round of requested documentation typically adds several more days." } }
+        {
+          "@type": "Question",
+          "name": "Why did my Amazon seller verification fail?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Almost always a mismatch: a name, address, or business detail that does not match exactly across your ID, your bank or utility statement, and your Seller Central profile, or a document that is expired or too low quality to read."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What documents does Amazon typically require?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A government issued photo ID and a bank statement or utility bill showing your name and address, generally required to be current, often within the last 90 days."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should I prepare for the video verification call?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your original ID and business documents, a quiet and well lit space, and the ability to state your business details exactly as they appear in Seller Central."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a verification appeal take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Initial reviews commonly take a few business days. Each additional round of requested documentation typically adds several more days."
+          }
+        }
       ]
     },
     {
@@ -89,11 +219,36 @@
       "@id": "https://www.appeal-edge.com/blog/amazon-seller-identity-verification-failed-appeal/#howto",
       "name": "How to fix a failed Amazon seller verification",
       "step": [
-        { "@type": "HowToStep", "position": 1, "name": "Read the specific rejection reason", "text": "Open the full notice in your case log. Amazon usually names which document or detail did not match." },
-        { "@type": "HowToStep", "position": 2, "name": "Check every document against your Seller Central profile", "text": "Name, address, and business details need to match exactly across your ID, bank statement, and account settings." },
-        { "@type": "HowToStep", "position": 3, "name": "Confirm document quality and recency", "text": "Scans need to be legible and bank or utility statements need to be current, generally within the last 90 days." },
-        { "@type": "HowToStep", "position": 4, "name": "Prepare for the video verification call", "text": "Have your original ID and business documents on hand, in a quiet, well lit space, matching the name on file." },
-        { "@type": "HowToStep", "position": 5, "name": "Resubmit through the specific verification case", "text": "Attach corrected documents directly to the open verification request rather than starting a new general appeal." }
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Read the specific rejection reason",
+          "text": "Open the full notice in your case log. Amazon usually names which document or detail did not match."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Check every document against your Seller Central profile",
+          "text": "Name, address, and business details need to match exactly across your ID, bank statement, and account settings."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Confirm document quality and recency",
+          "text": "Scans need to be legible and bank or utility statements need to be current, generally within the last 90 days."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Prepare for the video verification call",
+          "text": "Have your original ID and business documents on hand, in a quiet, well lit space, matching the name on file."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Resubmit through the specific verification case",
+          "text": "Attach corrected documents directly to the open verification request rather than starting a new general appeal."
+        }
       ]
     }
   ]

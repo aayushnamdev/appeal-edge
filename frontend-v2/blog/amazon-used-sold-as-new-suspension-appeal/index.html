@@ -50,39 +50,129 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
       "@id": "https://www.appeal-edge.com/#organization",
       "name": "Appeal Edge",
       "url": "https://www.appeal-edge.com/",
-      "logo": { "@type": "ImageObject", "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png", "width": 400, "height": 135 }
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png",
+        "width": 400,
+        "height": 135
+      },
+      "description": "Independent Amazon seller suspension appeal consultancy. Every case is reviewed and assigned to the specialist who fits it, led by the expert who pioneered the industry in 2014.",
+      "email": "contact@appeal-edge.com",
+      "sameAs": [
+        "https://www.instagram.com/appeal.edge/",
+        "https://www.linkedin.com/company/112773661/"
+      ],
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "Canada"
+        },
+        {
+          "@type": "Country",
+          "name": "Germany"
+        },
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "Country",
+          "name": "Italy"
+        },
+        {
+          "@type": "Country",
+          "name": "Japan"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        }
+      ],
+      "knowsAbout": [
+        "Inauthentic and counterfeit complaints",
+        "Order Defect Rate, Late Shipment Rate, and Valid Tracking Rate",
+        "Intellectual property, trademark, and copyright complaints",
+        "Related account suspensions",
+        "Listing policy violations and restricted category issues",
+        "Review manipulation suspicions",
+        "Dropshipping policy violations",
+        "Used sold as new and condition complaints"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "contact@appeal-edge.com",
+        "url": "https://tally.so/r/Y5voaW"
+      }
     },
     {
       "@type": "Person",
       "@id": "https://www.appeal-edge.com/#khushi-narwal",
       "name": "Khushi Narwal",
       "jobTitle": "COO",
-      "worksFor": { "@id": "https://www.appeal-edge.com/#organization" }
+      "worksFor": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      }
     },
     {
       "@type": "Article",
       "@id": "https://www.appeal-edge.com/blog/amazon-used-sold-as-new-suspension-appeal/#article",
       "headline": "Amazon Used Sold as New Suspension: How to Appeal",
       "description": "A used sold as new complaint can come from a unit you never touched. Here's exactly what triggers this suspension and what your appeal needs to prove.",
-      "author": { "@id": "https://www.appeal-edge.com/#khushi-narwal" },
-      "publisher": { "@id": "https://www.appeal-edge.com/#organization" },
+      "author": {
+        "@id": "https://www.appeal-edge.com/#khushi-narwal"
+      },
+      "publisher": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      },
       "datePublished": "2026-07-21",
       "dateModified": "2026-08-05",
       "mainEntityOfPage": "https://www.appeal-edge.com/blog/amazon-used-sold-as-new-suspension-appeal/",
       "image": "https://www.appeal-edge.com/og-image.png",
       "articleSection": "Condition Disputes",
-      "keywords": ["Amazon used sold as new complaint", "Amazon condition complaint appeal", "Amazon item not as described", "Amazon FBA commingled inventory"]
+      "keywords": [
+        "Amazon used sold as new complaint",
+        "Amazon condition complaint appeal",
+        "Amazon item not as described",
+        "Amazon FBA commingled inventory"
+      ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.appeal-edge.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.appeal-edge.com/blog/" },
-        { "@type": "ListItem", "position": 3, "name": "Used Sold as New Appeal", "item": "https://www.appeal-edge.com/blog/amazon-used-sold-as-new-suspension-appeal/" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.appeal-edge.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.appeal-edge.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Used Sold as New Appeal",
+          "item": "https://www.appeal-edge.com/blog/amazon-used-sold-as-new-suspension-appeal/"
+        }
       ]
     },
     {
@@ -92,22 +182,34 @@
         {
           "@type": "Question",
           "name": "What is a used sold as new complaint?",
-          "acceptedAnswer": { "@type": "Answer", "text": "A buyer report that an item purchased as new arrived used, opened, or damaged, which Amazon can treat as a condition or authenticity issue depending on the pattern." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A buyer report that an item purchased as new arrived used, opened, or damaged, which Amazon can treat as a condition or authenticity issue depending on the pattern."
+          }
         },
         {
           "@type": "Question",
           "name": "Can FBA commingled inventory cause this even if my own units are fine?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. If your listing is commingled with other sellers' units under the same ASIN, a complaint about a unit you never touched can still affect your account." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. If your listing is commingled with other sellers' units under the same ASIN, a complaint about a unit you never touched can still affect your account."
+          }
         },
         {
           "@type": "Question",
           "name": "How do I prevent returned items from being relisted as new by mistake?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Add an inspection step before any returned unit reenters sellable inventory, and route anything that shows signs of use to a used or unfulfillable status instead." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Add an inspection step before any returned unit reenters sellable inventory, and route anything that shows signs of use to a used or unfulfillable status instead."
+          }
         },
         {
           "@type": "Question",
           "name": "What does the appeal need to include?",
-          "acceptedAnswer": { "@type": "Answer", "text": "A specifically named root cause, the inspection or process change already made, and a concrete step that prevents it going forward, kept to one page." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A specifically named root cause, the inspection or process change already made, and a concrete step that prevents it going forward, kept to one page."
+          }
         }
       ]
     }

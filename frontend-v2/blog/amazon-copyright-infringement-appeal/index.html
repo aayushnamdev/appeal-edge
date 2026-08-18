@@ -50,37 +50,159 @@
 {
   "@context": "https://schema.org",
   "@graph": [
-    { "@type": "Organization", "@id": "https://www.appeal-edge.com/#organization", "name": "Appeal Edge", "url": "https://www.appeal-edge.com/", "logo": { "@type": "ImageObject", "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png", "width": 400, "height": 135 } },
+    {
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
+      "@id": "https://www.appeal-edge.com/#organization",
+      "name": "Appeal Edge",
+      "url": "https://www.appeal-edge.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png",
+        "width": 400,
+        "height": 135
+      },
+      "description": "Independent Amazon seller suspension appeal consultancy. Every case is reviewed and assigned to the specialist who fits it, led by the expert who pioneered the industry in 2014.",
+      "email": "contact@appeal-edge.com",
+      "sameAs": [
+        "https://www.instagram.com/appeal.edge/",
+        "https://www.linkedin.com/company/112773661/"
+      ],
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "Canada"
+        },
+        {
+          "@type": "Country",
+          "name": "Germany"
+        },
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "Country",
+          "name": "Italy"
+        },
+        {
+          "@type": "Country",
+          "name": "Japan"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        }
+      ],
+      "knowsAbout": [
+        "Inauthentic and counterfeit complaints",
+        "Order Defect Rate, Late Shipment Rate, and Valid Tracking Rate",
+        "Intellectual property, trademark, and copyright complaints",
+        "Related account suspensions",
+        "Listing policy violations and restricted category issues",
+        "Review manipulation suspicions",
+        "Dropshipping policy violations",
+        "Used sold as new and condition complaints"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "contact@appeal-edge.com",
+        "url": "https://tally.so/r/Y5voaW"
+      }
+    },
     {
       "@type": "Article",
       "@id": "https://www.appeal-edge.com/blog/amazon-copyright-infringement-appeal/#article",
       "headline": "Amazon Copyright Infringement Appeal: How to Respond",
       "description": "A copyright complaint usually targets your images, listing text, or design work, not your brand name. Here is how the appeal actually differs.",
-      "author": { "@id": "https://www.appeal-edge.com/#organization" },
-      "publisher": { "@id": "https://www.appeal-edge.com/#organization" },
+      "author": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      },
+      "publisher": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      },
       "datePublished": "2026-08-06",
       "dateModified": "2026-08-06",
       "mainEntityOfPage": "https://www.appeal-edge.com/blog/amazon-copyright-infringement-appeal/",
       "image": "https://www.appeal-edge.com/og-image.png",
       "articleSection": "IP Complaints",
-      "keywords": ["Amazon copyright infringement appeal", "Amazon copyright complaint", "Amazon listing image rights", "Amazon IP complaint"]
+      "keywords": [
+        "Amazon copyright infringement appeal",
+        "Amazon copyright complaint",
+        "Amazon listing image rights",
+        "Amazon IP complaint"
+      ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.appeal-edge.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.appeal-edge.com/blog/" },
-        { "@type": "ListItem", "position": 3, "name": "Copyright Infringement Appeal", "item": "https://www.appeal-edge.com/blog/amazon-copyright-infringement-appeal/" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.appeal-edge.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.appeal-edge.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Copyright Infringement Appeal",
+          "item": "https://www.appeal-edge.com/blog/amazon-copyright-infringement-appeal/"
+        }
       ]
     },
     {
       "@type": "FAQPage",
       "@id": "https://www.appeal-edge.com/blog/amazon-copyright-infringement-appeal/#faq",
       "mainEntity": [
-        { "@type": "Question", "name": "What is the difference between a copyright and trademark complaint on Amazon?", "acceptedAnswer": { "@type": "Answer", "text": "A trademark complaint concerns a protected brand name or logo. A copyright complaint concerns original creative work such as photography, written listing content, or design assets used without permission." } },
-        { "@type": "Question", "name": "What proves I own the images on my listing?", "acceptedAnswer": { "@type": "Answer", "text": "Original camera files with metadata, a signed agreement with the photographer or designer who created them, or a licensing agreement if the images were purchased from a stock source." } },
-        { "@type": "Question", "name": "Can I just remove the disputed images and keep selling?", "acceptedAnswer": { "@type": "Answer", "text": "Removing the images addresses the listing itself but does not resolve the violation on your account record. Amazon still expects a completed appeal or a retraction to close it out." } },
-        { "@type": "Question", "name": "What if I licensed the images but lost the paperwork?", "acceptedAnswer": { "@type": "Answer", "text": "Contact the photographer, designer, or stock photo platform to request a reissued copy of the license or invoice, since Amazon's review needs to see documented proof, not just a description of the arrangement." } }
+        {
+          "@type": "Question",
+          "name": "What is the difference between a copyright and trademark complaint on Amazon?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A trademark complaint concerns a protected brand name or logo. A copyright complaint concerns original creative work such as photography, written listing content, or design assets used without permission."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What proves I own the images on my listing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Original camera files with metadata, a signed agreement with the photographer or designer who created them, or a licensing agreement if the images were purchased from a stock source."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I just remove the disputed images and keep selling?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Removing the images addresses the listing itself but does not resolve the violation on your account record. Amazon still expects a completed appeal or a retraction to close it out."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I licensed the images but lost the paperwork?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Contact the photographer, designer, or stock photo platform to request a reissued copy of the license or invoice, since Amazon's review needs to see documented proof, not just a description of the arrangement."
+          }
+        }
       ]
     }
   ]

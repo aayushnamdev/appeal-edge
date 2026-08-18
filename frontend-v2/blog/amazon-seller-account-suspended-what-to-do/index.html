@@ -50,38 +50,168 @@
 {
   "@context": "https://schema.org",
   "@graph": [
-    { "@type": "Organization", "@id": "https://www.appeal-edge.com/#organization", "name": "Appeal Edge", "url": "https://www.appeal-edge.com/", "logo": { "@type": "ImageObject", "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png", "width": 400, "height": 135 } },
-    { "@type": "Person", "@id": "https://www.appeal-edge.com/#aayush-namdev", "name": "Aayush Namdev", "jobTitle": "CTO", "worksFor": { "@id": "https://www.appeal-edge.com/#organization" } },
+    {
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
+      "@id": "https://www.appeal-edge.com/#organization",
+      "name": "Appeal Edge",
+      "url": "https://www.appeal-edge.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png",
+        "width": 400,
+        "height": 135
+      },
+      "description": "Independent Amazon seller suspension appeal consultancy. Every case is reviewed and assigned to the specialist who fits it, led by the expert who pioneered the industry in 2014.",
+      "email": "contact@appeal-edge.com",
+      "sameAs": [
+        "https://www.instagram.com/appeal.edge/",
+        "https://www.linkedin.com/company/112773661/"
+      ],
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "Canada"
+        },
+        {
+          "@type": "Country",
+          "name": "Germany"
+        },
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "Country",
+          "name": "Italy"
+        },
+        {
+          "@type": "Country",
+          "name": "Japan"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        }
+      ],
+      "knowsAbout": [
+        "Inauthentic and counterfeit complaints",
+        "Order Defect Rate, Late Shipment Rate, and Valid Tracking Rate",
+        "Intellectual property, trademark, and copyright complaints",
+        "Related account suspensions",
+        "Listing policy violations and restricted category issues",
+        "Review manipulation suspicions",
+        "Dropshipping policy violations",
+        "Used sold as new and condition complaints"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "contact@appeal-edge.com",
+        "url": "https://tally.so/r/Y5voaW"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.appeal-edge.com/#aayush-namdev",
+      "name": "Aayush Namdev",
+      "jobTitle": "CTO",
+      "worksFor": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      }
+    },
     {
       "@type": "Article",
       "@id": "https://www.appeal-edge.com/blog/amazon-seller-account-suspended-what-to-do/#article",
       "headline": "Amazon Seller Account Suspended: What to Do",
       "description": "A suspended Amazon account is not dead. Here is the exact sequence to follow in the first 24 hours, and where to go next based on your violation type.",
-      "author": { "@id": "https://www.appeal-edge.com/#aayush-namdev" },
-      "publisher": { "@id": "https://www.appeal-edge.com/#organization" },
+      "author": {
+        "@id": "https://www.appeal-edge.com/#aayush-namdev"
+      },
+      "publisher": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      },
       "datePublished": "2026-08-05",
       "dateModified": "2026-08-05",
       "mainEntityOfPage": "https://www.appeal-edge.com/blog/amazon-seller-account-suspended-what-to-do/",
       "image": "https://www.appeal-edge.com/og-image.png",
       "articleSection": "Appeal Strategy",
-      "keywords": ["Amazon seller account suspended", "Amazon suspension what to do", "Amazon account reinstatement", "Amazon appeal first steps"]
+      "keywords": [
+        "Amazon seller account suspended",
+        "Amazon suspension what to do",
+        "Amazon account reinstatement",
+        "Amazon appeal first steps"
+      ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.appeal-edge.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.appeal-edge.com/blog/" },
-        { "@type": "ListItem", "position": 3, "name": "Account Suspended: What to Do", "item": "https://www.appeal-edge.com/blog/amazon-seller-account-suspended-what-to-do/" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.appeal-edge.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.appeal-edge.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Account Suspended: What to Do",
+          "item": "https://www.appeal-edge.com/blog/amazon-seller-account-suspended-what-to-do/"
+        }
       ]
     },
     {
       "@type": "FAQPage",
       "@id": "https://www.appeal-edge.com/blog/amazon-seller-account-suspended-what-to-do/#faq",
       "mainEntity": [
-        { "@type": "Question", "name": "What is the very first thing I should do after a suspension?", "acceptedAnswer": { "@type": "Answer", "text": "Read the entire notice carefully to identify the specific policy cited and the exact violation type, before writing or submitting anything." } },
-        { "@type": "Question", "name": "Should I appeal immediately or wait?", "acceptedAnswer": { "@type": "Answer", "text": "Do not submit a rushed, generic plan the same day out of panic. Take the time to gather your own account data and build a plan around a specific root cause, since a weak first submission is one of the most common reasons cases drag out." } },
-        { "@type": "Question", "name": "What if I am not sure which violation type applies?", "acceptedAnswer": { "@type": "Answer", "text": "Reread the notice for the specific policy cited and the language Amazon used. If it is still unclear, our free case scan reads the notice and identifies the case type before you talk to anyone." } },
-        { "@type": "Question", "name": "Is a suspended account the same as a terminated one?", "acceptedAnswer": { "@type": "Answer", "text": "No. A suspension is generally treated as temporary and reversible through an appeal. A termination is a more serious, generally harder to reverse action." } }
+        {
+          "@type": "Question",
+          "name": "What is the very first thing I should do after a suspension?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Read the entire notice carefully to identify the specific policy cited and the exact violation type, before writing or submitting anything."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I appeal immediately or wait?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Do not submit a rushed, generic plan the same day out of panic. Take the time to gather your own account data and build a plan around a specific root cause, since a weak first submission is one of the most common reasons cases drag out."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I am not sure which violation type applies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Reread the notice for the specific policy cited and the language Amazon used. If it is still unclear, our free case scan reads the notice and identifies the case type before you talk to anyone."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a suspended account the same as a terminated one?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. A suspension is generally treated as temporary and reversible through an appeal. A termination is a more serious, generally harder to reverse action."
+          }
+        }
       ]
     }
   ]

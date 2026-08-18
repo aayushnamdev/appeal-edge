@@ -50,37 +50,159 @@
 {
   "@context": "https://schema.org",
   "@graph": [
-    { "@type": "Organization", "@id": "https://www.appeal-edge.com/#organization", "name": "Appeal Edge", "url": "https://www.appeal-edge.com/", "logo": { "@type": "ImageObject", "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png", "width": 400, "height": 135 } },
+    {
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
+      "@id": "https://www.appeal-edge.com/#organization",
+      "name": "Appeal Edge",
+      "url": "https://www.appeal-edge.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png",
+        "width": 400,
+        "height": 135
+      },
+      "description": "Independent Amazon seller suspension appeal consultancy. Every case is reviewed and assigned to the specialist who fits it, led by the expert who pioneered the industry in 2014.",
+      "email": "contact@appeal-edge.com",
+      "sameAs": [
+        "https://www.instagram.com/appeal.edge/",
+        "https://www.linkedin.com/company/112773661/"
+      ],
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "Canada"
+        },
+        {
+          "@type": "Country",
+          "name": "Germany"
+        },
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "Country",
+          "name": "Italy"
+        },
+        {
+          "@type": "Country",
+          "name": "Japan"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        }
+      ],
+      "knowsAbout": [
+        "Inauthentic and counterfeit complaints",
+        "Order Defect Rate, Late Shipment Rate, and Valid Tracking Rate",
+        "Intellectual property, trademark, and copyright complaints",
+        "Related account suspensions",
+        "Listing policy violations and restricted category issues",
+        "Review manipulation suspicions",
+        "Dropshipping policy violations",
+        "Used sold as new and condition complaints"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "contact@appeal-edge.com",
+        "url": "https://tally.so/r/Y5voaW"
+      }
+    },
     {
       "@type": "Article",
       "@id": "https://www.appeal-edge.com/blog/amazon-odr-suspension-low-order-volume-small-seller/#article",
       "headline": "Amazon ODR Suspension at Low Order Volume: Why Three Complaints Suspend You",
       "description": "At sixty orders a month, three complaints is a five percent order defect rate and an instant suspension. Here is why low order volume makes ODR so volatile, and what to do.",
-      "author": { "@id": "https://www.appeal-edge.com/#organization" },
-      "publisher": { "@id": "https://www.appeal-edge.com/#organization" },
+      "author": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      },
+      "publisher": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      },
       "datePublished": "2026-08-14",
       "dateModified": "2026-08-14",
       "mainEntityOfPage": "https://www.appeal-edge.com/blog/amazon-odr-suspension-low-order-volume-small-seller/",
       "image": "https://www.appeal-edge.com/og-image.png",
       "articleSection": "Small Sellers",
-      "keywords": ["Amazon ODR low order volume", "Order defect rate small seller", "Amazon ODR suspension small account", "Amazon three complaints suspended"]
+      "keywords": [
+        "Amazon ODR low order volume",
+        "Order defect rate small seller",
+        "Amazon ODR suspension small account",
+        "Amazon three complaints suspended"
+      ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.appeal-edge.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.appeal-edge.com/blog/" },
-        { "@type": "ListItem", "position": 3, "name": "Low Order Volume ODR", "item": "https://www.appeal-edge.com/blog/amazon-odr-suspension-low-order-volume-small-seller/" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.appeal-edge.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.appeal-edge.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Low Order Volume ODR",
+          "item": "https://www.appeal-edge.com/blog/amazon-odr-suspension-low-order-volume-small-seller/"
+        }
       ]
     },
     {
       "@type": "FAQPage",
       "@id": "https://www.appeal-edge.com/blog/amazon-odr-suspension-low-order-volume-small-seller/#faq",
       "mainEntity": [
-        { "@type": "Question", "name": "Why does Amazon suspend small sellers over just a few complaints?", "acceptedAnswer": { "@type": "Answer", "text": "Order defect rate is a percentage of total orders. At low monthly volume, a small number of complaints produces a much larger percentage than the same number would at high volume, often crossing Amazon's roughly one percent threshold." } },
-        { "@type": "Question", "name": "What order defect rate does Amazon consider too high?", "acceptedAnswer": { "@type": "Answer", "text": "Amazon's published target is under one percent. At low order volume, even two or three defects in a short window can push the calculated rate well above that threshold." } },
-        { "@type": "Question", "name": "Does selling more products lower the risk of an ODR suspension?", "acceptedAnswer": { "@type": "Answer", "text": "Over time, yes, since a larger order count dilutes the impact of individual defects on the percentage. It is not a fix for an active suspension, which needs a plan of action addressing the specific incidents that triggered it." } },
-        { "@type": "Question", "name": "Should I mention low order volume in my plan of action?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, as context alongside, not instead of, addressing each specific defect individually. Explaining the volatility helps the reviewer understand the percentage, but each underlying incident still needs its own explanation." } }
+        {
+          "@type": "Question",
+          "name": "Why does Amazon suspend small sellers over just a few complaints?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Order defect rate is a percentage of total orders. At low monthly volume, a small number of complaints produces a much larger percentage than the same number would at high volume, often crossing Amazon's roughly one percent threshold."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What order defect rate does Amazon consider too high?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Amazon's published target is under one percent. At low order volume, even two or three defects in a short window can push the calculated rate well above that threshold."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does selling more products lower the risk of an ODR suspension?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Over time, yes, since a larger order count dilutes the impact of individual defects on the percentage. It is not a fix for an active suspension, which needs a plan of action addressing the specific incidents that triggered it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I mention low order volume in my plan of action?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, as context alongside, not instead of, addressing each specific defect individually. Explaining the volatility helps the reviewer understand the percentage, but each underlying incident still needs its own explanation."
+          }
+        }
       ]
     }
   ]

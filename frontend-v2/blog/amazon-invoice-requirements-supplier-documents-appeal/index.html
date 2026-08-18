@@ -50,38 +50,168 @@
 {
   "@context": "https://schema.org",
   "@graph": [
-    { "@type": "Organization", "@id": "https://www.appeal-edge.com/#organization", "name": "Appeal Edge", "url": "https://www.appeal-edge.com/", "logo": { "@type": "ImageObject", "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png", "width": 400, "height": 135 } },
-    { "@type": "Person", "@id": "https://www.appeal-edge.com/#khushi-narwal", "name": "Khushi Narwal", "jobTitle": "COO", "worksFor": { "@id": "https://www.appeal-edge.com/#organization" } },
+    {
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
+      "@id": "https://www.appeal-edge.com/#organization",
+      "name": "Appeal Edge",
+      "url": "https://www.appeal-edge.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png",
+        "width": 400,
+        "height": 135
+      },
+      "description": "Independent Amazon seller suspension appeal consultancy. Every case is reviewed and assigned to the specialist who fits it, led by the expert who pioneered the industry in 2014.",
+      "email": "contact@appeal-edge.com",
+      "sameAs": [
+        "https://www.instagram.com/appeal.edge/",
+        "https://www.linkedin.com/company/112773661/"
+      ],
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "Canada"
+        },
+        {
+          "@type": "Country",
+          "name": "Germany"
+        },
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "Country",
+          "name": "Italy"
+        },
+        {
+          "@type": "Country",
+          "name": "Japan"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        }
+      ],
+      "knowsAbout": [
+        "Inauthentic and counterfeit complaints",
+        "Order Defect Rate, Late Shipment Rate, and Valid Tracking Rate",
+        "Intellectual property, trademark, and copyright complaints",
+        "Related account suspensions",
+        "Listing policy violations and restricted category issues",
+        "Review manipulation suspicions",
+        "Dropshipping policy violations",
+        "Used sold as new and condition complaints"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "contact@appeal-edge.com",
+        "url": "https://tally.so/r/Y5voaW"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.appeal-edge.com/#khushi-narwal",
+      "name": "Khushi Narwal",
+      "jobTitle": "COO",
+      "worksFor": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      }
+    },
     {
       "@type": "Article",
       "@id": "https://www.appeal-edge.com/blog/amazon-invoice-requirements-supplier-documents-appeal/#article",
       "headline": "What Invoices Does Amazon Accept for an Appeal",
       "description": "Amazon rejects invoices for specific, fixable reasons. Here is exactly what an invoice needs to show to satisfy an inauthentic or counterfeit appeal.",
-      "author": { "@id": "https://www.appeal-edge.com/#khushi-narwal" },
-      "publisher": { "@id": "https://www.appeal-edge.com/#organization" },
+      "author": {
+        "@id": "https://www.appeal-edge.com/#khushi-narwal"
+      },
+      "publisher": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      },
       "datePublished": "2026-08-05",
       "dateModified": "2026-08-05",
       "mainEntityOfPage": "https://www.appeal-edge.com/blog/amazon-invoice-requirements-supplier-documents-appeal/",
       "image": "https://www.appeal-edge.com/og-image.png",
       "articleSection": "Inauthentic",
-      "keywords": ["Amazon invoice requirements", "Amazon supplier invoice appeal", "Amazon inauthentic complaint invoice", "Amazon appeal documentation"]
+      "keywords": [
+        "Amazon invoice requirements",
+        "Amazon supplier invoice appeal",
+        "Amazon inauthentic complaint invoice",
+        "Amazon appeal documentation"
+      ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.appeal-edge.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.appeal-edge.com/blog/" },
-        { "@type": "ListItem", "position": 3, "name": "Invoice Requirements", "item": "https://www.appeal-edge.com/blog/amazon-invoice-requirements-supplier-documents-appeal/" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.appeal-edge.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.appeal-edge.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Invoice Requirements",
+          "item": "https://www.appeal-edge.com/blog/amazon-invoice-requirements-supplier-documents-appeal/"
+        }
       ]
     },
     {
       "@type": "FAQPage",
       "@id": "https://www.appeal-edge.com/blog/amazon-invoice-requirements-supplier-documents-appeal/#faq",
       "mainEntity": [
-        { "@type": "Question", "name": "Why was my invoice rejected if the purchase was real?", "acceptedAnswer": { "@type": "Answer", "text": "Most rejections are not about authenticity, they are about a missing field: no clear supplier name, an outdated date, a quantity that reads as personal use, or product details that do not match the ASIN in question." } },
-        { "@type": "Question", "name": "How many units does an invoice need to show?", "acceptedAnswer": { "@type": "Answer", "text": "Enough to reflect a wholesale relationship rather than a personal purchase. A single unit invoice is one of the most common reasons a legitimate invoice still gets rejected." } },
-        { "@type": "Question", "name": "What if my supplier will not give me a formal invoice?", "acceptedAnswer": { "@type": "Answer", "text": "A letter of authorization from the supplier, along with purchase order confirmations or payment records, can sometimes support an appeal when a complete invoice is not available." } },
-        { "@type": "Question", "name": "Can I redact pricing on an invoice I submit?", "acceptedAnswer": { "@type": "Answer", "text": "You generally can for confidentiality, but a heavily redacted document can slow review if it looks incomplete rather than simply privacy conscious. Keep the supplier name, date, and product details fully visible." } }
+        {
+          "@type": "Question",
+          "name": "Why was my invoice rejected if the purchase was real?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most rejections are not about authenticity, they are about a missing field: no clear supplier name, an outdated date, a quantity that reads as personal use, or product details that do not match the ASIN in question."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many units does an invoice need to show?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Enough to reflect a wholesale relationship rather than a personal purchase. A single unit invoice is one of the most common reasons a legitimate invoice still gets rejected."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if my supplier will not give me a formal invoice?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A letter of authorization from the supplier, along with purchase order confirmations or payment records, can sometimes support an appeal when a complete invoice is not available."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I redact pricing on an invoice I submit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You generally can for confidentiality, but a heavily redacted document can slow review if it looks incomplete rather than simply privacy conscious. Keep the supplier name, date, and product details fully visible."
+          }
+        }
       ]
     }
   ]

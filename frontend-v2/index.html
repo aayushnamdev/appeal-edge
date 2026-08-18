@@ -41,16 +41,85 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
       "@id": "https://www.appeal-edge.com/#organization",
       "name": "Appeal Edge",
       "url": "https://www.appeal-edge.com/",
-      "logo": { "@type": "ImageObject", "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png", "width": 400, "height": 135 },
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png",
+        "width": 400,
+        "height": 135
+      },
       "description": "Independent Amazon seller suspension appeal consultancy. Every case is reviewed and assigned to the specialist who fits it, led by the expert who pioneered the industry in 2014.",
       "email": "contact@appeal-edge.com",
       "sameAs": [
         "https://www.instagram.com/appeal.edge/",
         "https://www.linkedin.com/company/112773661/"
+      ],
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "Canada"
+        },
+        {
+          "@type": "Country",
+          "name": "Germany"
+        },
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "Country",
+          "name": "Italy"
+        },
+        {
+          "@type": "Country",
+          "name": "Japan"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        }
+      ],
+      "knowsAbout": [
+        "Inauthentic and counterfeit complaints",
+        "Order Defect Rate, Late Shipment Rate, and Valid Tracking Rate",
+        "Intellectual property, trademark, and copyright complaints",
+        "Related account suspensions",
+        "Listing policy violations and restricted category issues",
+        "Review manipulation suspicions",
+        "Dropshipping policy violations",
+        "Used sold as new and condition complaints"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "contact@appeal-edge.com",
+        "url": "https://tally.so/r/Y5voaW"
+      },
+      "founder": [
+        {
+          "@id": "https://www.appeal-edge.com/#khushi-narwal"
+        },
+        {
+          "@id": "https://www.appeal-edge.com/#apeksha-namdev"
+        },
+        {
+          "@id": "https://www.appeal-edge.com/#aayush-namdev"
+        }
       ]
     },
     {
@@ -58,7 +127,9 @@
       "@id": "https://www.appeal-edge.com/#website",
       "url": "https://www.appeal-edge.com/",
       "name": "Appeal Edge",
-      "publisher": { "@id": "https://www.appeal-edge.com/#organization" },
+      "publisher": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      },
       "inLanguage": "en-US"
     },
     {
@@ -68,29 +139,71 @@
         {
           "@type": "Question",
           "name": "Do you guarantee reinstatement?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No one can, and anyone who promises it is lying to you. What we do is maximize your odds: identify the real root cause, write the plan of action Amazon actually wants to see, and guide it through." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No one can, and anyone who promises it is lying to you. What we do is maximize your odds: identify the real root cause, write the plan of action Amazon actually wants to see, and guide it through."
+          }
         },
         {
           "@type": "Question",
           "name": "How fast can my account come back?",
-          "acceptedAnswer": { "@type": "Answer", "text": "It depends on the case type and how Amazon responds. Once we review your case, we tell you upfront what a realistic timeline looks like for your situation." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on the case type and how Amazon responds. Once we review your case, we tell you upfront what a realistic timeline looks like for your situation."
+          }
         },
         {
           "@type": "Question",
           "name": "What does it cost?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Reviewing your case costs nothing. Pricing is discussed after we understand what your case actually requires, so you never pay for work you don't need." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Reviewing your case costs nothing. Pricing is discussed after we understand what your case actually requires, so you never pay for work you don't need."
+          }
         },
         {
           "@type": "Question",
           "name": "Are you affiliated with Amazon?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. Appeal Edge is an independent consultancy. We work for sellers, not for Amazon." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Appeal Edge is an independent consultancy. We work for sellers, not for Amazon."
+          }
         },
         {
           "@type": "Question",
           "name": "Who actually works on my case?",
-          "acceptedAnswer": { "@type": "Answer", "text": "A named Appeal Edge expert. Every submission is reviewed and assigned to the specialist who fits it, and our lead expert Jeff Goldin personally takes the most complex cases. Nothing is passed to a call center." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A named Appeal Edge expert. Every submission is reviewed and assigned to the specialist who fits it, and our lead expert Jeff Goldin personally takes the most complex cases. Nothing is passed to a call center."
+          }
         }
       ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.appeal-edge.com/#khushi-narwal",
+      "name": "Khushi Narwal",
+      "jobTitle": "COO",
+      "worksFor": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.appeal-edge.com/#apeksha-namdev",
+      "name": "Apeksha Namdev",
+      "jobTitle": "CEO",
+      "worksFor": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.appeal-edge.com/#aayush-namdev",
+      "name": "Aayush Namdev",
+      "jobTitle": "CTO",
+      "worksFor": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      }
     }
   ]
 }

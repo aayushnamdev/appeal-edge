@@ -43,11 +43,75 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
       "@id": "https://www.appeal-edge.com/#organization",
       "name": "Appeal Edge",
       "url": "https://www.appeal-edge.com/",
-      "logo": { "@type": "ImageObject", "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png", "width": 400, "height": 135 }
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png",
+        "width": 400,
+        "height": 135
+      },
+      "description": "Independent Amazon seller suspension appeal consultancy. Every case is reviewed and assigned to the specialist who fits it, led by the expert who pioneered the industry in 2014.",
+      "email": "contact@appeal-edge.com",
+      "sameAs": [
+        "https://www.instagram.com/appeal.edge/",
+        "https://www.linkedin.com/company/112773661/"
+      ],
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "Canada"
+        },
+        {
+          "@type": "Country",
+          "name": "Germany"
+        },
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "Country",
+          "name": "Italy"
+        },
+        {
+          "@type": "Country",
+          "name": "Japan"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        }
+      ],
+      "knowsAbout": [
+        "Inauthentic and counterfeit complaints",
+        "Order Defect Rate, Late Shipment Rate, and Valid Tracking Rate",
+        "Intellectual property, trademark, and copyright complaints",
+        "Related account suspensions",
+        "Listing policy violations and restricted category issues",
+        "Review manipulation suspicions",
+        "Dropshipping policy violations",
+        "Used sold as new and condition complaints"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "contact@appeal-edge.com",
+        "url": "https://tally.so/r/Y5voaW"
+      }
     },
     {
       "@type": "Service",
@@ -55,16 +119,42 @@
       "name": "Amazon Plan of Action Writing Service",
       "serviceType": "Amazon seller Plan of Action writing and review",
       "description": "A case specific Plan of Action written for a known violation type, naming the root cause, corrective action, and preventive measures Amazon expects to see.",
-      "provider": { "@id": "https://www.appeal-edge.com/#organization" },
+      "provider": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      },
       "areaServed": [
-        { "@type": "Country", "name": "United States" },
-        { "@type": "Country", "name": "United Kingdom" },
-        { "@type": "Country", "name": "Canada" },
-        { "@type": "Country", "name": "Germany" },
-        { "@type": "Country", "name": "France" },
-        { "@type": "Country", "name": "Italy" },
-        { "@type": "Country", "name": "Japan" },
-        { "@type": "Country", "name": "India" }
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "Canada"
+        },
+        {
+          "@type": "Country",
+          "name": "Germany"
+        },
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "Country",
+          "name": "Italy"
+        },
+        {
+          "@type": "Country",
+          "name": "Japan"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        }
       ],
       "makesOffer": {
         "@type": "Offer",
@@ -77,8 +167,18 @@
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.appeal-edge.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Plan of Action Writing Service", "item": "https://www.appeal-edge.com/amazon-plan-of-action-writing-service/" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.appeal-edge.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Plan of Action Writing Service",
+          "item": "https://www.appeal-edge.com/amazon-plan-of-action-writing-service/"
+        }
       ]
     },
     {
@@ -88,22 +188,34 @@
         {
           "@type": "Question",
           "name": "What actually gets a Plan of Action rejected?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Generic language, a root cause that does not match what Amazon flagged, and preventive measures that read as copied from a template. Amazon reads for specifics, not effort." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Generic language, a root cause that does not match what Amazon flagged, and preventive measures that read as copied from a template. Amazon reads for specifics, not effort."
+          }
         },
         {
           "@type": "Question",
           "name": "Do you write the whole Plan of Action, or just review mine?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Both are available. Some sellers want a Plan of Action written from scratch, others already have a draft and want it checked against what Amazon is actually asking for before they submit it." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Both are available. Some sellers want a Plan of Action written from scratch, others already have a draft and want it checked against what Amazon is actually asking for before they submit it."
+          }
         },
         {
           "@type": "Question",
           "name": "How is this different from the full appeal service?",
-          "acceptedAnswer": { "@type": "Answer", "text": "This is scoped to the Plan of Action document itself, for sellers who already know their violation type. The full appeal service also includes the initial root cause diagnosis for cases where that is not yet clear." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This is scoped to the Plan of Action document itself, for sellers who already know their violation type. The full appeal service also includes the initial root cause diagnosis for cases where that is not yet clear."
+          }
         },
         {
           "@type": "Question",
           "name": "What does it cost?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Reviewing the case costs nothing. Pricing is not published because it depends on case complexity and is discussed after the case is reviewed." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Reviewing the case costs nothing. Pricing is not published because it depends on case complexity and is discussed after the case is reviewed."
+          }
         }
       ]
     }

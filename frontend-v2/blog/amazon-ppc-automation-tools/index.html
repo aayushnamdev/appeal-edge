@@ -49,39 +49,129 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": [
+        "Organization",
+        "ProfessionalService"
+      ],
       "@id": "https://www.appeal-edge.com/#organization",
       "name": "Appeal Edge",
       "url": "https://www.appeal-edge.com/",
-      "logo": { "@type": "ImageObject", "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png", "width": 400, "height": 135 }
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.appeal-edge.com/assets/logo/appeal-edge-logo.png",
+        "width": 400,
+        "height": 135
+      },
+      "description": "Independent Amazon seller suspension appeal consultancy. Every case is reviewed and assigned to the specialist who fits it, led by the expert who pioneered the industry in 2014.",
+      "email": "contact@appeal-edge.com",
+      "sameAs": [
+        "https://www.instagram.com/appeal.edge/",
+        "https://www.linkedin.com/company/112773661/"
+      ],
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "United States"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        {
+          "@type": "Country",
+          "name": "Canada"
+        },
+        {
+          "@type": "Country",
+          "name": "Germany"
+        },
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "Country",
+          "name": "Italy"
+        },
+        {
+          "@type": "Country",
+          "name": "Japan"
+        },
+        {
+          "@type": "Country",
+          "name": "India"
+        }
+      ],
+      "knowsAbout": [
+        "Inauthentic and counterfeit complaints",
+        "Order Defect Rate, Late Shipment Rate, and Valid Tracking Rate",
+        "Intellectual property, trademark, and copyright complaints",
+        "Related account suspensions",
+        "Listing policy violations and restricted category issues",
+        "Review manipulation suspicions",
+        "Dropshipping policy violations",
+        "Used sold as new and condition complaints"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "contact@appeal-edge.com",
+        "url": "https://tally.so/r/Y5voaW"
+      }
     },
     {
       "@type": "Person",
       "@id": "https://www.appeal-edge.com/#aayush-namdev",
       "name": "Aayush Namdev",
       "jobTitle": "CTO",
-      "worksFor": { "@id": "https://www.appeal-edge.com/#organization" }
+      "worksFor": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      }
     },
     {
       "@type": "Article",
       "@id": "https://www.appeal-edge.com/blog/amazon-ppc-automation-tools/#article",
       "headline": "Amazon PPC Automation Tools Guide",
       "description": "Bid automation tools adjust your Amazon ad spend hundreds of times a day. Here's what they're actually optimizing for.",
-      "author": { "@id": "https://www.appeal-edge.com/#aayush-namdev" },
-      "publisher": { "@id": "https://www.appeal-edge.com/#organization" },
+      "author": {
+        "@id": "https://www.appeal-edge.com/#aayush-namdev"
+      },
+      "publisher": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      },
       "datePublished": "2026-07-17",
       "dateModified": "2026-07-17",
       "mainEntityOfPage": "https://www.appeal-edge.com/blog/amazon-ppc-automation-tools/",
       "image": "https://www.appeal-edge.com/og-image.png",
       "articleSection": "Advertising Tech",
-      "keywords": ["Amazon PPC automation tools", "Amazon advertising software", "Amazon ACOS optimization", "Amazon PPC management tool"]
+      "keywords": [
+        "Amazon PPC automation tools",
+        "Amazon advertising software",
+        "Amazon ACOS optimization",
+        "Amazon PPC management tool"
+      ]
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.appeal-edge.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.appeal-edge.com/blog/" },
-        { "@type": "ListItem", "position": 3, "name": "PPC Automation Tools", "item": "https://www.appeal-edge.com/blog/amazon-ppc-automation-tools/" }
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.appeal-edge.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.appeal-edge.com/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "PPC Automation Tools",
+          "item": "https://www.appeal-edge.com/blog/amazon-ppc-automation-tools/"
+        }
       ]
     },
     {
@@ -91,22 +181,34 @@
         {
           "@type": "Question",
           "name": "What is the difference between rule based and predictive PPC automation?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Rule based tools adjust bids when a metric like ACOS crosses a threshold you set. Predictive bid engines use a model trained on conversion likelihood to set bids before the metric has moved." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Rule based tools adjust bids when a metric like ACOS crosses a threshold you set. Predictive bid engines use a model trained on conversion likelihood to set bids before the metric has moved."
+          }
         },
         {
           "@type": "Question",
           "name": "Can automated keyword harvesting cause a policy problem?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Automatic and broad match campaigns can promote a search term into an active campaign without review, and that term can sometimes overlap with a competitor's registered brand name." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Automatic and broad match campaigns can promote a search term into an active campaign without review, and that term can sometimes overlap with a competitor's registered brand name."
+          }
         },
         {
           "@type": "Question",
           "name": "Should search term promotion be fully automatic?",
-          "acceptedAnswer": { "@type": "Answer", "text": "It's safer to set the tool to suggest high performing search terms rather than promote them automatically, at least until you've reviewed a few cycles of what it's actually harvesting." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It's safer to set the tool to suggest high performing search terms rather than promote them automatically, at least until you've reviewed a few cycles of what it's actually harvesting."
+          }
         },
         {
           "@type": "Question",
           "name": "Does automated ad creative need review too?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Templated ad copy can include a restricted claim or comparison Amazon doesn't allow, and a template that passed review once won't guarantee every variation it generates will." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Templated ad copy can include a restricted claim or comparison Amazon doesn't allow, and a template that passed review once won't guarantee every variation it generates will."
+          }
         }
       ]
     }
