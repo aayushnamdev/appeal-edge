@@ -29,6 +29,7 @@ const NAV_LINKS_SUB = `<ul class="nav-links" id="nav-links-list">
         <li><a href="/#handle">What we handle</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><a href="/#faq">FAQ</a></li>
+        <li><a href="/about/">About</a></li>
       </ul>`;
 
 const NAV_LINKS_HOME = `<ul class="nav-links" id="nav-links-list">
@@ -38,6 +39,7 @@ const NAV_LINKS_HOME = `<ul class="nav-links" id="nav-links-list">
         <li><a href="#handle">What we handle</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><a href="#faq">FAQ</a></li>
+        <li><a href="/about/">About</a></li>
       </ul>`;
 
 const FOOTER_NAV_SUB = `<ul>
@@ -47,6 +49,7 @@ const FOOTER_NAV_SUB = `<ul>
           <li><a href="/#handle">What we handle</a></li>
           <li><a href="/blog/">Blog</a></li>
           <li><a href="/#faq">FAQ</a></li>
+          <li><a href="/about/">About</a></li>
           <li><a href="/privacy-policy/">Privacy Policy</a></li>
           <li><a href="/terms/">Terms of Service</a></li>
         </ul>`;
@@ -58,6 +61,7 @@ const FOOTER_NAV_HOME = `<ul>
           <li><a href="#handle">What we handle</a></li>
           <li><a href="/blog/">Blog</a></li>
           <li><a href="#faq">FAQ</a></li>
+          <li><a href="/about/">About</a></li>
           <li><a href="/privacy-policy/">Privacy Policy</a></li>
           <li><a href="/terms/">Terms of Service</a></li>
         </ul>`;
