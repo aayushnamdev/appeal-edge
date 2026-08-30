@@ -1,5 +1,7 @@
 # GEO Handoff — 2026-08-20
 
+> **Superseded 2026-08-30.** Jeff Goldin is no longer affiliated with Appeal Edge in any capacity, not as advisor, not as expert. Everything below that discusses him (Phase A's `/experts/jeff-goldin/` page, Phase C2's "Jeff as advisor" section, Phase C5's blocked `sameAs`/SellerCare decision) is historical record of decisions made while he was still involved and is no longer current. `/experts/jeff-goldin/` now 301s to `/experts/`, a specialist panel page with no named individuals. Phase C5 is moot. See the plan file `so-okay-quick-context-spicy-lemur.md` in `~/.claude/plans/` for the removal work and the current specialist panel story (20+ years combined experience, US/UK/Europe/India, panel members not named publicly).
+
 Full plan: `/Users/aayushnamdev/.claude/plans/do-a-geo-for-breezy-harp.md` (read this first, it has the complete diagnosis and phase breakdown).
 
 ## Goal

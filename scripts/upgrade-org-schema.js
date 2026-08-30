@@ -39,7 +39,7 @@ const SKIP_DIRS = new Set(['scroll-hero-test']);
 const ORG_ID = 'https://www.appeal-edge.com/#organization';
 
 const DESCRIPTION =
-  "Independent Amazon seller suspension appeal consultancy. Every case is reviewed and assigned to the specialist who fits it, led by the expert who pioneered the industry in 2014.";
+  "Independent Amazon seller suspension appeal consultancy. Every case is read by a specialist from a panel with more than 20 years of combined Amazon experience, free, before you pay anything.";
 const EMAIL = 'contact@appeal-edge.com';
 const SAME_AS = [
   'https://www.instagram.com/appeal.edge/',

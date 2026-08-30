@@ -41,7 +41,7 @@ const PRIORITY_OVERRIDES = {
   '/amazon-plan-of-action-writing-service/': { priority: '0.8', changefreq: 'monthly' },
   '/amazon-ip-complaint-removal-service/': { priority: '0.8', changefreq: 'monthly' },
   '/amazon-appeal-service-india/': { priority: '0.8', changefreq: 'monthly' },
-  '/experts/jeff-goldin/': { priority: '0.6', changefreq: 'monthly' },
+  '/experts/': { priority: '0.6', changefreq: 'monthly' },
   '/privacy-policy/': { priority: '0.3', changefreq: 'yearly' },
   '/terms/': { priority: '0.3', changefreq: 'yearly' },
 };
