@@ -324,6 +324,12 @@
   .prose ul, .prose ol { margin-top: 16px; padding-left: 22px; color: var(--ink); }
   .prose li { margin-top: 8px; }
   .prose strong { color: var(--navy); }
+  .prose table { margin-top: 20px; width: 100%; border-collapse: collapse; border-radius: var(--r-card); overflow: hidden; box-shadow: var(--e1); border: 1px solid var(--line); }
+  .prose th, .prose td { padding: 14px 18px; text-align: left; border-bottom: 1px solid var(--line); font-size: 15px; vertical-align: top; }
+  .prose th { background: var(--mist); font-family: var(--font-display); font-weight: 800; text-transform: uppercase; font-size: 12px; letter-spacing: .06em; color: var(--navy); }
+  .prose td { color: var(--ink); }
+  .prose tr:last-child td { border-bottom: none; }
+  @media (max-width: 640px) { .prose table { display: block; overflow-x: auto; white-space: nowrap; } }
   .prose table { width: 100%; margin-top: 20px; border-collapse: collapse; font-size: 15px; }
   .prose th, .prose td { text-align: left; padding: 12px 14px; border: 1px solid var(--line); vertical-align: top; }
   .prose th { background: var(--mist); color: var(--navy); font-size: 13px; text-transform: uppercase; letter-spacing: .04em; }
@@ -397,7 +403,7 @@
 
 <header class="nav" id="nav">
   <div class="nav-inner">
-    <a class="brand" href="/" aria-label="Appeal Edge home"><img class="brand-logo" src="/assets/logo/appeal-edge-logo.png" alt="Appeal Edge"></a>
+    <a class="brand" href="/" aria-label="Appeal Edge home"><img class="brand-logo" src="/assets/logo/appeal-edge-logo.png" alt="Appeal Edge" width="400" height="135"></a>
     <nav aria-label="Main">
       <ul class="nav-links" id="nav-links-list">
         <li><a href="/amazon-appeal-service/">Services</a></li>
@@ -447,7 +453,7 @@
     </header>
 
     <div class="prose">
-      <p class="lede-p">Every rejected Plan of Action Amazon's reviewers see follows the same pattern: it apologizes, it promises to do better, and it never names what actually broke. A plan that gets an account reinstated does the opposite. It reads like an internal incident report, not a customer service email.</p>
+      <p class="lede-p">Every rejected Plan of Action Amazon's reviewers see follows the same pattern: it apologizes, it promises to do better, and it never names what actually broke. A plan that gets an account reinstated does the opposite. It reads like an internal incident report, not a customer service email. It reads like an internal incident report that names the specific line in Amazon's <a href="https://m.media-amazon.com/images/G/65/rainier/help/Selling_Policies_and_Seller_Code_of_Conduct_SG_new_version_clean_PDF.pdf" target="_blank" rel="noopener">Seller Code of Conduct</a> that was crossed.</p>
 
       <div class="callout">
         <h4>Quick answer</h4>
@@ -458,11 +464,12 @@
       <p>Templates from Scribd, forum threads, or an Etsy listing are written to be generic, since the author has no idea what your actual violation is. Amazon's reviewers read hundreds of appeals a day, and a plan built from a generic template reads as exactly that: generic. The structure below is the same one used across every violation type, but the content inside it has to come from your own account and your own case.</p>
 
       <h2>The three sections every accepted plan contains</h2>
-      <ol>
-        <li><strong>Root cause.</strong> Not a category like quality issues or a documentation problem. The specific, named thing that broke: a defective production run, a listing photo that misrepresented the product, a supplier who stopped providing compliant invoices, a returned unit relisted without inspection.</li>
-        <li><strong>Corrective actions already taken.</strong> What you did before you submitted the plan, described as completed, not planned. The batch was pulled on a specific date, the listing was corrected, the supplier relationship was ended, refunds were issued to the affected customers.</li>
-        <li><strong>Preventive measures going forward.</strong> The actual process change that stops the same failure from happening again. An added inspection step, a corrected listing template, a new supplier vetting requirement, not a promise to monitor more closely.</li>
-      </ol>
+      <table>
+        <tr><th>Section</th><th>What it means</th></tr>
+        <tr><td>Root cause</td><td>Not a category like quality issues or a documentation problem. The specific, named thing that broke: a defective production run, a listing photo that misrepresented the product, a supplier who stopped providing compliant invoices, a returned unit relisted without inspection.</td></tr>
+        <tr><td>Corrective actions already taken</td><td>What you did before you submitted the plan, described as completed, not planned. The batch was pulled on a specific date, the listing was corrected, the supplier relationship was ended, refunds were issued to the affected customers.</td></tr>
+        <tr><td>Preventive measures going forward</td><td>The actual process change that stops the same failure from happening again. An added inspection step, a corrected listing template, a new supplier vetting requirement, not a promise to monitor more closely.</td></tr>
+      </table>
 
       <h2>Wording you can adapt for each section</h2>
       <div class="callout">
@@ -622,7 +629,7 @@
     </div>
     <div class="footer-cols">
       <div>
-        <a class="brand" href="/"><img class="brand-logo" src="/assets/logo/appeal-edge-logo-white.png" alt="Appeal Edge"></a>
+        <a class="brand" href="/"><img class="brand-logo" src="/assets/logo/appeal-edge-logo-white.png" alt="Appeal Edge" width="400" height="135"></a>
         <p class="footer-desc">The Reinstatement Force.</p>
       </div>
       <div class="footer-col">

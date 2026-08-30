@@ -294,6 +294,12 @@
   .prose ul, .prose ol { margin-top: 16px; padding-left: 22px; color: var(--ink); }
   .prose li { margin-top: 8px; }
   .prose strong { color: var(--navy); }
+  .prose table { margin-top: 20px; width: 100%; border-collapse: collapse; border-radius: var(--r-card); overflow: hidden; box-shadow: var(--e1); border: 1px solid var(--line); }
+  .prose th, .prose td { padding: 14px 18px; text-align: left; border-bottom: 1px solid var(--line); font-size: 15px; vertical-align: top; }
+  .prose th { background: var(--mist); font-family: var(--font-display); font-weight: 800; text-transform: uppercase; font-size: 12px; letter-spacing: .06em; color: var(--navy); }
+  .prose td { color: var(--ink); }
+  .prose tr:last-child td { border-bottom: none; }
+  @media (max-width: 640px) { .prose table { display: block; overflow-x: auto; white-space: nowrap; } }
   .prose table { width: 100%; margin-top: 20px; border-collapse: collapse; font-size: 15px; }
   .prose th, .prose td { text-align: left; padding: 12px 14px; border: 1px solid var(--line); vertical-align: top; }
   .prose th { background: var(--mist); color: var(--navy); font-size: 13px; text-transform: uppercase; letter-spacing: .04em; }
@@ -363,7 +369,7 @@
 
 <header class="nav" id="nav">
   <div class="nav-inner">
-    <a class="brand" href="/" aria-label="Appeal Edge home"><img class="brand-logo" src="/assets/logo/appeal-edge-logo.png" alt="Appeal Edge"></a>
+    <a class="brand" href="/" aria-label="Appeal Edge home"><img class="brand-logo" src="/assets/logo/appeal-edge-logo.png" alt="Appeal Edge" width="400" height="135"></a>
     <nav aria-label="Main">
       <ul class="nav-links" id="nav-links-list">
         <li><a href="/amazon-appeal-service/">Services</a></li>
@@ -416,11 +422,12 @@
       <p class="lede-p">Order Defect Rate gets treated as a single number to watch, but it's actually three separate metrics stacked together, and bringing it back under the 1 percent threshold takes a different fix for each one. Here is what counts toward each component, how the rolling window actually works, and the adjacent metric that catches sellers off guard.</p>
 
       <h2>The three components of ODR</h2>
-      <ul>
-        <li><strong>Negative feedback rate.</strong> The share of orders that received feedback of one or two stars, or a written negative comment tied to the order itself rather than the product generally.</li>
-        <li><strong>A to z Guarantee claim rate.</strong> The share of orders where a buyer filed an A to z Guarantee claim, which Amazon can grant even without seller input if a response isn't provided quickly enough.</li>
-        <li><strong>Chargeback claim rate.</strong> The share of orders disputed directly through the buyer's card issuer rather than through Amazon.</li>
-      </ul>
+      <table>
+        <tr><th>Component</th><th>What it measures</th><th>How to bring it down</th></tr>
+        <tr><td>Negative feedback rate</td><td>The share of orders that received feedback of one or two stars, or a written negative comment tied to the order itself rather than the product generally.</td><td>Respond to the buyer where appropriate, and request removal through Amazon's feedback tools where the comment violates feedback guidelines. Fix whatever root cause is producing repeat complaints.</td></tr>
+        <tr><td>A to z Guarantee claim rate</td><td>The share of orders where a buyer filed an A to z Guarantee claim, which Amazon can grant even without seller input if a response isn't provided quickly enough.</td><td>Respond to buyer messages within 24 hours. A large share of claims get automatically granted simply because the seller didn't respond in time.</td></tr>
+        <tr><td>Chargeback claim rate</td><td>The share of orders disputed directly through the buyer's card issuer rather than through Amazon.</td><td>Dispute claims where you have delivery confirmation or tracking showing the order was fulfilled as described.</td></tr>
+      </table>
       <p>All three combine into the single ODR percentage shown on your account health dashboard, but each one needs a distinct fix, since the causes and the levers available for each are different.</p>
 
       <h2>The 60 day rolling window</h2>
@@ -501,7 +508,7 @@
     </div>
     <div class="footer-cols">
       <div>
-        <a class="brand" href="/"><img class="brand-logo" src="/assets/logo/appeal-edge-logo-white.png" alt="Appeal Edge"></a>
+        <a class="brand" href="/"><img class="brand-logo" src="/assets/logo/appeal-edge-logo-white.png" alt="Appeal Edge" width="400" height="135"></a>
         <p class="footer-desc">The Reinstatement Force.</p>
       </div>
       <div class="footer-col">

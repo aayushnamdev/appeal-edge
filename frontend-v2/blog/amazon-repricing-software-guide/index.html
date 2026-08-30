@@ -15,7 +15,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Can a Repricer Cause an Amazon Suspension? | Appeal Edge</title>
-<meta name="description" content="A repricer can trigger an Amazon suspension through Fair Pricing Policy violations if it's misconfigured. Here's exactly what crosses the line, and how to check your settings first.">
+<meta name="description" content="A repricer can trigger a suspension through Fair Pricing Policy violations if misconfigured. Here's what crosses the line, and how to check first.">
 <meta name="robots" content="noindex,follow">
 <link rel="canonical" href="https://www.appeal-edge.com/blog/amazon-repricing-software-guide/">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
@@ -26,7 +26,7 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Appeal Edge">
 <meta property="og:title" content="Can a Repricer Cause an Amazon Suspension?">
-<meta property="og:description" content="A repricer can trigger an Amazon suspension through Fair Pricing Policy violations if it's misconfigured. Here's exactly what crosses the line, and how to check your settings first.">
+<meta property="og:description" content="A repricer can trigger a suspension through Fair Pricing Policy violations if misconfigured. Here's what crosses the line, and how to check first.">
 <meta property="og:url" content="https://www.appeal-edge.com/blog/amazon-repricing-software-guide/">
 <meta property="og:image" content="https://www.appeal-edge.com/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -39,7 +39,7 @@
 <meta property="article:tag" content="Amazon repricing software">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Can a Repricer Cause an Amazon Suspension?">
-<meta name="twitter:description" content="What actually crosses the line into a Fair Pricing Policy violation and an Amazon suspension, and how to check your repricer settings first.">
+<meta name="twitter:description" content="A repricer can trigger a suspension through Fair Pricing Policy violations if misconfigured. Here's what crosses the line, and how to check first.">
 <meta name="twitter:image" content="https://www.appeal-edge.com/og-image.png">
 <link rel="preload" href="/assets/fonts/archivo-variable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/instrument-sans-variable.woff2" as="font" type="font/woff2" crossorigin>
@@ -294,6 +294,12 @@
   .prose ul, .prose ol { margin-top: 16px; padding-left: 22px; color: var(--ink); }
   .prose li { margin-top: 8px; }
   .prose strong { color: var(--navy); }
+  .prose table { margin-top: 20px; width: 100%; border-collapse: collapse; border-radius: var(--r-card); overflow: hidden; box-shadow: var(--e1); border: 1px solid var(--line); }
+  .prose th, .prose td { padding: 14px 18px; text-align: left; border-bottom: 1px solid var(--line); font-size: 15px; vertical-align: top; }
+  .prose th { background: var(--mist); font-family: var(--font-display); font-weight: 800; text-transform: uppercase; font-size: 12px; letter-spacing: .06em; color: var(--navy); }
+  .prose td { color: var(--ink); }
+  .prose tr:last-child td { border-bottom: none; }
+  @media (max-width: 640px) { .prose table { display: block; overflow-x: auto; white-space: nowrap; } }
   .callout { margin-top: 28px; padding: 24px 26px; border-radius: var(--r-card); background: linear-gradient(180deg, #FFFFFF 0%, #F4F7FB 100%); border: 1px solid var(--line); box-shadow: var(--e1); }
   .callout.warn { border-color: rgba(245,166,35,.4); background: linear-gradient(180deg, #FFFDF7 0%, #FFF6E6 100%); }
   .callout h4 { font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--amber-dark); margin-bottom: 10px; }
@@ -360,7 +366,7 @@
 
 <header class="nav" id="nav">
   <div class="nav-inner">
-    <a class="brand" href="/" aria-label="Appeal Edge home"><img class="brand-logo" src="/assets/logo/appeal-edge-logo.png" alt="Appeal Edge"></a>
+    <a class="brand" href="/" aria-label="Appeal Edge home"><img class="brand-logo" src="/assets/logo/appeal-edge-logo.png" alt="Appeal Edge" width="400" height="135"></a>
     <nav aria-label="Main">
       <ul class="nav-links" id="nav-links-list">
         <li><a href="/amazon-appeal-service/">Services</a></li>
@@ -416,6 +422,11 @@
       <p>Every repricer on the market falls into one of two categories, and the difference matters more than any individual feature list.</p>
       <p><strong>Rule based repricers</strong> follow a fixed instruction: beat the lowest price by a set amount, match the Buy Box price, or stay a fixed percentage above your floor. Tools like RepricerExpress and BQool built their early reputation on this model. It's simple to set up and easy to audit, but it reacts to competitors rather than to your own margin or sell through rate.</p>
       <p><strong>Algorithmic repricers</strong> weigh more than the lowest price: your sales velocity, current margin, stock level, and how long you've held or lost the Buy Box. Seller Snap and Informed.co are built around this approach. They ask for more setup work up front, in exchange for pricing decisions that account for whether winning the Buy Box at a given price is actually profitable.</p>
+      <table>
+        <tr><th>Model</th><th>Decides using</th><th>Example tools</th><th>Trade off</th></tr>
+        <tr><td>Rule based</td><td>A fixed instruction: beat the lowest price by a set amount, match the Buy Box, or stay a fixed percentage above your floor.</td><td>RepricerExpress, BQool</td><td>Simple to set up and easy to audit, but reacts to competitors rather than your own margin or sell through rate.</td></tr>
+        <tr><td>Algorithmic</td><td>Sales velocity, current margin, stock level, and how long you've held or lost the Buy Box.</td><td>Seller Snap, Informed.co</td><td>More setup work up front, in exchange for pricing decisions tied to actual profitability.</td></tr>
+      </table>
 
       <h2>What the software is checking before every price change</h2>
       <ol>
@@ -495,7 +506,7 @@
     </div>
     <div class="footer-cols">
       <div>
-        <a class="brand" href="/"><img class="brand-logo" src="/assets/logo/appeal-edge-logo-white.png" alt="Appeal Edge"></a>
+        <a class="brand" href="/"><img class="brand-logo" src="/assets/logo/appeal-edge-logo-white.png" alt="Appeal Edge" width="400" height="135"></a>
         <p class="footer-desc">The Reinstatement Force.</p>
       </div>
       <div class="footer-col">
