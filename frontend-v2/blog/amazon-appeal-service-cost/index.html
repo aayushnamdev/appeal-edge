@@ -284,6 +284,12 @@
   .prose ul, .prose ol { margin-top: 16px; padding-left: 22px; color: var(--ink); }
   .prose li { margin-top: 8px; }
   .prose strong { color: var(--navy); }
+  .prose table { margin-top: 20px; width: 100%; border-collapse: collapse; border-radius: var(--r-card); overflow: hidden; box-shadow: var(--e1); border: 1px solid var(--line); }
+  .prose th, .prose td { padding: 14px 18px; text-align: left; border-bottom: 1px solid var(--line); font-size: 15px; vertical-align: top; }
+  .prose th { background: var(--mist); font-family: var(--font-display); font-weight: 800; text-transform: uppercase; font-size: 12px; letter-spacing: .06em; color: var(--navy); }
+  .prose td { color: var(--ink); }
+  .prose tr:last-child td { border-bottom: none; }
+  @media (max-width: 640px) { .prose table { display: block; overflow-x: auto; white-space: nowrap; } }
   .callout { margin-top: 28px; padding: 24px 26px; border-radius: var(--r-card); background: linear-gradient(180deg, #FFFFFF 0%, #F4F7FB 100%); border: 1px solid var(--line); box-shadow: var(--e1); }
   .callout.warn { border-color: rgba(245,166,35,.4); background: linear-gradient(180deg, #FFFDF7 0%, #FFF6E6 100%); }
   .callout h4 { font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--amber-dark); margin-bottom: 10px; }
@@ -350,7 +356,7 @@
 
 <header class="nav" id="nav">
   <div class="nav-inner">
-    <a class="brand" href="/" aria-label="Appeal Edge home"><img class="brand-logo" src="/assets/logo/appeal-edge-logo.png" alt="Appeal Edge"></a>
+    <a class="brand" href="/" aria-label="Appeal Edge home"><img class="brand-logo" src="/assets/logo/appeal-edge-logo.png" alt="Appeal Edge" width="400" height="135"></a>
     <nav aria-label="Main">
       <ul class="nav-links" id="nav-links-list">
         <li><a href="/amazon-appeal-service/">Services</a></li>
@@ -403,12 +409,13 @@
       <p class="lede-p">There's no single market price for an Amazon appeal, because the work varies enormously by case complexity. What follows is the honest range reported across the industry, so you know what's typical before anyone quotes you a number.</p>
 
       <h2>The real range, by type of help</h2>
-      <ul>
-        <li><strong>Doing it yourself:</strong> no direct cost, but real time and the risk of a wasted attempt if the plan doesn't address the actual root cause.</li>
-        <li><strong>Flat fee appeal services:</strong> commonly in the range of roughly $1,500 per appeal, sometimes with free resubmission for the same case.</li>
-        <li><strong>Amazon suspension lawyers:</strong> typically $1,500 to $5,000 per appeal, with arbitration or extended legal work pushing costs higher.</li>
-        <li><strong>Independent consultants:</strong> often around $2,000 to $2,500, depending on case complexity.</li>
-      </ul>
+      <table>
+        <tr><th>Type of help</th><th>Typical cost</th></tr>
+        <tr><td>Doing it yourself</td><td>No direct cost, but real time and the risk of a wasted attempt if the plan doesn't address the actual root cause.</td></tr>
+        <tr><td>Flat fee appeal services</td><td>Commonly in the range of roughly $1,500 per appeal, sometimes with free resubmission for the same case.</td></tr>
+        <tr><td>Amazon suspension lawyers</td><td>Typically $1,500 to $5,000 per appeal, with arbitration or extended legal work pushing costs higher.</td></tr>
+        <tr><td>Independent consultants</td><td>Often around $2,000 to $2,500, depending on case complexity.</td></tr>
+      </table>
 
       <h2>What actually changes the price</h2>
       <p>The same case type can cost very differently depending on a few factors: whether prior appeals already failed and need to be reworked from scratch, how many marketplaces or ASINs are involved, whether the case involves IP arbitration versus a more straightforward performance issue, and whether ongoing account monitoring is part of the engagement.</p>
@@ -490,7 +497,7 @@
     </div>
     <div class="footer-cols">
       <div>
-        <a class="brand" href="/"><img class="brand-logo" src="/assets/logo/appeal-edge-logo-white.png" alt="Appeal Edge"></a>
+        <a class="brand" href="/"><img class="brand-logo" src="/assets/logo/appeal-edge-logo-white.png" alt="Appeal Edge" width="400" height="135"></a>
         <p class="footer-desc">The Reinstatement Force.</p>
       </div>
       <div class="footer-col">
