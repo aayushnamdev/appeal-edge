@@ -24,40 +24,44 @@ const HOME_FILE = path.join(ROOT, 'index.html');
 
 const NAV_LINKS_SUB = `<ul class="nav-links" id="nav-links-list">
         <li><a href="/amazon-appeal-service/">Services</a></li>
-        <li><a href="/#expert">The Expert</a></li>
+        <li><a href="/experts/">Our Specialists</a></li>
         <li><a href="/#how">How it works</a></li>
         <li><a href="/#handle">What we handle</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><a href="/#faq">FAQ</a></li>
+        <li><a href="/about/">About</a></li>
       </ul>`;
 
 const NAV_LINKS_HOME = `<ul class="nav-links" id="nav-links-list">
         <li><a href="/amazon-appeal-service/">Services</a></li>
-        <li><a href="#expert">Advisor</a></li>
+        <li><a href="/experts/">Specialists</a></li>
         <li><a href="#how">How it works</a></li>
         <li><a href="#handle">What we handle</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><a href="#faq">FAQ</a></li>
+        <li><a href="/about/">About</a></li>
       </ul>`;
 
 const FOOTER_NAV_SUB = `<ul>
           <li><a href="/amazon-appeal-service/">Amazon Appeal Service</a></li>
-          <li><a href="/#expert">The Expert</a></li>
+          <li><a href="/experts/">Our Specialists</a></li>
           <li><a href="/#how">How it works</a></li>
           <li><a href="/#handle">What we handle</a></li>
           <li><a href="/blog/">Blog</a></li>
           <li><a href="/#faq">FAQ</a></li>
+          <li><a href="/about/">About</a></li>
           <li><a href="/privacy-policy/">Privacy Policy</a></li>
           <li><a href="/terms/">Terms of Service</a></li>
         </ul>`;
 
 const FOOTER_NAV_HOME = `<ul>
           <li><a href="/amazon-appeal-service/">Amazon Appeal Service</a></li>
-          <li><a href="#expert">Advisor</a></li>
+          <li><a href="/experts/">Specialists</a></li>
           <li><a href="#how">How it works</a></li>
           <li><a href="#handle">What we handle</a></li>
           <li><a href="/blog/">Blog</a></li>
           <li><a href="#faq">FAQ</a></li>
+          <li><a href="/about/">About</a></li>
           <li><a href="/privacy-policy/">Privacy Policy</a></li>
           <li><a href="/terms/">Terms of Service</a></li>
         </ul>`;

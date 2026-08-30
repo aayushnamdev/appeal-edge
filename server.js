@@ -61,6 +61,22 @@ const staticCacheOptions = {
   },
 };
 
+// Retired pages that need a 301 rather than a 404. Kept as a small explicit
+// map (path -> new path) rather than a regex, so future retired URLs can
+// join the same object.
+const RETIRED_REDIRECTS = {
+  '/experts/jeff-goldin': '/experts/',
+  '/experts/jeff-goldin/': '/experts/',
+};
+
+app.use((req, res, next) => {
+  const target = RETIRED_REDIRECTS[req.path];
+  if (target) {
+    return res.redirect(301, target);
+  }
+  next();
+});
+
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public'), staticCacheOptions));
 app.use('/assets', express.static(path.join(__dirname, 'assets'), staticCacheOptions));

@@ -1,6 +1,6 @@
 # Appeal Edge
 
-> Independent Amazon seller suspension appeal consultancy led by the expert who pioneered the industry in 2014. Cases are reviewed individually and pricing is provided after that review, not published as a fixed rate.
+> Independent Amazon seller suspension appeal consultancy. Every case is read by a specialist from a panel with more than 20 years of combined Amazon experience. Cases are reviewed individually and pricing is provided after that review, not published as a fixed rate.
 
 ## Services
 - [Amazon Suspension Appeal Service](https://www.appeal-edge.com/amazon-appeal-service/): case review, root cause diagnosis, and a case specific Plan of Action written for the actual suspension type
@@ -26,8 +26,10 @@
 - Step 4: Check the draft for generic language, vague claims, and missing specifics before submission
 
 ## Key Facts
-- [Jeff Goldin](https://www.appeal-edge.com/experts/jeff-goldin/), advisor to Appeal Edge, founded the first Amazon appeal and reinstatement firm in 2014 and has more than 25 years of Amazon experience across 7 marketplaces
-- Every case is reviewed and assigned to the specialist who fits it. The most complex cases are personally handled by the lead expert
+- [About Appeal Edge](https://www.appeal-edge.com/about/): who runs the company and how a case is handled
+- Appeal Edge is run by three founders: Khushi Narwal (COO), Apeksha Namdev (CEO), and Aayush Namdev (CTO)
+- [Our Specialists](https://www.appeal-edge.com/experts/): cases are worked by a panel of Amazon specialists with more than 20 years of combined experience across the US, UK, Europe and India, not named publicly since they work independently
+- Every case is reviewed and assigned to the specialist who fits it. That same specialist stays in direct contact with you throughout
 - Pricing is not published. Case review is free, and pricing is discussed only after the case is reviewed
 - Not affiliated with, endorsed by, or sponsored by Amazon.com, Inc.
 - Independent consultancy, not a law firm
