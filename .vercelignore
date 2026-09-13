@@ -40,3 +40,12 @@ frontend-v2/scroll-hero-test
 stitch
 frontend-trial
 Appeal-Edge.html
+
+# unreferenced images, not linked from any frontend-v2 page (2026-09-12 audit)
+# duplicated between repo root and public/, ~12.3MB total per deploy
+hero.png
+public/hero.png
+hero-transparent.png
+public/hero-transparent.png
+assets/testomonial.png
+public/assets/testomonial.png
