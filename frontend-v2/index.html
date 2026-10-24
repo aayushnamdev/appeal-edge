@@ -141,7 +141,23 @@
           "name": "Do you guarantee reinstatement?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No one can, and anyone who promises it is lying to you. What we do is maximize your odds: identify the real root cause, write the plan of action Amazon actually wants to see, and guide it through."
+            "text": "No one can, and anyone who promises it is not being straight with you. Amazon makes the final decision. What we do is improve your odds: identify the real root cause, write the plan of action Amazon actually wants to see, and guide it through."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the free root cause scan work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Paste or upload your suspension notice. The scanner reads it the way our specialists do and shows the case type, the evidence your appeal will need and what to do next. If you want a specialist to take it from there, you can send it on from the results without retyping anything."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does it cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The scan and the first case review cost nothing. Pricing is discussed once we understand what your case actually requires, so you never pay for work you don't need."
           }
         },
         {
@@ -154,10 +170,50 @@
         },
         {
           "@type": "Question",
-          "name": "What does it cost?",
+          "name": "Who actually works on my case?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Reviewing your case costs nothing. Pricing is discussed after we understand what your case actually requires, so you never pay for work you don't need."
+            "text": "A specialist from the Appeal Edge panel who has worked that violation type before. The same specialist stays in direct contact with you throughout. Nothing is passed to a call center."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "My appeal was already rejected. Can you still help?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Send us the notice and what you submitted before you try again. Each rejected appeal narrows your options, and after repeated attempts Amazon may stop responding on the issue. We will tell you honestly whether there is still a path."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why not write the appeal myself?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can. Appeals that are emotional, argumentative, templated or that miss the root cause Amazon identified are usually rejected. Getting the structure right on the first attempt matters, because later attempts get harder."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you help with held funds or stranded inventory?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Disbursement holds, including the 90 day hold after a deactivation, and inventory stuck behind a listing block are both case types we handle."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which marketplaces do you cover?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The US, UK, Canada, Europe and India."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my information kept confidential?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Nothing you send us is shared with Amazon or anyone else without your agreement."
           }
         },
         {
@@ -166,14 +222,6 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "No. Appeal Edge is an independent consultancy. We work for sellers, not for Amazon."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Who actually works on my case?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A specialist from the Appeal Edge panel. Every submission is reviewed and assigned to whoever fits the case, and that same specialist stays in direct contact with you. Nothing is passed to a call center."
           }
         }
       ]
@@ -204,6 +252,17 @@
       "worksFor": {
         "@id": "https://www.appeal-edge.com/#organization"
       }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.appeal-edge.com/#likith",
+      "name": "Likith",
+      "jobTitle": "Head of Operations",
+      "image": "https://www.appeal-edge.com/assets/likith-photo.jpg",
+      "description": "Five years in the Amazon ecosystem, with 300+ suspended accounts reinstated.",
+      "worksFor": {
+        "@id": "https://www.appeal-edge.com/#organization"
+      }
     }
   ]
 }
@@ -230,38 +289,41 @@
     --navy-2: #0E2E52;
     --blue: #2B50FF;
     --blue-dark: #1E3AE0;
+    --blue-soft: #8FA3FF;
     --amber: #F5A623;
-    --amber-dark: #E48F00;
     --ink: #1A2433;
     --grey: #5B6675;
     --mist: #F4F7FB;
     --line: #D9DEE6;
     --white: #FFFFFF;
-    --grad-dark: linear-gradient(135deg, #0A2540 0%, #0E2E52 100%);
+    --d-text: rgba(255,255,255,.72);
+    --d-mute: rgba(255,255,255,.55);
+    --d-line: rgba(255,255,255,.12);
     --e1: 0 1px 2px rgba(10,37,64,.06);
-    --e2: 0 4px 16px rgba(10,37,64,.08);
+    --e2: 0 6px 24px rgba(10,37,64,.07);
     --e3: 0 12px 32px rgba(10,37,64,.12);
     --focus: 0 0 0 3px rgba(43,80,255,.35);
-    --r-card: 18px;
-    --r-btn: 12px;
+    --r-card: 16px;
+    --r-btn: 10px;
     --maxw: 1160px;
     --section-y: clamp(72px, 9vw, 120px);
-    --font-display: 'Archivo', sans-serif;
+    --font-display: 'Archivo', system-ui, sans-serif;
     --font-body: 'Instrument Sans', system-ui, sans-serif;
     color-scheme: light;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
+  [hidden] { display: none !important; }
 
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; scroll-padding-top: 76px; }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
   }
 
   body {
     font-family: var(--font-body);
-    font-size: 17px;
-    line-height: 1.6;
+    font-size: 16.5px;
+    line-height: 1.65;
     color: var(--ink);
     background: var(--white);
     -webkit-font-smoothing: antialiased;
@@ -269,46 +331,47 @@
   }
 
   ::selection { background: rgba(43,80,255,.16); }
-
-  .wrap {
-    max-width: var(--maxw);
-    margin: 0 auto;
-    padding: 0 24px;
-  }
-
-  .display {
-    font-family: var(--font-display);
-    font-variation-settings: 'wdth' 120;
-    font-weight: 850;
-    text-transform: uppercase;
-    letter-spacing: -.01em;
-    line-height: 1.02;
-  }
-
-  h2.display {
-    font-size: clamp(30px, 4vw, 44px);
-    color: var(--navy);
-    max-width: 18ch;
-  }
-
-  .section { padding: var(--section-y) 0; }
-  .section.mist { background: var(--mist); }
-
-  .lede {
-    color: var(--grey);
-    max-width: 52ch;
-    margin-top: 18px;
-    font-size: 18px;
-  }
+  img { max-width: 100%; }
+  p, li, h1, h2, h3 { text-wrap: pretty; }
+  button { font: inherit; }
 
   a { color: var(--blue); text-decoration: none; }
-  a:hover { text-decoration: underline; }
+  a:hover { color: var(--blue-dark); text-decoration: underline; }
 
   :focus-visible {
     outline: none;
     box-shadow: var(--focus);
     border-radius: 6px;
   }
+
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
+  .section { padding: var(--section-y) 0; }
+  .mist { background: var(--mist); }
+  .dark { background: var(--navy); color: var(--d-text); }
+  .dark a:not(.btn) { color: var(--white); }
+
+  .h2 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -.025em;
+    line-height: 1.1;
+    font-size: clamp(28px, 3.4vw, 42px);
+    color: var(--navy);
+  }
+  .dark .h2 { color: var(--white); }
+  .eyebrow {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--grey);
+  }
+  .dark .eyebrow { color: var(--d-mute); }
+  .lede { color: var(--grey); max-width: 54ch; font-size: 17px; }
+  .dark .lede { color: var(--d-text); }
+  .sec-head { display: grid; gap: 14px; margin-bottom: clamp(40px, 5vw, 56px); }
+  .sec-head.split { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: end; gap: 20px 64px; }
+  .sec-head .h2 { max-width: 20ch; }
 
   /* ---------- Buttons ---------- */
   .btn {
@@ -317,106 +380,80 @@
     justify-content: center;
     gap: 8px;
     font-family: var(--font-body);
-    font-weight: 600;
-    font-size: 16px;
-    white-space: nowrap;
-    padding: 15px 28px;
+    font-weight: 500;
+    font-size: 15.5px;
+    padding: 13px 22px;
     border-radius: var(--r-btn);
-    border: none;
+    border: 1px solid transparent;
     cursor: pointer;
     text-decoration: none;
-    transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+    white-space: nowrap;
+    transition: background .15s ease, border-color .15s ease, color .15s ease;
   }
   .btn:hover { text-decoration: none; }
-  .btn:active { transform: translateY(1px) scale(.98); }
-
-  .btn-blue {
-    background: var(--blue);
-    color: var(--white);
-    box-shadow: var(--e2);
-  }
-  .btn-blue:hover { background: var(--blue-dark); box-shadow: var(--e3); transform: translateY(-1px); }
-
-  .btn-amber {
-    background: var(--amber);
-    color: var(--navy);
-    box-shadow: var(--e2);
-    font-size: 17px;
-    padding: 17px 36px;
-  }
-  .btn-amber:hover { background: var(--amber-dark); box-shadow: var(--e3); transform: translateY(-1px); }
-
-  .btn-white {
-    background: var(--white);
-    color: var(--navy);
-    box-shadow: var(--e2);
-  }
-  .btn-white:hover { background: var(--mist); box-shadow: var(--e3); transform: translateY(-1px); }
-
-  .link-plain {
-    font-weight: 600;
-    color: var(--navy);
-    border-bottom: 2px solid var(--line);
-    padding-bottom: 2px;
-    transition: border-color .15s ease;
-  }
-  .link-plain:hover { text-decoration: none; border-color: var(--blue); color: var(--blue); }
+  .btn-blue { background: var(--blue); color: var(--white); }
+  .btn-blue:hover { background: var(--blue-dark); color: var(--white); }
+  .btn-ghost { background: transparent; color: var(--navy); border-color: var(--line); }
+  .btn-ghost:hover { border-color: var(--navy); color: var(--navy); }
+  .btn-light { background: var(--white); color: var(--navy); }
+  .btn-light:hover { background: var(--mist); color: var(--navy); }
+  .link-arrow { font-weight: 500; color: var(--navy); display: inline-flex; gap: 6px; align-items: center; padding: 8px 0; }
+  .link-arrow:hover { color: var(--blue); text-decoration: none; }
 
   /* ---------- Nav ---------- */
   .nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
+    position: sticky;
+    top: 0;
     z-index: 50;
-    height: 68px;
-    display: flex;
-    align-items: center;
-    background: transparent;
-    transition: background .25s ease, box-shadow .25s ease;
-  }
-  .nav.scrolled {
-    background: rgba(255,255,255,.92);
+    background: rgba(255,255,255,.95);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 1px 0 var(--line);
+    transition: box-shadow .2s ease;
   }
+  .nav.scrolled { box-shadow: 0 1px 0 var(--line); }
   .nav-inner {
     max-width: var(--maxw);
     margin: 0 auto;
-    padding: 0 24px;
-    width: 100%;
+    padding: 0 28px;
+    height: 68px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 24px;
+    gap: 32px;
   }
-  .brand {
-    display: inline-flex;
-    align-items: center;
-  }
-  .brand:hover { opacity: .82; }
-  .brand-logo {
-    height: 56px;
-    width: auto;
-    display: block;
-  }
+  .brand { display: inline-flex; align-items: center; flex: none; }
+  .brand:hover { opacity: .85; text-decoration: none; }
+  .brand-logo { height: 44px; width: auto; display: block; }
   .nav-links {
     display: flex;
     align-items: center;
-    gap: 28px;
+    gap: 26px;
     list-style: none;
+    margin-left: auto;
   }
-  .nav-links a {
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--ink);
+  .nav-links a { font-size: 14.5px; font-weight: 400; color: var(--grey); white-space: nowrap; }
+  .nav-links a:hover { color: var(--navy); text-decoration: none; }
+  .nav-links a.active { color: var(--navy); font-weight: 500; }
+  @media (min-width: 1081px) {
+    .nav-links a { position: relative; }
+    .nav-links a.active::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -10px;
+      width: 4px;
+      height: 4px;
+      margin-left: -2px;
+      border-radius: 50%;
+      background: var(--blue);
+    }
   }
-  .nav-links a:hover { color: var(--blue); text-decoration: none; }
-  .nav .btn { padding: 11px 20px; font-size: 15px; }
+  .nav-links .nav-cta-mobile { display: none; }
+  .nav-cta { padding: 9px 16px; font-size: 14.5px; }
   .nav-toggle {
     display: none;
     position: relative;
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     flex: none;
     border: none;
     background: transparent;
@@ -429,356 +466,390 @@
   .nav-toggle span::after {
     content: "";
     position: absolute;
-    width: 22px;
+    width: 20px;
     height: 2px;
     background: var(--navy);
     border-radius: 2px;
-    transition: transform .2s ease, opacity .2s ease, background .2s ease;
+    transition: transform .2s ease, background .2s ease, top .2s ease;
   }
-  .nav-toggle span::before { top: -7px; }
-  .nav-toggle span::after { top: 7px; }
+  .nav-toggle span::before { top: -6px; }
+  .nav-toggle span::after { top: 6px; }
   .nav-toggle[aria-expanded="true"] span { background: transparent; }
   .nav-toggle[aria-expanded="true"] span::before { top: 0; transform: rotate(45deg); }
   .nav-toggle[aria-expanded="true"] span::after { top: 0; transform: rotate(-45deg); }
-  @media (max-width: 860px) {
-    .nav-toggle { display: flex; }
-    .nav-links {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      flex-direction: column;
-      align-items: stretch;
-      gap: 0;
-      background: var(--white);
-      box-shadow: var(--e3);
-      padding: 8px 0;
-      border-top: 1px solid var(--line);
-    }
-    .nav-links.open { display: flex; }
-    .nav-links li { width: 100%; }
-    .nav-links a { display: block; padding: 14px 24px; }
-    .nav-inner { padding: 0 12px; gap: 8px; }
-    .brand-logo { height: 38px; }
-    .nav .btn { padding: 7px 10px; font-size: 11.5px; white-space: nowrap; }
-  }
 
   /* ---------- Hero ---------- */
   .hero {
-    position: relative;
-    padding: 172px 0 var(--section-y);
-    overflow: hidden;
-  }
-  .hero::before {
-    content: "";
-    position: absolute;
-    top: -30%;
-    right: -12%;
-    width: 60vw;
-    height: 60vw;
-    background: radial-gradient(closest-side, rgba(43,80,255,.1), transparent);
-    pointer-events: none;
-  }
-  .hero .wrap { position: relative; }
-  .eyebrow {
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: .16em;
-    text-transform: uppercase;
-    color: var(--grey);
-  }
-  .hero h1 {
-    font-family: var(--font-display);
-    font-variation-settings: 'wdth' 122;
-    font-weight: 880;
-    text-transform: uppercase;
-    font-size: clamp(27px, 5.2vw, 60px);
-    line-height: 1.04;
-    letter-spacing: -.015em;
-    color: var(--navy);
-    margin-top: 20px;
-  }
-  .hero-sub {
-    margin-top: 26px;
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 1.5;
-    color: var(--navy);
-    max-width: 56ch;
-  }
-  .hero-sub strong { color: var(--blue); }
-  .hero-ctas {
-    margin-top: 36px;
-    display: flex;
-    align-items: center;
-    gap: 26px;
-    flex-wrap: wrap;
-  }
-
-  /* ---------- Expert ---------- */
-  .expert-grid {
-    margin-top: 48px;
-    max-width: 68ch;
-  }
-  .expert-title {
-    font-size: clamp(19px, 2vw, 23px);
-    font-weight: 600;
-    line-height: 1.45;
-    color: var(--navy);
-  }
-  .expert-bio {
-    margin-top: 18px;
-    color: var(--grey);
-  }
-  .expert-meta {
-    margin-top: 22px;
-    font-size: 14px;
-    color: var(--grey);
-  }
-
-  /* ---------- Cofounders ---------- */
-  .cf-stage {
-    display: grid;
-    grid-template-columns: 1fr minmax(320px, 620px) 1fr;
-    align-items: center;
-    gap: clamp(16px, 3vw, 40px);
-    margin-top: 48px;
-  }
-  .cf-side {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
-  .cf-left { text-align: right; align-items: flex-end; }
-  .cf-right { text-align: left; align-items: flex-start; }
-  .cf-name {
-    font-family: var(--font-display);
-    font-variation-settings: 'wdth' 116;
-    font-weight: 800;
-    text-transform: uppercase;
-    color: var(--navy);
-    font-size: clamp(18px, 2vw, 24px);
-    line-height: 1.1;
-  }
-  .cf-role {
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    color: var(--blue);
-  }
-  .cf-role-full {
-    display: block;
-    margin-top: 2px;
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: .04em;
-    color: var(--grey);
-  }
-  .cf-arrow {
-    margin-top: 14px;
-    color: var(--blue);
-    line-height: 0;
-  }
-  .cf-arrow svg { display: block; width: clamp(40px, 6vw, 76px); height: auto; }
-  .cf-video {
-    background: linear-gradient(180deg, #FFFFFF 0%, var(--mist) 100%);
-    border: 1px solid var(--line);
-    border-radius: var(--r-card);
-    box-shadow: var(--e2);
-    padding: 10px;
-    margin: 0;
-  }
-  .cf-frame {
-    position: relative;
-    aspect-ratio: 16 / 9;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  .cf-frame iframe {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-  }
-  .cf-cto {
-    margin: clamp(40px, 6vw, 64px) auto 0;
-    max-width: 260px;
+    padding: clamp(64px, 9vw, 120px) 0 clamp(56px, 7vw, 88px);
     text-align: center;
   }
-  .cf-photo {
-    background: linear-gradient(180deg, #FFFFFF 0%, var(--mist) 100%);
-    border: 1px solid var(--line);
-    border-radius: var(--r-card);
-    box-shadow: var(--e2);
-    padding: 10px;
-  }
-  .cf-photo img {
-    display: block;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    object-position: center 30%;
-    border-radius: 10px;
-  }
-  .cf-cto figcaption {
-    margin-top: 16px;
-    display: flex;
-    flex-direction: column;
+  .hero-tag {
+    display: inline-flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
+    font-size: 13.5px;
+    color: var(--grey);
+    padding: 6px 14px 6px 8px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
   }
-
-  /* ---------- Proof strip ---------- */
-  .proof {
-    background: var(--grad-dark);
-    padding: var(--section-y) 0;
-  }
-  .proof-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: clamp(24px, 4vw, 56px);
-  }
-  .proof-num {
+  .hero-tag img { width: 18px; height: 18px; display: block; border-radius: 4px; }
+  .hero h1 {
+    margin: 28px auto 0;
+    max-width: 18ch;
     font-family: var(--font-display);
-    font-variation-settings: 'wdth' 122;
-    font-weight: 900;
-    font-size: clamp(52px, 7vw, 96px);
-    line-height: 1;
-    background: linear-gradient(180deg, #FFFFFF 12%, #B9C4D6 95%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-  .proof-label {
-    margin-top: 12px;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: .14em;
-    text-transform: uppercase;
-    color: var(--amber);
-    max-width: 20ch;
-  }
-  .proof-line {
-    margin-top: clamp(40px, 5vw, 64px);
-    padding-top: 28px;
-    border-top: 1px solid rgba(255,255,255,.14);
-    color: rgba(255,255,255,.88);
-    font-size: 20px;
-    font-weight: 600;
-    max-width: 56ch;
-  }
-  .proof-line strong { color: var(--amber); font-weight: 700; }
-
-  /* ---------- Who we help ---------- */
-  .help-rows {
-    margin-top: 48px;
-    border-top: 1px solid var(--line);
-  }
-  .help-row {
-    display: grid;
-    grid-template-columns: 5fr 7fr;
-    gap: 24px;
-    padding: 30px 0;
-    border-bottom: 1px solid var(--line);
-    align-items: baseline;
-  }
-  .help-row h3 {
-    font-size: 21px;
-    font-weight: 600;
-    color: var(--navy);
-    line-height: 1.3;
-  }
-  .help-row p { color: var(--grey); max-width: 52ch; }
-  .help-bridge {
-    margin-top: 40px;
-    font-size: 22px;
     font-weight: 700;
+    letter-spacing: -.03em;
+    line-height: 1.05;
+    font-size: clamp(36px, 5.2vw, 64px);
     color: var(--navy);
-    max-width: 46ch;
+  }
+  .hero h1 span { color: var(--blue); }
+  .hero-sub { margin: 24px auto 0; font-size: 18px; color: var(--grey); max-width: 52ch; }
+  .hero-ctas { margin-top: 32px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+  .stats {
+    margin: clamp(56px, 8vw, 96px) auto 0;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    border-top: 1px solid var(--line);
+    text-align: left;
+  }
+  .stat { padding: 28px 24px 0; position: relative; }
+  .stat::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 28px;
+    height: 2px;
+    background: var(--blue);
+    transition: width .35s ease;
+  }
+  .stat:nth-child(2)::before { background: var(--amber); }
+  .stat:nth-child(4)::before { background: var(--navy); }
+  .stat:hover::before { width: 100%; }
+  .stat + .stat { border-left: 1px solid var(--line); }
+  .stat-num {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(36px, 4vw, 54px);
+    line-height: 1;
+    letter-spacing: -.035em;
+    color: var(--navy);
+    font-variant-numeric: tabular-nums;
+  }
+  .stat-num .u { color: var(--blue); font-weight: 600; font-size: .56em; letter-spacing: -.01em; margin-left: 2px; }
+  .stat-label { margin-top: 10px; font-size: 14.5px; color: var(--grey); line-height: 1.45; max-width: 24ch; }
+
+  /* ---------- What we handle ---------- */
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 4px;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    justify-self: end;
+  }
+  .filter {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    color: var(--grey);
+    font-size: 14.5px;
+    padding: 8px 14px;
+    border-radius: 9px;
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+    transition: background .15s ease, color .15s ease;
+  }
+  .filter:hover { color: var(--navy); }
+  .filter[aria-pressed="true"] { background: var(--navy); color: var(--white); }
+  .filter .n { font-size: 12px; opacity: .6; }
+  .handle-desc { min-height: 3.4em; font-size: 17px; color: var(--navy); font-weight: 500; max-width: 62ch; margin-bottom: 24px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; }
+  .chip {
+    font-size: 15px;
+    color: var(--navy);
+    border: 1px solid var(--line);
+    background: var(--white);
+    border-radius: 999px;
+    padding: 10px 18px;
+    box-shadow: var(--e1);
+    transition: opacity .25s ease, border-color .15s ease, background .15s ease, color .15s ease, transform .15s ease;
+  }
+  .chip:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-1px); }
+  .chips.filtered .chip { opacity: .35; }
+  .chips.filtered .chip.on { opacity: 1; border-color: var(--blue); background: var(--blue); color: var(--white); }
+  .handle-note {
+    margin-top: 36px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px 32px;
+    color: var(--grey);
+    font-size: 15.5px;
   }
 
   /* ---------- How it works ---------- */
-  .steps {
-    margin-top: 56px;
+  .track {
+    --p: 0;
+    position: relative;
     display: grid;
-    gap: 0;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    list-style: none;
   }
-  .step {
+  .track::before, .track::after {
+    content: "";
+    position: absolute;
+    top: 48px;
+    left: 48px;
+    height: 2px;
+    border-radius: 2px;
+  }
+  .track::before { width: calc(2 * ((100% - 40px) / 3 + 20px)); background: var(--line); }
+  .track::after { width: calc(var(--p) * ((100% - 40px) / 3 + 20px)); background: var(--blue); transition: width .45s ease; }
+  .stop {
+    position: relative;
     display: grid;
-    grid-template-columns: 120px 1fr;
-    gap: clamp(20px, 4vw, 56px);
-    padding: 36px 0;
-    border-top: 1px solid var(--line);
-    align-items: start;
+    gap: 22px;
+    align-content: start;
+    padding: 28px;
+    border: 1px solid var(--line);
+    border-radius: var(--r-card);
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+    transition: border-color .2s ease, box-shadow .2s ease;
   }
-  .step:last-of-type { border-bottom: 1px solid var(--line); }
-  .step-num {
+  .stop:hover, .stop.on { border-color: var(--blue); box-shadow: 0 10px 30px rgba(43,80,255,.10); }
+  .stop:focus-visible { box-shadow: var(--focus); }
+  .stop-num {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--white);
+    border: 1.5px solid var(--line);
     font-family: var(--font-display);
-    font-variation-settings: 'wdth' 122;
-    font-weight: 900;
-    font-size: clamp(44px, 5vw, 64px);
-    line-height: 1;
-    color: var(--blue);
-    opacity: .22;
-  }
-  .step h3 {
-    font-size: 22px;
-    font-weight: 600;
-    color: var(--navy);
-  }
-  .step p { margin-top: 8px; color: var(--grey); max-width: 56ch; }
-  .steps-close {
-    margin-top: 36px;
-    font-size: 21px;
+    font-size: 15px;
     font-weight: 700;
-    color: var(--navy);
+    color: var(--grey);
+    position: relative;
+    z-index: 1;
+    transition: background .2s ease, color .2s ease, border-color .2s ease;
   }
+  .stop.done .stop-num { border-color: var(--blue); color: var(--blue); }
+  .stop.on .stop-num { background: var(--blue); border-color: var(--blue); color: var(--white); }
+  .stop-tag { font-size: 12.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--grey); }
+  .stop.on .stop-tag { color: var(--blue); }
+  .stop h3 { margin-top: 6px; font-family: var(--font-display); font-size: 21px; font-weight: 700; line-height: 1.25; color: var(--navy); letter-spacing: -.015em; }
+  .stop p { margin-top: 8px; font-size: 15.5px; color: var(--grey); max-width: 36ch; }
+  .steps-close { margin-top: 36px; font-size: 20px; font-weight: 600; color: var(--navy); }
 
-  /* ---------- What we handle ---------- */
-  .chips {
-    margin-top: 44px;
+  /* ---------- Case studies ---------- */
+  .cs-tabs {
     display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    max-width: 880px;
+    gap: 4px;
+    border-bottom: 1px solid var(--d-line);
+    margin-bottom: 28px;
+    overflow-x: auto;
+    scrollbar-width: none;
   }
-  .chip {
-    font-size: 16px;
-    font-weight: 500;
+  .cs-tabs::-webkit-scrollbar { display: none; }
+  .cs-tab {
+    flex: 1 1 0;
+    min-width: 200px;
+    text-align: left;
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+    color: var(--d-mute);
+    padding: 14px 4px 16px;
+    display: grid;
+    gap: 2px;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    transition: color .15s ease, border-color .15s ease;
+  }
+  .cs-tab:hover { color: var(--d-text); }
+  .cs-tab .k { font-size: 12.5px; letter-spacing: .08em; text-transform: uppercase; }
+  .cs-tab .t { font-family: var(--font-display); font-size: 18px; font-weight: 700; letter-spacing: -.01em; }
+  .cs-tab[aria-selected="true"] { color: var(--white); border-bottom-color: var(--amber); }
+  .cs-tab[aria-selected="true"] .k { color: var(--amber); }
+  .cs-panel {
+    display: grid;
+    grid-template-columns: 280px minmax(0, 1fr);
+    border: 1px solid var(--d-line);
+    border-radius: var(--r-card);
+    overflow: hidden;
+  }
+  .cs-fig {
+    padding: 32px 28px;
+    background: var(--blue);
+    border-right: 1px solid var(--d-line);
+    display: grid;
+    align-content: space-between;
+    gap: 28px;
+    position: relative;
+    overflow: hidden;
+  }
+  .cs-fig .lock { position: absolute; right: -36px; bottom: -36px; width: 150px; opacity: .1; pointer-events: none; }
+  .cs-market { font-size: 12.5px; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.85); }
+  .cs-title { margin-top: 8px; font-family: var(--font-display); font-size: 22px; font-weight: 700; line-height: 1.2; letter-spacing: -.015em; color: var(--white); }
+  .cs-metric { display: grid; gap: 6px; }
+  .cs-num { font-family: var(--font-display); font-weight: 700; font-size: 40px; line-height: 1.05; letter-spacing: -.02em; color: var(--white); }
+  .cs-num small { font-size: 17px; color: rgba(255,255,255,.88); letter-spacing: 0; font-weight: 400; }
+  .cs-num-label { font-size: 14.5px; color: rgba(255,255,255,.9); }
+  .cs-time {
+    justify-self: start;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: var(--amber);
     color: var(--navy);
+  }
+  .cs-time .v { font-family: var(--font-display); font-size: 16px; font-weight: 700; }
+  .cs-time .l { font-size: 13.5px; }
+  .cs-flow { list-style: none; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .cs-step { padding: 32px 24px; display: grid; align-content: start; gap: 10px; }
+  .cs-step + .cs-step { border-left: 1px solid var(--d-line); }
+  .cs-step .k {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-display);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--white);
+  }
+  .cs-step .k i {
+    font-style: normal;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1.5px solid var(--blue-soft);
+    color: var(--blue-soft);
+    display: grid;
+    place-items: center;
+    font-size: 11.5px;
+    flex: none;
+  }
+  .cs-step p { font-size: 15.5px; color: var(--d-text); line-height: 1.6; }
+  .cs-step.out { background: rgba(245,166,35,.06); }
+  .cs-step.out .k { color: var(--amber); }
+  .cs-step.out .k i { border-color: var(--amber); background: var(--amber); color: var(--navy); }
+  .cs-step.out p { color: var(--white); }
+  .cs-note { margin-top: 20px; font-size: 13.5px; color: var(--d-mute); }
+
+  /* ---------- Free case scan (base styles in /css/ae-scanner.css) ---------- */
+  .scan-zone { padding: var(--section-y) 0; background: var(--white); }
+  .scan-zone .scan-intro { display: grid; gap: 14px; margin-bottom: 40px; justify-items: center; text-align: center; }
+  .scan-zone .scan-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+    gap: 0;
+    margin-top: 0;
+    border: 1px solid var(--line);
+    border-radius: var(--r-card);
+    overflow: hidden;
+    box-shadow: var(--e2);
+    align-items: stretch;
+  }
+  .scan-zone .scan-input-col { padding: clamp(24px, 3vw, 36px); border-radius: 0; box-shadow: none; }
+  .scan-zone .scan-results-col {
+    padding: clamp(24px, 3vw, 36px);
+    background: var(--mist);
+    border-radius: 0;
+    box-shadow: none;
+    border-left: 1px solid var(--line);
+  }
+  .scan-zone .scan-field-label { font-weight: 500; }
+  .scan-zone .scan-textarea, .scan-zone .scan-email-input { font-size: 15px; background: var(--white); border-radius: 10px; }
+  .scan-zone .scan-textarea { min-height: 170px; }
+  .scan-zone .scan-textarea:focus-visible, .scan-zone .scan-email-input:focus-visible { border-color: var(--blue); }
+  .scan-zone .scan-upload-btn { font-weight: 400; border-radius: 10px; padding: 8px 12px; }
+  .scan-zone .scan-talk-instead { margin-top: 22px; font-size: 15px; color: var(--grey); }
+  .scan-zone .scan-talk-instead a { font-size: inherit; font-weight: 500; }
+  .scan-zone .scan-submit-row .btn { width: 100%; }
+
+  /* ---------- About ---------- */
+  .about-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 4fr) minmax(0, 7fr);
+    gap: clamp(32px, 6vw, 80px);
+    align-items: center;
+  }
+  .portrait {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    border-radius: var(--r-card);
+    overflow: hidden;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  .portrait img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+  .expert-name { margin-top: 14px; }
+  .expert-role { margin-top: 8px; font-size: 16px; font-weight: 500; color: var(--blue); }
+  .expert-bio { margin-top: 22px; font-size: 17px; color: var(--grey); max-width: 56ch; }
+  .facts { margin-top: 28px; border-top: 1px solid var(--line); }
+  .fact { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .fact dt { font-size: 14px; color: var(--grey); }
+  .fact dd { color: var(--navy); font-size: 15.5px; }
+  .panel-line {
+    margin-top: clamp(48px, 7vw, 80px);
+    padding: 22px 26px;
+    border-radius: var(--r-card);
     background: var(--white);
     border: 1px solid var(--line);
-    border-radius: var(--r-btn);
-    padding: 13px 22px;
     box-shadow: var(--e1);
-    transition: border-color .15s ease, box-shadow .15s ease, transform .15s ease;
-  }
-  .chip:hover {
-    border-color: var(--blue);
-    box-shadow: var(--e2);
-    transform: translateY(-1px);
-  }
-  .handle-note {
-    margin-top: 32px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    font-size: 16.5px;
     color: var(--grey);
-    max-width: 52ch;
   }
+  .panel-line img { width: 28px; height: 28px; flex: none; border-radius: 6px; }
+  .panel-line strong { color: var(--navy); font-weight: 600; }
 
-  /* Free case scan styles now live in /css/ae-scanner.css, shared with blog posts */
+  /* ---------- Blog ---------- */
+  .post {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 32px;
+    align-items: center;
+    padding: 32px;
+    border: 1px solid var(--line);
+    border-radius: var(--r-card);
+    transition: border-color .15s ease, box-shadow .15s ease;
+  }
+  .post:hover { border-color: var(--navy); box-shadow: var(--e2); text-decoration: none; }
+  .post-tag { font-size: 12.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--blue); }
+  .post h3 { margin-top: 10px; font-family: var(--font-display); font-weight: 600; font-size: 21px; line-height: 1.3; letter-spacing: -.01em; color: var(--navy); max-width: 40ch; }
+  .post p { margin-top: 8px; color: var(--grey); font-size: 15.5px; max-width: 64ch; }
+  .post-go { display: grid; justify-items: end; gap: 8px; font-size: 14px; color: var(--grey); white-space: nowrap; }
+  .post-go span:last-child { color: var(--navy); font-weight: 500; }
 
   /* ---------- FAQ ---------- */
-  .faq-list {
-    margin-top: 48px;
-    max-width: 780px;
-    border-top: 1px solid var(--line);
+  .faq-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+    gap: clamp(32px, 6vw, 80px);
+    align-items: start;
   }
-  .faq-item {
-    border-bottom: 1px solid var(--line);
-  }
+  .faq-side { position: sticky; top: 100px; display: grid; gap: 14px; }
+  .ask { margin-top: 18px; padding-top: 20px; border-top: 1px solid var(--d-line); display: grid; gap: 12px; justify-items: start; }
+  .ask p { color: var(--white); font-size: 15.5px; }
+  .faq-list { border-top: 1px solid var(--d-line); }
+  .faq-item { border-bottom: 1px solid var(--d-line); }
   .faq-item summary {
     list-style: none;
     cursor: pointer;
@@ -786,109 +857,39 @@
     align-items: center;
     justify-content: space-between;
     gap: 24px;
-    padding: 24px 4px;
-    font-size: 19px;
-    font-weight: 600;
-    color: var(--navy);
+    padding: 20px 2px;
+    font-size: 16.5px;
+    font-weight: 500;
+    color: var(--white);
   }
   .faq-item summary::-webkit-details-marker { display: none; }
-  .faq-item summary:hover { color: var(--blue); }
-  .faq-mark {
-    position: relative;
-    width: 18px;
-    height: 18px;
-    flex: 0 0 18px;
-  }
-  .faq-mark::before,
-  .faq-mark::after {
-    content: "";
-    position: absolute;
-    background: var(--blue);
-    border-radius: 2px;
-    transition: transform .25s ease;
-  }
-  .faq-mark::before { left: 0; right: 0; top: 8px; height: 2px; }
-  .faq-mark::after { top: 0; bottom: 0; left: 8px; width: 2px; }
+  .faq-item summary:hover { color: var(--blue-soft); }
+  .faq-mark { position: relative; width: 14px; height: 14px; flex: 0 0 14px; }
+  .faq-mark::before, .faq-mark::after { content: ""; position: absolute; background: var(--d-text); transition: transform .2s ease; }
+  .faq-mark::before { left: 0; right: 0; top: 6px; height: 2px; }
+  .faq-mark::after { top: 0; bottom: 0; left: 6px; width: 2px; }
   .faq-item[open] .faq-mark::after { transform: scaleY(0); }
-  .faq-body {
-    padding: 0 4px 26px;
-    color: var(--grey);
-    max-width: 62ch;
-  }
+  .faq-body { padding: 0 2px 22px; color: var(--d-text); max-width: 64ch; font-size: 15.5px; }
 
-  /* ---------- From the blog ---------- */
-  .post-card {
-    display: block;
-    margin-top: 44px;
-    max-width: 640px;
-    background: linear-gradient(180deg, #FFFFFF 0%, #F4F7FB 100%);
-    border: 1px solid var(--line);
-    border-radius: var(--r-card);
-    box-shadow: var(--e1);
-    padding: 28px;
-    transition: box-shadow .15s ease, transform .15s ease, border-color .15s ease;
-  }
-  .post-card:hover { box-shadow: var(--e3); transform: translateY(-2px); border-color: var(--blue); text-decoration: none; }
-  .post-tag {
-    display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
-    color: var(--blue); background: rgba(43,80,255,.08); border-radius: 999px; padding: 5px 12px;
-  }
-  .post-card h3 { margin-top: 16px; font-size: 21px; font-weight: 700; color: var(--navy); line-height: 1.3; }
-  .post-card p { margin-top: 10px; color: var(--grey); font-size: 15px; }
-  .post-meta { margin-top: 18px; font-size: 13px; color: var(--grey); }
-  .blog-teaser-link { margin-top: 24px; }
+  /* ---------- Closing CTA (class prefooter keeps analytics position) ---------- */
+  .closing { padding: var(--section-y) 0; text-align: center; border-top: 1px solid var(--line); }
+  .closing .h2 { max-width: 22ch; margin: 0 auto; }
+  .closing p { margin: 18px auto 0; color: var(--grey); max-width: 50ch; }
+  .closing-ctas { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
 
   /* ---------- Footer ---------- */
-  .footer {
-    background: var(--navy);
-    color: rgba(255,255,255,.7);
-  }
-  .prefooter {
-    padding: clamp(56px, 7vw, 88px) 0;
-    border-bottom: 1px solid rgba(255,255,255,.12);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 32px;
-    flex-wrap: wrap;
-  }
-  .prefooter h2 {
-    font-family: var(--font-display);
-    font-variation-settings: 'wdth' 118;
-    font-weight: 850;
-    text-transform: uppercase;
-    font-size: clamp(26px, 3.4vw, 40px);
-    line-height: 1.05;
-    color: var(--white);
-    max-width: 22ch;
-  }
-  .footer-cols {
-    padding: 56px 0;
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 48px;
-  }
+  .footer { background: var(--navy); color: var(--d-text); }
+  .footer-cols { padding: 64px 0 48px; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; }
   .footer .brand-logo { height: 48px; }
-  .footer-desc {
-    margin-top: 12px;
-    font-size: 15px;
-    color: rgba(255,255,255,.55);
-  }
-  .footer-col h4 {
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,.45);
-    margin-bottom: 16px;
-  }
+  .footer-desc { margin-top: 14px; font-size: 14.5px; color: var(--d-mute); max-width: 34ch; }
+  .footer-col h4 { font-size: 12.5px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--d-mute); margin-bottom: 14px; }
   .footer-col ul { list-style: none; }
-  .footer-col li { margin-bottom: 10px; }
-  .footer-col a { color: rgba(255,255,255,.8); font-size: 15px; }
+  .footer-col li { margin-bottom: 9px; }
+  .footer-col a { color: rgba(255,255,255,.8); font-size: 14.5px; }
   .footer-col a:hover { color: var(--white); }
   .footer-legal {
-    padding: 28px 0 40px;
-    border-top: 1px solid rgba(255,255,255,.12);
+    padding: 24px 0 36px;
+    border-top: 1px solid var(--d-line);
     font-size: 13px;
     color: rgba(255,255,255,.62);
     display: flex;
@@ -896,7 +897,8 @@
     gap: 24px;
     flex-wrap: wrap;
   }
-  .footer-legal p { max-width: 62ch; }
+  .footer-legal p { max-width: 70ch; }
+  .footer-legal a { color: inherit; text-decoration: underline; white-space: nowrap; }
 
   /* ---------- WhatsApp chat button ---------- */
   .wa-fab {
@@ -969,289 +971,282 @@
     .social-rail svg { width: 13px; height: 13px; }
   }
 
-  /* ---------- Reveal animation ---------- */
-  .reveal {
-    opacity: 0;
-    transform: translateY(22px);
-    transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
-    transition-delay: var(--d, 0s);
+  /* ---------- Responsive ---------- */
+  @media (max-width: 1080px) {
+    .nav-toggle { display: flex; }
+    .nav-inner { gap: 12px; }
+    .nav-cta { margin-left: auto; }
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      margin: 0;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      background: var(--white);
+      box-shadow: 0 12px 24px rgba(10,37,64,.08);
+      padding: 8px 0 16px;
+      border-top: 1px solid var(--line);
+    }
+    .nav-links.open { display: flex; }
+    .nav-links a { display: block; padding: 13px 28px; font-size: 16px; color: var(--navy); }
   }
-  .reveal.in { opacity: 1; transform: none; }
-  @media (prefers-reduced-motion: reduce) {
-    .reveal { opacity: 1; transform: none; transition: none; }
-    .btn, .chip { transition: none; }
+  @media (max-width: 1040px) {
+    .cs-panel { grid-template-columns: 1fr; }
+    .cs-fig { border-right: 0; border-bottom: 1px solid var(--d-line); grid-template-columns: 1fr 1fr; align-items: end; }
+    .cs-fig .cs-market { grid-column: 1 / -1; }
+    .footer-cols { grid-template-columns: 1fr 1fr 1fr; }
+    .footer-cols > :first-child { grid-column: 1 / -1; }
   }
-
-  /* ---------- Mobile ---------- */
-  @media (max-width: 860px) {
-    .hero { padding-top: 128px; }
-    .cf-stage { grid-template-columns: 1fr; gap: 16px; }
-    .cf-left { text-align: left; align-items: flex-start; }
-    .cf-right { text-align: right; align-items: flex-end; }
-    .cf-video { width: 100%; }
-    .cf-arrow { margin: 6px 0; transform: rotate(90deg); }
-    .cf-arrow svg { width: 28px; }
-    .proof-grid { grid-template-columns: 1fr 1fr; gap: 40px 16px; }
-    .proof-num { font-size: clamp(34px, 11vw, 52px); }
-    .help-row { grid-template-columns: 1fr; gap: 6px; }
-    .step { grid-template-columns: 64px 1fr; }
-    .footer-cols { grid-template-columns: 1fr; gap: 36px; }
-    .prefooter { flex-direction: column; align-items: flex-start; }
+  @media (max-width: 900px) {
+    .stats { grid-template-columns: 1fr 1fr; }
+    .stat:nth-child(3) { border-left: 0; }
+    .stat:nth-child(n+3) { border-top: 1px solid var(--line); margin-top: 28px; }
+    .sec-head.split { grid-template-columns: 1fr; }
+    .filters { justify-self: start; }
+    .track { grid-template-columns: 1fr; gap: 12px; }
+    .track::before, .track::after { display: none; }
+    .stop { grid-template-columns: 40px minmax(0, 1fr); gap: 18px; padding: 22px; }
+    .stop p { max-width: 56ch; }
+    .cs-flow { grid-template-columns: 1fr 1fr; }
+    .cs-step:nth-child(3) { border-left: 0; }
+    .cs-step:nth-child(n+3) { border-top: 1px solid var(--d-line); }
+    .scan-zone .scan-grid { grid-template-columns: 1fr; }
+    .scan-zone .scan-results-col { border-left: 0; border-top: 1px solid var(--line); }
+    .about-grid, .faq-grid { grid-template-columns: 1fr; }
+    .portrait { max-width: 320px; }
+    .faq-side { position: static; }
+    .footer-legal { padding-bottom: 84px; }
   }
-
-  @media (max-width: 400px) {
-    .wrap { padding: 0 18px; }
-  }
-
-  @media (max-width: 480px) {
-    h2.display, .prefooter h2 { max-width: none; overflow-wrap: break-word; }
+  @media (max-width: 640px) {
+    .wrap, .nav-inner { padding: 0 20px; }
+    .brand-logo { height: 36px; }
+    .nav-cta { display: none; }
+    .nav-toggle { margin-left: auto; }
+    .nav-links .nav-cta-mobile { display: block; padding: 10px 20px 0; }
+    .nav-links .nav-cta-mobile a { display: flex; color: var(--white); padding: 13px 20px; }
+    .hero-ctas .btn, .closing-ctas .btn { flex: 1 1 100%; }
+    .stat { padding: 22px 14px 0 0; }
+    .stat + .stat { padding-left: 14px; }
+    .stat:nth-child(3) { padding-left: 0; }
+    .handle-desc { min-height: 0; }
+    .cs-tabs { flex-direction: column; gap: 0; overflow: visible; border-bottom: 0; }
+    .cs-tab { min-width: 0; flex: none; padding: 14px 4px; border-bottom: 1px solid var(--d-line); margin-bottom: 0; }
+    .cs-tab[aria-selected="true"] { border-bottom-color: var(--amber); }
+    .cs-fig { grid-template-columns: 1fr; }
+    .cs-flow { grid-template-columns: 1fr; }
+    .cs-step { padding: 22px; }
+    .cs-step + .cs-step { border-left: 0; border-top: 1px solid var(--d-line); }
+    .fact { grid-template-columns: 1fr; gap: 2px; }
+    .panel-line { padding: 18px 20px; font-size: 16px; }
+    .post { grid-template-columns: 1fr; padding: 24px; }
+    .post-go { justify-items: start; }
+    .footer-cols { grid-template-columns: 1fr 1fr; }
+    .footer .brand-logo { height: 44px; }
   }
 </style>
 </head>
 <body>
 
-<div id="nav-sentinel" aria-hidden="true"></div>
-
 <header class="nav" id="nav">
   <div class="nav-inner">
     <a class="brand" href="#top" aria-label="Appeal Edge home"><img class="brand-logo" src="assets/logo/appeal-edge-logo.png" alt="Appeal Edge" width="400" height="135"></a>
-    <nav aria-label="Main">
+    <nav aria-label="Main" style="display:contents">
       <ul class="nav-links" id="nav-links-list">
-        <li><a href="/amazon-appeal-service/">Services</a></li>
-        <li><a href="/experts/">Specialists</a></li>
+        <li><a href="#handle">Services</a></li>
         <li><a href="#how">How it works</a></li>
-        <li><a href="#handle">What we handle</a></li>
+        <li><a href="#cases">Case studies</a></li>
+        <li><a href="#understand">Free scan</a></li>
+        <li><a href="#about">About us</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><a href="#faq">FAQ</a></li>
-        <li><a href="/about/">About</a></li>
+        <li class="nav-cta-mobile"><a class="btn btn-blue" data-cta href="https://tally.so/r/Y5voaW" target="_blank" rel="noopener">Get your case reviewed</a></li>
       </ul>
     </nav>
-    <a class="btn btn-blue" data-cta href="https://tally.so/r/Y5voaW" target="_blank" rel="noopener">Get your case reviewed</a>
-    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links-list">
-      <span></span>
-    </button>
+    <a class="btn btn-blue nav-cta" data-cta href="https://tally.so/r/Y5voaW" target="_blank" rel="noopener">Get your case reviewed</a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links-list"><span></span></button>
   </div>
 </header>
-<script>
-(function () {
-  var toggle = document.querySelector(".nav-toggle");
-  var links = document.getElementById("nav-links-list");
-  if (!toggle || !links) return;
-  toggle.addEventListener("click", function () {
-    var open = links.classList.toggle("open");
-    toggle.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-  links.querySelectorAll("a").forEach(function (a) {
-    a.addEventListener("click", function () {
-      links.classList.remove("open");
-      toggle.setAttribute("aria-expanded", "false");
-    });
-  });
-})();
-</script>
 
 <main id="top">
 
   <!-- 1. HERO -->
   <section class="hero">
     <div class="wrap">
-      <p class="eyebrow reveal">The Reinstatement Force</p>
-      <h1 class="reveal" style="--d:.06s">Amazon locked you out.<br>We have the keys.</h1>
-      <p class="hero-sub reveal" style="--d:.12s"><strong>Your account, your inventory, your funds. We get them back.</strong><br>Every case is read by a specialist from our panel, with more than 20 years of combined Amazon experience across the US, UK, Europe and India.<br>You get the root cause, the scope and a straight read on where you stand, free.</p>
-      <div class="hero-ctas reveal" style="--d:.18s">
-        <a class="btn btn-blue" data-cta href="https://tally.so/r/Y5voaW" target="_blank" rel="noopener">Get your case reviewed</a>
-        <a class="link-plain" href="#specialists">Meet our specialists</a>
+      <span class="hero-tag"><img src="/icon.svg" alt="" width="18" height="18">Amazon seller account reinstatement</span>
+      <h1>Amazon suspended your account. <span>We know the exact way back.</span></h1>
+      <p class="hero-sub">Your account, your inventory, your funds. Every case is read by a specialist who finds what actually triggered the action, and you get a straight read on where you stand, free.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-blue" href="#understand">Run a free root cause scan</a>
+        <a class="btn btn-ghost" data-cta href="https://tally.so/r/Y5voaW" target="_blank" rel="noopener">Speak with a specialist</a>
+      </div>
+
+      <div class="stats" aria-label="Track record">
+        <div class="stat"><div class="stat-num"><span data-count="300">300</span>+</div><p class="stat-label">Suspended accounts reinstated</p></div>
+        <div class="stat"><div class="stat-num"><span data-count="20">20</span>+<span class="u">yrs</span></div><p class="stat-label">Combined Amazon experience across our specialists</p></div>
+        <div class="stat"><div class="stat-num"><span data-count="7">7</span></div><p class="stat-label">Marketplaces: US, UK, Europe and India</p></div>
+        <div class="stat"><div class="stat-num"><span data-count="98">98</span><span class="u">%</span></div><p class="stat-label">Scan accuracy</p></div>
       </div>
     </div>
   </section>
 
-  <!-- 2. MEET THE FOUNDERS TEAM -->
-  <section class="section mist" id="founders">
+  <!-- 2. WHAT WE HANDLE -->
+  <section class="section mist" id="handle">
     <div class="wrap">
-      <h2 class="display reveal">Meet the Founders Team</h2>
-      <p class="lede reveal">People who run Appeal Edge.</p>
-
-      <div class="cf-stage">
-        <div class="cf-side cf-left reveal">
-          <span class="cf-name">Khushi Narwal</span>
-          <span class="cf-role">COO <span class="cf-role-full">(Chief Operating Officer)</span></span>
-          <span class="cf-arrow cf-arrow-r" aria-hidden="true">
-            <svg viewBox="0 0 76 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M2 12H70" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-              <path d="M60 3L70 12L60 21" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </span>
+      <div class="sec-head split">
+        <div style="display:grid;gap:14px">
+          <p class="eyebrow">What we handle</p>
+          <h2 class="h2">If Amazon can issue it, we have appealed it.</h2>
         </div>
-
-        <figure class="cf-video reveal" style="--d:.08s">
-          <div class="cf-frame">
-            <iframe src="https://www.youtube.com/embed/FknNCZqfn0k"
-                    title="Meet the Appeal Edge founders team"
-                    loading="lazy" allowfullscreen
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-          </div>
-        </figure>
-
-        <div class="cf-side cf-right reveal" style="--d:.05s">
-          <span class="cf-arrow cf-arrow-l" aria-hidden="true">
-            <svg viewBox="0 0 76 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M74 12H6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
-              <path d="M16 3L6 12L16 21" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </span>
-          <span class="cf-name">Apeksha Namdev</span>
-          <span class="cf-role">CEO <span class="cf-role-full">(Chief Executive Officer)</span></span>
+        <div class="filters" role="group" aria-label="Filter case types">
+          <button class="filter" type="button" data-filter="all" aria-pressed="true">All <span class="n">16</span></button>
+          <button class="filter" type="button" data-filter="account" aria-pressed="false" data-desc="Account deactivated, Section 3 and performance flags. Payouts frozen while the money you are owed sits out of reach.">Account <span class="n">7</span></button>
+          <button class="filter" type="button" data-filter="listing" aria-pressed="false" data-desc="Listing or ASIN removed. Inauthentic claims, intellectual property complaints or condition disputes that stop a product cold.">Listings <span class="n">6</span></button>
+          <button class="filter" type="button" data-filter="catalog" aria-pressed="false" data-desc="Catalog and approvals. Listing errors, approvals or catalog data that keep a product from going live.">Catalog <span class="n">3</span></button>
         </div>
       </div>
 
-      <figure class="cf-cto reveal" style="--d:.12s">
-        <div class="cf-photo">
-          <img src="assets/aayush-photo.webp" alt="Aayush Namdev, CTO of Appeal Edge" loading="lazy" width="598" height="598">
-        </div>
-        <figcaption>
-          <span class="cf-name">Aayush Namdev</span>
-          <span class="cf-role">CTO <span class="cf-role-full">(Chief Technology Officer)</span></span>
-        </figcaption>
-      </figure>
-    </div>
-  </section>
+      <p class="handle-desc" id="handle-desc" aria-live="polite">Filter by the type of notice you received.</p>
 
-  <!-- 2b. OUR SPECIALISTS -->
-  <section class="section" id="specialists">
-    <div class="wrap">
-      <h2 class="display reveal">Our specialists.</h2>
-      <p class="lede reveal">A panel of Amazon specialists, not a call center. Your case goes to whoever has actually worked that violation type before.</p>
-      <div class="expert-grid">
-        <div>
-          <p class="expert-title reveal" style="--d:.05s">Every case is worked by a panel of Amazon specialists with more than 20 years of combined experience across the US, UK, Europe and India.</p>
-          <p class="expert-bio reveal" style="--d:.15s">They are not named publicly, because they work independently and their outside client relationships are their own. Appeal Edge is the front, and Appeal Edge is directly accountable for how your case is handled from intake through resolution. The specialist who reviews your case stays in contact with you, and will get on a call if you want to talk it through before deciding anything.</p>
-          <p class="expert-meta reveal" style="margin-top:8px;"><a class="link-plain" href="/experts/">Read how the panel works</a></p>
-        </div>
+      <ul class="chips" id="chips">
+        <li class="chip" data-cat="listing">Inauthentic complaints</li>
+        <li class="chip" data-cat="listing">Intellectual property</li>
+        <li class="chip" data-cat="listing">Used sold as new</li>
+        <li class="chip" data-cat="account">Section 3</li>
+        <li class="chip" data-cat="account">Related accounts</li>
+        <li class="chip" data-cat="account">Velocity reviews</li>
+        <li class="chip" data-cat="listing">Restricted products</li>
+        <li class="chip" data-cat="account">Dropshipping violations</li>
+        <li class="chip" data-cat="account">Review manipulation</li>
+        <li class="chip" data-cat="listing">Listing suppressions</li>
+        <li class="chip" data-cat="account">Account health warnings</li>
+        <li class="chip" data-cat="account">Disbursement holds</li>
+        <li class="chip" data-cat="listing">Brand registry and IP</li>
+        <li class="chip" data-cat="catalog">Category and brand approval</li>
+        <li class="chip" data-cat="catalog">Flat file and listing errors</li>
+        <li class="chip" data-cat="catalog">GTIN and catalog issues</li>
+      </ul>
+
+      <div class="handle-note">
+        <span>Recognize your notice? We have seen it before, and we know what Amazon expects in response.</span>
+        <a class="link-arrow" href="/amazon-appeal-service/">Full service details <span aria-hidden="true">&rarr;</span></a>
       </div>
     </div>
   </section>
 
-  <!-- 3. PROOF STRIP -->
-  <section class="proof" aria-label="Track record">
-    <div class="wrap">
-      <div class="proof-grid">
-        <div class="reveal">
-          <div class="proof-num">20+</div>
-          <div class="proof-label">Years of combined Amazon experience</div>
-        </div>
-        <div class="reveal" style="--d:.08s">
-          <div class="proof-num">Group</div>
-          <div class="proof-label">Of Amazon specialists working your case</div>
-        </div>
-        <div class="reveal" style="--d:.16s">
-          <div class="proof-num">7</div>
-          <div class="proof-label">Marketplaces: US, UK, Europe and India</div>
-        </div>
-        <div class="reveal" style="--d:.24s">
-          <div class="proof-num">Free</div>
-          <div class="proof-label">Case review, no obligation</div>
-        </div>
-      </div>
-      <p class="proof-line reveal">Real account, ASIN and compliance cases, resolved by <strong>the specialist whose area it is</strong>.</p>
-    </div>
-  </section>
-
-  <!-- 4. WHO WE HELP -->
-  <section class="section mist">
-    <div class="wrap">
-      <h2 class="display reveal">You are not the first seller in this position.</h2>
-      <div class="help-rows">
-        <div class="help-row reveal">
-          <h3>Account deactivated</h3>
-          <p>Payouts frozen while the money you are owed sits out of reach, and every day costs you more.</p>
-        </div>
-        <div class="help-row reveal" style="--d:.06s">
-          <h3>Listing or ASIN removed</h3>
-          <p>Inauthentic claims, intellectual property complaints or condition disputes that stop a product cold.</p>
-        </div>
-        <div class="help-row reveal" style="--d:.12s">
-          <h3>Section 3 and performance flags</h3>
-          <p>Velocity reviews, related account findings and policy violations that arrive without warning.</p>
-        </div>
-      </div>
-      <p class="help-bridge reveal">Whatever your notice says, there is a way back. It starts the moment we read your case.</p>
-    </div>
-  </section>
-
-  <!-- 5. HOW IT WORKS -->
+  <!-- 3. HOW IT WORKS -->
   <section class="section" id="how">
     <div class="wrap">
-      <h2 class="display reveal">Three steps between you and reinstatement.</h2>
-      <div class="steps">
-        <div class="step reveal">
-          <div class="step-num" aria-hidden="true">1</div>
+      <div class="sec-head">
+        <p class="eyebrow">How it works</p>
+        <h2 class="h2">Three steps between you and reinstatement.</h2>
+      </div>
+      <ol class="track" id="track">
+        <li class="stop" tabindex="0">
+          <span class="stop-num" aria-hidden="true">1</span>
           <div>
+            <span class="stop-tag">Five minutes</span>
             <h3>Send your case</h3>
             <p>Share the suspension notice and a few details about your account. It takes five minutes.</p>
           </div>
-        </div>
-        <div class="step reveal">
-          <div class="step-num" aria-hidden="true">2</div>
+        </li>
+        <li class="stop" tabindex="0">
+          <span class="stop-num" aria-hidden="true">2</span>
           <div>
+            <span class="stop-tag">Free review</span>
             <h3>We find the root cause</h3>
             <p>Our experts identify what actually triggered the action, and your case is assigned to the specialist who has resolved it before.</p>
           </div>
-        </div>
-        <div class="step reveal">
-          <div class="step-num" aria-hidden="true">3</div>
+        </li>
+        <li class="stop" tabindex="0">
+          <span class="stop-num" aria-hidden="true">3</span>
           <div>
+            <span class="stop-tag">Through to resolution</span>
             <h3>We build and guide your appeal</h3>
-            <p>A tailored plan of action written to be accepted, with follow through until you are back in business.</p>
+            <p>A tailored plan of action written to be accepted, with follow through until you are back in business. Your specialist stays in direct contact throughout, and will get on a call if you want to talk it through.</p>
           </div>
-        </div>
-        <div class="step reveal">
-          <div class="step-num" aria-hidden="true">4</div>
-          <div>
-            <h3>You stay in direct contact</h3>
-            <p>The specialist who reviewed your case stays reachable throughout, and will get on a call with you if you want to talk it through before deciding anything.</p>
-          </div>
-        </div>
-      </div>
-      <p class="steps-close reveal">No guarantee games. Just an honest read on exactly where you stand.</p>
+        </li>
+      </ol>
+      <p class="steps-close">No guarantee games. Just an honest read on exactly where you stand.</p>
     </div>
   </section>
 
-  <!-- 6. WHAT WE HANDLE -->
-  <section class="section mist" id="handle">
+  <!-- 4. CASE STUDIES -->
+  <section class="section dark" id="cases">
     <div class="wrap">
-      <h2 class="display reveal">If Amazon can issue it, we have appealed it.</h2>
-      <div class="chips">
-        <span class="chip reveal">Inauthentic complaints</span>
-        <span class="chip reveal" style="--d:.03s">Intellectual property</span>
-        <span class="chip reveal" style="--d:.06s">Used sold as new</span>
-        <span class="chip reveal" style="--d:.09s">Section 3</span>
-        <span class="chip reveal" style="--d:.12s">Related accounts</span>
-        <span class="chip reveal" style="--d:.15s">Velocity reviews</span>
-        <span class="chip reveal" style="--d:.18s">Restricted products</span>
-        <span class="chip reveal" style="--d:.21s">Dropshipping violations</span>
-        <span class="chip reveal" style="--d:.24s">Review manipulation</span>
-        <span class="chip reveal" style="--d:.27s">Listing suppressions</span>
-        <span class="chip reveal" style="--d:.3s">Account health warnings</span>
-        <span class="chip reveal" style="--d:.33s">Disbursement holds</span>
-        <span class="chip reveal" style="--d:.36s">Brand registry and IP</span>
-        <span class="chip reveal" style="--d:.39s">Category and brand approval</span>
-        <span class="chip reveal" style="--d:.42s">Flat file and listing errors</span>
-        <span class="chip reveal" style="--d:.45s">GTIN and catalog issues</span>
+      <div class="sec-head">
+        <p class="eyebrow">Case studies</p>
+        <h2 class="h2">Our most recent cases.</h2>
       </div>
-      <p class="handle-note reveal">Recognize your notice above? We have seen it before, and we know what Amazon expects in response.</p>
+
+      <div class="cs-tabs" role="tablist" aria-label="Case studies">
+        <button class="cs-tab" type="button" role="tab" id="tab-1" aria-controls="case-1" aria-selected="true"><span class="k">01 &middot; US</span><span class="t">Section 3 deactivation</span></button>
+        <button class="cs-tab" type="button" role="tab" id="tab-2" aria-controls="case-2" aria-selected="false" tabindex="-1"><span class="k">02 &middot; UK and EU</span><span class="t">Patent and trademark claims</span></button>
+        <button class="cs-tab" type="button" role="tab" id="tab-3" aria-controls="case-3" aria-selected="false" tabindex="-1"><span class="k">03 &middot; US and CA</span><span class="t">Inauthentic ASIN block</span></button>
+      </div>
+
+      <article class="cs-panel" id="case-1" role="tabpanel" aria-labelledby="tab-1">
+        <div class="cs-fig">
+          <img class="lock" src="assets/logo/icon-white.png" alt="" loading="lazy" width="237" height="303">
+          <div><span class="cs-market">US marketplace</span><h3 class="cs-title">Section 3 deactivation</h3></div>
+          <div class="cs-metric"><div class="cs-num">$340,000</div><p class="cs-num-label">Disbursements unlocked</p></div>
+          <div class="cs-time"><span class="v">38 hours</span><span class="l">to reinstatement</span></div>
+        </div>
+        <ol class="cs-flow">
+          <li class="cs-step"><span class="k"><i>1</i>Problem</span><p>An established Home and Kitchen brand was deactivated under Section 3, Code of Conduct.</p></li>
+          <li class="cs-step"><span class="k"><i>2</i>Root cause</span><p>Tracking discrepancies from an outside 3PL carrier, flagged by Amazon as falsified fulfillment.</p></li>
+          <li class="cs-step"><span class="k"><i>3</i>What we did</span><p>Audited the supply chain and fulfillment records, then escalated the case with the evidence.</p></li>
+          <li class="cs-step out"><span class="k"><i>4</i>Outcome</span><p>Full selling rights restored and disbursements released.</p></li>
+        </ol>
+      </article>
+
+      <article class="cs-panel" id="case-2" role="tabpanel" aria-labelledby="tab-2" hidden>
+        <div class="cs-fig">
+          <img class="lock" src="assets/logo/icon-white.png" alt="" loading="lazy" width="237" height="303">
+          <div><span class="cs-market">UK and EU marketplaces</span><h3 class="cs-title">Patent and trademark claims</h3></div>
+          <div class="cs-metric"><div class="cs-num">&pound;14,500 <small>per day</small></div><p class="cs-num-label">Revenue back online</p></div>
+          <div class="cs-time"><span class="v">52 hours</span><span class="l">to reinstatement</span></div>
+        </div>
+        <ol class="cs-flow">
+          <li class="cs-step"><span class="k"><i>1</i>Problem</span><p>Four flagship ASINs were removed after a run of design patent complaints.</p></li>
+          <li class="cs-step"><span class="k"><i>2</i>Root cause</span><p>The complaints were filed by a competitor, not a legitimate rights owner.</p></li>
+          <li class="cs-step"><span class="k"><i>3</i>What we did</span><p>Prepared counter notices proving prior art and manufacturer authorization.</p></li>
+          <li class="cs-step out"><span class="k"><i>4</i>Outcome</span><p>All four listings restored.</p></li>
+        </ol>
+      </article>
+
+      <article class="cs-panel" id="case-3" role="tabpanel" aria-labelledby="tab-3" hidden>
+        <div class="cs-fig">
+          <img class="lock" src="assets/logo/icon-white.png" alt="" loading="lazy" width="237" height="303">
+          <div><span class="cs-market">US and CA marketplaces</span><h3 class="cs-title">Inauthentic ASIN block</h3></div>
+          <div class="cs-metric"><div class="cs-num">4,200 <small>units</small></div><p class="cs-num-label">Stranded inventory cleared</p></div>
+          <div class="cs-time"><span class="v">24 hours</span><span class="l">to reinstatement</span></div>
+        </div>
+        <ol class="cs-flow">
+          <li class="cs-step"><span class="k"><i>1</i>Problem</span><p>An ASIN was suppressed by Amazon's automated counterfeit checks.</p></li>
+          <li class="cs-step"><span class="k"><i>2</i>Root cause</span><p>A customer return with mislabeled packaging triggered the flag.</p></li>
+          <li class="cs-step"><span class="k"><i>3</i>What we did</span><p>Reconstructed the three level distributor invoice chain and obtained authorization letters from the brand.</p></li>
+          <li class="cs-step out"><span class="k"><i>4</i>Outcome</span><p>Listing cleared and inventory released.</p></li>
+        </ol>
+      </article>
+
+      <p class="cs-note">Individual cases. Every account is different, and the outcome depends on the facts of the case and on Amazon's decision. Client details withheld for confidentiality.</p>
     </div>
   </section>
 
-  <!-- 7. FREE CASE SCAN -->
+  <!-- 5. FREE CASE SCAN -->
   <section class="scan-zone" id="understand">
     <div class="wrap">
       <div class="scan-intro">
-        <p class="eyebrow reveal">Free case scan</p>
-        <h2 class="display reveal" style="--d:.06s">Understand your case.</h2>
-        <p class="lede reveal" style="--d:.12s">Paste your suspension notice below, or upload it. Our system reads it the way our specialists do and tells you what Amazon is actually enforcing.</p>
+        <p class="eyebrow">Free case scan</p>
+        <h2 class="h2">Understand your case.</h2>
+        <p class="lede">Paste your suspension notice below, or upload it. Our system reads it the way our specialists do and tells you what Amazon is actually enforcing.</p>
       </div>
 
-      <div class="scan-grid reveal" style="--d:.18s">
+<div class="scan-grid">
 
         <div class="scan-input-col">
           <form id="scan-form">
@@ -1271,7 +1266,7 @@
               <p class="scan-email-hint">So we can follow up if you want a specialist's take. Not required to see your result.</p>
             </div>
             <div class="scan-submit-row">
-              <button class="btn btn-amber" type="submit" id="scan-submit">Analyze my notice</button>
+              <button class="btn btn-blue" type="submit" id="scan-submit">Analyze my notice</button>
               <span class="scan-note">Confidential. Nothing is shared with Amazon. No charge to review.</span>
             </div>
           </form>
@@ -1319,51 +1314,93 @@
 
       </div>
 
-      <p class="scan-talk-instead reveal" style="--d:.24s">Prefer to just talk to someone? <a href="https://tally.so/r/Y5voaW" data-cta-main target="_blank" rel="noopener">Get your case reviewed directly</a>.</p>
+      <p class="scan-talk-instead">Prefer to just talk to someone? <a href="https://tally.so/r/Y5voaW" data-cta-main target="_blank" rel="noopener">Get your case reviewed directly</a>.</p>
+    </div>
+  </section>
+
+  <!-- 6. ABOUT -->
+  <section class="section mist" id="about">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="portrait">
+          <img src="assets/likith-photo.jpg" alt="Likith, Head of Operations at Appeal Edge" width="800" height="800" loading="lazy">
+        </div>
+        <div>
+          <p class="eyebrow">About us</p>
+          <h2 class="h2 expert-name">Likith</h2>
+          <p class="expert-role">Head of Operations</p>
+          <p class="expert-bio">Five years in the Amazon ecosystem, with 300+ suspended accounts reinstated. He combines supply chain knowledge with close policy analysis to write appeals built on evidence and root cause, never templates.</p>
+          <dl class="facts">
+            <div class="fact"><dt>Amazon policy experience</dt><dd>5+ years, 300+ accounts reinstated</dd></div>
+            <div class="fact"><dt>Marketplaces</dt><dd>US, UK, Canada and Europe</dd></div>
+            <div class="fact"><dt>Case focus</dt><dd>Section 3, related accounts, IP and trademark, inauthentic claims, frozen funds</dd></div>
+          </dl>
+        </div>
+      </div>
+      <p class="panel-line"><img src="/icon.svg" alt="" width="28" height="28"><span>Behind every case is our panel of Amazon specialists with <strong>20+ years of combined experience</strong>. Your case is assigned to the specialist most relevant to it.</span></p>
+    </div>
+  </section>
+
+  <!-- 7. BLOG -->
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head split">
+        <div style="display:grid;gap:14px">
+          <p class="eyebrow">Blog</p>
+          <h2 class="h2">From the blog.</h2>
+        </div>
+        <a class="link-arrow" href="/blog/" style="justify-self:end">See all posts <span aria-hidden="true">&rarr;</span></a>
+      </div>
+      <a class="post" href="/blog/amazon-related-account-suspension-appeal/">
+        <div>
+          <span class="post-tag">Related account</span>
+          <h3>Suspended for a "Related Account" You Never Created? Here's the Appeal That Actually Works</h3>
+          <p>Why Amazon links accounts that were never meant to be connected, the one mistake that makes it permanent, and what your appeal actually needs to prove.</p>
+        </div>
+        <div class="post-go"><span>7 min read</span><span>Read &rarr;</span></div>
+      </a>
     </div>
   </section>
 
   <!-- 8. FAQ -->
-  <section class="section" id="faq">
+  <section class="section dark" id="faq">
     <div class="wrap">
-      <h2 class="display reveal">Straight answers.</h2>
-      <div class="faq-list">
-        <details class="faq-item reveal">
-          <summary>Do you guarantee reinstatement?<span class="faq-mark" aria-hidden="true"></span></summary>
-          <p class="faq-body">No one can, and anyone who promises it is lying to you. What we do is maximize your odds: identify the real root cause, write the plan of action Amazon actually wants to see, and guide it through.</p>
-        </details>
-        <details class="faq-item reveal">
-          <summary>How fast can my account come back?<span class="faq-mark" aria-hidden="true"></span></summary>
-          <p class="faq-body">It depends on the case type and how Amazon responds. Once we review your case, we tell you upfront what a realistic timeline looks like for your situation.</p>
-        </details>
-        <details class="faq-item reveal">
-          <summary>What does it cost?<span class="faq-mark" aria-hidden="true"></span></summary>
-          <p class="faq-body">Reviewing your case costs nothing. Pricing is discussed after we understand what your case actually requires, so you never pay for work you don't need.</p>
-        </details>
-        <details class="faq-item reveal">
-          <summary>Are you affiliated with Amazon?<span class="faq-mark" aria-hidden="true"></span></summary>
-          <p class="faq-body">No. Appeal Edge is an independent consultancy. We work for sellers, not for Amazon.</p>
-        </details>
-        <details class="faq-item reveal">
-          <summary>Who actually works on my case?<span class="faq-mark" aria-hidden="true"></span></summary>
-          <p class="faq-body">A specialist from the Appeal Edge panel. Every submission is reviewed and assigned to whoever fits the case, and that same specialist stays in direct contact with you. Nothing is passed to a call center.</p>
-        </details>
+      <div class="faq-grid">
+        <div class="faq-side">
+          <p class="eyebrow">FAQ</p>
+          <h2 class="h2">Straight answers.</h2>
+          <p class="lede" style="font-size:16px">The questions sellers ask us most.</p>
+          <div class="ask">
+            <p>Need to speak to us directly?</p>
+            <a class="btn btn-light" data-cta href="https://tally.so/r/Y5voaW" target="_blank" rel="noopener">Speak with a specialist</a>
+          </div>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item"><summary>Do you guarantee reinstatement?<span class="faq-mark" aria-hidden="true"></span></summary><p class="faq-body">No one can, and anyone who promises it is not being straight with you. Amazon makes the final decision. What we do is improve your odds: identify the real root cause, write the plan of action Amazon actually wants to see, and guide it through.</p></details>
+          <details class="faq-item"><summary>How does the free root cause scan work?<span class="faq-mark" aria-hidden="true"></span></summary><p class="faq-body">Paste or upload your suspension notice. The scanner reads it the way our specialists do and shows the case type, the evidence your appeal will need and what to do next. If you want a specialist to take it from there, you can send it on from the results without retyping anything.</p></details>
+          <details class="faq-item"><summary>What does it cost?<span class="faq-mark" aria-hidden="true"></span></summary><p class="faq-body">The scan and the first case review cost nothing. Pricing is discussed once we understand what your case actually requires, so you never pay for work you don't need.</p></details>
+          <details class="faq-item"><summary>How fast can my account come back?<span class="faq-mark" aria-hidden="true"></span></summary><p class="faq-body">It depends on the case type and how Amazon responds. Once we review your case, we tell you upfront what a realistic timeline looks like for your situation.</p></details>
+          <details class="faq-item"><summary>Who actually works on my case?<span class="faq-mark" aria-hidden="true"></span></summary><p class="faq-body">A specialist from the Appeal Edge panel who has worked that violation type before. The same specialist stays in direct contact with you throughout. Nothing is passed to a call center.</p></details>
+          <details class="faq-item"><summary>My appeal was already rejected. Can you still help?<span class="faq-mark" aria-hidden="true"></span></summary><p class="faq-body">Send us the notice and what you submitted before you try again. Each rejected appeal narrows your options, and after repeated attempts Amazon may stop responding on the issue. We will tell you honestly whether there is still a path.</p></details>
+          <details class="faq-item"><summary>Why not write the appeal myself?<span class="faq-mark" aria-hidden="true"></span></summary><p class="faq-body">You can. Appeals that are emotional, argumentative, templated or that miss the root cause Amazon identified are usually rejected. Getting the structure right on the first attempt matters, because later attempts get harder.</p></details>
+          <details class="faq-item"><summary>Can you help with held funds or stranded inventory?<span class="faq-mark" aria-hidden="true"></span></summary><p class="faq-body">Yes. Disbursement holds, including the 90 day hold after a deactivation, and inventory stuck behind a listing block are both case types we handle.</p></details>
+          <details class="faq-item"><summary>Which marketplaces do you cover?<span class="faq-mark" aria-hidden="true"></span></summary><p class="faq-body">The US, UK, Canada, Europe and India.</p></details>
+          <details class="faq-item"><summary>Is my information kept confidential?<span class="faq-mark" aria-hidden="true"></span></summary><p class="faq-body">Yes. Nothing you send us is shared with Amazon or anyone else without your agreement.</p></details>
+          <details class="faq-item"><summary>Are you affiliated with Amazon?<span class="faq-mark" aria-hidden="true"></span></summary><p class="faq-body">No. Appeal Edge is an independent consultancy. We work for sellers, not for Amazon.</p></details>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 9. FROM THE BLOG -->
-  <section class="section mist">
+  <!-- 9. CLOSING CTA (prefooter class feeds analytics position) -->
+  <section class="closing prefooter">
     <div class="wrap">
-      <h2 class="display reveal">From the blog.</h2>
-      <p class="lede reveal">Guides on what actually triggers a suspension and how to build an appeal that gets a real read.</p>
-      <a class="post-card reveal" href="/blog/amazon-related-account-suspension-appeal/">
-        <span class="post-tag">Related Account</span>
-        <h3>Suspended for a "Related Account" You Never Created? Here's the Appeal That Actually Works</h3>
-        <p>Why Amazon links accounts that were never meant to be connected, the one mistake that makes it permanent, and what your appeal actually needs to prove.</p>
-        <p class="post-meta">Appeal Edge &middot; 7 min read</p>
-      </a>
-      <p class="blog-teaser-link reveal"><a class="link-plain" href="/blog/">Read more guides</a></p>
+      <h2 class="h2">Every hour your store is down, you lose search ranking and cash flow.</h2>
+      <p>The sooner the real root cause is on the table, the sooner you know where you stand. Your first review is free.</p>
+      <div class="closing-ctas">
+        <a class="btn btn-blue" href="#understand">Run a free root cause scan</a>
+        <a class="btn btn-ghost" data-cta href="https://tally.so/r/Y5voaW" target="_blank" rel="noopener">Speak with a specialist</a>
+      </div>
     </div>
   </section>
 
@@ -1372,25 +1409,27 @@
 <!-- FOOTER -->
 <footer class="footer">
   <div class="wrap">
-    <div class="prefooter">
-      <h2 class="reveal">Your account is waiting. Let's get it back.</h2>
-      <a class="btn btn-white reveal" data-cta href="https://tally.so/r/Y5voaW" target="_blank" rel="noopener">Get your case reviewed</a>
-    </div>
     <div class="footer-cols">
       <div>
-        <a class="brand" href="#top"><img class="brand-logo" src="assets/logo/appeal-edge-logo-white.png" alt="Appeal Edge" loading="lazy" width="400" height="135"></a>
+        <a class="brand" href="#top" aria-label="Appeal Edge home"><img class="brand-logo" src="assets/logo/appeal-edge-logo-white.png" alt="Appeal Edge" loading="lazy" width="400" height="135"></a>
         <p class="footer-desc">The Reinstatement Force.</p>
       </div>
       <div class="footer-col">
-        <h4>Navigate</h4>
+        <h4>Services</h4>
         <ul>
           <li><a href="/amazon-appeal-service/">Amazon Appeal Service</a></li>
-          <li><a href="/experts/">Specialists</a></li>
-          <li><a href="#how">How it works</a></li>
           <li><a href="#handle">What we handle</a></li>
+          <li><a href="#understand">Free case scan</a></li>
+          <li><a href="#cases">Case studies</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about/">About</a></li>
+          <li><a href="#how">How it works</a></li>
           <li><a href="/blog/">Blog</a></li>
           <li><a href="#faq">FAQ</a></li>
-          <li><a href="/about/">About</a></li>
           <li><a href="/privacy-policy/">Privacy Policy</a></li>
           <li><a href="/terms/">Terms of Service</a></li>
         </ul>
@@ -1406,7 +1445,7 @@
       </div>
     </div>
     <div class="footer-legal">
-      <p>Appeal Edge is an independent consultancy. Not affiliated with, endorsed by, or sponsored by Amazon. <a href="/privacy-policy/" style="color:inherit;text-decoration:underline;">Privacy Policy</a> &middot; <a href="/terms/" style="color:inherit;text-decoration:underline;">Terms of Service</a></p>
+      <p>Appeal Edge is an independent consultancy. Not affiliated with, endorsed by, or sponsored by Amazon. Case studies describe individual results and are not a promise of any outcome. <a href="/privacy-policy/">Privacy Policy</a> &middot; <a href="/terms/">Terms of Service</a></p>
       <p>&copy; 2026 Appeal Edge</p>
     </div>
   </div>
@@ -1432,38 +1471,120 @@
 </a>
 
 <script>
-  // Nav: transparent until the page scrolls past the top sentinel
-  const nav = document.getElementById("nav");
-  const sentinel = document.getElementById("nav-sentinel");
-  new IntersectionObserver(([entry]) => {
-    nav.classList.toggle("scrolled", !entry.isIntersecting);
-  }).observe(sentinel);
+(function () {
+  var nav = document.getElementById("nav");
+  var onScroll = function () { nav.classList.toggle("scrolled", window.scrollY > 8); };
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
 
-  // Scroll reveal
-  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (reduce) {
-    document.querySelectorAll(".reveal").forEach(el => el.classList.add("in"));
-  } else {
-    const io = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add("in");
-          io.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.15, rootMargin: "0px 0px -5% 0px" });
-    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  // Mobile menu
+  var toggle = document.querySelector(".nav-toggle");
+  var links = document.getElementById("nav-links-list");
+  function closeMenu() {
+    links.classList.remove("open");
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-label", "Open menu");
   }
+  toggle.addEventListener("click", function () {
+    var open = links.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  });
+  links.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", closeMenu); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeMenu(); });
 
-  // FAQ: one open at a time
-  const faqs = document.querySelectorAll(".faq-item");
-  faqs.forEach(d => {
-    d.addEventListener("toggle", () => {
-      if (d.open) faqs.forEach(o => { if (o !== d) o.open = false; });
+  // What we handle: category filter
+  var chips = document.getElementById("chips");
+  var desc = document.getElementById("handle-desc");
+  var defaultDesc = desc.textContent;
+  var filters = document.querySelectorAll(".filter");
+  filters.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var cat = btn.dataset.filter;
+      filters.forEach(function (b) { b.setAttribute("aria-pressed", b === btn ? "true" : "false"); });
+      chips.classList.toggle("filtered", cat !== "all");
+      chips.querySelectorAll(".chip").forEach(function (c) { c.classList.toggle("on", c.dataset.cat === cat); });
+      desc.textContent = btn.dataset.desc || defaultDesc;
     });
   });
 
-  // Free case scan JS now lives in /js/ae-scanner.js, shared with blog posts
+  // Case studies: tabs
+  var tabs = Array.prototype.slice.call(document.querySelectorAll(".cs-tab"));
+  function selectTab(tab) {
+    tabs.forEach(function (t) {
+      var on = t === tab;
+      t.setAttribute("aria-selected", on ? "true" : "false");
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute("aria-controls")).hidden = !on;
+    });
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener("click", function () { selectTab(t); });
+    t.addEventListener("keydown", function (e) {
+      var d = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
+      if (!d) return;
+      var next = tabs[(i + d + tabs.length) % tabs.length];
+      selectTab(next);
+      next.focus();
+    });
+  });
+
+  // FAQ: one open at a time
+  var faqs = document.querySelectorAll(".faq-item");
+  faqs.forEach(function (d) {
+    d.addEventListener("toggle", function () {
+      if (d.open) faqs.forEach(function (o) { if (o !== d) o.open = false; });
+    });
+  });
+
+  // How it works: highlight step and fill the progress line
+  var track = document.getElementById("track");
+  var stops = Array.prototype.slice.call(track.querySelectorAll(".stop"));
+  function setStep(n) {
+    stops.forEach(function (s, i) { s.classList.toggle("on", i === n); s.classList.toggle("done", i < n); });
+    track.style.setProperty("--p", n);
+  }
+  stops.forEach(function (s, i) {
+    s.addEventListener("mouseenter", function () { setStep(i); });
+    s.addEventListener("focus", function () { setStep(i); });
+    s.addEventListener("click", function () { setStep(i); });
+  });
+  setStep(0);
+
+  // Stats: count up once when visible
+  var nums = document.querySelectorAll("[data-count]");
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduce && "IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        io.unobserve(e.target);
+        var el = e.target, end = +el.dataset.count, t0 = null;
+        function tick(t) {
+          if (!t0) t0 = t;
+          var k = Math.min((t - t0) / 1100, 1);
+          el.textContent = Math.round(end * (1 - Math.pow(1 - k, 3)));
+          if (k < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      });
+    }, { threshold: .6 });
+    nums.forEach(function (n) { io.observe(n); });
+  }
+
+  // Nav: mark the section in view (none until the first one is reached)
+  var navLinks = Array.prototype.slice.call(links.querySelectorAll('a[href^="#"]:not(.btn)'));
+  var secs = navLinks.map(function (a) { return document.querySelector(a.getAttribute("href")); });
+  function markActive() {
+    var y = window.scrollY + 120, idx = -1;
+    secs.forEach(function (s, i) { if (s && s.getBoundingClientRect().top + window.scrollY <= y) idx = i; });
+    navLinks.forEach(function (a, i) { a.classList.toggle("active", i === idx); });
+  }
+  window.addEventListener("scroll", markActive, { passive: true });
+  markActive();
+
+  // Free case scan JS lives in /js/ae-scanner.js, shared with blog posts
+})();
 </script>
 <script defer src="/js/ae-scanner.js"></script>
 

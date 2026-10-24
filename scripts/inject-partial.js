@@ -23,28 +23,27 @@ const ROOT = path.join(__dirname, '..', 'frontend-v2');
 const HOME_FILE = path.join(ROOT, 'index.html');
 
 const NAV_LINKS_SUB = `<ul class="nav-links" id="nav-links-list">
-        <li><a href="/amazon-appeal-service/">Services</a></li>
-        <li><a href="/experts/">Our Specialists</a></li>
         <li><a href="/#how">How it works</a></li>
-        <li><a href="/#handle">What we handle</a></li>
+        <li><a href="/#handle">Services</a></li>
+        <li><a href="/#understand">Free scan</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><a href="/#faq">FAQ</a></li>
-        <li><a href="/about/">About</a></li>
+        <li><a href="/#about">About us</a></li>
       </ul>`;
 
 const NAV_LINKS_HOME = `<ul class="nav-links" id="nav-links-list">
-        <li><a href="/amazon-appeal-service/">Services</a></li>
-        <li><a href="/experts/">Specialists</a></li>
+        <li><a href="#handle">Services</a></li>
         <li><a href="#how">How it works</a></li>
-        <li><a href="#handle">What we handle</a></li>
+        <li><a href="#cases">Case studies</a></li>
+        <li><a href="#understand">Free scan</a></li>
+        <li><a href="#about">About us</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><a href="#faq">FAQ</a></li>
-        <li><a href="/about/">About</a></li>
+        <li class="nav-cta-mobile"><a class="btn btn-blue" data-cta href="https://tally.so/r/Y5voaW" target="_blank" rel="noopener">Get your case reviewed</a></li>
       </ul>`;
 
 const FOOTER_NAV_SUB = `<ul>
           <li><a href="/amazon-appeal-service/">Amazon Appeal Service</a></li>
-          <li><a href="/experts/">Our Specialists</a></li>
           <li><a href="/#how">How it works</a></li>
           <li><a href="/#handle">What we handle</a></li>
           <li><a href="/blog/">Blog</a></li>
@@ -56,7 +55,6 @@ const FOOTER_NAV_SUB = `<ul>
 
 const FOOTER_NAV_HOME = `<ul>
           <li><a href="/amazon-appeal-service/">Amazon Appeal Service</a></li>
-          <li><a href="/experts/">Specialists</a></li>
           <li><a href="#how">How it works</a></li>
           <li><a href="#handle">What we handle</a></li>
           <li><a href="/blog/">Blog</a></li>
