@@ -23,6 +23,11 @@
   if (!form) return;
 
   let lastResult = null;
+  // The case review prefill below runs on the homepage only. Blog posts tag
+  // their body with data-scan-page-type, so they keep the original behaviour.
+  const isHome = (document.body.dataset.scanPageType || "home") === "home";
+  const NOTICE_PREFILL_MAX = 1500; // keeps the Tally URL a safe length
+  let lastNotice = "";
 
   const updateFileName = () => {
     fileNameEl.textContent = fileEl.files.length
@@ -115,6 +120,10 @@
       caseType: data.caseType || "",
       synthesis: (data.synthesis || "").slice(0, 300),
     });
+    if (isHome) {
+      if (data.caseTypeId) params.set("caseTypeId", data.caseTypeId);
+      if (lastNotice) params.set("noticeText", lastNotice.slice(0, NOTICE_PREFILL_MAX));
+    }
     wrap.innerHTML = '<iframe data-tally-src="https://tally.so/embed/Y5voaW?' + params.toString() +
       '" width="100%" height="400" frameborder="0" title="Get your case reviewed"></iframe>';
     await ensureTallyEmbedScript();
@@ -122,6 +131,34 @@
       window.Tally.loadEmbeds();
     }
   };
+
+  // Homepage: nothing is sent to Tally until the person chooses to open the form.
+  const renderReviewButton = (data) => {
+    const wrap = document.getElementById("scan-tally-wrap");
+    wrap.innerHTML = '<button type="button" class="btn btn-blue" id="scan-review-btn">Request a specialist review</button>';
+    document.getElementById("scan-review-btn").addEventListener("click", () => renderTallyEmbed(data));
+  };
+
+  // Other Get your case reviewed links also carry the scan result, but only
+  // at the moment they are clicked and only after a scan has run.
+  if (isHome) {
+    const addScanParams = (e) => {
+      const a = e.target.closest && e.target.closest('a[href*="tally.so"]');
+      if (!a) return;
+      // Always build from the clean link, so a reset scan leaves no old notice behind.
+      if (!a.dataset.aeBase) a.dataset.aeBase = a.href;
+      if (!lastResult) { a.href = a.dataset.aeBase; return; }
+      try {
+        const url = new URL(a.dataset.aeBase);
+        url.searchParams.set("caseType", lastResult.caseType || "");
+        if (lastResult.caseTypeId) url.searchParams.set("caseTypeId", lastResult.caseTypeId);
+        if (lastNotice) url.searchParams.set("noticeText", lastNotice.slice(0, NOTICE_PREFILL_MAX));
+        a.href = url.toString();
+      } catch (err) { /* leave the link as it was */ }
+    };
+    document.addEventListener("click", addScanParams, true);
+    document.addEventListener("auxclick", addScanParams, true);
+  }
 
   const renderResults = (data) => {
     if (data.caseTypeId === "unrecognized") {
@@ -158,7 +195,8 @@
 
     emptyEl.hidden = true;
     resultsEl.hidden = false;
-    renderTallyEmbed(data);
+    if (isHome) renderReviewButton(data);
+    else renderTallyEmbed(data);
 
     if (typeof gtag === "function") {
       const pageType = document.body.dataset.scanPageType || "home";
@@ -172,6 +210,7 @@
     errorEl.textContent = "";
 
     const text = textEl.value.trim();
+    lastNotice = text;
     const hasFiles = fileEl.files.length > 0;
     if (text.length < 30 && !hasFiles) {
       showError("Paste your suspension notice, or upload a file, before analyzing.");
@@ -224,5 +263,6 @@
     emailEl.value = "";
     fileNameEl.textContent = "";
     lastResult = null;
+    lastNotice = "";
   });
 })();

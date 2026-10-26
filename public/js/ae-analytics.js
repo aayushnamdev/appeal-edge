@@ -33,6 +33,7 @@
     if (a.closest(".prefooter")) return "prefooter";
     if (a.classList.contains("wa-fab")) return "float_wa";
     if (a.closest(".social-rail")) return "social_rail";
+    if (a.closest(".sticky-bar")) return "sticky_bar";
     if (a.closest(".footer-cols")) return "footer_link";
     return "other";
   };
