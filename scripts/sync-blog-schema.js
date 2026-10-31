@@ -99,7 +99,22 @@ function rebuildBlogIndex(entries, write) {
   blogNode.blogPost = sorted;
   const after = JSON.stringify(blogNode.blogPost);
 
-  if (before === after) return 'unchanged';
+  // Keep the /blog/ graph self resolving: every author @id referenced by an entry
+  // must be defined on this page. Definitions are copied from the homepage graph.
+  const home = parseGraph(fs.readFileSync(path.join(SITE_ROOT, 'index.html'), 'utf8'));
+  let peopleChanged = false;
+  if (home) {
+    const wanted = new Set(sorted.map((e) => e.author && e.author['@id']).filter((id) => id && !id.endsWith('#organization')));
+    for (const id of wanted) {
+      const def = home.data['@graph'].find((n) => n['@id'] === id && n['@type'] === 'Person');
+      const at = data['@graph'].findIndex((n) => n['@id'] === id);
+      if (!def) continue;
+      if (at === -1) { data['@graph'].push(def); peopleChanged = true; }
+      else if (JSON.stringify(data['@graph'][at]) !== JSON.stringify(def)) { data['@graph'][at] = def; peopleChanged = true; }
+    }
+  }
+
+  if (before === after && !peopleChanged) return 'unchanged';
 
   const newJson = '\n' + JSON.stringify(data, null, 2) + '\n';
   const updated = original.slice(0, match.index) + match[1] + newJson + match[3] + original.slice(match.index + match[0].length);

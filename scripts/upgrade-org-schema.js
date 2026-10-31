@@ -35,6 +35,8 @@ const SITE_ROOT = path.join(REPO_ROOT, 'frontend-v2');
 const HOME_FILE = path.join(SITE_ROOT, 'index.html');
 
 const SKIP_DIRS = new Set(['scroll-hero-test']);
+// /about/ is deliberately left alone (owner instruction, 2026-10-31).
+const SKIP_FILES = new Set([path.join(SITE_ROOT, 'about', 'index.html')]);
 
 const ORG_ID = 'https://www.appeal-edge.com/#organization';
 
@@ -43,16 +45,17 @@ const DESCRIPTION =
 const EMAIL = 'contact@appeal-edge.com';
 const SAME_AS = [
   'https://www.instagram.com/appeal.edge/',
-  'https://www.linkedin.com/company/112773661/',
+  'https://www.linkedin.com/company/appealedge/',
+  'https://wa.me/919220560623',
 ];
+// The seven regions in CLAUDE.md. Do not add any other country.
 const AREA_SERVED = [
   { '@type': 'Country', name: 'United States' },
   { '@type': 'Country', name: 'United Kingdom' },
+  { '@type': 'Place', name: 'European Union' },
   { '@type': 'Country', name: 'Canada' },
-  { '@type': 'Country', name: 'Germany' },
-  { '@type': 'Country', name: 'France' },
-  { '@type': 'Country', name: 'Italy' },
-  { '@type': 'Country', name: 'Japan' },
+  { '@type': 'Country', name: 'Mexico' },
+  { '@type': 'Country', name: 'Australia' },
   { '@type': 'Country', name: 'India' },
 ];
 const KNOWS_ABOUT = [
@@ -76,6 +79,26 @@ const FOUNDERS = [
   { id: 'apeksha-namdev', name: 'Apeksha Namdev', jobTitle: 'CEO' },
   { id: 'aayush-namdev', name: 'Aayush Namdev', jobTitle: 'CTO' },
 ];
+
+const LIKITH = {
+  '@type': 'Person',
+  '@id': 'https://www.appeal-edge.com/#likith',
+  name: 'Likith',
+  jobTitle: 'Head of Operations',
+  url: 'https://www.appeal-edge.com/#about',
+  image: 'https://www.appeal-edge.com/assets/likith-photo.jpg',
+  description:
+    'Five years in the Amazon ecosystem, with 300+ suspended accounts reinstated. He combines supply chain knowledge with close policy analysis to write appeals built on evidence and root cause.',
+  knowsAbout: [
+    'Section 3 suspensions',
+    'Related account suspensions',
+    'Intellectual property and trademark complaints',
+    'Inauthentic complaints',
+    'Frozen funds',
+  ],
+  sameAs: ['https://www.linkedin.com/in/likith-s-b6478b16b/'],
+  worksFor: { '@id': ORG_ID },
+};
 
 function personNode(f) {
   return {
@@ -112,8 +135,8 @@ function upgradeOrgNode(node) {
   }
   if (!node.description) { node.description = DESCRIPTION; changed = true; }
   if (!node.email) { node.email = EMAIL; changed = true; }
-  if (!node.sameAs) { node.sameAs = SAME_AS; changed = true; }
-  if (!node.areaServed) { node.areaServed = AREA_SERVED; changed = true; }
+  if (JSON.stringify(node.sameAs) !== JSON.stringify(SAME_AS)) { node.sameAs = SAME_AS; changed = true; }
+  if (JSON.stringify(node.areaServed) !== JSON.stringify(AREA_SERVED)) { node.areaServed = AREA_SERVED; changed = true; }
   if (!node.knowsAbout) { node.knowsAbout = KNOWS_ABOUT; changed = true; }
   if (!node.contactPoint) { node.contactPoint = CONTACT_POINT; changed = true; }
   return changed;
@@ -138,12 +161,22 @@ function processFile(file, write) {
   if (!orgNode) return 'no-org';
 
   let changed = upgradeOrgNode(orgNode);
+  for (const n of data['@graph']) {
+    if (n !== orgNode && n.areaServed && JSON.stringify(n.areaServed) !== JSON.stringify(AREA_SERVED)) {
+      n.areaServed = AREA_SERVED; changed = true;
+    }
+  }
 
   if (file === HOME_FILE) {
     if (!orgNode.founder) {
       orgNode.founder = FOUNDERS.map((f) => ({ '@id': `https://www.appeal-edge.com/#${f.id}` }));
       changed = true;
     }
+    const empId = { '@id': LIKITH['@id'] };
+    if (JSON.stringify(orgNode.employee) !== JSON.stringify([empId])) { orgNode.employee = [empId]; changed = true; }
+    const li = data['@graph'].findIndex((n) => n['@id'] === LIKITH['@id']);
+    if (li === -1) { data['@graph'].push(LIKITH); changed = true; }
+    else if (JSON.stringify(data['@graph'][li]) !== JSON.stringify(LIKITH)) { data['@graph'][li] = LIKITH; changed = true; }
     for (const f of FOUNDERS) {
       const id = `https://www.appeal-edge.com/#${f.id}`;
       if (!data['@graph'].some((n) => n['@id'] === id)) {
@@ -170,6 +203,7 @@ function main() {
   let skipped = 0;
 
   for (const file of files) {
+    if (SKIP_FILES.has(file)) continue;
     const result = processFile(file, write);
     const rel = path.relative(SITE_ROOT, file);
     if (result === 'changed') {

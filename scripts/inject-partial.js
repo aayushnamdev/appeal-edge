@@ -31,6 +31,11 @@ const NAV_LINKS_SUB = `<ul class="nav-links" id="nav-links-list">
         <li><a href="/#about">About us</a></li>
       </ul>`;
 
+// Blog pages use the shared ae-blog.css nav, which also needs the mobile CTA item.
+const NAV_LINKS_BLOG = NAV_LINKS_SUB.replace(/\n\s*<\/ul>$/, `
+        <li class="nav-cta-mobile"><a class="btn btn-blue" data-cta href="https://tally.so/r/Y5voaW" target="_blank" rel="noopener">Get your case reviewed</a></li>
+      </ul>`);
+
 const NAV_LINKS_HOME = `<ul class="nav-links" id="nav-links-list">
         <li><a href="#handle">Services</a></li>
         <li><a href="#how">How it works</a></li>
@@ -120,7 +125,8 @@ function processFile(file, write) {
   const original = fs.readFileSync(file, 'utf8');
   const isHome = file === HOME_FILE;
 
-  let updated = replaceNavLinks(original, isHome ? NAV_LINKS_HOME : NAV_LINKS_SUB, file);
+  const isBlog = file.startsWith(path.join(ROOT, 'blog') + path.sep);
+  let updated = replaceNavLinks(original, isHome ? NAV_LINKS_HOME : (isBlog ? NAV_LINKS_BLOG : NAV_LINKS_SUB), file);
   updated = replaceFooterNav(updated, isHome ? FOOTER_NAV_HOME : FOOTER_NAV_SUB, file);
 
   if (updated === original) return 'unchanged';

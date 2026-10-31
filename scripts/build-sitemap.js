@@ -27,7 +27,8 @@ const SITE_ROOT = path.join(REPO_ROOT, 'frontend-v2');
 const SITEMAP_PATH = path.join(REPO_ROOT, 'public', 'sitemap.xml');
 const BASE_URL = 'https://www.appeal-edge.com';
 
-const SKIP_DIRS = new Set(['scroll-hero-test']);
+// experts/ is a redirect stub (canonical points at the homepage), so it is not a sitemap URL.
+const SKIP_DIRS = new Set(['scroll-hero-test', 'experts']);
 
 // URL path (with leading/trailing slash, matching <loc> minus BASE_URL) ->
 // { priority, changefreq } overrides. Everything not listed here uses the

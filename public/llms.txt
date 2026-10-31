@@ -2,12 +2,15 @@
 
 > Independent Amazon seller suspension appeal consultancy. Every case is read by a specialist from a panel with more than 20 years of combined Amazon experience. Cases are reviewed individually and pricing is provided after that review, not published as a fixed rate.
 
-## Services
-- [Amazon Suspension Appeal Service](https://www.appeal-edge.com/amazon-appeal-service/): case review, root cause diagnosis, and a case specific Plan of Action written for the actual suspension type
-- [Plan of Action Writing Service](https://www.appeal-edge.com/amazon-plan-of-action-writing-service/): for sellers who already know their violation type and need the document itself written
-- [IP Complaint Removal Service](https://www.appeal-edge.com/amazon-ip-complaint-removal-service/): trademark, copyright, and counterfeit complaint appeals
-- [Appeal Service for India Based Sellers](https://www.appeal-edge.com/amazon-appeal-service-india/): the same process, communicated over WhatsApp and email in India time zones
-- Account health guidance to help prevent future suspensions
+## Key Facts
+- Appeal Edge is run by three founders: Khushi Narwal (COO), Apeksha Namdev (CEO), and Aayush Namdev (CTO), with Likith as Head of Operations
+- 300+ suspended accounts reinstated
+- Regions served: US, UK, EU, Canada, Mexico, Australia and India
+- Cases are worked by a panel of Amazon specialists with more than 20 years of combined experience, not named publicly since they work independently
+- Every case is reviewed and assigned to the specialist who fits it. That same specialist stays in direct contact with you throughout
+- Pricing is not published. Case review is free, and pricing is discussed only after the case is reviewed
+- Not affiliated with, endorsed by, or sponsored by Amazon.com, Inc.
+- Independent consultancy, not a law firm. Content is general guidance, not legal advice
 
 ## Suspension Types Covered
 - Inauthentic and counterfeit complaints
@@ -25,21 +28,100 @@
 - Step 3: Draft a case specific Plan of Action naming the root cause, the corrective action already taken, and the preventive measures going forward
 - Step 4: Check the draft for generic language, vague claims, and missing specifics before submission
 
-## Key Facts
-- [About Appeal Edge](https://www.appeal-edge.com/about/): who runs the company and how a case is handled
-- Appeal Edge is run by three founders: Khushi Narwal (COO), Apeksha Namdev (CEO), and Aayush Namdev (CTO)
-- Cases are worked by a panel of Amazon specialists with more than 20 years of combined experience across the US, UK, Europe and India, not named publicly since they work independently
-- Every case is reviewed and assigned to the specialist who fits it. That same specialist stays in direct contact with you throughout
-- Pricing is not published. Case review is free, and pricing is discussed only after the case is reviewed
-- Not affiliated with, endorsed by, or sponsored by Amazon.com, Inc.
-- Independent consultancy, not a law firm
+## Services
+- [Amazon Seller Suspension Appeal Service](https://www.appeal-edge.com/amazon-appeal-service/): A case specific appeal built by a specialist panel with 20+ years of combined experience. Free review, price shared once we know what your case needs.
+- [Amazon Plan of Action Writing Service](https://www.appeal-edge.com/amazon-plan-of-action-writing-service/): Already know your violation type and just need the Plan of Action written right. A case specific POA, checked before it goes anywhere near Amazon.
+- [Amazon IP Complaint Removal Service](https://www.appeal-edge.com/amazon-ip-complaint-removal-service/): Trademark, copyright, and counterfeit complaints removed the way Amazon actually reviews them. Free case review before anything is charged.
+- [Amazon Seller Account Suspended in India](https://www.appeal-edge.com/amazon-appeal-service-india/): Appeal help for India based Amazon sellers, on WhatsApp and email, in your time zone. Free case review before anything is charged.
+
+## Company
+- [About Appeal Edge | Independent Amazon Appeal Consultancy](https://www.appeal-edge.com/about/): Appeal Edge is an Amazon suspension appeal consultancy run by three founders and a specialist panel. Not a law firm, not affiliated with Amazon.
+- [Privacy Policy](https://www.appeal-edge.com/privacy-policy/): How Appeal Edge collects, uses, and protects the information you share when you submit a case for review.
+- [Terms of Service](https://www.appeal-edge.com/terms/): The terms that apply when you submit a case to Appeal Edge or use this website.
 
 ## Blog
-- [Appeal Edge Blog](https://www.appeal-edge.com/blog/): Guides on Amazon suspension types, appeal strategy, and seller tools
+- [Appeal Edge Blog](https://www.appeal-edge.com/blog/): Guides on Amazon suspension types and how to appeal them
+
+### Plan of Action
+- [Amazon Root Cause Examples By Violation Type](https://www.appeal-edge.com/blog/amazon-plan-of-action-root-cause-examples/): The root cause section fails more appeals than any other. Here is a worked, specific example for five common violation types.
+- [Writing Your First Amazon Plan of Action](https://www.appeal-edge.com/blog/first-amazon-appeal-plan-of-action-new-seller/): Writing your first Amazon plan of action with no prior appeal experience. Here is the structure that gets read, for someone doing this the first time.
+- [Amazon POA Examples by Violation Type](https://www.appeal-edge.com/blog/amazon-plan-of-action-examples-by-violation-type/): A generic example does not fit your case. See a worked Plan of Action opening for each major Amazon violation type, with a link to the full appeal guide.
+- [Amazon POA Rejected: Insufficient Information](https://www.appeal-edge.com/blog/amazon-plan-of-action-rejected-insufficient-information/): Insufficient information is Amazon's most common rejection reason, and it rarely means what sellers think. Here is what it actually signals and how to fix it.
+- [Amazon Plan of Action Template](https://www.appeal-edge.com/blog/amazon-plan-of-action-template/): A generic Plan of Action template gets you rejected. Here is the exact structure Amazon's reviewers expect, with real wording for each section.
+- [Used Sold as New: Plan of Action Template](https://www.appeal-edge.com/blog/used-sold-as-new-plan-of-action-template/): A used sold as new complaint needs a specific plan, not an apology. Here is the 3 part structure Amazon reads for, with sample wording for each section.
+
+### IP, trademark and copyright complaints
+- [Amazon False IP Complaint: Proving Bad Faith](https://www.appeal-edge.com/blog/amazon-false-ip-complaint-competitor/): A competitor can file an IP complaint against a genuine listing. Here is the evidence that separates a real infringement from a bad faith claim.
+- [Amazon IP Retraction Letter: What To Send](https://www.appeal-edge.com/blog/amazon-ip-complaint-retraction-letter/): A retraction from the rights owner closes an IP complaint faster than an appeal. Here is exactly what the request needs to say to get one.
+- [Amazon Trademark Appeal: Annotated Example](https://www.appeal-edge.com/blog/amazon-trademark-appeal-letter-example/): A generic template does not answer your specific notice. Here is a real trademark appeal, section by section, with notes on why each line works.
+- [Amazon Copyright Infringement: How to Appeal](https://www.appeal-edge.com/blog/amazon-copyright-infringement-appeal/): A copyright complaint usually targets your images, listing text, or design work, not your brand name. Here is how the appeal actually differs.
+- [How to Remove an Amazon IP Complaint](https://www.appeal-edge.com/blog/how-to-remove-amazon-ip-complaint/): Winning an appeal and getting the complaint itself removed are two different outcomes. Here is what actually clears an IP complaint off your account record.
+- [Amazon Trademark Violation: Appeal Steps](https://www.appeal-edge.com/blog/amazon-trademark-violation-appeal-seller-central-steps/): The appeal sits on the violation row in Account Health, not a separate page. Here's the click path, the form's 4 fields, and when a retraction beats appealing.
+- [Amazon Intellectual Property Complaint: Appeal](https://www.appeal-edge.com/blog/amazon-ip-complaint-suspension-appeal/): An Amazon intellectual property complaint isn't reviewed by Amazon itself, it's enforced on the rights owner's word. Here's what actually resolves it.
+
+### Related account suspensions
+- [Amazon Related Account: Proof Of Separation](https://www.appeal-edge.com/blog/amazon-related-account-suspension-proof-of-separation/): Denying the link rarely works. Here is the specific documentation that proves two flagged accounts are genuinely separate businesses.
+- [Amazon Related Account Suspension Appeal](https://www.appeal-edge.com/blog/amazon-related-account-suspension-appeal/): An Amazon related account suspension links your account to one you never opened. Here's exactly why that happens and what your appeal needs to prove.
+
+### Dropshipping and seller of record
+- [Amazon Packing Slip Example: What To Include](https://www.appeal-edge.com/blog/amazon-compliant-packing-slip-example/): A compliant packing slip needs specific fields, not a generic template. Here is one, field by field, and where sellers add supplier info by mistake.
+- [Amazon Dropshipping Packaging Requirements](https://www.appeal-edge.com/blog/amazon-dropshipping-external-packaging-requirements/): The outer box is the surface sellers check least, and Amazon checks first. Here is exactly what the packaging itself cannot show.
+- [Amazon Dropshipping Violation: 3 Surfaces](https://www.appeal-edge.com/blog/amazon-dropshipping-packing-slips-invoices-requirements/): A dropshipping violation traces to 1 of 3 surfaces: packing slip, invoice, or outer box. Here is exactly what has to show your business, not your supplier's.
+- [Seller of Record vs Supplier: Why Both Matter](https://www.appeal-edge.com/blog/amazon-seller-of-record-vs-supplier/): A legitimate supplier does not satisfy Amazon on its own. Here is the exact line between the two roles, and the 3 things your supplier agreement must say.
+- [Is Dropshipping Allowed on Amazon?](https://www.appeal-edge.com/blog/is-dropshipping-allowed-on-amazon/): Yes, with conditions. Here is exactly what Amazon's dropshipping policy permits, what it bans outright, and why so many sellers get suspended anyway.
+- [Amazon Dropshipping Policy Explained (2026)](https://www.appeal-edge.com/blog/amazon-dropshipping-policy-explained/): Amazon's dropshipping policy does not ban the model outright. Four specific 2026 requirements decide whether your setup is compliant or a suspension risk.
+- [Amazon Seller of Record: What It Means for You](https://www.appeal-edge.com/blog/amazon-seller-of-record-explained/): Seller of record decides who Amazon holds responsible for an order. Here is what Amazon checks and how to prove your business qualifies.
+- [Amazon Dropshipping Policy Violation Appeal](https://www.appeal-edge.com/blog/amazon-dropshipping-policy-violation-appeal/): Amazon allows dropshipping, just not the way most sellers assume. Here's the specific violation that actually triggers a suspension.
+
+### Inauthentic complaints and documents
+- [Amazon Appeal Evidence Checklist By Violation](https://www.appeal-edge.com/blog/amazon-appeal-evidence-documents-checklist/): The wrong attachments slow an appeal down as much as a weak Plan of Action. Here is the exact evidence checklist by violation type.
+- [Amazon Invoice Rejected: The Real Reasons](https://www.appeal-edge.com/blog/amazon-supplier-invoice-rejected-reasons/): A rejected supplier invoice usually fails on one of four specific points. Here is each one and exactly what fixes it before you resubmit.
+- [Commingled Inventory Counterfeit Complaint](https://www.appeal-edge.com/blog/amazon-commingled-inventory-counterfeit-complaint/): A counterfeit complaint tied to commingled inventory feels impossible to fight since the flagged unit was never yours. Here is the appeal that works.
+- [Amazon Forged Documents Suspension Appeal](https://www.appeal-edge.com/blog/amazon-forged-manipulated-documents-appeal/): This is one of the more serious suspension categories Amazon issues. Here is what the notice actually means and the path back from it.
+- [Stickerless Commingled Inventory Explained](https://www.appeal-edge.com/blog/stickerless-commingled-inventory-explained/): Stickerless commingled inventory pools your units with other sellers on the same ASIN. Here is exactly how it works and whether Amazon still allows it.
+- [What Invoices Does Amazon Accept for an Appeal](https://www.appeal-edge.com/blog/amazon-invoice-requirements-supplier-documents-appeal/): Amazon rejects invoices for specific, fixable reasons. Here is exactly what an invoice needs to show to satisfy an inauthentic or counterfeit appeal.
+- [Inauthentic Complaint From Commingling](https://www.appeal-edge.com/blog/amazon-fba-commingling-inauthentic-complaints/): An inauthentic complaint for a unit you never touched usually traces to commingled inventory. Here is how to prove it and opt out for good.
+- [Amazon Inauthentic Complaint, No Invoice?](https://www.appeal-edge.com/blog/amazon-inauthentic-complaint-no-invoice-appeal/): Amazon says your product is inauthentic and wants an invoice you don't have. Here's why invoice quality is the real reason most inauthentic appeals fail.
+
+### Performance metrics and policy violations
+- [Amazon Appeal Button Missing In Account Health](https://www.appeal-edge.com/blog/amazon-appeal-button-missing-account-health/): No appeal option on the violation row? Three reasons the button is not where you expect, and where to actually find it in each case.
+- [Amazon ODR Suspension at Low Order Volume](https://www.appeal-edge.com/blog/amazon-odr-suspension-low-order-volume-small-seller/): At sixty orders a month, three complaints is a five percent order defect rate and an instant suspension. Here is why low order volume makes ODR volatile.
+- [Amazon Fair Pricing Violation: How to Appeal](https://www.appeal-edge.com/blog/amazon-fair-pricing-policy-violation-appeal/): A fair pricing violation flags your price as significantly higher than a recent reference price, not as a pricing strategy error. Here is how to appeal it.
+- [Amazon Valid Tracking Rate: The 95% Threshold](https://www.appeal-edge.com/blog/amazon-valid-tracking-rate-suspension/): It's usually a carrier problem, not a shipping one. Amazon expects Valid Tracking Rate near 95%, and here's what to fix when a scan is missing.
+- [Amazon Account Health Rating Too Low? Fix It](https://www.appeal-edge.com/blog/amazon-account-health-rating-low-deactivation-appeal/): An Account Health Rating under 100 puts your account at risk of deactivation. Here is how the score works and how to raise it before Amazon acts.
+- [Amazon Order Defect Rate Too High? Fix It](https://www.appeal-edge.com/blog/amazon-order-defect-rate-too-high-fix/): Order Defect Rate combines three separate metrics into one number, and moving it back under 1 percent takes different action for each.
+- [Amazon Review Manipulation Suspension Appeal](https://www.appeal-edge.com/blog/amazon-review-manipulation-suspension-appeal/): Amazon review manipulation covers more than buying fake reviews. Here's exactly what gets classified as manipulation, and what the appeal needs to prove.
+- [Amazon Restricted Products Suspension Appeal](https://www.appeal-edge.com/blog/amazon-restricted-products-suspension-appeal/): A product research tool can surface a promising product without ever flagging that the category is gated. Here's what makes a product restricted.
+- [Amazon Velocity Review Suspension Appeal](https://www.appeal-edge.com/blog/amazon-velocity-review-suspension-appeal/): Amazon's velocity review flag can trigger from a sudden, legitimate burst of reviews. Here's exactly what the flag measures, and what clears it.
+- [Amazon Section 3 Suspension: How to Respond](https://www.appeal-edge.com/blog/amazon-section-3-suspension-appeal/): Amazon Section 3 notices cite the Business Solutions Agreement but rarely say what's flagged. Here's what Section 3 covers and how to find the real issue.
+- [Amazon Used Sold as New Suspension: Appeal](https://www.appeal-edge.com/blog/amazon-used-sold-as-new-suspension-appeal/): A used sold as new complaint can come from a unit you never touched. Here's exactly what triggers this suspension and what your appeal needs to prove.
+- [Amazon High ODR (Order Defect Rate) Suspension](https://www.appeal-edge.com/blog/amazon-high-odr-suspension-appeal/): A high Order Defect Rate suspension is about a measurable pattern, not one bad review. Here's how to build a Plan of Action that proves it.
+
+### Appeal process, timelines and costs
+- [Amazon ASIN Suspended: How to Appeal](https://www.appeal-edge.com/blog/amazon-asin-suspended-listing-removed-appeal/): A suspended ASIN is a listing level action, not an account suspension. Here is how to tell which you have, what Amazon wants and how to appeal.
+- [How to Read an Amazon Suspension Notice](https://www.appeal-edge.com/blog/how-to-read-amazon-suspension-notice/): Your suspension notice already says what Amazon wants. Here is how to find the violation type, the evidence it asks for and what to do next.
+- [Amazon Account Suspended Before First Sale](https://www.appeal-edge.com/blog/amazon-account-suspended-before-first-sale/): Suspended before you ever made a sale on Amazon. Here is why that happens on new accounts, often tied to verification or Section 3, and how to respond.
+- [Amazon Appeal With No Sales History](https://www.appeal-edge.com/blog/amazon-appeal-no-sales-history-new-account/): Every Amazon appeal guide says to show your metrics improved, which is impossible with almost no orders. Here is what a new account can point to instead.
+- [Amazon India Seller Account Suspended](https://www.appeal-edge.com/blog/amazon-india-seller-account-suspended-appeal/): Amazon.in seller account suspended. GST documentation, courier tracking, and account structure work differently than Amazon US or UK. Here is what matters.
+- [Amazon Suspended With FBA Inventory Stranded](https://www.appeal-edge.com/blog/amazon-suspended-fba-inventory-stranded-storage-fees/): Your Amazon account is suspended and your FBA stock is stuck in a warehouse while storage fees keep accruing. Here is what happens to that inventory.
+- [Is Appealing an Amazon Suspension Worth It](https://www.appeal-edge.com/blog/is-amazon-appeal-worth-it-small-seller/): Turning over $5,000 to $10,000 a month and suspended on Amazon. An honest look at when appealing is worth the time and cost, and when it genuinely is not.
+- [New Amazon Seller Account Suspended](https://www.appeal-edge.com/blog/new-amazon-seller-account-suspended/): A new Amazon seller account gets suspended more often than an established one because it has no track record yet. Here is why, and the first moves to make.
+- [New Amazon Account After Suspension? Don't](https://www.appeal-edge.com/blog/should-i-open-new-amazon-account-after-suspension/): Thinking about opening a new Amazon account after a suspension instead of appealing. Here is why that almost always ends worse, and what to do instead.
+- [Write Your Own Amazon Appeal, No Lawyer](https://www.appeal-edge.com/blog/write-your-own-amazon-appeal-without-a-lawyer/): Hiring help is not always an option. Here is exactly how to write a genuinely strong Amazon plan of action yourself, step by step, with no lawyer or agency.
+- [Amazon Suspended and Holding Your Funds](https://www.appeal-edge.com/blog/amazon-account-suspended-funds-held-release/): A suspended account does not always mean funds are gone. Here is why Amazon holds disbursements, the 90 day timeline, and how reinstatement releases them.
+- [Amazon Final Decision Email: What It Means](https://www.appeal-edge.com/blog/amazon-appeal-final-decision-account-not-reinstated/): A final decision email feels like the end, but it usually is not. Here is what the notice actually means and the paths still open after it.
+- [Amazon Seller Account Suspended: What to Do](https://www.appeal-edge.com/blog/amazon-seller-account-suspended-what-to-do/): A suspended Amazon account is not dead. Here is the exact sequence to follow in the first 24 hours, and where to go next based on your violation type.
+- [Amazon Seller Verification Failed: Fix It](https://www.appeal-edge.com/blog/amazon-seller-identity-verification-failed-appeal/): Video or document verification failures are usually a mismatch problem, not a fraud accusation. Here is what Amazon checks and how to fix a failed verification.
+- [How Long Does an Amazon Appeal Take](https://www.appeal-edge.com/blog/how-long-amazon-appeal-takes-reinstatement-timeline/): Amazon appeal timelines vary by violation type and review queue. Here is what to expect at each stage, and when a delay signals a real problem.
+- [Amazon Not Responding to Your Appeal? Escalate](https://www.appeal-edge.com/blog/amazon-not-responding-to-appeal-escalation/): Escalate an Amazon appeal that has stopped getting real responses through Account Health Support and specialist routing. Here is the actual path.
+- [Amazon Appeal Rejected? What to Change](https://www.appeal-edge.com/blog/amazon-appeal-rejected-twice-what-to-do/): Amazon appeal rejected once or twice? It means something specific is still missing. Here's exactly what to change before you resubmit.
+- [Amazon Appeal Service Cost: What to Expect](https://www.appeal-edge.com/blog/amazon-appeal-service-cost/): Before you hire anyone, here's what the market actually charges to appeal an Amazon suspension, and what changes the price.
+- [AI Generated Amazon Listings: Suspension Risk](https://www.appeal-edge.com/blog/ai-generated-amazon-listings-without-suspension-risk/): AI listing generators are fast, but a hallucinated claim can trigger suspension risk just like a policy violation. Here's how to use them safely.
 
 ## Contact
 - Email: contact@appeal-edge.com
 - WhatsApp: https://wa.me/919220560623
 - Instagram: https://www.instagram.com/appeal.edge/
-- LinkedIn: https://www.linkedin.com/company/112773661/
+- LinkedIn: https://www.linkedin.com/company/appealedge/
 - Case review: https://tally.so/r/Y5voaW
+- Full page list with outlines: https://www.appeal-edge.com/llms-full.txt
