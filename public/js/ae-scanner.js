@@ -1,6 +1,8 @@
 // Free case scan: paste, drop, or clipboard-paste a notice, with email
-// optional and upfront in the same step. On a result, an inline Tally
-// embed offers the deeper specialist review without a new tab.
+// optional and upfront in the same step. On a result, a "Book a call" button
+// opens the Cal.com booking popup (ae-booking.js) with the detected issue and the
+// notice text prefilled. The old inline Tally embed code below is kept but is
+// no longer called, so nothing here opens Tally.
 //
 // Extracted from frontend-v2/index.html so the identical scan-zone
 // markup can be embedded on the homepage and inside blog posts. Fully
@@ -110,6 +112,7 @@
     document.body.appendChild(s);
   });
 
+  // KEPT, UNLINKED: the Tally embed. Nothing calls this any more (see renderBookButton).
   const renderTallyEmbed = async (data) => {
     const wrap = document.getElementById("scan-tally-wrap");
     const params = new URLSearchParams({
@@ -132,13 +135,26 @@
     }
   };
 
-  // Homepage: nothing is sent to Tally until the person chooses to open the form.
+  // After a scan: a button that opens the Cal.com calendar popup. ae-booking.js
+  // reads the prefill (detected issue, notice text, email) when it opens.
+  const renderBookButton = (data) => {
+    const wrap = document.getElementById("scan-tally-wrap");
+    if (window.AEBooking) {
+      window.AEBooking.setPrefill({ issue: data.caseType || "", notice: lastNotice, email: emailEl.value.trim() });
+      window.AEBooking.warm();
+    }
+    wrap.innerHTML = '<a class="btn btn-blue" id="scan-review-btn" data-book href="https://cal.com/appealedge/discovery-call" target="_blank" rel="noopener">Book a call with a specialist</a>';
+  };
+
+  // KEPT, UNLINKED: the old Tally review button. Nothing calls this any more.
   const renderReviewButton = (data) => {
     const wrap = document.getElementById("scan-tally-wrap");
     wrap.innerHTML = '<button type="button" class="btn btn-blue" id="scan-review-btn">Request a specialist review</button>';
     document.getElementById("scan-review-btn").addEventListener("click", () => renderTallyEmbed(data));
   };
 
+  // KEPT, UNLINKED: this only touches tally.so links, and none remain on the site.
+  // Booking buttons get the scan result through AEBooking.setPrefill instead.
   // Other Get your case reviewed links also carry the scan result, but only
   // at the moment they are clicked and only after a scan has run.
   if (isHome) {
@@ -195,8 +211,7 @@
 
     emptyEl.hidden = true;
     resultsEl.hidden = false;
-    if (isHome) renderReviewButton(data);
-    else renderTallyEmbed(data);
+    renderBookButton(data);
 
     if (typeof gtag === "function") {
       const pageType = document.body.dataset.scanPageType || "home";
@@ -264,5 +279,8 @@
     fileNameEl.textContent = "";
     lastResult = null;
     lastNotice = "";
+    if (window.AEBooking) window.AEBooking.clearPrefill();
+    const wrap = document.getElementById("scan-tally-wrap");
+    if (wrap) wrap.innerHTML = "";
   });
 })();

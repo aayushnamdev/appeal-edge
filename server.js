@@ -22,12 +22,12 @@ app.use((req, res, next) => {
 
 const CSP = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://tally.so",
+  "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://tally.so https://app.cal.com",
   "style-src 'self' 'unsafe-inline'",
   "font-src 'self' data:",
   "img-src 'self' data: https:",
-  "frame-src https://www.youtube.com https://tally.so",
-  "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com",
+  "frame-src https://www.youtube.com https://tally.so https://app.cal.com https://cal.com",
+  "connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://app.cal.com",
   "base-uri 'self'",
   "object-src 'none'",
 ].join('; ');

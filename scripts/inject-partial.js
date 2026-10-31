@@ -22,6 +22,10 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..', 'frontend-v2');
 const HOME_FILE = path.join(ROOT, 'index.html');
 
+const CAL_URL = 'https://cal.com/appealedge/discovery-call';
+// "Book a call" opens the Cal.com popup (public/js/ae-booking.js). The href is the new tab fallback.
+const BOOK_LI = `<li><a href="${CAL_URL}" data-book data-cta target="_blank" rel="noopener">Book a call</a></li>`;
+
 const NAV_LINKS_SUB = `<ul class="nav-links" id="nav-links-list">
         <li><a href="/#how">How it works</a></li>
         <li><a href="/#handle">Services</a></li>
@@ -29,11 +33,12 @@ const NAV_LINKS_SUB = `<ul class="nav-links" id="nav-links-list">
         <li><a href="/blog/">Blog</a></li>
         <li><a href="/#faq">FAQ</a></li>
         <li><a href="/#about">About us</a></li>
+        ${BOOK_LI}
       </ul>`;
 
 // Blog pages use the shared ae-blog.css nav, which also needs the mobile CTA item.
 const NAV_LINKS_BLOG = NAV_LINKS_SUB.replace(/\n\s*<\/ul>$/, `
-        <li class="nav-cta-mobile"><a class="btn btn-blue" data-cta href="https://tally.so/r/Y5voaW" target="_blank" rel="noopener">Get your case reviewed</a></li>
+        <li class="nav-cta-mobile"><a class="btn btn-blue" data-cta data-book href="${CAL_URL}" target="_blank" rel="noopener">Get your case reviewed</a></li>
       </ul>`);
 
 const NAV_LINKS_HOME = `<ul class="nav-links" id="nav-links-list">
@@ -44,7 +49,8 @@ const NAV_LINKS_HOME = `<ul class="nav-links" id="nav-links-list">
         <li><a href="#about">About us</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><a href="#faq">FAQ</a></li>
-        <li class="nav-cta-mobile"><a class="btn btn-blue" data-cta href="https://tally.so/r/Y5voaW" target="_blank" rel="noopener">Get your case reviewed</a></li>
+        ${BOOK_LI}
+        <li class="nav-cta-mobile"><a class="btn btn-blue" data-cta data-book href="${CAL_URL}" target="_blank" rel="noopener">Get your case reviewed</a></li>
       </ul>`;
 
 const FOOTER_NAV_SUB = `<ul>

@@ -105,7 +105,7 @@ function build() {
 - WhatsApp: https://wa.me/919220560623
 - Instagram: https://www.instagram.com/appeal.edge/
 - LinkedIn: https://www.linkedin.com/company/appealedge/
-- Case review: https://tally.so/r/Y5voaW
+- Book a call: https://cal.com/appealedge/discovery-call
 - Full page list with outlines: ${BASE}/llms-full.txt
 `;
 

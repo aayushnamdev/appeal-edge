@@ -53,14 +53,14 @@ function header(navLinksHtml) {
     <nav aria-label="Main" style="display:contents">
       ${navLinksHtml}
     </nav>
-    <a class="btn btn-blue nav-cta" data-cta href="https://tally.so/r/Y5voaW" target="_blank" rel="noopener">Get your case reviewed</a>
+    <a class="btn btn-blue nav-cta" data-cta data-book href="https://cal.com/appealedge/discovery-call" target="_blank" rel="noopener">Get your case reviewed</a>
     <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links-list"><span></span></button>
   </div>
 </header>
 <script defer src="/js/ae-nav.js"></script>`;
 }
 
-const MOBILE_CTA_LI = `        <li class="nav-cta-mobile"><a class="btn btn-blue" data-cta href="https://tally.so/r/Y5voaW" target="_blank" rel="noopener">Get your case reviewed</a></li>\n`;
+const MOBILE_CTA_LI = `        <li class="nav-cta-mobile"><a class="btn btn-blue" data-cta data-book href="https://cal.com/appealedge/discovery-call" target="_blank" rel="noopener">Get your case reviewed</a></li>\n`;
 
 function walk(dir, out = []) {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {

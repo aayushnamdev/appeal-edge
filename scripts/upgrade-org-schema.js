@@ -72,7 +72,7 @@ const CONTACT_POINT = {
   '@type': 'ContactPoint',
   contactType: 'customer support',
   email: EMAIL,
-  url: 'https://tally.so/r/Y5voaW',
+  url: 'https://cal.com/appealedge/discovery-call',
 };
 const FOUNDERS = [
   { id: 'khushi-narwal', name: 'Khushi Narwal', jobTitle: 'COO' },

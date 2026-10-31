@@ -42,3 +42,12 @@ The blog (`/blog/` and every post) shares one stylesheet, `frontend-v2/css/ae-bl
 
 Other scripts: `upgrade-org-schema.js` (Organization schema, regions and sameAs on every page), `inject-partial.js` (nav and footer links), `build-og-images.js`, `build-llms.js`, `build-sitemap.js`, `sync-blog-schema.js`. Each runs as a dry run until you pass `--write`.
 
+## Booking
+
+Every booking button opens the Cal.com calendar (https://cal.com/appealedge/discovery-call) as a popup. There is no other booking or intake form on the site.
+- Markup for a new button: `<a class="btn btn-blue" data-book data-cta href="https://cal.com/appealedge/discovery-call" target="_blank" rel="noopener">Book a call</a>`. The `href` is the new tab fallback. `data-cta` keeps click tracking.
+- The popup logic is `public/js/ae-booking.js`, loaded on every page. After a scan it prefills the booking question "Describe what happened or Paste your suspension notice" and the email (`AEBooking.setPrefill`, called by `ae-scanner.js`).
+- The menu item "Book a call" lives in `scripts/inject-partial.js`, so edit it there and run `node scripts/inject-partial.js --write`.
+- `server.js` allows `app.cal.com` in its Content Security Policy. Without that the popup is blocked.
+- Tally is unlinked, not deleted. It stays in `ae-caseform.js`, `ae-caseform.css`, the unused functions in `ae-scanner.js`, the Tally handlers in `ae-analytics.js`, the `/thank-you/` conversion script, the empty `scan-tally-wrap` and `case-form-embed` containers, and the `tally.so` entries in the CSP. The old form is https://tally.so/r/Y5voaW. To bring it back, point a button at that URL and add `data-case-form-open` for the blog panel.
+

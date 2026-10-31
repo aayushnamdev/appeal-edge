@@ -1,6 +1,8 @@
 // Shared CTA tracking, loaded on every page.
 // Tags every outbound conversion click with position + destination, appends
-// attribution params to Tally links, and reports a gtag event. Nothing here
+// attribution params to any Tally links, and reports a gtag event. Booking links to
+// Cal.com (cal.com/appealedge) are tracked as cta_destination "cal"; the popup itself
+// is handled by ae-booking.js. Nothing here
 // intercepts navigation: every tracked link opens target="_blank", so the
 // beacon always has time to send before the tab changes.
 
@@ -40,6 +42,7 @@
 
   const destinationOf = (href) => {
     if (href.includes("tally.so")) return "tally";
+    if (href.includes("cal.com/appealedge")) return "cal";
     if (href.includes("wa.me")) return "whatsapp";
     if (href.startsWith("mailto:")) return "email";
     if (href.includes("instagram.com") || href.includes("linkedin.com")) return "social";
@@ -74,10 +77,13 @@
     const a = e.target.closest("a[href]");
     if (!a) return;
     const href = a.href;
-    const isTracked = href.includes("tally.so") || href.includes("wa.me") ||
+    const isTracked = href.includes("tally.so") || href.includes("cal.com/appealedge") || href.includes("wa.me") ||
       href.startsWith("mailto:") || href.includes("instagram.com") || href.includes("linkedin.com") ||
       href.includes("#understand");
     if (!isTracked) return;
+
+    // ae-booking.js reads this when a booking completes, to credit the right button.
+    window.__aeLastCtaPos = positionOf(a);
 
     if (typeof gtag === "function") {
       gtag("event", "cta_click", {
