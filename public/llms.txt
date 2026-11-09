@@ -74,6 +74,7 @@
 - [Amazon Dropshipping Policy Violation Appeal](https://www.appeal-edge.com/blog/amazon-dropshipping-policy-violation-appeal/): Amazon allows dropshipping, just not the way most sellers assume. Here's the specific violation that actually triggers a suspension.
 
 ### Inauthentic complaints and documents
+- [Genuine Stock, Inauthentic Claim: Fix](https://www.appeal-edge.com/blog/amazon-inauthentic-claim-genuine-stock-paperwork/): You bought genuine stock and Amazon still says inauthentic. Here is why paperwork fails and the audit to run before you upload documents.
 - [Amazon Appeal Evidence Checklist By Violation](https://www.appeal-edge.com/blog/amazon-appeal-evidence-documents-checklist/): The wrong attachments slow an appeal down as much as a weak Plan of Action. Here is the exact evidence checklist by violation type.
 - [Amazon Invoice Rejected: The Real Reasons](https://www.appeal-edge.com/blog/amazon-supplier-invoice-rejected-reasons/): A rejected supplier invoice usually fails on one of four specific points. Here is each one and exactly what fixes it before you resubmit.
 - [Commingled Inventory Counterfeit Complaint](https://www.appeal-edge.com/blog/amazon-commingled-inventory-counterfeit-complaint/): A counterfeit complaint tied to commingled inventory feels impossible to fight since the flagged unit was never yours. Here is the appeal that works.
@@ -84,6 +85,7 @@
 - [Amazon Inauthentic Complaint, No Invoice?](https://www.appeal-edge.com/blog/amazon-inauthentic-complaint-no-invoice-appeal/): Amazon says your product is inauthentic and wants an invoice you don't have. Here's why invoice quality is the real reason most inauthentic appeals fail.
 
 ### Performance metrics and policy violations
+- [Section 3 Triage: Where to Start](https://www.appeal-edge.com/blog/amazon-section-3-triage-checklist/): A practical Section 3 triage checklist: what to review, what to collect and how to build a plan around the real cause instead of a guess.
 - [Amazon Appeal Button Missing In Account Health](https://www.appeal-edge.com/blog/amazon-appeal-button-missing-account-health/): No appeal option on the violation row? Three reasons the button is not where you expect, and where to actually find it in each case.
 - [Amazon ODR Suspension at Low Order Volume](https://www.appeal-edge.com/blog/amazon-odr-suspension-low-order-volume-small-seller/): At sixty orders a month, three complaints is a five percent order defect rate and an instant suspension. Here is why low order volume makes ODR volatile.
 - [Amazon Fair Pricing Violation: How to Appeal](https://www.appeal-edge.com/blog/amazon-fair-pricing-policy-violation-appeal/): A fair pricing violation flags your price as significantly higher than a recent reference price, not as a pricing strategy error. Here is how to appeal it.
@@ -98,6 +100,7 @@
 - [Amazon High ODR (Order Defect Rate) Suspension](https://www.appeal-edge.com/blog/amazon-high-odr-suspension-appeal/): A high Order Defect Rate suspension is about a measurable pattern, not one bad review. Here's how to build a Plan of Action that proves it.
 
 ### Appeal process, timelines and costs
+- [Amazon Appeal Rejected in Minutes: Why](https://www.appeal-edge.com/blog/amazon-appeal-rejected-within-minutes/): A fast Amazon appeal rejection usually points at what the plan says. Here is what we commonly see behind it and how to write a plan that gets read.
 - [Amazon ASIN Suspended: How to Appeal](https://www.appeal-edge.com/blog/amazon-asin-suspended-listing-removed-appeal/): A suspended ASIN is a listing level action, not an account suspension. Here is how to tell which you have, what Amazon wants and how to appeal.
 - [How to Read an Amazon Suspension Notice](https://www.appeal-edge.com/blog/how-to-read-amazon-suspension-notice/): Your suspension notice already says what Amazon wants. Here is how to find the violation type, the evidence it asks for and what to do next.
 - [Amazon Account Suspended Before First Sale](https://www.appeal-edge.com/blog/amazon-account-suspended-before-first-sale/): Suspended before you ever made a sale on Amazon. Here is why that happens on new accounts, often tied to verification or Section 3, and how to respond.

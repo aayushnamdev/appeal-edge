@@ -238,6 +238,13 @@
 
 ## Inauthentic complaints and documents
 
+### Genuine Stock, Inauthentic Claim: Fix
+- URL: https://www.appeal-edge.com/blog/amazon-inauthentic-claim-genuine-stock-paperwork/
+- Topic: Inauthentic complaints and documents
+- Published: 2026-11-09
+- Summary: You bought genuine stock and Amazon still says inauthentic. Here is why paperwork fails and the audit to run before you upload documents.
+- Sections: Why does Amazon reject invoices for genuine products? / Are receipts and order confirmations enough? / Why does the supplier footprint matter? / What if you buy from a distributor, not the brand? / What should you audit before you upload? / How do you tell whether the problem is the document or the product? / What should you do if the supplier is slow or unhelpful? / What small details cause the most rejections? / How should you present the documents? / Frequently asked questions / Or scan your notice first.
+
 ### Amazon Appeal Evidence Checklist By Violation
 - URL: https://www.appeal-edge.com/blog/amazon-appeal-evidence-documents-checklist/
 - Topic: Inauthentic complaints and documents
@@ -295,6 +302,13 @@
 - Sections: Why this isn't really about your product / Why invoice quality is the most common reason appeals fail / What to do when your supplier won't give you a proper invoice / The ratio that actually wins these appeals / What Amazon's reviewers are actually checking / Frequently asked questions
 
 ## Performance metrics and policy violations
+
+### Section 3 Triage: Where to Start
+- URL: https://www.appeal-edge.com/blog/amazon-section-3-triage-checklist/
+- Topic: Performance metrics and policy violations
+- Published: 2026-11-09
+- Summary: A practical Section 3 triage checklist: what to review, what to collect and how to build a plan around the real cause instead of a guess.
+- Sections: What does Section 3 actually cover? / What should you review in the days before the notice? / How do you trace the supply chain paper trail? / What does a zero defect plan look like? / How do you know which Section 3 trigger applies? / Which documents deserve the most attention? / What should you avoid in the first days? / What order should you work in? / Frequently asked questions / Or scan your notice first.
 
 ### Amazon Appeal Button Missing In Account Health
 - URL: https://www.appeal-edge.com/blog/amazon-appeal-button-missing-account-health/
@@ -381,6 +395,13 @@
 - Sections: Why "we'll do better" doesn't pass the first screen / The four parts of a POA that actually gets read / If you're not sure what actually caused the spike / What Amazon's reviewers are actually checking / Frequently asked questions
 
 ## Appeal process, timelines and costs
+
+### Amazon Appeal Rejected in Minutes: Why
+- URL: https://www.appeal-edge.com/blog/amazon-appeal-rejected-within-minutes/
+- Topic: Appeal process, timelines and costs
+- Published: 2026-11-09
+- Summary: A fast Amazon appeal rejection usually points at what the plan says. Here is what we commonly see behind it and how to write a plan that gets read.
+- Sections: Why does an Amazon appeal get rejected within minutes? / Does copying a public template hurt your appeal? / What is the difference between an apology and a root cause? / Why do mismatched documents get rejected so quickly? / What should a plan that gets read actually contain? / How long should you wait before you change course? / What does a stronger opening look like? / What mistakes do sellers repeat most? / What should you do after a fast rejection? / Frequently asked questions / Or scan your notice first.
 
 ### Amazon ASIN Suspended: How to Appeal
 - URL: https://www.appeal-edge.com/blog/amazon-asin-suspended-listing-removed-appeal/
